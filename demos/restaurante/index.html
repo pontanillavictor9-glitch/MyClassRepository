@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Trattoria de Marco — Cocina italiana · Reservas por WhatsApp</title>
+<meta name="description" content="Restaurante italiano La Trattoria de Marco. Pasta fresca, pizza al horno de leña. Reserva tu mesa por WhatsApp en 30 segundos.">
+<style>
+  :root{
+    --verde:#2d5a3d; --rojo:#b33939; --crema:#fdf8f0; --dark:#2b2b2b;
+    --whatsapp:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',Arial,sans-serif;color:var(--dark);background:var(--crema);line-height:1.6}
+  header{background:var(--verde);color:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+  .logo{font-size:1.3rem;font-weight:bold}
+  .logo span{color:#f0c987}
+  nav a{color:#fff;text-decoration:none;margin-left:1.5rem;font-size:.9rem}
+  nav a:hover{text-decoration:underline}
+  .hero{background:linear-gradient(rgba(30,50,35,.8),rgba(30,50,35,.8)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect fill="%23223a2b" width="80" height="80"/><circle cx="40" cy="40" r="20" fill="%232a4534"/></svg>');background-size:160px;color:#fff;text-align:center;padding:6rem 5%}
+  .hero h1{font-size:2.8rem;margin-bottom:1rem}
+  .hero h1 em{color:#f0c987;font-style:italic}
+  .hero p{font-size:1.15rem;max-width:34rem;margin:0 auto 2rem;color:#e8e8e8}
+  .btn{display:inline-block;padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:bold;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  .btn-rojo{background:var(--rojo);color:#fff}
+  section{padding:4rem 5%;max-width:1100px;margin:0 auto}
+  h2{font-size:2rem;text-align:center;margin-bottom:.5rem;color:var(--verde)}
+  .sub{text-align:center;color:#777;margin-bottom:2.5rem}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+  .menu-cat{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 3px 12px rgba(0,0,0,.07)}
+  .menu-cat h3{color:var(--rojo);border-bottom:2px solid #eee;padding-bottom:.5rem;margin-bottom:1rem}
+  .plato{display:flex;justify-content:space-between;margin-bottom:.7rem;gap:1rem}
+  .plato .p-nombre{font-weight:600}
+  .plato .p-desc{font-size:.82rem;color:#888}
+  .plato .p-precio{color:var(--verde);font-weight:bold;white-space:nowrap}
+  .info{background:var(--verde);color:#fff;border-radius:12px;padding:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+  .info h3{color:#f0c987;margin-bottom:.8rem}
+  .info td{padding:.15rem .8rem .15rem 0;font-size:.95rem}
+  .info a{color:#f0c987}
+  form{background:#fff;border-radius:12px;padding:2.5rem;box-shadow:0 3px 12px rgba(0,0,0,.07);max-width:34rem;margin:0 auto}
+  label{display:block;font-size:.85rem;font-weight:bold;margin:1rem 0 .3rem}
+  input,select{width:100%;padding:.7rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;background:#fff}
+  .form-btn{width:100%;margin-top:1.5rem;border:none;font-size:1.05rem;cursor:pointer}
+  .nota{font-size:.8rem;color:#888;text-align:center;margin-top:1rem}
+  .reseñas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+  .reseña{background:#fff;border-radius:12px;padding:1.6rem;box-shadow:0 3px 12px rgba(0,0,0,.07);font-size:.95rem}
+  .estrellas{color:#f0a500;margin-bottom:.5rem}
+  .reseña .autor{color:#888;font-size:.82rem;margin-top:.6rem}
+  footer{background:var(--dark);color:#aaa;text-align:center;padding:2rem 5%;font-size:.85rem}
+  .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--whatsapp);color:#fff;width:3.6rem;height:3.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 14px rgba(0,0,0,.3);text-decoration:none;z-index:20}
+  @media(max-width:600px){.hero h1{font-size:2rem}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍝 La Trattoria <span>de Marco</span></div>
+  <nav>
+    <a href="#carta">Carta</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#info">Horario</a>
+    <a href="#reservar">Reservar mesa</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Cocina italiana <em>de verdad</em></h1>
+  <p>Pasta fresca hecha cada mañana y pizza al horno de leña. Reserva tu mesa por WhatsApp y te la guardamos sin esperas.</p>
+  <a class="btn btn-rojo" href="#reservar">🍽️ Reservar mesa</a>
+  &nbsp;
+  <a class="btn btn-wa" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20hacer%20un%20pedido%20para%20llevar">🛵 Pedido para llevar</a>
+</section>
+
+<section id="carta">
+  <h2>Nuestra carta</h2>
+  <p class="sub">Producto fresco, recetas de la nonna</p>
+  <div class="menu-grid">
+    <div class="menu-cat">
+      <h3>Pastas</h3>
+      <div class="plato"><div><div class="p-nombre">Tagliatelle al ragù</div><div class="p-desc">Boloñesa tradicional, 4 h de cocción</div></div><div class="p-precio">13,50 €</div></div>
+      <div class="plato"><div><div class="p-nombre">Carbonara romana</div><div class="p-desc">Guanciale, pecorino y huevo — sin nata</div></div><div class="p-precio">12,90 €</div></div>
+      <div class="plato"><div><div class="p-nombre">Lasaña de la casa</div><div class="p-desc">Gratinada al momento</div></div><div class="p-precio">13,90 €</div></div>
+    </div>
+    <div class="menu-cat">
+      <h3>Pizzas al horno de leña</h3>
+      <div class="plato"><div><div class="p-nombre">Margherita D.O.P.</div><div class="p-desc">Mozzarella fior di latte y albahaca</div></div><div class="p-precio">10,50 €</div></div>
+      <div class="plato"><div><div class="p-nombre">Diavola</div><div class="p-desc">Salami picante y miel</div></div><div class="p-precio">12,50 €</div></div>
+      <div class="plato"><div><div class="p-nombre">Cuatro quesos</div><div class="p-desc">Gorgonzola, taleggio, parmesano, mozzarella</div></div><div class="p-precio">12,90 €</div></div>
+    </div>
+    <div class="menu-cat">
+      <h3>Postres</h3>
+      <div class="plato"><div><div class="p-nombre">Tiramisú casero</div><div class="p-desc">La receta secreta de Marco</div></div><div class="p-precio">5,90 €</div></div>
+      <div class="plato"><div><div class="p-nombre">Panna cotta</div><div class="p-desc">Con frutos rojos</div></div><div class="p-precio">5,50 €</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <p class="sub">4,8 ★ en Google con más de 300 reseñas</p>
+  <div class="reseñas">
+    <div class="reseña"><div class="estrellas">★★★★★</div>"La mejor carbonara que he probado fuera de Roma. El trato, de diez."<div class="autor">— Laura G.</div></div>
+    <div class="reseña"><div class="estrellas">★★★★★</div>"Reservé por WhatsApp en un minuto y la mesa estaba lista al llegar. Repetiremos seguro."<div class="autor">— Javier M.</div></div>
+    <div class="reseña"><div class="estrellas">★★★★★</div>"Pizza espectacular y el tiramisú es obligatorio. Sitio pequeño y con encanto."<div class="autor">— Carmen R.</div></div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="info">
+    <div>
+      <h3>🕐 Horario</h3>
+      <table>
+        <tr><td>Mar – Dom (comidas)</td><td>13:00 – 16:00</td></tr>
+        <tr><td>Vie – Sáb (cenas)</td><td>20:00 – 23:30</td></tr>
+        <tr><td>Lunes</td><td>Cerrado</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>📍 Dónde estamos</h3>
+      <p>Plaza del Sol 8<br>28001 Madrid</p>
+      <p style="margin-top:.6rem"><a href="https://maps.google.com/?q=Plaza+del+Sol+8+Madrid">Ver en Google Maps →</a></p>
+    </div>
+    <div>
+      <h3>📞 Contacto</h3>
+      <p>Tel: 600 00 00 00<br>WhatsApp: 600 00 00 00</p>
+    </div>
+  </div>
+</section>
+
+<section id="reservar">
+  <h2>Reserva tu mesa</h2>
+  <p class="sub">Te confirmamos por WhatsApp en minutos</p>
+  <form onsubmit="reservar(event)">
+    <label for="nombre">Tu nombre</label>
+    <input id="nombre" required placeholder="Ej: María">
+    <label for="personas">Número de personas</label>
+    <select id="personas">
+      <option>2 personas</option><option>3 personas</option><option>4 personas</option>
+      <option>5 personas</option><option>6 personas</option><option>Más de 6 (grupo)</option>
+    </select>
+    <label for="dia">Día</label>
+    <input id="dia" type="date" required>
+    <label for="hora">Hora</label>
+    <select id="hora">
+      <option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option>
+      <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option>
+    </select>
+    <button type="submit" class="btn btn-wa form-btn">📲 Enviar reserva por WhatsApp</button>
+    <p class="nota">Al pulsar se abrirá WhatsApp con tu reserva ya escrita. Solo tienes que darle a enviar.</p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 La Trattoria de Marco · Plaza del Sol 8, Madrid</p>
+  <p style="margin-top:.4rem">Web de demostración creada como ejemplo de catálogo.</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20mesa" aria-label="WhatsApp">💬</a>
+
+<script>
+// NÚMERO DEL NEGOCIO: cambiar aquí una sola vez (formato internacional sin +)
+const TELEFONO = "34600000000";
+
+function reservar(e){
+  e.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const personas = document.getElementById("personas").value;
+  const dia = document.getElementById("dia").value;
+  const hora = document.getElementById("hora").value;
+  const msg = `🍽️ *Nueva reserva de mesa*\n👤 Nombre: ${nombre}\n👥 Personas: ${personas}\n📅 Día: ${dia}\n🕐 Hora: ${hora}\n\n¿Me confirmáis la reserva? ¡Gracias!`;
+  window.open(`https://wa.me/${TELEFONO}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+document.querySelectorAll('a[href*="wa.me/34600000000"]').forEach(a=>{
+  a.href = a.href.replace("34600000000", TELEFONO);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbería El Clásico — Cortes y afeitados con cita por WhatsApp</title>
+<meta name="description" content="Barbería El Clásico: cortes de pelo, arreglo de barba y afeitado tradicional. Reserva tu cita en 30 segundos por WhatsApp.">
+<style>
+  :root{
+    --dark:#1a1a1a; --gold:#c9a227; --cream:#f5f0e8; --gray:#555;
+    --whatsapp:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--dark);background:var(--cream);line-height:1.6}
+  .sans{font-family:Arial,Helvetica,sans-serif}
+  header{background:var(--dark);color:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+  .logo{font-size:1.4rem;letter-spacing:2px}
+  .logo span{color:var(--gold)}
+  nav a{color:#fff;text-decoration:none;margin-left:1.5rem;font-family:Arial,sans-serif;font-size:.9rem}
+  nav a:hover{color:var(--gold)}
+  .hero{background:linear-gradient(rgba(20,20,20,.75),rgba(20,20,20,.75)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23262626" width="100" height="100"/><path d="M0 100 L100 0" stroke="%23333" stroke-width="1"/></svg>');background-size:cover;color:#fff;text-align:center;padding:6rem 5%}
+  .hero h1{font-size:2.8rem;margin-bottom:1rem;letter-spacing:1px}
+  .hero h1 em{color:var(--gold);font-style:normal}
+  .hero p{font-size:1.15rem;max-width:34rem;margin:0 auto 2rem;color:#ddd}
+  .btn{display:inline-block;padding:.9rem 2rem;border-radius:6px;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  .btn-gold{background:var(--gold);color:var(--dark)}
+  section{padding:4rem 5%;max-width:1100px;margin:0 auto}
+  h2{font-size:2rem;text-align:center;margin-bottom:.5rem}
+  .sub{text-align:center;color:var(--gray);margin-bottom:2.5rem;font-family:Arial,sans-serif}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+  .card{background:#fff;border-radius:10px;padding:2rem;box-shadow:0 3px 12px rgba(0,0,0,.08);text-align:center}
+  .card .icon{font-size:2.2rem;margin-bottom:.8rem}
+  .card h3{margin-bottom:.4rem}
+  .card .precio{color:var(--gold);font-size:1.5rem;font-weight:bold;font-family:Arial,sans-serif;margin-top:.6rem}
+  .horario{background:var(--dark);color:#fff;border-radius:12px;padding:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+  .horario h3{color:var(--gold);margin-bottom:.8rem}
+  .horario td{padding:.2rem .8rem .2rem 0;font-family:Arial,sans-serif;font-size:.95rem}
+  form{background:#fff;border-radius:12px;padding:2.5rem;box-shadow:0 3px 12px rgba(0,0,0,.08);max-width:34rem;margin:0 auto}
+  label{display:block;font-family:Arial,sans-serif;font-size:.85rem;font-weight:bold;margin:1rem 0 .3rem}
+  input,select{width:100%;padding:.7rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;font-family:Arial,sans-serif;background:#fff}
+  .form-btn{width:100%;margin-top:1.5rem;border:none;font-size:1.05rem;cursor:pointer}
+  .nota{font-size:.8rem;color:var(--gray);text-align:center;margin-top:1rem;font-family:Arial,sans-serif}
+  footer{background:var(--dark);color:#aaa;text-align:center;padding:2rem 5%;font-family:Arial,sans-serif;font-size:.85rem}
+  footer a{color:var(--gold)}
+  .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--whatsapp);color:#fff;width:3.6rem;height:3.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 14px rgba(0,0,0,.3);text-decoration:none;z-index:20}
+  @media(max-width:600px){.hero h1{font-size:2rem}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BARBERÍA <span>EL CLÁSICO</span></div>
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#horario">Horario</a>
+    <a href="#reservar">Reservar cita</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>El corte que mereces,<br><em>sin esperas</em></h1>
+  <p>Más de 15 años cuidando el estilo del barrio. Reserva tu cita en 30 segundos por WhatsApp y llega justo a tu hora.</p>
+  <a class="btn btn-gold" href="#reservar">📅 Reservar cita</a>
+  &nbsp;
+  <a class="btn btn-wa" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20barber%C3%ADa">💬 WhatsApp</a>
+</section>
+
+<section id="servicios">
+  <h2>Servicios y precios</h2>
+  <p class="sub">Precios claros, sin sorpresas</p>
+  <div class="grid">
+    <div class="card"><div class="icon">✂️</div><h3>Corte de pelo</h3><p class="sans">Clásico o moderno, a tu gusto</p><div class="precio">12 €</div></div>
+    <div class="card"><div class="icon">🪒</div><h3>Arreglo de barba</h3><p class="sans">Perfilado y acabado con toalla caliente</p><div class="precio">8 €</div></div>
+    <div class="card"><div class="icon">💈</div><h3>Corte + barba</h3><p class="sans">El pack completo, nuestro más pedido</p><div class="precio">17 €</div></div>
+    <div class="card"><div class="icon">👦</div><h3>Corte niño</h3><p class="sans">Hasta 12 años</p><div class="precio">9 €</div></div>
+  </div>
+</section>
+
+<section id="horario">
+  <div class="horario">
+    <div>
+      <h3>🕐 Horario</h3>
+      <table>
+        <tr><td>Lunes – Viernes</td><td>9:30 – 20:00</td></tr>
+        <tr><td>Sábado</td><td>9:00 – 14:30</td></tr>
+        <tr><td>Domingo</td><td>Cerrado</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>📍 Dónde estamos</h3>
+      <p class="sans">Calle Mayor 24, bajo<br>28001 Madrid</p>
+      <p class="sans" style="margin-top:.6rem"><a href="https://maps.google.com/?q=Calle+Mayor+24+Madrid" style="color:var(--gold)">Ver en Google Maps →</a></p>
+    </div>
+    <div>
+      <h3>📞 Contacto</h3>
+      <p class="sans">Tel: 600 00 00 00<br>WhatsApp: 600 00 00 00</p>
+    </div>
+  </div>
+</section>
+
+<section id="reservar">
+  <h2>Reserva tu cita</h2>
+  <p class="sub">Elige servicio, día y hora — te confirmamos por WhatsApp al momento</p>
+  <form onsubmit="reservar(event)">
+    <label for="nombre">Tu nombre</label>
+    <input id="nombre" required placeholder="Ej: Carlos">
+    <label for="servicio">Servicio</label>
+    <select id="servicio">
+      <option>Corte de pelo (12 €)</option>
+      <option>Arreglo de barba (8 €)</option>
+      <option>Corte + barba (17 €)</option>
+      <option>Corte niño (9 €)</option>
+    </select>
+    <label for="dia">Día</label>
+    <input id="dia" type="date" required>
+    <label for="hora">Hora preferida</label>
+    <select id="hora">
+      <option>Mañana (9:30 – 13:00)</option>
+      <option>Mediodía (13:00 – 16:00)</option>
+      <option>Tarde (16:00 – 20:00)</option>
+    </select>
+    <button type="submit" class="btn btn-wa form-btn">📲 Enviar reserva por WhatsApp</button>
+    <p class="nota">Al pulsar se abrirá WhatsApp con tu reserva ya escrita. Solo tienes que darle a enviar.</p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Barbería El Clásico · Calle Mayor 24, Madrid</p>
+  <p style="margin-top:.4rem">Web de demostración creada como ejemplo de catálogo.</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20cita" aria-label="WhatsApp">💬</a>
+
+<script>
+// NÚMERO DEL NEGOCIO: cambiar aquí una sola vez (formato internacional sin +)
+const TELEFONO = "34600000000";
+
+function reservar(e){
+  e.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const servicio = document.getElementById("servicio").value;
+  const dia = document.getElementById("dia").value;
+  const hora = document.getElementById("hora").value;
+  const msg = `🗓️ *Nueva reserva*\n👤 Nombre: ${nombre}\n✂️ Servicio: ${servicio}\n📅 Día: ${dia}\n🕐 Franja: ${hora}\n\n¿Me confirmáis la hora exacta? ¡Gracias!`;
+  window.open(`https://wa.me/${TELEFONO}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+// Enlaces flotantes usan el mismo número
+document.querySelectorAll('a[href*="wa.me/34600000000"]').forEach(a=>{
+  a.href = a.href.replace("34600000000", TELEFONO);
+});
+</script>
+</body>
+</html>

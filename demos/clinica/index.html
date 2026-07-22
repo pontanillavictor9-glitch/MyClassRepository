@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Dental Sonría — Tu dentista de confianza · Cita por WhatsApp</title>
+<meta name="description" content="Clínica Dental Sonría: limpiezas, ortodoncia, implantes. Primera revisión gratuita. Pide cita por WhatsApp en 30 segundos.">
+<style>
+  :root{
+    --azul:#1272b6; --azul-osc:#0b5188; --celeste:#eaf4fb; --dark:#28343d;
+    --whatsapp:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+  header{background:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .logo{font-size:1.3rem;font-weight:bold;color:var(--azul)}
+  nav a{color:var(--dark);text-decoration:none;margin-left:1.5rem;font-size:.9rem}
+  nav a:hover{color:var(--azul)}
+  .hero{background:linear-gradient(135deg,var(--celeste),#fff);text-align:center;padding:5.5rem 5%}
+  .hero h1{font-size:2.7rem;margin-bottom:1rem;color:var(--azul-osc)}
+  .hero p{font-size:1.15rem;max-width:36rem;margin:0 auto 1.2rem;color:#4a5a66}
+  .badge{display:inline-block;background:var(--azul);color:#fff;border-radius:50px;padding:.35rem 1.1rem;font-size:.85rem;font-weight:bold;margin-bottom:1.4rem}
+  .btn{display:inline-block;padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  .btn-azul{background:var(--azul);color:#fff}
+  section{padding:4rem 5%;max-width:1100px;margin:0 auto}
+  h2{font-size:2rem;text-align:center;margin-bottom:.5rem;color:var(--azul-osc)}
+  .sub{text-align:center;color:#777;margin-bottom:2.5rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+  .card{background:var(--celeste);border-radius:12px;padding:2rem;text-align:center}
+  .card .icon{font-size:2.2rem;margin-bottom:.8rem}
+  .card h3{margin-bottom:.4rem;color:var(--azul-osc)}
+  .card p{font-size:.92rem;color:#4a5a66}
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;counter-reset:paso}
+  .paso{background:#fff;border:2px solid var(--celeste);border-radius:12px;padding:1.8rem;text-align:center}
+  .paso .num{background:var(--azul);color:#fff;width:2.4rem;height:2.4rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;margin:0 auto .8rem}
+  .info{background:var(--azul-osc);color:#fff;border-radius:12px;padding:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+  .info h3{color:#9fd3f5;margin-bottom:.8rem}
+  .info td{padding:.15rem .8rem .15rem 0;font-size:.95rem}
+  .info a{color:#9fd3f5}
+  form{background:var(--celeste);border-radius:12px;padding:2.5rem;max-width:34rem;margin:0 auto}
+  label{display:block;font-size:.85rem;font-weight:bold;margin:1rem 0 .3rem}
+  input,select{width:100%;padding:.7rem;border:1px solid #bcd6e8;border-radius:6px;font-size:1rem;background:#fff}
+  .form-btn{width:100%;margin-top:1.5rem;border:none;font-size:1.05rem;cursor:pointer}
+  .nota{font-size:.8rem;color:#66798a;text-align:center;margin-top:1rem}
+  footer{background:var(--dark);color:#aaa;text-align:center;padding:2rem 5%;font-size:.85rem}
+  .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--whatsapp);color:#fff;width:3.6rem;height:3.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 14px rgba(0,0,0,.3);text-decoration:none;z-index:20}
+  @media(max-width:600px){.hero h1{font-size:2rem}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🦷 Clínica Dental Sonría</div>
+  <nav>
+    <a href="#tratamientos">Tratamientos</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#info">Horario</a>
+    <a href="#cita">Pedir cita</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="badge">✓ Primera revisión y diagnóstico GRATIS</div>
+  <h1>Tu sonrisa, en buenas manos</h1>
+  <p>Equipo con más de 20 años de experiencia, tecnología digital y financiación sin intereses. Pide tu cita por WhatsApp en 30 segundos.</p>
+  <a class="btn btn-azul" href="#cita">📅 Pedir cita gratis</a>
+  &nbsp;
+  <a class="btn btn-wa" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20tratamiento">💬 Resolver una duda</a>
+</section>
+
+<section id="tratamientos">
+  <h2>Tratamientos</h2>
+  <p class="sub">Presupuesto cerrado antes de empezar, siempre</p>
+  <div class="grid">
+    <div class="card"><div class="icon">✨</div><h3>Limpieza dental</h3><p>Higiene profesional con ultrasonidos y pulido</p></div>
+    <div class="card"><div class="icon">😁</div><h3>Ortodoncia invisible</h3><p>Alineadores transparentes, revisiones incluidas</p></div>
+    <div class="card"><div class="icon">🦷</div><h3>Implantes</h3><p>Titanio de primera calidad con garantía escrita</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Urgencias</h3><p>Te atendemos el mismo día si tienes dolor</p></div>
+  </div>
+</section>
+
+<section id="como">
+  <h2>Así de fácil</h2>
+  <p class="sub">De la duda a la cita en tres pasos</p>
+  <div class="pasos">
+    <div class="paso"><div class="num">1</div><h3>Pide cita</h3><p>Rellena el formulario y llega a nuestro WhatsApp al instante.</p></div>
+    <div class="paso"><div class="num">2</div><h3>Te confirmamos</h3><p>Te respondemos con la hora exacta y lo que necesitas traer.</p></div>
+    <div class="paso"><div class="num">3</div><h3>Primera revisión gratis</h3><p>Diagnóstico completo y presupuesto cerrado, sin compromiso.</p></div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="info">
+    <div>
+      <h3>🕐 Horario</h3>
+      <table>
+        <tr><td>Lunes – Viernes</td><td>9:00 – 20:30</td></tr>
+        <tr><td>Sábado</td><td>10:00 – 14:00</td></tr>
+        <tr><td>Domingo</td><td>Cerrado</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>📍 Dónde estamos</h3>
+      <p>Avenida de la Paz 15, 1º<br>28001 Madrid</p>
+      <p style="margin-top:.6rem"><a href="https://maps.google.com/?q=Avenida+de+la+Paz+15+Madrid">Ver en Google Maps →</a></p>
+    </div>
+    <div>
+      <h3>📞 Contacto</h3>
+      <p>Tel: 600 00 00 00<br>WhatsApp: 600 00 00 00</p>
+    </div>
+  </div>
+</section>
+
+<section id="cita">
+  <h2>Pide tu cita</h2>
+  <p class="sub">Primera revisión gratuita y sin compromiso</p>
+  <form onsubmit="pedirCita(event)">
+    <label for="nombre">Tu nombre</label>
+    <input id="nombre" required placeholder="Ej: Ana">
+    <label for="motivo">Motivo de la visita</label>
+    <select id="motivo">
+      <option>Primera revisión gratuita</option>
+      <option>Limpieza dental</option>
+      <option>Ortodoncia / alineadores</option>
+      <option>Implantes</option>
+      <option>Urgencia (tengo dolor)</option>
+      <option>Otro motivo</option>
+    </select>
+    <label for="dia">Día que te viene bien</label>
+    <input id="dia" type="date" required>
+    <label for="franja">Franja horaria</label>
+    <select id="franja">
+      <option>Mañana (9:00 – 14:00)</option>
+      <option>Tarde (16:00 – 20:30)</option>
+      <option>Me da igual, la primera libre</option>
+    </select>
+    <button type="submit" class="btn btn-wa form-btn">📲 Enviar solicitud por WhatsApp</button>
+    <p class="nota">Al pulsar se abrirá WhatsApp con tu solicitud ya escrita. Solo tienes que darle a enviar.</p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Clínica Dental Sonría · Avenida de la Paz 15, Madrid</p>
+  <p style="margin-top:.4rem">Web de demostración creada como ejemplo de catálogo.</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20cita" aria-label="WhatsApp">💬</a>
+
+<script>
+// NÚMERO DEL NEGOCIO: cambiar aquí una sola vez (formato internacional sin +)
+const TELEFONO = "34600000000";
+
+function pedirCita(e){
+  e.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const motivo = document.getElementById("motivo").value;
+  const dia = document.getElementById("dia").value;
+  const franja = document.getElementById("franja").value;
+  const msg = `🦷 *Solicitud de cita*\n👤 Nombre: ${nombre}\n📋 Motivo: ${motivo}\n📅 Día preferido: ${dia}\n🕐 Franja: ${franja}\n\n¿Me confirmáis la cita? ¡Gracias!`;
+  window.open(`https://wa.me/${TELEFONO}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+document.querySelectorAll('a[href*="wa.me/34600000000"]').forEach(a=>{
+  a.href = a.href.replace("34600000000", TELEFONO);
+});
+</script>
+</body>
+</html>
