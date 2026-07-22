@@ -12,7 +12,7 @@ propias cuentas — nunca spam en grupos que lo prohíban.
 
 **Opción 2:**
 > "No sé si mi negocio gana o pierde" — si te ha pasado, esto es para ti.
-> 4 plantillas listas, en español, pago único. [ENLACE]
+> 5 plantillas listas, en español, pago único. [ENLACE]
 
 **Opción 3 (con imagen):**
 > [Captura de la plantilla de inventario] Así se ve el control de inventario:
@@ -20,9 +20,10 @@ propias cuentas — nunca spam en grupos que lo prohíban.
 
 ## Grupos de Facebook de emprendedores / comerciantes
 
-> Hola 👋 Comparto algo que puede servirles: un pack de 4 plantillas de Excel
+> Hola 👋 Comparto algo que puede servirles: un pack de 5 plantillas de Excel
 > para pequeños negocios (control de inventario con alertas, flujo de caja,
-> fiados y cotizaciones profesionales). No hay que saber Excel: se llena solo
+> fiados, cotizaciones profesionales y calculadora de precios con punto de
+> equilibrio). No hay que saber Excel: se llena solo
 > lo amarillo y todo calcula automático. Trae guía en español y ejemplos.
 > Lo dejo por si a alguien le ordena la vida: [ENLACE]
 
@@ -39,7 +40,8 @@ al que solo llega a vender.*
 
 ## Respuesta lista para interesados por WhatsApp
 
-> ¡Hola! Claro 😊 El pack trae 4 plantillas de Excel: control de inventario,
-> flujo de caja, fiados y cotizaciones. Todo calcula automático y trae guía de
+> ¡Hola! Claro 😊 El pack trae 5 plantillas de Excel: control de inventario,
+> flujo de caja, fiados, cotizaciones y calculadora de precios. Todo calcula
+> automático y trae guía de
 > uso. Se compra aquí y te llega al instante: [ENLACE]. Si tienes dudas después
 > de comprarlo, me escribes y te ayudo.

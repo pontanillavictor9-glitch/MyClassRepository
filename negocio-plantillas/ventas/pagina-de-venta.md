@@ -19,7 +19,7 @@ Cada mes se te pierde plata y no sabes en qué: mercancía que se acaba sin dart
 cuenta, fiados que nadie recuerda, y al final del mes no sabes si ganaste o
 perdiste.
 
-Este pack incluye **4 plantillas de Excel listas para usar**, hechas para
+Este pack incluye **5 plantillas de Excel listas para usar**, hechas para
 tiendas, restaurantes, ferreterías, papelerías, salones de belleza y cualquier
 pequeño negocio:
 
@@ -36,6 +36,10 @@ cuánto te debe cada cliente sin discusiones y cuánto tienes en la calle.
 📄 **Cotizaciones Profesionales** — Escribes el código y la cantidad, y sale una
 cotización con tu nombre, totales e impuesto calculados, lista para enviar en
 PDF por WhatsApp.
+
+🧮 **Calculadora de Precios y Punto de Equilibrio** — Te dice a cuánto vender
+cada producto para ganar lo que quieres, si hoy estás vendiendo a pérdida sin
+saberlo, y cuántas ventas al mes necesitas para cubrir tus gastos.
 
 **Todo calcula solo.** Tú solo escribes en las celdas amarillas — cada plantilla
 trae instrucciones y ejemplos adentro.

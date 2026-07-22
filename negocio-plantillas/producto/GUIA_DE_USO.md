@@ -1,6 +1,6 @@
 # Pack de Herramientas para tu Negocio — Guía de uso
 
-¡Gracias por tu compra! Este pack incluye 4 plantillas de Excel diseñadas para
+¡Gracias por tu compra! Este pack incluye 5 plantillas de Excel diseñadas para
 que lleves el control de tu negocio sin ser experto en Excel.
 
 ## Antes de empezar (aplica a las 4 plantillas)
@@ -58,6 +58,19 @@ cuentan como clientes distintos).
 3. Ajusta el % de impuesto en la celda amarilla (ponlo en 0% si no aplica).
 4. Para enviarla: guarda como PDF (Archivo → Guardar como / Exportar → PDF) y
    mándala por WhatsApp o correo.
+
+## 5. Precios y Punto de Equilibrio
+
+1. En la hoja **Calculadora de Precios**, escribe cada producto con sus costos y
+   el margen que quieres ganar: la columna verde te dice a cuánto deberías
+   venderlo. Si pones tu precio actual, verás cuánto ganas de verdad hoy (si
+   sale negativo, estás vendiendo a pérdida).
+2. En la hoja **Punto de Equilibrio**, escribe tus gastos fijos del mes y tu
+   venta promedio: te dice cuántas ventas necesitas al mes (y por día) para
+   cubrir gastos. A partir de ahí, todo es ganancia.
+
+**Consejo:** revisa esta plantilla cada vez que te suban el arriendo o los
+insumos — el precio que servía el año pasado puede estar dándote pérdida hoy.
 
 ---
 

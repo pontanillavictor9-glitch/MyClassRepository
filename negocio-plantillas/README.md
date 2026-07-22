@@ -1,6 +1,6 @@
 # Negocio: Pack de Plantillas Excel para Pequeños Negocios
 
-Este es un negocio de **venta de productos digitales**: un pack de 4 plantillas de
+Este es un negocio de **venta de productos digitales**: un pack de 5 plantillas de
 Excel profesionales, en español, para tenderos, restauranteros y pequeños
 comerciantes. Se vende en plataformas como **Gumroad** o **Hotmart** y, una vez
 publicado, se vende solo — no requiere inventario, envíos ni atención al cliente.
@@ -10,7 +10,7 @@ publicado, se vende solo — no requiere inventario, envíos ni atención al cli
 ```
 negocio-plantillas/
 ├── producto/
-│   ├── plantillas/           ← Las 4 plantillas Excel (el producto)
+│   ├── plantillas/           ← Las 5 plantillas Excel (el producto)
 │   ├── GUIA_DE_USO.md        ← Guía para el comprador (va dentro del ZIP)
 │   └── Pack_Herramientas_Negocio.zip  ← ZIP listo para subir a la plataforma
 └── ventas/
@@ -27,6 +27,7 @@ negocio-plantillas/
 | 2 | Flujo de Caja Mensual | Cuánto entra y sale cada mes; saber si el negocio gana o pierde |
 | 3 | Fiados / Cuentas por Cobrar | Cuánto debe cada cliente, sin cuaderno ni discusiones |
 | 4 | Cotizaciones | Cotizaciones profesionales con catálogo de precios y totales automáticos |
+| 5 | Precios y Punto de Equilibrio | A cuánto vender para ganar, y cuántas ventas al mes cubren los gastos |
 
 Todas las fórmulas fueron verificadas automáticamente (0 errores) y cada archivo
 trae instrucciones y datos de ejemplo dentro.
