@@ -3,12 +3,13 @@ MiPrimerRepositorio
 
 ---
 
-## ⚡ TuWebLocal — Negocio de webs con reservas por WhatsApp
+## ⚡ TuWebLocal — Tienda de plantillas web con reservas por WhatsApp
 
-Este repositorio contiene un negocio listo para arrancar: vender páginas web a negocios locales.
+Este repositorio contiene un negocio online listo para arrancar: venta de plantillas web descargables (vía Gumroad), sin venta cara a cara.
 
 **👉 Lee [EMPIEZA-AQUI.md](EMPIEZA-AQUI.md) para los pasos de arranque.**
 
-- `index.html` — tu página de venta
-- `demos/` — tres webs de demostración funcionales (barbería, restaurante, clínica)
-- `kit-ventas/` — guía de venta, mensajes de WhatsApp y precios
+- `index.html` — la tienda (escaparate con botones de compra)
+- `demos/` — demos en vivo de las 3 plantillas (barbería, restaurante, clínica)
+- `productos/` — los packs vendibles y sus ZIP listos para Gumroad
+- `kit-ventas/` — guía de Gumroad y promoción · `agencia/` — modelo alternativo de venta directa (guardado)

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TuWebLocal — Webs profesionales con reservas por WhatsApp para negocios</title>
-<meta name="description" content="Página web profesional para tu negocio con citas y reservas por WhatsApp. Lista en 48 horas, sin cuotas de mantenimiento obligatorias.">
+<title>Plantillas web con reservas por WhatsApp — para negocios, sin programar</title>
+<meta name="description" content="Plantillas web profesionales para barberías, restaurantes y clínicas con sistema de citas por WhatsApp integrado. Descarga, pon tus datos y publica gratis. Sin cuotas, sin programar.">
 <style>
   :root{
     --violeta:#5b3df5; --violeta-osc:#3d28b0; --fondo:#f7f7fc; --dark:#1e1e2e;
@@ -17,43 +17,47 @@
   nav a{color:var(--dark);text-decoration:none;margin-left:1.5rem;font-size:.9rem}
   nav a:hover{color:var(--violeta)}
   .hero{background:linear-gradient(135deg,var(--violeta),var(--violeta-osc));color:#fff;text-align:center;padding:5.5rem 5%}
-  .hero h1{font-size:2.7rem;margin-bottom:1.2rem;max-width:46rem;margin-left:auto;margin-right:auto}
-  .hero p{font-size:1.15rem;max-width:38rem;margin:0 auto 2rem;color:#e6e2ff}
-  .btn{display:inline-block;padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:transform .15s}
+  .hero h1{font-size:2.7rem;margin-bottom:1.2rem;max-width:48rem;margin-left:auto;margin-right:auto}
+  .hero p{font-size:1.15rem;max-width:40rem;margin:0 auto 2rem;color:#e6e2ff}
+  .hero .mini{font-size:.9rem;color:#cfc7ff}
+  .btn{display:inline-block;padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:transform .15s;border:none;cursor:pointer;font-size:1rem}
   .btn:hover{transform:translateY(-2px)}
   .btn-wa{background:var(--whatsapp);color:#fff}
   .btn-blanco{background:#fff;color:var(--violeta)}
+  .btn-violeta{background:var(--violeta);color:#fff}
   section{padding:4rem 5%;max-width:1100px;margin:0 auto}
   h2{font-size:2rem;text-align:center;margin-bottom:.5rem}
   .sub{text-align:center;color:#777;margin-bottom:2.5rem}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
-  .card{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 3px 12px rgba(0,0,0,.07)}
-  .card .icon{font-size:2rem;margin-bottom:.8rem}
-  .card h3{margin-bottom:.5rem}
-  .card p{font-size:.92rem;color:#555}
-  .demos .card{text-align:center;padding-bottom:2.2rem}
-  .demos .tipo{display:inline-block;background:var(--fondo);border-radius:50px;padding:.25rem 1rem;font-size:.8rem;font-weight:bold;color:var(--violeta);margin-bottom:.8rem}
-  .demos a.ver{display:inline-block;margin-top:1rem;color:var(--violeta);font-weight:bold;text-decoration:none}
-  .demos a.ver:hover{text-decoration:underline}
-  .precios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:stretch}
-  .plan{background:#fff;border-radius:14px;padding:2.2rem;box-shadow:0 3px 12px rgba(0,0,0,.07);text-align:center;display:flex;flex-direction:column}
-  .plan.destacado{border:3px solid var(--violeta);position:relative}
-  .plan .tag{position:absolute;top:-1rem;left:50%;transform:translateX(-50%);background:var(--violeta);color:#fff;border-radius:50px;padding:.25rem 1.2rem;font-size:.8rem;font-weight:bold}
-  .plan h3{margin-bottom:.3rem}
-  .plan .precio{font-size:2.4rem;font-weight:800;color:var(--violeta);margin:.6rem 0}
-  .plan .precio small{font-size:1rem;color:#888;font-weight:normal}
-  .plan ul{list-style:none;text-align:left;margin:1rem 0 1.5rem;flex:1}
-  .plan li{padding:.35rem 0;font-size:.92rem}
-  .plan li::before{content:"✓ ";color:var(--whatsapp);font-weight:bold}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem}
+  .producto{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.08);display:flex;flex-direction:column}
+  .producto .head{padding:2rem 2rem 1rem;text-align:center}
+  .producto .tipo{display:inline-block;background:var(--fondo);border-radius:50px;padding:.25rem 1rem;font-size:.78rem;font-weight:bold;color:var(--violeta);margin-bottom:.8rem}
+  .producto .icon{font-size:2.6rem}
+  .producto h3{margin:.5rem 0 .3rem}
+  .producto .body{padding:0 2rem 2rem;flex:1;display:flex;flex-direction:column}
+  .producto ul{list-style:none;text-align:left;margin:1rem 0 1.4rem;flex:1}
+  .producto li{padding:.28rem 0;font-size:.9rem}
+  .producto li::before{content:"✓ ";color:var(--whatsapp);font-weight:bold}
+  .producto .precio{font-size:2rem;font-weight:800;color:var(--violeta);margin-bottom:1rem;text-align:center}
+  .producto .precio small{font-size:.9rem;color:#888;font-weight:normal}
+  .producto .acciones{display:flex;gap:.7rem;flex-direction:column}
+  .producto a.demo{color:var(--violeta);font-weight:bold;text-decoration:none;text-align:center;font-size:.92rem}
+  .producto a.demo:hover{text-decoration:underline}
+  .bundle{background:linear-gradient(135deg,var(--violeta),var(--violeta-osc));color:#fff;border-radius:16px;padding:2.8rem;text-align:center;margin-top:2rem}
+  .bundle h3{font-size:1.6rem;margin-bottom:.5rem}
+  .bundle p{color:#e6e2ff;max-width:34rem;margin:0 auto 1.4rem}
+  .bundle .precio{font-size:2.4rem;font-weight:800;margin-bottom:1.2rem}
+  .bundle .precio s{font-size:1.2rem;color:#b8aef5;font-weight:normal;margin-right:.6rem}
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
+  .paso{background:#fff;border-radius:12px;padding:2rem;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.07)}
+  .paso .num{background:var(--violeta);color:#fff;width:2.4rem;height:2.4rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;margin:0 auto .8rem}
+  .paso p{font-size:.92rem;color:#555}
   .faq{max-width:44rem;margin:0 auto}
   .faq details{background:#fff;border-radius:10px;padding:1.2rem 1.5rem;margin-bottom:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.05)}
   .faq summary{font-weight:bold;cursor:pointer}
   .faq p{margin-top:.7rem;font-size:.95rem;color:#555}
-  .cta-final{background:linear-gradient(135deg,var(--violeta),var(--violeta-osc));color:#fff;text-align:center;border-radius:16px;padding:3.5rem 2rem;margin:0 5% 4rem}
-  .cta-final h2{color:#fff}
-  .cta-final p{color:#e6e2ff;max-width:34rem;margin:.8rem auto 1.8rem}
   footer{background:var(--dark);color:#aaa;text-align:center;padding:2rem 5%;font-size:.85rem}
-  .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--whatsapp);color:#fff;width:3.6rem;height:3.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 14px rgba(0,0,0,.3);text-decoration:none;z-index:20}
+  footer a{color:#9d8cff}
   @media(max-width:600px){.hero h1{font-size:1.9rem}nav{display:none}}
 </style>
 </head>
@@ -62,148 +66,154 @@
 <header>
   <div class="logo">⚡ TuWebLocal</div>
   <nav>
-    <a href="#demos">Ejemplos</a>
-    <a href="#incluye">Qué incluye</a>
-    <a href="#precios">Precios</a>
+    <a href="#plantillas">Plantillas</a>
+    <a href="#como">Cómo funciona</a>
     <a href="#faq">Preguntas</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Tu negocio con página web y reservas por WhatsApp en 48 horas</h1>
-  <p>El 80% de tus clientes te busca en Google antes de visitarte. Con tu web, te encuentran, ven tus precios y te reservan por WhatsApp — mientras tú trabajas.</p>
-  <a class="btn btn-blanco" href="#demos">👀 Ver ejemplos reales</a>
-  &nbsp;
-  <a class="btn btn-wa" href="https://wa.me/TUNUMERO?text=Hola%2C%20quiero%20una%20web%20para%20mi%20negocio">💬 Pedir presupuesto gratis</a>
+  <h1>La web de tu negocio con citas por WhatsApp, hoy mismo y sin programar</h1>
+  <p>Plantillas profesionales para negocios locales con sistema de reservas integrado: tu cliente elige servicio, día y hora, y la cita te llega directa a tu WhatsApp. Descarga, pon tus datos siguiendo la guía incluida y publícala gratis.</p>
+  <a class="btn btn-blanco" href="#plantillas">Ver plantillas</a>
+  <p class="mini" style="margin-top:1.2rem">Pago único · Sin cuotas mensuales · Hosting gratuito · Guía paso a paso incluida</p>
 </section>
 
-<section id="demos" class="demos">
-  <h2>Así quedaría la web de tu negocio</h2>
-  <p class="sub">Ejemplos reales y funcionales — pruébalos, incluso el botón de reserva</p>
+<section id="plantillas">
+  <h2>Elige tu plantilla</h2>
+  <p class="sub">Todas incluyen reservas por WhatsApp, diseño para móvil y guía de personalización en español</p>
   <div class="grid">
-    <div class="card">
-      <div class="tipo">PELUQUERÍAS Y BARBERÍAS</div>
-      <div class="icon">💈</div>
-      <h3>Barbería El Clásico</h3>
-      <p>Servicios con precios, horario y cita previa por WhatsApp con día y franja horaria.</p>
-      <a class="ver" href="demos/barberia/">Ver demo →</a>
+    <div class="producto">
+      <div class="head">
+        <div class="tipo">PELUQUERÍAS · BARBERÍAS · ESTÉTICA</div>
+        <div class="icon">💈</div>
+        <h3>Barbería / Peluquería</h3>
+      </div>
+      <div class="body">
+        <ul>
+          <li>Cita previa por WhatsApp (servicio, día y franja)</li>
+          <li>Lista de servicios con precios</li>
+          <li>Horario, mapa y botón de llamada</li>
+          <li>Guía de personalización en 15 min</li>
+        </ul>
+        <div class="precio">19 €<small> pago único</small></div>
+        <div class="acciones">
+          <a class="btn btn-violeta comprar" data-pack="barberia" href="#">🛒 Comprar y descargar</a>
+          <a class="demo" href="demos/barberia/" target="_blank">Ver demo en vivo →</a>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div class="tipo">BARES Y RESTAURANTES</div>
-      <div class="icon">🍝</div>
-      <h3>La Trattoria de Marco</h3>
-      <p>Carta completa, reseñas de clientes y reserva de mesa con número de personas y hora.</p>
-      <a class="ver" href="demos/restaurante/">Ver demo →</a>
+    <div class="producto">
+      <div class="head">
+        <div class="tipo">RESTAURANTES · BARES · CAFETERÍAS</div>
+        <div class="icon">🍝</div>
+        <h3>Restaurante / Bar</h3>
+      </div>
+      <div class="body">
+        <ul>
+          <li>Reserva de mesa por WhatsApp (personas, día, hora)</li>
+          <li>Carta completa con precios</li>
+          <li>Sección de reseñas de clientes</li>
+          <li>Guía de personalización en 15 min</li>
+        </ul>
+        <div class="precio">19 €<small> pago único</small></div>
+        <div class="acciones">
+          <a class="btn btn-violeta comprar" data-pack="restaurante" href="#">🛒 Comprar y descargar</a>
+          <a class="demo" href="demos/restaurante/" target="_blank">Ver demo en vivo →</a>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div class="tipo">CLÍNICAS Y CONSULTAS</div>
-      <div class="icon">🦷</div>
-      <h3>Clínica Dental Sonría</h3>
-      <p>Tratamientos, proceso paso a paso y solicitud de cita con motivo de la visita.</p>
-      <a class="ver" href="demos/clinica/">Ver demo →</a>
+    <div class="producto">
+      <div class="head">
+        <div class="tipo">CLÍNICAS · FISIOS · CONSULTAS</div>
+        <div class="icon">🦷</div>
+        <h3>Clínica / Consulta</h3>
+      </div>
+      <div class="body">
+        <ul>
+          <li>Solicitud de cita por WhatsApp (motivo, día, franja)</li>
+          <li>Tratamientos y proceso en 3 pasos</li>
+          <li>Banner de oferta (revisión gratis, etc.)</li>
+          <li>Guía de personalización en 15 min</li>
+        </ul>
+        <div class="precio">19 €<small> pago único</small></div>
+        <div class="acciones">
+          <a class="btn btn-violeta comprar" data-pack="clinica" href="#">🛒 Comprar y descargar</a>
+          <a class="demo" href="demos/clinica/" target="_blank">Ver demo en vivo →</a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="bundle">
+    <h3>📦 Pack completo — las 3 plantillas</h3>
+    <p>Ideal si eres freelance o quieres hacer webs para varios negocios: úsalas en tantos proyectos propios o de clientes como quieras.</p>
+    <div class="precio"><s>57 €</s> 39 €</div>
+    <a class="btn btn-blanco comprar" data-pack="bundle" href="#">🛒 Llevarme el pack</a>
   </div>
 </section>
 
-<section id="incluye">
-  <h2>Todo lo que incluye tu web</h2>
-  <p class="sub">Pensada para que te llueva trabajo, no para presumir de diseño</p>
-  <div class="grid">
-    <div class="card"><div class="icon">📲</div><h3>Reservas por WhatsApp</h3><p>Tus clientes eligen servicio, día y hora, y te llega todo ordenado a tu WhatsApp. Sin apps raras ni cuotas mensuales.</p></div>
-    <div class="card"><div class="icon">📱</div><h3>Perfecta en el móvil</h3><p>Más del 90% de tus clientes entrará desde el teléfono. Tu web se ve perfecta en cualquier pantalla.</p></div>
-    <div class="card"><div class="icon">🔍</div><h3>Aparece en Google</h3><p>Preparada para que te encuentren al buscar tu tipo de negocio en tu zona.</p></div>
-    <div class="card"><div class="icon">🗺️</div><h3>Mapa y horarios</h3><p>Cómo llegar con un toque, horarios claros y teléfono con llamada directa.</p></div>
-    <div class="card"><div class="icon">⭐</div><h3>Tus reseñas destacadas</h3><p>Mostramos tus mejores opiniones de Google para generar confianza al instante.</p></div>
-    <div class="card"><div class="icon">🚀</div><h3>Entrega en 48 h</h3><p>Me pasas fotos, precios y horarios, y en dos días tienes tu web funcionando.</p></div>
-  </div>
-</section>
-
-<section id="precios">
-  <h2>Precios cerrados, sin sorpresas</h2>
-  <p class="sub">Pago único — la web es tuya para siempre</p>
-  <div class="precios">
-    <div class="plan">
-      <h3>Web Básica</h3>
-      <div class="precio">149 €<small> pago único</small></div>
-      <ul>
-        <li>Página de presentación completa</li>
-        <li>Botón de contacto por WhatsApp</li>
-        <li>Horarios, mapa y teléfono</li>
-        <li>Adaptada a móvil</li>
-        <li>Entrega en 48 h</li>
-      </ul>
-      <a class="btn btn-wa" href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Web%20B%C3%A1sica">La quiero</a>
-    </div>
-    <div class="plan destacado">
-      <div class="tag">MÁS VENDIDA</div>
-      <h3>Web + Reservas</h3>
-      <div class="precio">249 €<small> pago único</small></div>
-      <ul>
-        <li>Todo lo de la Web Básica</li>
-        <li>Sistema de citas/reservas por WhatsApp</li>
-        <li>Carta o lista de servicios con precios</li>
-        <li>Sección de reseñas de clientes</li>
-        <li>Optimizada para Google</li>
-      </ul>
-      <a class="btn btn-wa" href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Web%20%2B%20Reservas">La quiero</a>
-    </div>
-    <div class="plan">
-      <h3>Mantenimiento</h3>
-      <div class="precio">19 €<small> /mes (opcional)</small></div>
-      <ul>
-        <li>Cambios de precios y horarios</li>
-        <li>Fotos y ofertas nuevas cada mes</li>
-        <li>Soporte por WhatsApp</li>
-        <li>Sin permanencia — cancela cuando quieras</li>
-      </ul>
-      <a class="btn btn-wa" href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20el%20mantenimiento%20mensual">Me interesa</a>
-    </div>
+<section id="como">
+  <h2>Cómo funciona</h2>
+  <p class="sub">De la compra a tu web publicada en menos de media hora</p>
+  <div class="pasos">
+    <div class="paso"><div class="num">1</div><h3>Compra y descarga</h3><p>Recibes un ZIP con la plantilla y una guía en español, paso a paso.</p></div>
+    <div class="paso"><div class="num">2</div><h3>Pon tus datos</h3><p>Nombre, precios, horario y tu número de WhatsApp. Con el Bloc de notas vale — la guía te lleva de la mano.</p></div>
+    <div class="paso"><div class="num">3</div><h3>Publica gratis</h3><p>Arrastra la carpeta a Netlify Drop y tu web queda online. Pega el enlace en tu Instagram y tu ficha de Google.</p></div>
   </div>
 </section>
 
 <section id="faq">
   <h2>Preguntas frecuentes</h2>
-  <p class="sub">Lo que todo el mundo pregunta antes de decidirse</p>
+  <p class="sub">Lo que preguntan todos antes de comprar</p>
   <div class="faq">
     <details>
-      <summary>¿Tengo que pagar algo todos los meses?</summary>
-      <p>No. La web se paga una sola vez y es tuya. El mantenimiento mensual es opcional, solo si quieres que me encargue yo de los cambios.</p>
+      <summary>¿Necesito saber programar?</summary>
+      <p>No. Solo cambiar textos siguiendo la guía incluida (como editar un documento). Si te atascas, escríbeme y te ayudo.</p>
     </details>
     <details>
       <summary>¿Cómo me llegan las reservas?</summary>
-      <p>Directamente a tu WhatsApp de siempre, con el nombre del cliente, el servicio, el día y la hora. Tú solo respondes "confirmado" y listo.</p>
+      <p>A tu WhatsApp de siempre. El cliente rellena el formulario en tu web y se le abre WhatsApp con la reserva ya escrita hacia tu número: nombre, servicio, día y hora, todo ordenado.</p>
     </details>
     <details>
-      <summary>¿Qué necesitas de mí para empezar?</summary>
-      <p>Solo tres cosas: fotos de tu negocio, tu lista de servicios con precios, y tus horarios. Con eso, en 48 horas tienes la web.</p>
+      <summary>¿Hay cuotas mensuales o costes ocultos?</summary>
+      <p>No. Pagas la plantilla una vez y es tuya. El hosting recomendado (Netlify, GitHub Pages) es gratuito. Un dominio propio es opcional (~10-15 €/año, se compra aparte).</p>
     </details>
     <details>
-      <summary>¿Y si quiero cambiar algo después?</summary>
-      <p>Los pequeños cambios del primer mes van incluidos. Después, puedes contratarme el mantenimiento o pedirme cambios puntuales.</p>
+      <summary>Soy freelance, ¿puedo usarlas para mis clientes?</summary>
+      <p>Sí — el pack completo está pensado justo para eso: úsalo en tantos proyectos de clientes como quieras. Lo único no permitido es revender las plantillas tal cual.</p>
+    </details>
+    <details>
+      <summary>¿Y si mi negocio no es de estos tres tipos?</summary>
+      <p>Las plantillas se adaptan fácil (la de clínica sirve para cualquier negocio de citas; la de restaurante para cualquier carta de productos). Y si me escribes, te digo cuál encaja mejor con el tuyo.</p>
     </details>
   </div>
 </section>
 
-<div class="cta-final">
-  <h2>¿Hablamos de tu negocio?</h2>
-  <p>Escríbeme por WhatsApp, cuéntame qué negocio tienes y te enseño en el momento cómo quedaría tu web. Presupuesto gratis y sin compromiso.</p>
-  <a class="btn btn-wa" href="https://wa.me/TUNUMERO?text=Hola%2C%20tengo%20un%20negocio%20y%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20mi%20web">💬 Escribir por WhatsApp</a>
-</div>
-
 <footer>
-  <p>© 2026 TuWebLocal · Webs con reservas por WhatsApp para negocios locales</p>
+  <p>© 2026 TuWebLocal · Plantillas web con reservas por WhatsApp</p>
+  <p style="margin-top:.4rem">¿Dudas antes de comprar? <a id="contacto" href="#">Escríbeme</a></p>
 </footer>
 
-<a class="wa-float" href="https://wa.me/TUNUMERO?text=Hola%2C%20quiero%20informaci%C3%B3n" aria-label="WhatsApp">💬</a>
-
 <script>
-// ⚠️ IMPORTANTE: pon aquí TU número de WhatsApp en formato internacional sin "+"
-// Ejemplo España: 34612345678 · Ejemplo Colombia: 573001234567 · Ejemplo México: 5215512345678
-const MI_NUMERO = "TUNUMERO";
+// ⚠️ CONFIGURACIÓN — pega aquí tus enlaces de venta de Gumroad cuando los tengas
+// (ver kit-ventas/GUIA-GUMROAD.md para crearlos en 20 minutos)
+const ENLACES_COMPRA = {
+  barberia:    "PEGAR_ENLACE_GUMROAD",
+  restaurante: "PEGAR_ENLACE_GUMROAD",
+  clinica:     "PEGAR_ENLACE_GUMROAD",
+  bundle:      "PEGAR_ENLACE_GUMROAD"
+};
+// ⚠️ Tu email o WhatsApp de contacto para dudas preventa:
+const CONTACTO = "mailto:PEGAR_TU_EMAIL";
 
-document.querySelectorAll('a[href*="wa.me/TUNUMERO"]').forEach(a=>{
-  a.href = a.href.replace("TUNUMERO", MI_NUMERO);
+document.querySelectorAll("a.comprar").forEach(a=>{
+  const enlace = ENLACES_COMPRA[a.dataset.pack];
+  if (enlace && !enlace.startsWith("PEGAR")) { a.href = enlace; }
+  else { a.addEventListener("click", e=>{ e.preventDefault(); alert("Tienda en montaje — enlace de compra disponible muy pronto."); }); }
 });
+const c = document.getElementById("contacto");
+if (!CONTACTO.includes("PEGAR")) { c.href = CONTACTO; } else { c.style.display="none"; }
 </script>
 </body>
 </html>
