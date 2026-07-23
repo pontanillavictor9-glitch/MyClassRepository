@@ -3,10 +3,10 @@
 Produce MP4 verticales (1080x1920, 30 fps) de tipografía cinética con
 gráficos flat dibujados con código: iconos animados, contador de dinero,
 curva animada, barra de progreso y música lo-fi sintetizada con numpy.
+El contenido de los 30 videos vive en contenido_videos.py.
 
 Uso:
-    python make_video.py 1 [salida.mp4]   # Video 1: Netflix $30.000
-    python make_video.py 2 [salida.mp4]   # Video 2: La regla de las 72 horas
+    python make_video.py <numero 1-30> [salida.mp4]
 
 Requiere: pillow, numpy, imageio-ffmpeg (pip install pillow numpy imageio-ffmpeg)
 """
@@ -33,196 +33,7 @@ OSCURO = (24, 26, 33)
 # Cada segmento: duración, icono y líneas (texto, tamaño, color, retardo).
 # "COUNTER" es la línea especial que cuenta de $0 a $30.000.
 
-VIDEO_01 = [
-    (4.0, "tv", [
-        ("Tu NETFLIX", 92, BLANCO, 0.0),
-        ("no cuesta $15.", 92, BLANCO, 0.2),
-        ("", 30, BLANCO, 0),
-        ("CUESTA", 96, AMBAR, 1.3),
-        ("$30.000", 180, ROJO, 1.6),
-    ]),
-    (4.0, "monedas", [
-        ("$15 al mes", 94, BLANCO, 0.0),
-        ("= $180 al año", 94, BLANCO, 0.4),
-        ("", 30, BLANCO, 0),
-        ("«Poco», piensas.", 70, GRIS, 1.5),
-        ("ERROR.", 124, ROJO, 2.3),
-    ]),
-    (4.5, "etiqueta", [
-        ("Cada peso que gastas", 74, BLANCO, 0.0),
-        ("tiene un precio", 74, BLANCO, 0.25),
-        ("OCULTO:", 118, AMBAR, 1.0),
-        ("", 30, BLANCO, 0),
-        ("lo que pudo generar", 66, GRIS, 1.9),
-        ("INVERTIDO", 96, BLANCO, 2.4),
-    ]),
-    (5.5, "curva", [
-        ("$15 al mes al 10% anual", 68, BLANCO, 0.0),
-        ("en 30 años son...", 64, GRIS, 0.8),
-        ("COUNTER", 170, ROJO, 1.6),
-        ("(promedio histórico de la bolsa)", 40, GRIS, 4.2),
-    ]),
-    (4.0, "carro", [
-        ("Una suscripción", 82, BLANCO, 0.0),
-        ("«barata»", 82, GRIS, 0.35),
-        ("", 30, BLANCO, 0),
-        ("VALE UN CARRO", 106, AMBAR, 1.3),
-    ]),
-    (5.0, "lista", [
-        ("NO canceles Netflix.", 82, BLANCO, 0.0),
-        ("Ese no es el punto.", 58, GRIS, 0.9),
-        ("", 30, BLANCO, 0),
-        ("Elimina la que", 78, BLANCO, 1.9),
-        ("NO USASTE", 106, ROJO, 2.4),
-        ("este mes", 78, BLANCO, 2.7),
-    ]),
-    (4.5, "invertir", [
-        ("E invierte lo que", 82, BLANCO, 0.0),
-        ("te cobraba.", 82, BLANCO, 0.35),
-        ("", 30, BLANCO, 0),
-        ("Cada mes.", 90, AMBAR, 1.5),
-        ("Sin excusas.", 90, ROJO, 2.1),
-    ]),
-    (5.0, "burbuja", [
-        ("¿Cuál suscripción", 80, BLANCO, 0.0),
-        ("pagas SIN usar?", 80, BLANCO, 0.35),
-        ("", 30, BLANCO, 0),
-        ("CONFIÉSALO EN", 88, AMBAR, 1.6),
-        ("LOS COMENTARIOS", 88, AMBAR, 1.9),
-        ("▼", 84, ROJO, 2.5),
-    ]),
-]
-
-VIDEO_02 = [
-    (4.0, "carrito", [
-        ("Tu CEREBRO te", 88, BLANCO, 0.0),
-        ("SABOTEA", 128, ROJO, 0.4),
-        ("cada vez que compras", 72, BLANCO, 1.0),
-        ("", 30, BLANCO, 0),
-        ("(y tiene arreglo)", 56, GRIS, 2.2),
-    ]),
-    (4.5, "chispa", [
-        ("Ves algo que te gusta", 70, BLANCO, 0.0),
-        ("y BUM:", 82, BLANCO, 0.6),
-        ("DOPAMINA", 126, AMBAR, 1.1),
-        ("", 30, BLANCO, 0),
-        ("Tu cerebro grita:", 62, GRIS, 2.2),
-        ("«¡CÓMPRALO YA!»", 94, ROJO, 2.7),
-    ]),
-    (4.5, "etiqueta", [
-        ("Por eso existen las", 72, BLANCO, 0.0),
-        ("ofertas «SOLO HOY»", 84, AMBAR, 0.5),
-        ("", 30, BLANCO, 0),
-        ("Quieren que decidas", 68, BLANCO, 1.6),
-        ("SIN PENSAR", 110, ROJO, 2.1),
-        ("Pero hay un truco...", 54, GRIS, 3.2),
-    ]),
-    (3.5, "reloj", [
-        ("LA REGLA DE LAS", 82, BLANCO, 0.0),
-        ("72 HORAS", 165, AMBAR, 0.5),
-    ]),
-    (4.5, "calendario", [
-        ("¿Quieres comprarlo?", 80, BLANCO, 0.0),
-        ("Perfecto.", 68, GRIS, 0.8),
-        ("", 30, BLANCO, 0),
-        ("ESPERA", 118, ROJO, 1.5),
-        ("3 DÍAS", 118, AMBAR, 1.9),
-    ]),
-    (4.5, "check", [
-        ("Si a las 72 horas", 76, BLANCO, 0.0),
-        ("lo sigues queriendo:", 74, BLANCO, 0.4),
-        ("", 30, BLANCO, 0),
-        ("CÓMPRALO", 118, VERDE, 1.4),
-        ("Sin culpa.", 68, GRIS, 2.2),
-    ]),
-    (5.0, "monedas", [
-        ("Spoiler:", 80, AMBAR, 0.0),
-        ("el 80% de las veces", 74, BLANCO, 0.5),
-        ("SE TE OLVIDA", 116, ROJO, 1.4),
-        ("", 30, BLANCO, 0),
-        ("No era deseo.", 64, GRIS, 2.6),
-        ("Era dopamina.", 64, GRIS, 3.1),
-    ]),
-    (5.0, "burbuja", [
-        ("¿De qué compra", 80, BLANCO, 0.0),
-        ("te arrepientes?", 80, BLANCO, 0.35),
-        ("", 30, BLANCO, 0),
-        ("CUÉNTALO EN", 88, AMBAR, 1.5),
-        ("LOS COMENTARIOS", 88, AMBAR, 1.8),
-        ("▼", 84, ROJO, 2.4),
-    ]),
-]
-
-VIDEO_03 = [
-    (4.0, "banco", [
-        ("Ser POBRE", 100, BLANCO, 0.0),
-        ("es CARÍSIMO", 110, ROJO, 0.5),
-        ("", 30, BLANCO, 0),
-        ("Te lo demuestro en 30 seg", 56, GRIS, 1.8),
-    ]),
-    (4.5, "banco", [
-        ("¿Poco saldo en el banco?", 62, BLANCO, 0.0),
-        ("COMISIÓN.", 106, ROJO, 0.6),
-        ("¿Cajero de otro banco?", 62, BLANCO, 1.5),
-        ("COMISIÓN.", 106, ROJO, 2.1),
-        ("", 30, BLANCO, 0),
-        ("Ser pobre tiene tarifa.", 56, GRIS, 3.2),
-    ]),
-    (4.5, "etiqueta", [
-        ("¿No te alcanza?", 72, BLANCO, 0.0),
-        ("Pagas en CUOTAS...", 84, AMBAR, 0.5),
-        ("con INTERESES.", 84, ROJO, 1.2),
-        ("", 30, BLANCO, 0),
-        ("Todo te cuesta MÁS.", 68, BLANCO, 2.2),
-        ("Y hay algo peor...", 54, GRIS, 3.3),
-    ]),
-    (5.0, "bota", [
-        ("La teoría de las botas:", 64, BLANCO, 0.0),
-        ("", 30, BLANCO, 0),
-        ("Botas buenas: $50", 76, BLANCO, 0.8),
-        ("duran 10 años", 64, VERDE, 1.3),
-        ("Botas baratas: $10", 76, BLANCO, 2.2),
-        ("duran 1 año", 64, ROJO, 2.7),
-    ]),
-    (4.5, "monedas", [
-        ("El rico paga $50", 76, BLANCO, 0.0),
-        ("UNA vez.", 84, VERDE, 0.6),
-        ("", 30, BLANCO, 0),
-        ("El pobre paga $10...", 76, BLANCO, 1.5),
-        ("DIEZ VECES", 114, ROJO, 2.2),
-        ("= $100 por las mismas botas", 54, GRIS, 3.1),
-    ]),
-    (4.5, "check", [
-        ("Y no, no es tu culpa.", 70, BLANCO, 0.0),
-        ("El sistema cobra", 70, BLANCO, 0.7),
-        ("por NO tener.", 84, AMBAR, 1.2),
-        ("", 30, BLANCO, 0),
-        ("Pero conocer la trampa", 58, GRIS, 2.3),
-        ("es empezar a escapar.", 58, GRIS, 2.8),
-    ]),
-    (4.5, "invertir", [
-        ("Tu primera meta", 72, BLANCO, 0.0),
-        ("NO es ser rico.", 72, BLANCO, 0.4),
-        ("", 30, BLANCO, 0),
-        ("Es un COLCHÓN", 96, AMBAR, 1.3),
-        ("que te libre de comisiones,", 54, GRIS, 2.2),
-        ("cuotas e intereses.", 54, GRIS, 2.7),
-    ]),
-    (5.0, "burbuja", [
-        ("¿Qué cobro te parece", 76, BLANCO, 0.0),
-        ("un ROBO?", 100, ROJO, 0.5),
-        ("", 30, BLANCO, 0),
-        ("DILO EN", 88, AMBAR, 1.6),
-        ("LOS COMENTARIOS", 88, AMBAR, 1.9),
-        ("▼", 84, ROJO, 2.5),
-    ]),
-]
-
-VIDEOS = {
-    "1": ("video-01-netflix.mp4", VIDEO_01),
-    "2": ("video-02-72horas.mp4", VIDEO_02),
-    "3": ("video-03-pobre-caro.mp4", VIDEO_03),
-}
+from contenido_videos import VIDEOS  # noqa: E402
 
 _fuentes = {}
 
@@ -417,6 +228,61 @@ def dibujar_icono(d, tipo, cx, cy, s, a, prog):
         d.line([cx - 0.75 * s, cy - 0.45 * s, cx + 0.05 * s, cy - 0.45 * s],
                fill=col(GRIS, a * 0.6), width=int(0.07 * s))
 
+    elif tipo == "telefono":
+        d.rounded_rectangle([cx - 0.62 * s, cy - 1.1 * s, cx + 0.62 * s, cy + 1.1 * s],
+                            radius=0.2 * s, outline=col(BLANCO, a), width=int(0.1 * s))
+        d.line([cx - 0.22 * s, cy + 0.82 * s, cx + 0.22 * s, cy + 0.82 * s],
+               fill=col(GRIS, a), width=int(0.07 * s))
+        d.ellipse([cx + 0.3 * s, cy - 1.35 * s, cx + 0.85 * s, cy - 0.8 * s], fill=col(ROJO, a))
+
+    elif tipo == "sobre":
+        d.rounded_rectangle([cx - 1.25 * s, cy - 0.8 * s, cx + 1.25 * s, cy + 0.8 * s],
+                            radius=0.12 * s, fill=col(BLANCO, a * 0.94))
+        d.line([(cx - 1.25 * s, cy - 0.8 * s), (cx, cy + 0.15 * s), (cx + 1.25 * s, cy - 0.8 * s)],
+               fill=col(GRIS, a), width=int(0.08 * s), joint="curve")
+        d.ellipse([cx + 0.75 * s, cy - 1.1 * s, cx + 1.45 * s, cy - 0.4 * s], fill=col(AMBAR, a))
+        texto_centrado(d, "$", fuente(int(0.42 * s)), cx + 1.1 * s, cy - 0.75 * s, col(OSCURO, a))
+
+    elif tipo == "grafica":
+        d.line([cx - 1.35 * s, cy + 1.0 * s, cx + 1.35 * s, cy + 1.0 * s],
+               fill=col(GRIS, a * 0.7), width=int(0.06 * s))
+        alturas = [0.5, 0.9, 1.4, 1.9]
+        colores = [GRIS, BLANCO, AMBAR, ROJO]
+        for i, (h, c) in enumerate(zip(alturas, colores)):
+            x = cx - 1.15 * s + i * 0.62 * s
+            d.rounded_rectangle([x, cy + 1.0 * s - h * s, x + 0.42 * s, cy + 1.0 * s],
+                                radius=0.06 * s, fill=col(c, a))
+
+    elif tipo == "escudo":
+        d.polygon([(cx - 1.0 * s, cy - 0.95 * s), (cx + 1.0 * s, cy - 0.95 * s),
+                   (cx + 1.0 * s, cy + 0.25 * s), (cx, cy + 1.05 * s),
+                   (cx - 1.0 * s, cy + 0.25 * s)], fill=col(AMBAR, a))
+        d.line([(cx - 0.45 * s, cy - 0.1 * s), (cx - 0.1 * s, cy + 0.3 * s),
+                (cx + 0.5 * s, cy - 0.5 * s)], fill=col(OSCURO, a),
+               width=int(0.16 * s), joint="curve")
+
+    elif tipo == "foco":
+        d.ellipse([cx - 0.75 * s, cy - 1.05 * s, cx + 0.75 * s, cy + 0.45 * s],
+                  fill=col(AMBAR, a))
+        d.rounded_rectangle([cx - 0.3 * s, cy + 0.5 * s, cx + 0.3 * s, cy + 0.95 * s],
+                            radius=0.08 * s, fill=col(GRIS, a))
+        for ang in (-2.5, -1.9, -1.25, -0.65):
+            x1 = cx + 1.0 * s * np.cos(ang)
+            y1 = cy - 0.3 * s + 1.0 * s * np.sin(ang)
+            x2 = cx + 1.35 * s * np.cos(ang)
+            y2 = cy - 0.3 * s + 1.35 * s * np.sin(ang)
+            d.line([x1, y1, x2, y2], fill=col(AMBAR, a * 0.7), width=int(0.09 * s))
+
+    elif tipo == "libro":
+        d.polygon([(cx - 1.3 * s, cy - 0.7 * s), (cx, cy - 0.4 * s), (cx, cy + 0.9 * s),
+                   (cx - 1.3 * s, cy + 0.6 * s)], fill=col(BLANCO, a))
+        d.polygon([(cx + 1.3 * s, cy - 0.7 * s), (cx, cy - 0.4 * s), (cx, cy + 0.9 * s),
+                   (cx + 1.3 * s, cy + 0.6 * s)], fill=col(BLANCO, a * 0.8))
+        d.line([cx, cy - 0.4 * s, cx, cy + 0.9 * s], fill=col(GRIS, a), width=int(0.06 * s))
+        for dy in (-0.25, 0.05, 0.35):
+            d.line([cx - 1.05 * s, cy + dy * s - 0.08 * s, cx - 0.25 * s, cy + dy * s + 0.08 * s],
+                   fill=col(GRIS, a * 0.6), width=int(0.05 * s))
+
     elif tipo == "check":
         d.ellipse([cx - 1.05 * s, cy - 1.05 * s, cx + 1.05 * s, cy + 1.05 * s],
                   fill=col((66, 148, 96), a))
@@ -464,6 +330,12 @@ def dibujar_frame(t, bg, segmentos, duracion):
                     texto = texto_contador(max(tl - delay, 0.0))
                 f = fuente(tam)
                 ancho = d.textlength(texto, font=f)
+                # Ajuste automático: si la línea no cabe, reducir la fuente
+                tam_fit = tam
+                while ancho > 980 and tam_fit > 32:
+                    tam_fit -= 4
+                    f = fuente(tam_fit)
+                    ancho = d.textlength(texto, font=f)
                 dy = (1 - a) * 42
                 d.text(((W - ancho) / 2, y + dy), texto, font=f, fill=col(color, a))
         y += paso
@@ -475,8 +347,12 @@ def dibujar_frame(t, bg, segmentos, duracion):
     return Image.alpha_composite(frame.convert("RGBA"), capa).convert("RGB")
 
 
-def musica_lofi(dur):
-    """Beat lo-fi sintetizado: batería + bajo + acordes + ruido de vinilo."""
+def musica_lofi(dur, semitonos=0):
+    """Beat lo-fi sintetizado: batería + bajo + acordes + ruido de vinilo.
+
+    semitonos transpone la armonía para que cada video suene ligeramente distinto.
+    """
+    tono = 2 ** (semitonos / 12)
     n = int(SR * dur)
     mezcla = np.zeros(n)
 
@@ -524,10 +400,11 @@ def musica_lofi(dur):
         seg_t = np.arange(i1 - i0) / SR
         env = np.minimum(seg_t / 0.5, 1.0) * np.minimum((bar - seg_t) / 0.6, 1.0)
         env = np.clip(env, 0, 1)
-        pad = sum(np.sin(2 * np.pi * f * seg_t) + 0.6 * np.sin(2 * np.pi * f * 1.004 * seg_t)
+        pad = sum(np.sin(2 * np.pi * f * tono * seg_t)
+                  + 0.6 * np.sin(2 * np.pi * f * tono * 1.004 * seg_t)
                   for f in acordes[idx % 4])
         mezcla[i0:i1] += pad * env * 0.045
-        mezcla[i0:i1] += np.sin(2 * np.pi * bajos[idx % 4] * seg_t) * env * 0.14
+        mezcla[i0:i1] += np.sin(2 * np.pi * bajos[idx % 4] * tono * seg_t) * env * 0.14
         pos += bar
         idx += 1
 
@@ -554,7 +431,7 @@ def main():
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
 
     print(f"🎵 Sintetizando música lo-fi ({duracion:.1f} s)...")
-    audio = musica_lofi(duracion)
+    audio = musica_lofi(duracion, semitonos=(int(num) * 3) % 7 - 3)
     wav_path = tempfile.mktemp(suffix=".wav")
     with wave.open(wav_path, "wb") as w:
         w.setnchannels(1)
