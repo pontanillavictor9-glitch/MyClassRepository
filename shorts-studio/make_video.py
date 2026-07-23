@@ -153,9 +153,75 @@ VIDEO_02 = [
     ]),
 ]
 
+VIDEO_03 = [
+    (4.0, "banco", [
+        ("Ser POBRE", 100, BLANCO, 0.0),
+        ("es CARÍSIMO", 110, ROJO, 0.5),
+        ("", 30, BLANCO, 0),
+        ("Te lo demuestro en 30 seg", 56, GRIS, 1.8),
+    ]),
+    (4.5, "banco", [
+        ("¿Poco saldo en el banco?", 62, BLANCO, 0.0),
+        ("COMISIÓN.", 106, ROJO, 0.6),
+        ("¿Cajero de otro banco?", 62, BLANCO, 1.5),
+        ("COMISIÓN.", 106, ROJO, 2.1),
+        ("", 30, BLANCO, 0),
+        ("Ser pobre tiene tarifa.", 56, GRIS, 3.2),
+    ]),
+    (4.5, "etiqueta", [
+        ("¿No te alcanza?", 72, BLANCO, 0.0),
+        ("Pagas en CUOTAS...", 84, AMBAR, 0.5),
+        ("con INTERESES.", 84, ROJO, 1.2),
+        ("", 30, BLANCO, 0),
+        ("Todo te cuesta MÁS.", 68, BLANCO, 2.2),
+        ("Y hay algo peor...", 54, GRIS, 3.3),
+    ]),
+    (5.0, "bota", [
+        ("La teoría de las botas:", 64, BLANCO, 0.0),
+        ("", 30, BLANCO, 0),
+        ("Botas buenas: $50", 76, BLANCO, 0.8),
+        ("duran 10 años", 64, VERDE, 1.3),
+        ("Botas baratas: $10", 76, BLANCO, 2.2),
+        ("duran 1 año", 64, ROJO, 2.7),
+    ]),
+    (4.5, "monedas", [
+        ("El rico paga $50", 76, BLANCO, 0.0),
+        ("UNA vez.", 84, VERDE, 0.6),
+        ("", 30, BLANCO, 0),
+        ("El pobre paga $10...", 76, BLANCO, 1.5),
+        ("DIEZ VECES", 114, ROJO, 2.2),
+        ("= $100 por las mismas botas", 54, GRIS, 3.1),
+    ]),
+    (4.5, "check", [
+        ("Y no, no es tu culpa.", 70, BLANCO, 0.0),
+        ("El sistema cobra", 70, BLANCO, 0.7),
+        ("por NO tener.", 84, AMBAR, 1.2),
+        ("", 30, BLANCO, 0),
+        ("Pero conocer la trampa", 58, GRIS, 2.3),
+        ("es empezar a escapar.", 58, GRIS, 2.8),
+    ]),
+    (4.5, "invertir", [
+        ("Tu primera meta", 72, BLANCO, 0.0),
+        ("NO es ser rico.", 72, BLANCO, 0.4),
+        ("", 30, BLANCO, 0),
+        ("Es un COLCHÓN", 96, AMBAR, 1.3),
+        ("que te libre de comisiones,", 54, GRIS, 2.2),
+        ("cuotas e intereses.", 54, GRIS, 2.7),
+    ]),
+    (5.0, "burbuja", [
+        ("¿Qué cobro te parece", 76, BLANCO, 0.0),
+        ("un ROBO?", 100, ROJO, 0.5),
+        ("", 30, BLANCO, 0),
+        ("DILO EN", 88, AMBAR, 1.6),
+        ("LOS COMENTARIOS", 88, AMBAR, 1.9),
+        ("▼", 84, ROJO, 2.5),
+    ]),
+]
+
 VIDEOS = {
     "1": ("video-01-netflix.mp4", VIDEO_01),
     "2": ("video-02-72horas.mp4", VIDEO_02),
+    "3": ("video-03-pobre-caro.mp4", VIDEO_03),
 }
 
 _fuentes = {}
@@ -331,6 +397,25 @@ def dibujar_icono(d, tipo, cx, cy, s, a, prog):
             d.line([cx + wx * s, cy - 1.05 * s, cx + wx * s, cy - 0.6 * s],
                    fill=col(GRIS, a), width=int(0.09 * s))
         texto_centrado(d, "3", fuente(int(0.85 * s)), cx, cy + 0.32 * s, col(OSCURO, a))
+
+    elif tipo == "banco":
+        d.polygon([(cx - 1.3 * s, cy - 0.4 * s), (cx, cy - 1.1 * s), (cx + 1.3 * s, cy - 0.4 * s)],
+                  fill=col(BLANCO, a))
+        for wx in (-0.8, -0.15, 0.5):
+            d.rectangle([cx + wx * s, cy - 0.25 * s, cx + (wx + 0.32) * s, cy + 0.6 * s],
+                        fill=col(BLANCO, a * 0.85))
+        d.rectangle([cx - 1.3 * s, cy + 0.72 * s, cx + 1.3 * s, cy + 1.0 * s], fill=col(BLANCO, a))
+        texto_centrado(d, "$", fuente(int(0.5 * s)), cx, cy - 0.62 * s, col(ROJO, a))
+
+    elif tipo == "bota":
+        d.polygon([(cx - 0.75 * s, cy - 1.05 * s), (cx + 0.05 * s, cy - 1.05 * s),
+                   (cx + 0.05 * s, cy + 0.1 * s), (cx + 0.95 * s, cy + 0.4 * s),
+                   (cx + 0.95 * s, cy + 0.72 * s), (cx - 0.75 * s, cy + 0.72 * s)],
+                  fill=col(BLANCO, a))
+        d.rounded_rectangle([cx - 0.82 * s, cy + 0.72 * s, cx + 1.02 * s, cy + 1.0 * s],
+                            radius=0.1 * s, fill=col(AMBAR, a))
+        d.line([cx - 0.75 * s, cy - 0.45 * s, cx + 0.05 * s, cy - 0.45 * s],
+               fill=col(GRIS, a * 0.6), width=int(0.07 * s))
 
     elif tipo == "check":
         d.ellipse([cx - 1.05 * s, cy - 1.05 * s, cx + 1.05 * s, cy + 1.05 * s],
