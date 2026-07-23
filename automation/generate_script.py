@@ -69,17 +69,24 @@ def _generar_con_claude(config: dict, cola: dict) -> dict:
         model="claude-opus-4-8",
         max_tokens=2000,
         system=(
-            "Escribes guiones para YouTube Shorts en español. Reglas: el guion debe durar "
-            "40-55 segundos leído en voz alta (110-140 palabras), empezar con un gancho "
-            "sorprendente en la primera frase, usar frases cortas, terminar pidiendo seguir "
-            "el canal, y ser 100% factual. El título debe ser llamativo, incluir un emoji "
-            "y terminar con #Shorts. El campo 'id' debe ser un slug corto en minúsculas con guiones."
+            "Escribes guiones para 'Archivo Rojo', un canal de YouTube Shorts en español "
+            "sobre casos criminales reales SIN RESOLVER (desapariciones, robos, códigos, "
+            "identidades desconocidas, muertes misteriosas). Reglas estrictas:\n"
+            "- Solo casos reales y bien documentados. Nada inventado; si algo es teoría, dilo.\n"
+            "- Tono: narración de misterio, sobria e intrigante. Respetuoso con las víctimas: "
+            "sin detalles gráficos ni morbo.\n"
+            "- El guion dura 45-60 segundos leído en voz alta (120-150 palabras).\n"
+            "- Estructura fija: empieza con 'Archivo Rojo. Caso: [nombre].', desarrolla el "
+            "misterio con frases cortas y un giro, y termina con 'Caso abierto. Sígueme para "
+            "más casos del Archivo Rojo.'\n"
+            "- El título empieza con 'ARCHIVO ROJO 🔴', es intrigante y termina con #Shorts.\n"
+            "- El campo 'id' es un slug corto en minúsculas con guiones."
         ),
         messages=[{
             "role": "user",
             "content": (
-                f"Genera un guion nuevo sobre: {tema}.\n"
-                f"NO repitas estos temas ya usados: {json.dumps(usados, ensure_ascii=False)}"
+                f"Genera un guion nuevo de la categoría: {tema}.\n"
+                f"NO repitas estos casos ya publicados: {json.dumps(usados, ensure_ascii=False)}"
             ),
         }],
         output_config={"format": {"type": "json_schema", "schema": ESQUEMA_GUION}},

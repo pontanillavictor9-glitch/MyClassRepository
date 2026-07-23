@@ -1,6 +1,7 @@
-# 🎬 Configuración: Shorts automáticos en YouTube
+# 🔴 Archivo Rojo — Configuración: Shorts automáticos en YouTube
 
-Este repositorio genera y publica un YouTube Short **cada día, automáticamente**:
+Este repositorio genera y publica un YouTube Short de **Archivo Rojo**
+(casos de crímenes sin resolver) **cada día, automáticamente**:
 
 ```
 Guion (cola o Claude) → Voz (ElevenLabs) → Video con subtítulos (ffmpeg) → YouTube
@@ -45,7 +46,7 @@ En este repositorio: **Settings → Secrets and variables → Actions → New re
 | `YT_REFRESH_TOKEN` | El token del Paso 2 | ✅ Sí |
 | `ANTHROPIC_API_KEY` | Clave de la API de Claude | Opcional* |
 
-\* Sin ella, el sistema publica los 8 guiones que ya vienen en `content/queue.json` y luego se detiene. Con ella, **genera guiones nuevos infinitamente** cuando la cola se vacía.
+\* Sin ella, el sistema publica los 8 casos que ya vienen en `content/queue.json` (D.B. Cooper, el robo Gardner, la mujer de Isdal...) y luego se detiene. Con ella, **genera casos nuevos infinitamente** cuando la cola se vacía, siguiendo el estilo Archivo Rojo (casos reales, sin morbo, con giro final).
 
 ## Paso 4 — Probar
 

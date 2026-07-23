@@ -1,16 +1,17 @@
 {
   "idioma": "es",
   "canal": {
-    "tags_base": ["shorts", "curiosidades", "datos curiosos", "sabias que"],
+    "nombre": "Archivo Rojo",
+    "tags_base": ["archivo rojo", "casos sin resolver", "misterio", "true crime", "crimenes sin resolver", "shorts"],
     "categoria_youtube": "27",
     "privacidad": "public"
   },
   "elevenlabs": {
     "model_id": "eleven_multilingual_v2",
     "voice_settings": {
-      "stability": 0.5,
+      "stability": 0.55,
       "similarity_boost": 0.75,
-      "style": 0.3,
+      "style": 0.35,
       "use_speaker_boost": true
     }
   },
@@ -18,22 +19,22 @@
     "ancho": 1080,
     "alto": 1920,
     "colores_fondo": [
-      ["0x0F1B2D", "0x1E3A5F"],
-      ["0x1A0F2D", "0x4A1E5F"],
-      ["0x0F2D1B", "0x1E5F3A"],
-      ["0x2D160F", "0x5F3A1E"]
+      ["0x0D0000", "0x4A0A0A"],
+      ["0x000000", "0x3D0A14"],
+      ["0x0A0A0D", "0x5C1010"],
+      ["0x1A0505", "0x2D0000"]
     ]
   },
   "generacion_automatica": {
     "temas": [
-      "datos curiosos de la ciencia",
-      "historia sorprendente",
-      "curiosidades del cuerpo humano",
-      "misterios del espacio",
-      "datos curiosos de los animales",
-      "tecnologia e inventos sorprendentes",
-      "curiosidades de la comida",
-      "records mundiales increibles"
+      "desapariciones sin resolver famosas",
+      "robos y atracos nunca esclarecidos",
+      "asesinos nunca identificados (casos historicos)",
+      "mensajes y codigos sin descifrar vinculados a casos reales",
+      "identidades desconocidas: personas que nadie pudo identificar",
+      "muertes misteriosas que siguen abiertas",
+      "secuestros historicos sin resolver",
+      "casos policiales reabiertos por nuevas pruebas"
     ]
   }
 }
