@@ -61,8 +61,11 @@ def _guardar(cola: dict) -> None:
 def _generar_con_claude(config: dict, cola: dict) -> dict:
     import anthropic
 
+    import sync_channel
+
     tema = random.choice(config["generacion_automatica"]["temas"])
-    usados = [v["titulo"] for v in cola["videos"]]
+    # Ni los de la cola ni los ya subidos al canal de YouTube
+    usados = [v["titulo"] for v in cola["videos"]] + sync_channel.titulos_guardados()
 
     client = anthropic.Anthropic()
     response = client.messages.create(

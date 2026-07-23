@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import generate_script
 import make_video
+import sync_channel
 import tts
 import upload_youtube
 
@@ -27,6 +28,10 @@ def main() -> None:
         config = json.load(f)
 
     os.makedirs(OUT_DIR, exist_ok=True)
+
+    if os.environ.get("YT_REFRESH_TOKEN"):
+        print("0/4 Leyendo videos ya publicados en el canal...")
+        sync_channel.sincronizar()
 
     print("1/4 Seleccionando guion...")
     video = generate_script.obtener_siguiente(config)
