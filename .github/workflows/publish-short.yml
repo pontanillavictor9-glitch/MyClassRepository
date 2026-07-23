@@ -1,0 +1,68 @@
+name: Publicar Short en YouTube
+
+on:
+  schedule:
+    # Todos los días a las 15:00 UTC (ajusta la hora a tu audiencia)
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+    inputs:
+      no_upload:
+        description: "Modo prueba: generar el video sin subirlo a YouTube"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-short
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar ffmpeg y fuentes
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Instalar dependencias de Python
+        run: pip install -r automation/requirements.txt
+
+      - name: Generar y publicar el video
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ inputs.no_upload }}" = "true" ]; then
+            python automation/run_pipeline.py --no-upload
+          else
+            python automation/run_pipeline.py
+          fi
+
+      - name: Guardar el video como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-generado
+          path: output/*.mp4
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Actualizar la cola de publicación
+        if: ${{ inputs.no_upload != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/queue.json
+          git diff --cached --quiet || git commit -m "Marcar video publicado [skip ci]"
+          git push

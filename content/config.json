@@ -1,0 +1,39 @@
+{
+  "idioma": "es",
+  "canal": {
+    "tags_base": ["shorts", "curiosidades", "datos curiosos", "sabias que"],
+    "categoria_youtube": "27",
+    "privacidad": "public"
+  },
+  "elevenlabs": {
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.3,
+      "use_speaker_boost": true
+    }
+  },
+  "video": {
+    "ancho": 1080,
+    "alto": 1920,
+    "colores_fondo": [
+      ["0x0F1B2D", "0x1E3A5F"],
+      ["0x1A0F2D", "0x4A1E5F"],
+      ["0x0F2D1B", "0x1E5F3A"],
+      ["0x2D160F", "0x5F3A1E"]
+    ]
+  },
+  "generacion_automatica": {
+    "temas": [
+      "datos curiosos de la ciencia",
+      "historia sorprendente",
+      "curiosidades del cuerpo humano",
+      "misterios del espacio",
+      "datos curiosos de los animales",
+      "tecnologia e inventos sorprendentes",
+      "curiosidades de la comida",
+      "records mundiales increibles"
+    ]
+  }
+}
