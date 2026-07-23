@@ -1,0 +1,336 @@
+<title>Shorts Studio — Generador de prompts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #16181d;
+    --surface: #1e2128;
+    --surface-2: #262a33;
+    --border: #333845;
+    --text: #ecedef;
+    --text-dim: #9aa0ad;
+    --accent: #ff5c5c;
+    --accent-ink: #ffffff;
+    --amber: #ffc53d;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafaf8;
+      --surface: #ffffff;
+      --surface-2: #f1f0ec;
+      --border: #dedcd4;
+      --text: #1b1d22;
+      --text-dim: #6b6f7a;
+      --accent: #d93b3b;
+      --accent-ink: #ffffff;
+      --amber: #b57e00;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181d; --surface: #1e2128; --surface-2: #262a33; --border: #333845;
+    --text: #ecedef; --text-dim: #9aa0ad; --accent: #ff5c5c; --accent-ink: #fff; --amber: #ffc53d;
+  }
+  :root[data-theme="light"] {
+    --bg: #fafaf8; --surface: #ffffff; --surface-2: #f1f0ec; --border: #dedcd4;
+    --text: #1b1d22; --text-dim: #6b6f7a; --accent: #d93b3b; --accent-ink: #fff; --amber: #b57e00;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 64px; }
+
+  header { margin-bottom: 28px; }
+  .rec {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+    color: var(--text-dim); text-transform: uppercase;
+  }
+  .rec::before {
+    content: ""; width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent);
+    animation: blink 1.6s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { .rec::before { animation: none; } }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  h1 {
+    margin: 10px 0 6px; font-size: 30px; font-weight: 800;
+    letter-spacing: -0.02em; text-wrap: balance;
+  }
+  .sub { margin: 0; color: var(--text-dim); font-size: 15px; max-width: 46ch; }
+
+  .panel {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 16px; margin-bottom: 30px;
+  }
+  .panel h2 {
+    margin: 0 0 4px; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
+  }
+  .panel p.hint { margin: 0 0 14px; font-size: 13px; color: var(--text-dim); }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field.wide { grid-column: 1 / -1; }
+  label { font-size: 12px; font-weight: 600; color: var(--text-dim); }
+  input {
+    width: 100%; padding: 10px 12px; font-size: 16px;
+    background: var(--surface-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    font-family: inherit;
+  }
+  input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 16px; margin-bottom: 16px;
+  }
+  .card.bonus { border-color: var(--amber); }
+  .step {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 2px;
+  }
+  .card.bonus .step { color: var(--amber); }
+  .card h3 { margin: 0 0 2px; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+  .lema { margin: 0 0 12px; font-size: 13px; color: var(--text-dim); font-style: italic; }
+  pre {
+    margin: 0 0 12px; padding: 12px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    font-family: var(--mono); font-size: 13px; line-height: 1.5;
+    white-space: pre-wrap; word-break: break-word;
+    overflow-x: auto; color: var(--text);
+  }
+  .copy {
+    width: 100%; padding: 12px; font-size: 15px; font-weight: 700;
+    background: var(--accent); color: var(--accent-ink);
+    border: none; border-radius: 10px; cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.06s ease;
+  }
+  .copy:active { transform: scale(0.98); }
+  .copy:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+  .copy.ok { background: #2f9e57; }
+
+  footer { margin-top: 36px; font-size: 13px; color: var(--text-dim); }
+  footer p { margin: 0 0 6px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="rec">Shorts Studio</span>
+    <h1>13 prompts para tu canal de Shorts</h1>
+    <p class="sub">Rellena tus datos una vez. Los prompts se completan solos: copia cada uno y pégalo en Claude. Sin cámara, sin voz, sin PC.</p>
+  </header>
+
+  <section class="panel" aria-label="Tus datos">
+    <h2>Tus datos</h2>
+    <p class="hint">Todo se actualiza al instante mientras escribes.</p>
+    <div class="fields">
+      <div class="field wide">
+        <label for="f-tema">Tema del Short</label>
+        <input id="f-tema" data-k="tema" placeholder="finanzas personales">
+      </div>
+      <div class="field wide">
+        <label for="f-audiencia">Audiencia</label>
+        <input id="f-audiencia" data-k="audiencia" placeholder="jóvenes de 18 a 25 años">
+      </div>
+      <div class="field">
+        <label for="f-edad">Tu edad</label>
+        <input id="f-edad" data-k="edad" inputmode="numeric" placeholder="25">
+      </div>
+      <div class="field">
+        <label for="f-nicho">Tu nicho</label>
+        <input id="f-nicho" data-k="nicho" placeholder="igual que el tema">
+      </div>
+      <div class="field wide">
+        <label for="f-intereses">Tus intereses</label>
+        <input id="f-intereses" data-k="intereses" placeholder="tecnología, dinero, deporte">
+      </div>
+      <div class="field">
+        <label for="f-suscriptores">Suscriptores</label>
+        <input id="f-suscriptores" data-k="suscriptores" inputmode="numeric" placeholder="0">
+      </div>
+      <div class="field">
+        <label for="f-huso">Huso horario</label>
+        <input id="f-huso" data-k="huso" placeholder="GMT-5">
+      </div>
+      <div class="field wide">
+        <label for="f-canales">5 canales de referencia (separados por comas)</label>
+        <input id="f-canales" data-k="canales" placeholder="Canal1, Canal2, Canal3, Canal4, Canal5">
+      </div>
+    </div>
+  </section>
+
+  <main id="cards"></main>
+
+  <footer>
+    <p><strong>Flujo:</strong> pasos 1, 11 y 12 una sola vez · paso 8 cada mes · pasos 2→3→4→6→5→7 por cada video.</p>
+    <p>Regla de oro: consistencia &gt; perfección. 1 Short al día durante 90 días.</p>
+  </footer>
+</div>
+
+<script>
+  const DEFAULTS = {
+    tema: "[TEMA]", audiencia: "[AUDIENCIA]", edad: "[EDAD]", intereses: "[INTERESES]",
+    nicho: "[NICHO]", suscriptores: "[X]", canales: "[NOMBRES DE 5 CANALES]", huso: "[TU HUSO HORARIO]"
+  };
+
+  const PROMPTS = [
+    ["Paso 1", "Elegir el nicho correcto", "El 90 % fracasa por elegir mal el nicho.",
+`Tengo {edad} años y me intereso en {intereses}.
+Dame los 5 nichos de Shorts con el CPM más alto.
+
+Incluye:
+- La competencia
+- Los ingresos reales a 10K suscriptores
+- Cuál empezar HOY sin dinero
+
+Clasifícalos por velocidad de monetización.`],
+    ["Paso 2", "Escribir el guion", "Un Short sin guion es un Short muerto.",
+`Escribe un guion de Short de 45 segundos sobre {tema} para {audiencia}.
+
+Incluye:
+- Un gancho en los primeros 3 segundos
+- 3 puntos clave con datos
+- Un llamado a la acción final que genere comentarios
+
+Tono conversacional, frases cortas.`],
+    ["Paso 3", "Generar ganchos", "Si pierdes al espectador en 3 segundos, lo pierdes todo.",
+`Dame 20 ganchos de una sola línea para un Short sobre {tema}.
+5 de curiosidad. 5 de impacto. 5 de pregunta directa. 5 de promesa fuerte.
+Cada gancho debe tener menos de 10 palabras y sonar como lo diría un humano real.`],
+    ["Paso 4", "Elegir el título", "El título decide si hacen clic... o si te ignoran.",
+`Genera 15 títulos para un Short sobre {tema}.
+5 con un número. 5 en forma de pregunta. 5 con una tensión emocional.
+Menos de 60 caracteres.
+Añade cuál tiene el mayor potencial viral y por qué.`],
+    ["Paso 5", "Adaptar para voz de IA", "No necesitas tu voz. Ni mostrarte a la cámara.",
+`Adapta este guion para una voz en off generada por IA (ElevenLabs o similar).
+Indica las pausas con [...], los acentos con MAYÚSCULAS
+y las emociones entre paréntesis.
+
+Guion: [PEGA AQUÍ EL GUION DEL PASO 2]`],
+    ["Paso 6", "Optimizar la retención", "El algoritmo recompensa a aquellos que se quedan hasta el final.",
+`Reorganiza este guion para una retención máxima en Shorts.
+
+Añade:
+- Un bucle al principio y al final
+- Un cliffhanger a los 15 segundos
+- Un giro a los 30 segundos
+
+Dame la versión optimizada segundo a segundo.
+
+Guion: [PEGA AQUÍ EL GUION DEL PASO 2]`],
+    ["Paso 7", "Descripción con SEO", "Tu descripción es SEO gratis. La mayoría de la gente lo desperdicia.",
+`Crea la descripción perfecta para un Short sobre {tema}.
+
+Incluye:
+- Primera línea con la palabra clave exacta
+- 3 líneas de gancho
+- 15 hashtags (5 grandes, 5 medianos, 5 de nicho)`],
+    ["Paso 8", "Ideas para 30 días", "El problema no es hacer 1 Short, es hacer 100.",
+`Dame 30 ideas de Shorts sobre {nicho} para los próximos 30 días.
+
+Cada idea debe incluir:
+- Un título
+- Un gancho en una línea
+- Un ángulo único
+
+No repitas los conceptos.
+Mezcla los conceptos educativos / virales / controvertidos.`],
+    ["Paso 9", "Reciclar contenido largo", "1 vídeo largo = 10 Shorts.",
+`Analiza este guion largo y extrae 10 Shorts independientes.
+
+Para cada uno:
+- Un gancho propio
+- Un inicio y un final autónomos
+- Entre 30 y 60 segundos
+
+Guion: [PEGA AQUÍ TU CONTENIDO LARGO]`],
+    ["Paso 10", "Monetizar más allá de AdSense", "AdSense es solo el comienzo, no el final.",
+`Soy creador de Shorts en el nicho {nicho} con {suscriptores} suscriptores.
+Dame 7 formas de monetizar AHORA MISMO.
+Clasifícalas por: ingresos realistas del primer mes + facilidad de implementación.
+Sin teoría. Ejemplos concretos.`],
+    ["Paso 11", "Analizar la competencia", "No reinventes la rueda. Copia lo que ya funciona.",
+`Analiza estos 5 canales de Shorts sobre {nicho}: {canales}.
+
+Dame:
+- Los puntos en común en sus hooks
+- La estructura de sus títulos
+- Lo que hacen diferente aquellos que crecen más rápido
+- 3 oportunidades que puedo explotar yo mismo`],
+    ["Paso 12", "Calendario de publicación", "Publicar cuando quieras = algoritmo en tu contra.",
+`Crea un calendario de publicación de 30 días para un canal de Shorts sobre {nicho}.
+
+Incluye:
+- La mejor hora según el huso horario {huso}
+- La frecuencia óptima
+- Diferentes formatos cada semana`],
+    ["Bonus", "El prompt maestro", "Conecta los 12 anteriores. Pégalo en Claude y tienes un canal.",
+`Actúa como mi estratega de YouTube Shorts.
+Con mi nicho {nicho}, crea un plan de 90 días que combine:
+guiones, ganchos, títulos y monetización.
+Preséntalo en forma de calendario semanal accionable.`]
+  ];
+
+  const cards = document.getElementById("cards");
+  PROMPTS.forEach(([step, titulo, lema], i) => {
+    const card = document.createElement("article");
+    card.className = "card" + (step === "Bonus" ? " bonus" : "");
+    card.innerHTML =
+      '<p class="step"></p><h3></h3><p class="lema"></p>' +
+      '<pre id="p-' + i + '"></pre>' +
+      '<button class="copy" data-i="' + i + '">Copiar prompt</button>';
+    card.querySelector(".step").textContent = step;
+    card.querySelector("h3").textContent = titulo;
+    card.querySelector(".lema").textContent = lema;
+    cards.appendChild(card);
+  });
+
+  function values() {
+    const v = {};
+    document.querySelectorAll("input[data-k]").forEach(inp => {
+      const val = inp.value.trim();
+      v[inp.dataset.k] = val || DEFAULTS[inp.dataset.k];
+    });
+    if (!document.getElementById("f-nicho").value.trim() && document.getElementById("f-tema").value.trim()) {
+      v.nicho = v.tema;
+    }
+    return v;
+  }
+
+  function render() {
+    const v = values();
+    PROMPTS.forEach(([, , , tpl], i) => {
+      document.getElementById("p-" + i).textContent =
+        tpl.replace(/\{(\w+)\}/g, (m, k) => v[k] ?? m);
+    });
+  }
+
+  document.querySelectorAll("input[data-k]").forEach(inp => inp.addEventListener("input", render));
+
+  cards.addEventListener("click", async e => {
+    const btn = e.target.closest(".copy");
+    if (!btn) return;
+    const text = document.getElementById("p-" + btn.dataset.i).textContent;
+    let ok = false;
+    try { await navigator.clipboard.writeText(text); ok = true; }
+    catch {
+      const ta = document.createElement("textarea");
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { ok = document.execCommand("copy"); } catch {}
+      ta.remove();
+    }
+    btn.textContent = ok ? "¡Copiado! Pégalo en Claude" : "No se pudo copiar — mantén pulsado el texto";
+    btn.classList.toggle("ok", ok);
+    setTimeout(() => { btn.textContent = "Copiar prompt"; btn.classList.remove("ok"); }, 2200);
+  });
+
+  render();
+</script>
