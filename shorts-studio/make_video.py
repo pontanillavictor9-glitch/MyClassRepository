@@ -1,9 +1,9 @@
 """Genera el video del Short "Netflix te cuesta $30.000" sin dependencias externas.
 
-Produce un MP4 vertical (1080x1920, 30 fps, ~37 s) de tipografía cinética:
-texto animado grande sincronizado, contador de dinero, barra de progreso
-y música lo-fi sintetizada con numpy. Pensado para publicarse tal cual o
-con una voz en off añadida encima (ElevenLabs / CapCut).
+Produce un MP4 vertical (1080x1920, 30 fps, ~37 s) de tipografía cinética con
+gráficos flat dibujados con código: iconos animados, curva de interés compuesto
+que crece en pantalla, contador de dinero, barra de progreso y música lo-fi
+sintetizada con numpy. Publicable tal cual o con voz en off añadida encima.
 
 Uso:
     python make_video.py [salida.mp4]
@@ -27,71 +27,71 @@ BLANCO = (236, 237, 239)
 GRIS = (154, 160, 173)
 ROJO = (255, 92, 92)
 AMBAR = (255, 197, 61)
+OSCURO = (24, 26, 33)
 
-# Cada segmento: duración y líneas (texto, tamaño, color, retardo de aparición).
+# Cada segmento: duración, icono y líneas (texto, tamaño, color, retardo).
 # "COUNTER" es la línea especial que cuenta de $0 a $30.000.
 SEGMENTOS = [
-    (4.0, [
+    (4.0, "tv", [
         ("Tu NETFLIX", 92, BLANCO, 0.0),
         ("no cuesta $15.", 92, BLANCO, 0.2),
-        ("", 40, BLANCO, 0),
-        ("CUESTA", 100, AMBAR, 1.3),
-        ("$30.000", 190, ROJO, 1.6),
+        ("", 30, BLANCO, 0),
+        ("CUESTA", 96, AMBAR, 1.3),
+        ("$30.000", 180, ROJO, 1.6),
     ]),
-    (4.0, [
-        ("$15 al mes", 96, BLANCO, 0.0),
-        ("= $180 al año", 96, BLANCO, 0.4),
-        ("", 40, BLANCO, 0),
-        ("«Poco», piensas.", 72, GRIS, 1.5),
-        ("ERROR.", 130, ROJO, 2.3),
+    (4.0, "monedas", [
+        ("$15 al mes", 94, BLANCO, 0.0),
+        ("= $180 al año", 94, BLANCO, 0.4),
+        ("", 30, BLANCO, 0),
+        ("«Poco», piensas.", 70, GRIS, 1.5),
+        ("ERROR.", 124, ROJO, 2.3),
     ]),
-    (4.5, [
-        ("Cada peso que gastas", 76, BLANCO, 0.0),
-        ("tiene un precio", 76, BLANCO, 0.25),
-        ("OCULTO:", 124, AMBAR, 1.0),
-        ("", 40, BLANCO, 0),
-        ("lo que pudo generar", 68, GRIS, 1.9),
-        ("INVERTIDO", 100, BLANCO, 2.4),
+    (4.5, "etiqueta", [
+        ("Cada peso que gastas", 74, BLANCO, 0.0),
+        ("tiene un precio", 74, BLANCO, 0.25),
+        ("OCULTO:", 118, AMBAR, 1.0),
+        ("", 30, BLANCO, 0),
+        ("lo que pudo generar", 66, GRIS, 1.9),
+        ("INVERTIDO", 96, BLANCO, 2.4),
     ]),
-    (5.5, [
-        ("$15 al mes", 78, BLANCO, 0.0),
-        ("al 10% anual", 78, BLANCO, 0.4),
-        ("en 30 años son...", 68, GRIS, 1.0),
-        ("COUNTER", 180, ROJO, 1.6),
-        ("(promedio histórico de la bolsa)", 42, GRIS, 4.2),
+    (5.5, "curva", [
+        ("$15 al mes al 10% anual", 68, BLANCO, 0.0),
+        ("en 30 años son...", 64, GRIS, 0.8),
+        ("COUNTER", 170, ROJO, 1.6),
+        ("(promedio histórico de la bolsa)", 40, GRIS, 4.2),
     ]),
-    (4.0, [
-        ("Una suscripción", 84, BLANCO, 0.0),
-        ("«barata»", 84, GRIS, 0.35),
-        ("", 40, BLANCO, 0),
-        ("VALE UN CARRO", 112, AMBAR, 1.3),
+    (4.0, "carro", [
+        ("Una suscripción", 82, BLANCO, 0.0),
+        ("«barata»", 82, GRIS, 0.35),
+        ("", 30, BLANCO, 0),
+        ("VALE UN CARRO", 106, AMBAR, 1.3),
     ]),
-    (5.0, [
-        ("NO canceles Netflix.", 86, BLANCO, 0.0),
-        ("Ese no es el punto.", 60, GRIS, 0.9),
-        ("", 40, BLANCO, 0),
-        ("Elimina la que", 82, BLANCO, 1.9),
-        ("NO USASTE", 112, ROJO, 2.4),
-        ("este mes", 82, BLANCO, 2.7),
+    (5.0, "lista", [
+        ("NO canceles Netflix.", 82, BLANCO, 0.0),
+        ("Ese no es el punto.", 58, GRIS, 0.9),
+        ("", 30, BLANCO, 0),
+        ("Elimina la que", 78, BLANCO, 1.9),
+        ("NO USASTE", 106, ROJO, 2.4),
+        ("este mes", 78, BLANCO, 2.7),
     ]),
-    (4.5, [
-        ("E invierte lo que", 84, BLANCO, 0.0),
-        ("te cobraba.", 84, BLANCO, 0.35),
-        ("", 40, BLANCO, 0),
-        ("Cada mes.", 92, AMBAR, 1.5),
-        ("Sin excusas.", 92, ROJO, 2.1),
+    (4.5, "invertir", [
+        ("E invierte lo que", 82, BLANCO, 0.0),
+        ("te cobraba.", 82, BLANCO, 0.35),
+        ("", 30, BLANCO, 0),
+        ("Cada mes.", 90, AMBAR, 1.5),
+        ("Sin excusas.", 90, ROJO, 2.1),
     ]),
-    (5.0, [
-        ("¿Cuál suscripción", 82, BLANCO, 0.0),
-        ("pagas SIN usar?", 82, BLANCO, 0.35),
-        ("", 40, BLANCO, 0),
-        ("CONFIÉSALO EN", 92, AMBAR, 1.6),
-        ("LOS COMENTARIOS", 92, AMBAR, 1.9),
-        ("▼", 90, ROJO, 2.5),
+    (5.0, "burbuja", [
+        ("¿Cuál suscripción", 80, BLANCO, 0.0),
+        ("pagas SIN usar?", 80, BLANCO, 0.35),
+        ("", 30, BLANCO, 0),
+        ("CONFIÉSALO EN", 88, AMBAR, 1.6),
+        ("LOS COMENTARIOS", 88, AMBAR, 1.9),
+        ("▼", 84, ROJO, 2.5),
     ]),
 ]
 
-DURACION = sum(d for d, _ in SEGMENTOS)
+DURACION = sum(d for d, _, _ in SEGMENTOS)
 
 _fuentes = {}
 
@@ -100,6 +100,15 @@ def fuente(tam):
     if tam not in _fuentes:
         _fuentes[tam] = ImageFont.truetype(FONT_PATH, tam)
     return _fuentes[tam]
+
+
+def col(c, a):
+    return c + (int(255 * max(0.0, min(1.0, a))),)
+
+
+def ease_out(x):
+    x = min(max(x, 0.0), 1.0)
+    return 1 - (1 - x) ** 3
 
 
 def fondo_grande():
@@ -119,11 +128,6 @@ def fondo_grande():
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
 
-def ease_out(x):
-    x = min(max(x, 0.0), 1.0)
-    return 1 - (1 - x) ** 3
-
-
 def texto_contador(t_linea):
     p = ease_out(t_linea / 1.8)
     v = int(30000 * p)
@@ -131,10 +135,101 @@ def texto_contador(t_linea):
     return ("+" if p >= 1 else "") + f"${s}"
 
 
+def texto_centrado(d, texto, f, cx, cy, color):
+    ancho = d.textlength(texto, font=f)
+    caja = f.getbbox(texto)
+    d.text((cx - ancho / 2, cy - (caja[1] + caja[3]) / 2), texto, font=f, fill=color)
+
+
+def dibujar_icono(d, tipo, cx, cy, s, a, prog):
+    """Iconos flat dibujados con primitivas. s = medio-tamaño, a = alfa, prog = animación interna."""
+    k = 0.8 + 0.2 * a  # pop de entrada
+    s = s * k
+
+    if tipo == "tv":
+        d.rounded_rectangle([cx - 1.5 * s, cy - 1.05 * s, cx + 1.5 * s, cy + 0.85 * s],
+                            radius=0.22 * s, outline=col(BLANCO, a), width=int(0.11 * s))
+        d.polygon([(cx - 0.32 * s, cy - 0.52 * s), (cx - 0.32 * s, cy + 0.32 * s),
+                   (cx + 0.52 * s, cy - 0.1 * s)], fill=col(ROJO, a))
+        d.line([cx - 0.55 * s, cy + 1.25 * s, cx + 0.55 * s, cy + 1.25 * s],
+               fill=col(GRIS, a * 0.8), width=int(0.12 * s))
+
+    elif tipo == "monedas":
+        for i in range(3):
+            dy = 0.55 * s - i * 0.5 * s
+            d.ellipse([cx - 1.05 * s, cy + dy - 0.34 * s, cx + 1.05 * s, cy + dy + 0.34 * s],
+                      fill=col((196, 148, 32), a), outline=col(AMBAR, a), width=int(0.06 * s))
+        texto_centrado(d, "$", fuente(int(0.62 * s)), cx, cy - 0.48 * s, col(OSCURO, a))
+
+    elif tipo == "etiqueta":
+        p = [(-1.35, 0), (-0.45, -0.85), (1.25, -0.85), (1.25, 0.85), (-0.45, 0.85)]
+        d.polygon([(cx + x * s, cy + y * s) for x, y in p], fill=col(AMBAR, a))
+        d.ellipse([cx - 1.02 * s, cy - 0.14 * s, cx - 0.74 * s, cy + 0.14 * s],
+                  fill=col(OSCURO, a))
+        texto_centrado(d, "$?", fuente(int(0.75 * s)), cx + 0.35 * s, cy, col(OSCURO, a))
+
+    elif tipo == "curva":
+        x0, y0 = cx - 1.6 * s, cy + 1.0 * s
+        d.line([x0, y0, cx + 1.7 * s, y0], fill=col(GRIS, a * 0.7), width=6)
+        d.line([x0, y0, x0, cy - 1.15 * s], fill=col(GRIS, a * 0.7), width=6)
+        n = max(2, int(46 * prog))
+        pts = []
+        for i in range(n):
+            x = (i / 45)
+            y = (np.exp(3.1 * x) - 1) / (np.exp(3.1) - 1)
+            pts.append((x0 + 3.2 * s * x, y0 - 2.05 * s * y))
+        if len(pts) > 1:
+            d.polygon(pts + [(pts[-1][0], y0), (x0, y0)], fill=col(ROJO, a * 0.16))
+            d.line(pts, fill=col(ROJO, a), width=10, joint="curve")
+            fx, fy = pts[-1]
+            d.ellipse([fx - 15, fy - 15, fx + 15, fy + 15], fill=col(AMBAR, a))
+
+    elif tipo == "carro":
+        d.rounded_rectangle([cx - 1.55 * s, cy - 0.12 * s, cx + 1.55 * s, cy + 0.55 * s],
+                            radius=0.2 * s, fill=col(BLANCO, a))
+        d.polygon([(cx - 0.75 * s, cy - 0.1 * s), (cx - 0.35 * s, cy - 0.68 * s),
+                   (cx + 0.62 * s, cy - 0.68 * s), (cx + 0.95 * s, cy - 0.1 * s)],
+                  fill=col(BLANCO, a))
+        for wx in (-0.85, 0.85):
+            d.ellipse([cx + wx * s - 0.32 * s, cy + 0.3 * s, cx + wx * s + 0.32 * s, cy + 0.94 * s],
+                      fill=col(OSCURO, a), outline=col(GRIS, a), width=int(0.07 * s))
+
+    elif tipo == "lista":
+        d.rounded_rectangle([cx - 1.3 * s, cy - 1.15 * s, cx + 1.3 * s, cy + 1.15 * s],
+                            radius=0.18 * s, fill=col((255, 255, 255), a * 0.09),
+                            outline=col(GRIS, a * 0.8), width=5)
+        for i, fy in enumerate((-0.62, 0.0, 0.62)):
+            yy = cy + fy * s
+            ccol = ROJO if i == 1 else (120, 200, 140)
+            d.ellipse([cx - 1.0 * s, yy - 0.13 * s, cx - 0.74 * s, yy + 0.13 * s],
+                      fill=col(ccol, a))
+            d.line([cx - 0.5 * s, yy, cx + 1.0 * s, yy],
+                   fill=col(GRIS if i == 1 else BLANCO, a * 0.75), width=int(0.14 * s))
+        d.line([cx - 0.55 * s, cy - 0.16 * s, cx + 1.05 * s, cy + 0.16 * s], fill=col(ROJO, a), width=9)
+        d.line([cx - 0.55 * s, cy + 0.16 * s, cx + 1.05 * s, cy - 0.16 * s], fill=col(ROJO, a), width=9)
+
+    elif tipo == "invertir":
+        d.ellipse([cx - 1.35 * s, cy - 0.15 * s, cx - 0.25 * s, cy + 0.95 * s],
+                  fill=col((196, 148, 32), a), outline=col(AMBAR, a), width=int(0.07 * s))
+        texto_centrado(d, "$", fuente(int(0.6 * s)), cx - 0.8 * s, cy + 0.4 * s, col(OSCURO, a))
+        d.line([cx - 0.45 * s, cy + 0.45 * s, cx + 1.05 * s, cy - 0.75 * s],
+               fill=col(ROJO, a), width=int(0.16 * s))
+        d.polygon([(cx + 1.25 * s, cy - 0.92 * s), (cx + 0.62 * s, cy - 0.82 * s),
+                   (cx + 1.12 * s, cy - 0.32 * s)], fill=col(ROJO, a))
+
+    elif tipo == "burbuja":
+        d.rounded_rectangle([cx - 1.35 * s, cy - 0.95 * s, cx + 1.35 * s, cy + 0.65 * s],
+                            radius=0.35 * s, fill=col(BLANCO, a * 0.92))
+        d.polygon([(cx - 0.7 * s, cy + 0.6 * s), (cx - 0.25 * s, cy + 0.6 * s),
+                   (cx - 0.75 * s, cy + 1.1 * s)], fill=col(BLANCO, a * 0.92))
+        for i in (-1, 0, 1):
+            d.ellipse([cx + i * 0.42 * s - 0.11 * s, cy - 0.26 * s,
+                       cx + i * 0.42 * s + 0.11 * s, cy - 0.04 * s], fill=col(OSCURO, a))
+
+
 def dibujar_frame(t, bg):
-    # Segmento activo y tiempo local
     acc = 0.0
-    for i, (dur, lineas) in enumerate(SEGMENTOS):
+    for i, (dur, icono, lineas) in enumerate(SEGMENTOS):
         if t < acc + dur or i == len(SEGMENTOS) - 1:
             tl = t - acc
             break
@@ -144,15 +239,23 @@ def dibujar_frame(t, bg):
     p = min(tl / dur, 1.0)
     z = 1.0 + 0.05 * (p if i % 2 == 0 else 1 - p)
     cw, ch = int(W / z * 1.08), int(H / z * 1.08)
-    cx, cy = (bg.width - cw) // 2, (bg.height - ch) // 2
-    frame = bg.crop((cx, cy, cx + cw, cy + ch)).resize((W, H), Image.BILINEAR)
+    cx0, cy0 = (bg.width - cw) // 2, (bg.height - ch) // 2
+    frame = bg.crop((cx0, cy0, cx0 + cw, cy0 + ch)).resize((W, H), Image.BILINEAR)
 
     capa = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(capa)
 
-    # Altura total del bloque para centrarlo verticalmente
     alto = sum(int(tam * 1.18) + 8 for _, tam, _, _ in lineas)
-    y = (H - alto) // 2 - 90
+    y = (H - alto) // 2 + 30
+
+    # Icono animado sobre el bloque de texto
+    a_ico = ease_out((tl - 0.05) / 0.45)
+    if a_ico > 0:
+        if icono == "curva":
+            prog = ease_out((tl - 0.9) / 2.6)
+            dibujar_icono(d, icono, W / 2, y - 300, 150, a_ico, prog)
+        else:
+            dibujar_icono(d, icono, W / 2, y - 265, 115, a_ico, 0)
 
     for texto, tam, color, delay in lineas:
         paso = int(tam * 1.18) + 8
@@ -164,13 +267,12 @@ def dibujar_frame(t, bg):
                 f = fuente(tam)
                 ancho = d.textlength(texto, font=f)
                 dy = (1 - a) * 42
-                d.text(((W - ancho) / 2, y + dy), texto, font=f,
-                       fill=color + (int(255 * a),))
+                d.text(((W - ancho) / 2, y + dy), texto, font=f, fill=col(color, a))
         y += paso
 
     # Barra de progreso (truco de retención)
     d.rectangle([0, 1730, W, 1742], fill=(255, 255, 255, 26))
-    d.rectangle([0, 1730, int(W * t / DURACION), 1742], fill=ROJO + (230,))
+    d.rectangle([0, 1730, int(W * t / DURACION), 1742], fill=col(ROJO, 0.9))
 
     return Image.alpha_composite(frame.convert("RGBA"), capa).convert("RGB")
 
@@ -178,7 +280,6 @@ def dibujar_frame(t, bg):
 def musica_lofi(dur):
     """Beat lo-fi sintetizado: batería + bajo + acordes + ruido de vinilo."""
     n = int(SR * dur)
-    t = np.arange(n) / SR
     mezcla = np.zeros(n)
 
     beat = 60 / 84  # 84 BPM
@@ -191,7 +292,6 @@ def musica_lofi(dur):
         s = sonido[: n - i]
         mezcla[i:i + len(s)] += s
 
-    # Percusión
     tt = np.arange(int(0.3 * SR)) / SR
     kick = np.sin(2 * np.pi * (110 * np.exp(-tt * 9) + 42) * tt) * np.exp(-tt * 14) * 0.9
     ruido = np.random.default_rng(7).standard_normal(int(0.22 * SR))
@@ -211,7 +311,6 @@ def musica_lofi(dur):
             añadir(hat, pos + k * beat / 2)
         pos += bar
 
-    # Armonía: Am7 - Fmaj7 - Cmaj7 - G6 (frecuencias en Hz)
     acordes = [
         [220.00, 261.63, 329.63, 392.00],
         [174.61, 220.00, 261.63, 329.63],
@@ -230,17 +329,14 @@ def musica_lofi(dur):
         pad = sum(np.sin(2 * np.pi * f * seg_t) + 0.6 * np.sin(2 * np.pi * f * 1.004 * seg_t)
                   for f in acordes[idx % 4])
         mezcla[i0:i1] += pad * env * 0.045
-        oct_bajo = np.sin(2 * np.pi * bajos[idx % 4] * seg_t)
-        mezcla[i0:i1] += oct_bajo * env * 0.14
+        mezcla[i0:i1] += np.sin(2 * np.pi * bajos[idx % 4] * seg_t) * env * 0.14
         pos += bar
         idx += 1
 
-    # Vinilo
     vinilo = np.convolve(np.random.default_rng(11).standard_normal(n),
                          np.ones(10) / 10, "same") * 0.012
     mezcla += vinilo
 
-    # Master: saturación suave, fundidos
     mezcla = np.tanh(mezcla * 1.4) * 0.85
     fi, fo = int(0.3 * SR), int(1.4 * SR)
     mezcla[:fi] *= np.linspace(0, 1, fi)
