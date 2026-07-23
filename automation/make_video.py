@@ -54,6 +54,26 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         f.write(cabecera + "\n".join(eventos) + "\n")
 
 
+def mezclar_musica(ruta_voz: str, salida: str) -> str:
+    """Mezcla la voz con una pista aleatoria de assets/music/ a volumen bajo.
+    Si no hay música, devuelve la voz tal cual."""
+    pistas = glob.glob("assets/music/*.mp3")
+    if not pistas:
+        return ruta_voz
+    musica = random.choice(pistas)
+    subprocess.run([
+        "ffmpeg", "-y",
+        "-i", ruta_voz,
+        "-stream_loop", "-1", "-i", musica,
+        "-filter_complex",
+        "[1:a]volume=0.12[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=3",
+        "-c:a", "libmp3lame", "-q:a", "2",
+        salida,
+    ], check=True, capture_output=True)
+    print(f"   -> música de fondo: {os.path.basename(musica)}")
+    return salida
+
+
 def _duracion_audio(ruta_audio: str) -> float:
     out = subprocess.run(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",

@@ -5,64 +5,144 @@
       "titulo": "ARCHIVO ROJO 🔴 El secuestrador que se esfumó en el aire #Shorts",
       "descripcion": "En 1971, D.B. Cooper secuestró un avión, cobró un rescate y saltó en paracaídas hacia la nada. Nunca fue encontrado. Caso Archivo Rojo: abierto.",
       "guion": "Archivo Rojo. Caso: D.B. Cooper. En 1971, un hombre elegante abordó un avión en Estados Unidos, mostró a la azafata lo que dijo ser una bomba, y exigió doscientos mil dólares y cuatro paracaídas. Recibió el dinero, liberó a los pasajeros, y ordenó despegar de nuevo. Entonces hizo lo impensable: saltó del avión en plena noche, bajo una tormenta, y desapareció para siempre. El FBI lo buscó durante cuarenta y cinco años. Solo encontraron una pista: unos billetes del rescate enterrados en la orilla de un río. Nadie sabe quién era. Nadie sabe si sobrevivió. Es el único secuestro aéreo sin resolver de la historia de Estados Unidos. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["db cooper", "desapariciones", "fbi"],
-      "publicado": null
+      "tags": [
+        "db cooper",
+        "desapariciones",
+        "fbi"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a vintage 1971 Boeing 727 airplane on a rainy airport tarmac at night, stairs lowered",
+        "an airplane seat with a black briefcase and a bundle of old dollar bills, dim cabin light",
+        "night storm over a dense pacific northwest forest seen from above, heavy clouds",
+        "weathered dollar bills half buried in river sand, forest riverbank at dawn"
+      ]
     },
     {
       "id": "robo-gardner",
       "titulo": "ARCHIVO ROJO 🔴 El robo de arte más grande de la historia #Shorts",
       "descripcion": "Dos falsos policías robaron 13 obras valoradas en 500 millones de dólares del museo Gardner en 1990. Los marcos vacíos siguen colgados, esperando.",
       "guion": "Archivo Rojo. Caso: el museo Gardner. Boston, 1990, la noche de San Patricio. Dos hombres vestidos de policías llamaron a la puerta del museo Isabella Stewart Gardner. Los guardias los dejaron entrar. En ochenta y un minutos, se llevaron trece obras de arte, incluyendo un Vermeer y dos Rembrandt. Valor total: quinientos millones de dólares. Es el mayor robo de arte de la historia. Treinta años después, ni una sola obra ha aparecido. El museo mantiene los marcos vacíos colgados en las paredes, esperando su regreso, y ofrece diez millones de dólares de recompensa. ¿Quiénes eran los falsos policías? ¿Dónde están los cuadros? Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["robo gardner", "robo de arte", "boston"],
-      "publicado": null
+      "tags": [
+        "robo gardner",
+        "robo de arte",
+        "boston"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a grand museum facade at night in the rain, one door ajar with light spilling out",
+        "two silhouetted police caps and coats hanging in a dark museum corridor",
+        "an ornate empty picture frame hanging on a dark museum wall, spotlight",
+        "a dark museum gallery with empty gilded frames, moonlight through tall windows"
+      ]
     },
     {
       "id": "mujer-isdal",
       "titulo": "ARCHIVO ROJO 🔴 La mujer que no existía #Shorts",
       "descripcion": "En 1970 apareció en Noruega el cuerpo de una mujer con 8 pasaportes falsos y etiquetas de ropa arrancadas. Nadie sabe quién era.",
       "guion": "Archivo Rojo. Caso: la mujer de Isdal. Noruega, 1970. En un valle conocido como el Valle de la Muerte, apareció el cuerpo de una mujer. Todo en ella era extraño: las etiquetas de su ropa habían sido arrancadas, y en sus maletas, encontradas después en una estación de tren, había pelucas, gafas, y libretas con códigos. La policía descubrió que había viajado por Europa usando al menos ocho identidades falsas, con pasaportes distintos. Hablaba varios idiomas y cambiaba de aspecto constantemente. ¿Era una espía de la Guerra Fría? Ni siquiera las pruebas de ADN modernas han revelado su nombre. Medio siglo después, nadie sabe quién era ni qué le pasó. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["mujer de isdal", "identidad desconocida", "noruega"],
-      "publicado": null
+      "tags": [
+        "mujer de isdal",
+        "identidad desconocida",
+        "noruega"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a remote norwegian valley with fog between dark rocky slopes, november light",
+        "an old leather suitcase open on a train station bench, wigs and glasses inside, 1970",
+        "a stack of passports from different countries on a wooden table, candlelight",
+        "a notebook page filled with handwritten coded letters and numbers, magnifying glass"
+      ]
     },
     {
       "id": "hombre-somerton",
       "titulo": "ARCHIVO ROJO 🔴 El misterio del hombre de Somerton #Shorts",
       "descripcion": "Un hombre apareció muerto en una playa de Australia en 1948 con una nota que decía 'terminado' en persa. Tardaron 74 años en saber su nombre.",
       "guion": "Archivo Rojo. Caso: el hombre de Somerton. Australia, 1948. Un hombre apareció muerto en una playa, vestido de traje, sin documentos, y con las etiquetas de la ropa arrancadas. En un bolsillo oculto de su pantalón había un papel diminuto con dos palabras en persa: Tamam Shud. Significa: terminado. La página había sido arrancada de un libro de poesía, y en ese libro apareció escrito un código que nadie ha logrado descifrar hasta hoy. Durante setenta y cuatro años, nadie supo quién era. En 2022, el ADN por fin reveló un nombre: Carl Webb, un ingeniero que había desaparecido. Pero cómo murió, y qué significa el código, sigue siendo un misterio. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["hombre de somerton", "tamam shud", "australia"],
-      "publicado": null
+      "tags": [
+        "hombre de somerton",
+        "tamam shud",
+        "australia"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "an empty australian beach at dawn in 1948, a fedora hat resting on the sand",
+        "a tiny torn piece of printed paper held by tweezers over a dark desk",
+        "an old book of persian poetry open under a desk lamp, pencil markings visible",
+        "a chalkboard with strange capital letters written in faded chalk, dark room"
+      ]
     },
     {
       "id": "hinterkaifeck",
       "titulo": "ARCHIVO ROJO 🔴 Las huellas en la nieve que iban solo de ida #Shorts",
       "descripcion": "En 1922, una familia alemana reportó huellas que llegaban a su granja pero nunca salían. Días después, la granja Hinterkaifeck se convirtió en uno de los casos más inquietantes de Alemania.",
       "guion": "Archivo Rojo. Caso: Hinterkaifeck. Alemania, 1922. Días antes de la tragedia, el granjero Andreas Gruber contó algo inquietante a sus vecinos: había huellas en la nieve que iban del bosque hasta su granja... pero ninguna de regreso. Escuchaba pasos en el ático, y había aparecido un periódico que nadie compró. Poco después, los seis habitantes de la granja fueron encontrados sin vida. Y aquí viene lo más perturbador: la evidencia mostró que el responsable se quedó viviendo en la granja varios días. Alimentó a los animales, comió de su cocina, encendió la chimenea. La policía interrogó a más de cien sospechosos durante décadas. Nunca hubo un culpable. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["hinterkaifeck", "alemania", "casos historicos"],
-      "publicado": null
+      "tags": [
+        "hinterkaifeck",
+        "alemania",
+        "casos historicos"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "an isolated bavarian farmhouse in deep snow at dusk, warm light in one window",
+        "a single trail of footprints in fresh snow leading from a dark forest to a farmhouse",
+        "a dark wooden attic with light through floorboard cracks, dust in the air",
+        "an old rusty farm lantern glowing in a dark barn, hay and shadows"
+      ]
     },
     {
       "id": "paso-dyatlov",
       "titulo": "ARCHIVO ROJO 🔴 ¿Qué pasó en el paso Dyatlov? #Shorts",
       "descripcion": "En 1959, nueve excursionistas rusos huyeron de su tienda en plena noche a -30 grados. Lo que encontró el equipo de rescate desconcierta a la ciencia desde hace 60 años.",
       "guion": "Archivo Rojo. Caso: el paso Dyatlov. Rusia, 1959. Nueve excursionistas experimentados acamparon en una montaña de los Urales. Esa noche, algo los hizo huir en pánico: cortaron la tienda desde dentro y corrieron hacia la oscuridad, a treinta grados bajo cero, algunos descalzos y sin abrigo. Ninguno sobrevivió. Los rescatistas encontraron escenas imposibles de explicar: heridas internas graves sin marcas externas, y rastros de radiación en algunas prendas. La investigación soviética lo cerró con una frase escalofriante: murieron por una fuerza natural desconocida. En 2019, Rusia reabrió el caso y propuso una avalancha como explicación. Pero muchos expertos no están convencidos. ¿Qué vieron esa noche? Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["paso dyatlov", "rusia", "misterios"],
-      "publicado": null
+      "tags": [
+        "paso dyatlov",
+        "rusia",
+        "misterios"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a snowbound mountain slope in the ural mountains at night under stars, wind-blown snow",
+        "a canvas tent half buried in snow, torn open from the inside, moonlight",
+        "scattered belongings and an old camera in deep snow, harsh winter light",
+        "a dark forest edge below a mountain at night, a faint orange glow in the sky"
+      ]
     },
     {
       "id": "cifrado-zodiaco",
       "titulo": "ARCHIVO ROJO 🔴 El código que tardó 51 años en descifrarse #Shorts",
       "descripcion": "El criminal conocido como el Zodiaco envió cartas cifradas a la prensa desafiando a la policía. Uno de sus códigos tardó 51 años en caer. Su identidad sigue siendo un misterio.",
       "guion": "Archivo Rojo. Caso: los códigos del Zodiaco. California, años sesenta. Un criminal que se hacía llamar el Zodiaco enviaba cartas a los periódicos burlándose de la policía, firmadas con un círculo y una cruz. Lo más escalofriante: incluían mensajes cifrados. El primero fue descifrado por una pareja de profesores en una semana. Pero el segundo, conocido como el código de trescientos cuarenta caracteres, resistió todo: al FBI, a la NSA, a superordenadores. Hasta que en 2020, cincuenta y un años después, tres aficionados de tres países distintos lo rompieron. El mensaje se burlaba de la policía... pero no revelaba su nombre. El Zodiaco jamás fue identificado. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["zodiaco", "codigos", "california"],
-      "publicado": null
+      "tags": [
+        "zodiaco",
+        "codigos",
+        "california"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a 1969 newspaper printing press at night, papers rolling with cryptic symbols",
+        "a letter with cipher symbols laid on a detective desk, typewriter nearby",
+        "a wall covered in code symbols, circles and crosses, red string connecting notes",
+        "an old computer screen glowing green with decoded text in a dark room"
+      ]
     },
     {
       "id": "cartas-circleville",
       "titulo": "ARCHIVO ROJO 🔴 El pueblo que recibía cartas de alguien que lo sabía todo #Shorts",
       "descripcion": "Durante años, los vecinos de Circleville, Ohio, recibieron miles de cartas anónimas con secretos que nadie debería saber. El autor nunca fue identificado.",
       "guion": "Archivo Rojo. Caso: las cartas de Circleville. Ohio, 1976. Los vecinos de un pueblo tranquilo empezaron a recibir cartas anónimas. El autor conocía secretos íntimos de todos: infidelidades, deudas, mentiras. Y amenazaba con revelarlos. Miles de cartas durante años, todas con la misma letra inclinada. Un hombre fue acusado y encarcelado como el autor... pero aquí está el giro imposible: las cartas siguieron llegando mientras él estaba en prisión, vigilado, sin acceso a correo. Incluso un programa de televisión que investigó el caso recibió su propia carta: dejen Circleville en paz. El verdadero autor nunca fue identificado. Caso abierto. Sígueme para más casos del Archivo Rojo.",
-      "tags": ["circleville", "cartas anonimas", "ohio"],
-      "publicado": null
+      "tags": [
+        "circleville",
+        "cartas anonimas",
+        "ohio"
+      ],
+      "publicado": null,
+      "prompts_imagenes": [
+        "a quiet small american town street at dusk, 1970s cars, long shadows",
+        "a rural mailbox on a country road at twilight, a white envelope inside",
+        "dozens of anonymous letters spread on a wooden kitchen table, slanted handwriting",
+        "a lone streetlight over an empty crossroads at night, mist on the road"
+      ]
     }
   ]
 }

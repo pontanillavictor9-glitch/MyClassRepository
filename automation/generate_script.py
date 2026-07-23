@@ -16,8 +16,9 @@ ESQUEMA_GUION = {
         "descripcion": {"type": "string"},
         "guion": {"type": "string"},
         "tags": {"type": "array", "items": {"type": "string"}},
+        "prompts_imagenes": {"type": "array", "items": {"type": "string"}},
     },
-    "required": ["id", "titulo", "descripcion", "guion", "tags"],
+    "required": ["id", "titulo", "descripcion", "guion", "tags", "prompts_imagenes"],
     "additionalProperties": False,
 }
 
@@ -83,7 +84,12 @@ def _generar_con_claude(config: dict, cola: dict) -> dict:
             "misterio con frases cortas y un giro, y termina con 'Caso abierto. Sígueme para "
             "más casos del Archivo Rojo.'\n"
             "- El título empieza con 'ARCHIVO ROJO 🔴', es intrigante y termina con #Shorts.\n"
-            "- El campo 'id' es un slug corto en minúsculas con guiones."
+            "- El campo 'id' es un slug corto en minúsculas con guiones.\n"
+            "- 'prompts_imagenes': exactamente 4 prompts EN INGLÉS para un modelo de "
+            "imagen (FLUX), que ilustren escenas atmosféricas del caso en orden narrativo. "
+            "Solo lugares, objetos y ambientes (nunca personas reales reconocibles, nunca "
+            "violencia explícita ni cuerpos). Ejemplo: 'an abandoned farmhouse in the snow "
+            "at dusk, footprints leading to the door'."
         ),
         messages=[{
             "role": "user",

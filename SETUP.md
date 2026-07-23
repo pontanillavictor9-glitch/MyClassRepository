@@ -45,8 +45,11 @@ En este repositorio: **Settings → Secrets and variables → Actions → New re
 | `YT_CLIENT_SECRET` | Client Secret de Google Cloud | ✅ Sí |
 | `YT_REFRESH_TOKEN` | El token del Paso 2 | ✅ Sí |
 | `ANTHROPIC_API_KEY` | Clave de la API de Claude | Opcional* |
+| `REPLICATE_API_TOKEN` | Token de replicate.com (imágenes automáticas) | Opcional** |
 
 \* Sin ella, el sistema publica los 8 casos que ya vienen en `content/queue.json` (D.B. Cooper, el robo Gardner, la mujer de Isdal...) y luego se detiene. Con ella, **genera casos nuevos infinitamente** cuando la cola se vacía, siguiendo el estilo Archivo Rojo (casos reales, sin morbo, con giro final).
+
+\** Sin él, los videos usan un fondo degradado oscuro animado en lugar de imágenes generadas por IA. Ver la sección "Imágenes automáticas".
 
 ## Paso 4 — Probar
 
@@ -58,26 +61,37 @@ A partir de ahí se ejecuta solo **todos los días a las 15:00 UTC** (edita el `
 
 ---
 
-## Imágenes con ComfyUI 🎨
+## Imágenes automáticas 🎨 (sustituye a ComfyUI)
 
-El bot puede usar tus imágenes generadas con ComfyUI como fondo de cada video,
-animándolas con un **zoom lento estilo documental** (efecto Ken Burns):
+Cada caso genera **sus propias imágenes automáticamente** en la nube con FLUX
+(el mismo tipo de modelo que ComfyUI, sin tu PC), con la estética fija de
+Archivo Rojo: tonos rojo oscuro y negro, sombras, niebla, grano de película.
+Luego se animan con **zoom lento estilo documental** (efecto Ken Burns), que
+reemplaza el montaje que hacías en CapCut.
 
-1. Genera en ComfyUI 3–6 imágenes verticales para un caso (ideal 1080x1920 o mayor;
-   cualquier tamaño funciona, se recortan automáticamente).
-2. Guárdalas en `assets/cases/<id-del-caso>/` — el `id` es el mismo que aparece en
-   `content/queue.json`. Ejemplo: `assets/cases/db-cooper/01.png`, `02.png`...
-3. Haz commit y push. Nada más.
+Para activarlo:
 
-Se muestran en orden alfabético, repartidas a lo largo del video, alternando
-zoom de acercamiento y alejamiento. Prioridad de fondos:
+1. Crea una cuenta en [replicate.com](https://replicate.com) y copia tu API token
+   (**Account → API tokens**).
+2. Guárdalo como secreto `REPLICATE_API_TOKEN` en GitHub.
 
-1. `assets/cases/<id>/` (imágenes del caso — ComfyUI)
-2. `assets/backgrounds/*.mp4` (videos de fondo genéricos)
-3. Degradado oscuro animado (automático, sin archivos)
+**Coste**: ~1 céntimo por video (4 imágenes con flux-schnell). Un video diario ≈ 0,40 €/mes.
 
-💡 Consejo: si un caso de la cola aún no tiene imágenes, no pasa nada — se publica
-con el degradado. Puedes preparar las imágenes de los próximos casos con calma.
+Cada caso de la cola trae sus 4 prompts de imagen (`prompts_imagenes`), y cuando
+Claude genera casos nuevos, escribe también los prompts. Sin el token, los videos
+salen con un fondo degradado oscuro animado — el canal nunca deja de publicar.
+
+Prioridad de fondos: imágenes en `assets/cases/<id>/` (generadas automáticamente,
+o puestas ahí a mano si algún día quieres control total) → videos en
+`assets/backgrounds/` → degradado oscuro.
+
+## Música de fondo 🎵 (opcional)
+
+Si subes archivos `.mp3` a `assets/music/` (música libre de derechos, p. ej. de la
+[Audio Library de YouTube](https://www.youtube.com/audiolibrary)), el bot elegirá
+una pista al azar en cada video y la mezclará bajo la voz a volumen suave. Es lo
+único "manual", y solo se hace una vez: descarga 3-4 pistas de misterio/tensión,
+súbelas a esa carpeta, y olvídate. Sin música, el video sale solo con la voz.
 
 ## Personalización
 
