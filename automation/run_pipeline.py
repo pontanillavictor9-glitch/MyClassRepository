@@ -46,7 +46,7 @@ def main() -> None:
     ruta_ass = os.path.join(OUT_DIR, f"{video['id']}.ass")
     ruta_mp4 = os.path.join(OUT_DIR, f"{video['id']}.mp4")
     make_video.generar_subtitulos_ass(palabras, ruta_ass)
-    make_video.montar(ruta_audio, ruta_ass, ruta_mp4, config)
+    make_video.montar(ruta_audio, ruta_ass, ruta_mp4, config, video_id=video["id"])
 
     if not subir:
         print(f"Modo prueba: video guardado en {ruta_mp4}, no se sube a YouTube.")

@@ -58,6 +58,27 @@ A partir de ahí se ejecuta solo **todos los días a las 15:00 UTC** (edita el `
 
 ---
 
+## Imágenes con ComfyUI 🎨
+
+El bot puede usar tus imágenes generadas con ComfyUI como fondo de cada video,
+animándolas con un **zoom lento estilo documental** (efecto Ken Burns):
+
+1. Genera en ComfyUI 3–6 imágenes verticales para un caso (ideal 1080x1920 o mayor;
+   cualquier tamaño funciona, se recortan automáticamente).
+2. Guárdalas en `assets/cases/<id-del-caso>/` — el `id` es el mismo que aparece en
+   `content/queue.json`. Ejemplo: `assets/cases/db-cooper/01.png`, `02.png`...
+3. Haz commit y push. Nada más.
+
+Se muestran en orden alfabético, repartidas a lo largo del video, alternando
+zoom de acercamiento y alejamiento. Prioridad de fondos:
+
+1. `assets/cases/<id>/` (imágenes del caso — ComfyUI)
+2. `assets/backgrounds/*.mp4` (videos de fondo genéricos)
+3. Degradado oscuro animado (automático, sin archivos)
+
+💡 Consejo: si un caso de la cola aún no tiene imágenes, no pasa nada — se publica
+con el degradado. Puedes preparar las imágenes de los próximos casos con calma.
+
 ## Personalización
 
 - **Guiones propios**: añade entradas a `content/queue.json` (campos: `id`, `titulo`, `descripcion`, `guion`, `tags`, `publicado: null`). La cola siempre tiene prioridad sobre la generación automática.

@@ -63,15 +63,31 @@ def _duracion_audio(ruta_audio: str) -> float:
     return float(out.stdout.strip())
 
 
-def montar(ruta_audio: str, ruta_ass: str, salida_mp4: str, config: dict) -> None:
-    """Crea el MP4 final. Usa un video de assets/backgrounds/ si existe;
-    si no, genera un fondo degradado animado con ffmpeg."""
+def montar(ruta_audio: str, ruta_ass: str, salida_mp4: str, config: dict,
+           video_id: str | None = None) -> None:
+    """Crea el MP4 final. Prioridad del fondo:
+    1. Imágenes del caso en assets/cases/<id>/ (p. ej. generadas con ComfyUI),
+       animadas con zoom lento estilo documental.
+    2. Un video de assets/backgrounds/.
+    3. Fondo degradado oscuro generado con ffmpeg."""
     ancho = config["video"]["ancho"]
     alto = config["video"]["alto"]
     duracion = _duracion_audio(ruta_audio)
+    filtro_subs = f"subtitles={ruta_ass}"
+
+    imagenes = []
+    if video_id:
+        for ext in ("png", "jpg", "jpeg", "webp"):
+            imagenes += glob.glob(f"assets/cases/{video_id}/*.{ext}")
+        imagenes.sort()
+
+    if imagenes:
+        _montar_con_imagenes(imagenes, ruta_audio, filtro_subs, salida_mp4,
+                             ancho, alto, duracion)
+        print(f"Video creado con {len(imagenes)} imágenes del caso: {salida_mp4}")
+        return
 
     fondos = glob.glob("assets/backgrounds/*.mp4")
-    filtro_subs = f"subtitles={ruta_ass}"
 
     if fondos:
         fondo = random.choice(fondos)
@@ -104,3 +120,45 @@ def montar(ruta_audio: str, ruta_ass: str, salida_mp4: str, config: dict) -> Non
     ]
     subprocess.run(cmd, check=True)
     print(f"Video creado: {salida_mp4} ({os.path.getsize(salida_mp4) / 1e6:.1f} MB, {duracion:.1f}s)")
+
+
+def _montar_con_imagenes(imagenes: list[str], ruta_audio: str, filtro_subs: str,
+                         salida_mp4: str, ancho: int, alto: int, duracion: float) -> None:
+    """Convierte imágenes fijas en un fondo animado (efecto Ken Burns: zoom
+    lento alternando acercamiento y alejamiento) y añade audio y subtítulos."""
+    fps = 30
+    frames_por_imagen = int(duracion * fps / len(imagenes)) + 1
+
+    entradas = []
+    filtros = []
+    for i, img in enumerate(imagenes):
+        entradas += ["-i", img]
+        if i % 2 == 0:
+            zoom = "min(1+0.0010*on,1.18)"
+        else:
+            zoom = "max(1.18-0.0010*on,1.0)"
+        filtros.append(
+            f"[{i}:v]scale={ancho * 2}:{alto * 2}:force_original_aspect_ratio=increase,"
+            f"crop={ancho * 2}:{alto * 2},"
+            f"zoompan=z='{zoom}':d={frames_por_imagen}:"
+            f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={ancho}x{alto}:fps={fps},"
+            f"setsar=1[v{i}]"
+        )
+    cadena = "".join(f"[v{i}]" for i in range(len(imagenes)))
+    filtros.append(f"{cadena}concat=n={len(imagenes)}:v=1:a=0[bg]")
+    filtros.append(f"[bg]{filtro_subs}[vout]")
+
+    cmd = [
+        "ffmpeg", "-y",
+        *entradas,
+        "-i", ruta_audio,
+        "-filter_complex", ";".join(filtros),
+        "-map", "[vout]", "-map", f"{len(imagenes)}:a",
+        "-t", f"{duracion:.2f}",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+        "-pix_fmt", "yuv420p", "-r", str(fps),
+        "-c:a", "aac", "-b:a", "192k",
+        "-shortest",
+        salida_mp4,
+    ]
+    subprocess.run(cmd, check=True)
