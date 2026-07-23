@@ -1,12 +1,12 @@
-"""Genera el video del Short "Netflix te cuesta $30.000" sin dependencias externas.
+"""Genera los videos de Shorts del canal sin dependencias externas.
 
-Produce un MP4 vertical (1080x1920, 30 fps, ~37 s) de tipografía cinética con
-gráficos flat dibujados con código: iconos animados, curva de interés compuesto
-que crece en pantalla, contador de dinero, barra de progreso y música lo-fi
-sintetizada con numpy. Publicable tal cual o con voz en off añadida encima.
+Produce MP4 verticales (1080x1920, 30 fps) de tipografía cinética con
+gráficos flat dibujados con código: iconos animados, contador de dinero,
+curva animada, barra de progreso y música lo-fi sintetizada con numpy.
 
 Uso:
-    python make_video.py [salida.mp4]
+    python make_video.py 1 [salida.mp4]   # Video 1: Netflix $30.000
+    python make_video.py 2 [salida.mp4]   # Video 2: La regla de las 72 horas
 
 Requiere: pillow, numpy, imageio-ffmpeg (pip install pillow numpy imageio-ffmpeg)
 """
@@ -27,11 +27,13 @@ BLANCO = (236, 237, 239)
 GRIS = (154, 160, 173)
 ROJO = (255, 92, 92)
 AMBAR = (255, 197, 61)
+VERDE = (110, 200, 140)
 OSCURO = (24, 26, 33)
 
 # Cada segmento: duración, icono y líneas (texto, tamaño, color, retardo).
 # "COUNTER" es la línea especial que cuenta de $0 a $30.000.
-SEGMENTOS = [
+
+VIDEO_01 = [
     (4.0, "tv", [
         ("Tu NETFLIX", 92, BLANCO, 0.0),
         ("no cuesta $15.", 92, BLANCO, 0.2),
@@ -91,7 +93,70 @@ SEGMENTOS = [
     ]),
 ]
 
-DURACION = sum(d for d, _, _ in SEGMENTOS)
+VIDEO_02 = [
+    (4.0, "carrito", [
+        ("Tu CEREBRO te", 88, BLANCO, 0.0),
+        ("SABOTEA", 128, ROJO, 0.4),
+        ("cada vez que compras", 72, BLANCO, 1.0),
+        ("", 30, BLANCO, 0),
+        ("(y tiene arreglo)", 56, GRIS, 2.2),
+    ]),
+    (4.5, "chispa", [
+        ("Ves algo que te gusta", 70, BLANCO, 0.0),
+        ("y BUM:", 82, BLANCO, 0.6),
+        ("DOPAMINA", 126, AMBAR, 1.1),
+        ("", 30, BLANCO, 0),
+        ("Tu cerebro grita:", 62, GRIS, 2.2),
+        ("«¡CÓMPRALO YA!»", 94, ROJO, 2.7),
+    ]),
+    (4.5, "etiqueta", [
+        ("Por eso existen las", 72, BLANCO, 0.0),
+        ("ofertas «SOLO HOY»", 84, AMBAR, 0.5),
+        ("", 30, BLANCO, 0),
+        ("Quieren que decidas", 68, BLANCO, 1.6),
+        ("SIN PENSAR", 110, ROJO, 2.1),
+        ("Pero hay un truco...", 54, GRIS, 3.2),
+    ]),
+    (3.5, "reloj", [
+        ("LA REGLA DE LAS", 82, BLANCO, 0.0),
+        ("72 HORAS", 165, AMBAR, 0.5),
+    ]),
+    (4.5, "calendario", [
+        ("¿Quieres comprarlo?", 80, BLANCO, 0.0),
+        ("Perfecto.", 68, GRIS, 0.8),
+        ("", 30, BLANCO, 0),
+        ("ESPERA", 118, ROJO, 1.5),
+        ("3 DÍAS", 118, AMBAR, 1.9),
+    ]),
+    (4.5, "check", [
+        ("Si a las 72 horas", 76, BLANCO, 0.0),
+        ("lo sigues queriendo:", 74, BLANCO, 0.4),
+        ("", 30, BLANCO, 0),
+        ("CÓMPRALO", 118, VERDE, 1.4),
+        ("Sin culpa.", 68, GRIS, 2.2),
+    ]),
+    (5.0, "monedas", [
+        ("Spoiler:", 80, AMBAR, 0.0),
+        ("el 80% de las veces", 74, BLANCO, 0.5),
+        ("SE TE OLVIDA", 116, ROJO, 1.4),
+        ("", 30, BLANCO, 0),
+        ("No era deseo.", 64, GRIS, 2.6),
+        ("Era dopamina.", 64, GRIS, 3.1),
+    ]),
+    (5.0, "burbuja", [
+        ("¿De qué compra", 80, BLANCO, 0.0),
+        ("te arrepientes?", 80, BLANCO, 0.35),
+        ("", 30, BLANCO, 0),
+        ("CUÉNTALO EN", 88, AMBAR, 1.5),
+        ("LOS COMENTARIOS", 88, AMBAR, 1.8),
+        ("▼", 84, ROJO, 2.4),
+    ]),
+]
+
+VIDEOS = {
+    "1": ("video-01-netflix.mp4", VIDEO_01),
+    "2": ("video-02-72horas.mp4", VIDEO_02),
+}
 
 _fuentes = {}
 
@@ -200,7 +265,7 @@ def dibujar_icono(d, tipo, cx, cy, s, a, prog):
                             outline=col(GRIS, a * 0.8), width=5)
         for i, fy in enumerate((-0.62, 0.0, 0.62)):
             yy = cy + fy * s
-            ccol = ROJO if i == 1 else (120, 200, 140)
+            ccol = ROJO if i == 1 else VERDE
             d.ellipse([cx - 1.0 * s, yy - 0.13 * s, cx - 0.74 * s, yy + 0.13 * s],
                       fill=col(ccol, a))
             d.line([cx - 0.5 * s, yy, cx + 1.0 * s, yy],
@@ -226,11 +291,59 @@ def dibujar_icono(d, tipo, cx, cy, s, a, prog):
             d.ellipse([cx + i * 0.42 * s - 0.11 * s, cy - 0.26 * s,
                        cx + i * 0.42 * s + 0.11 * s, cy - 0.04 * s], fill=col(OSCURO, a))
 
+    elif tipo == "carrito":
+        d.line([cx - 1.45 * s, cy - 0.85 * s, cx - 0.95 * s, cy - 0.85 * s],
+               fill=col(BLANCO, a), width=int(0.12 * s))
+        d.polygon([(cx - 0.95 * s, cy - 0.85 * s), (cx + 1.15 * s, cy - 0.85 * s),
+                   (cx + 0.85 * s, cy + 0.35 * s), (cx - 0.65 * s, cy + 0.35 * s)],
+                  fill=col(BLANCO, a))
+        for wx in (-0.4, 0.55):
+            d.ellipse([cx + wx * s - 0.17 * s, cy + 0.6 * s, cx + wx * s + 0.17 * s, cy + 0.94 * s],
+                      fill=col(BLANCO, a))
+        d.ellipse([cx - 0.15 * s, cy - 1.45 * s, cx + 0.45 * s, cy - 0.95 * s],
+                  fill=col(ROJO, a))
 
-def dibujar_frame(t, bg):
+    elif tipo == "chispa":
+        pts = []
+        for i in range(16):
+            ang = i * np.pi / 8 - np.pi / 2
+            r = (1.15 if i % 2 == 0 else 0.45) * s
+            pts.append((cx + r * np.cos(ang), cy + r * np.sin(ang)))
+        d.polygon(pts, fill=col(AMBAR, a))
+        d.ellipse([cx - 0.22 * s, cy - 0.22 * s, cx + 0.22 * s, cy + 0.22 * s],
+                  fill=col(BLANCO, a))
+
+    elif tipo == "reloj":
+        d.ellipse([cx - 1.1 * s, cy - 1.1 * s, cx + 1.1 * s, cy + 1.1 * s],
+                  outline=col(BLANCO, a), width=int(0.12 * s))
+        for ang in (0, np.pi / 2, np.pi, 3 * np.pi / 2):
+            x1, y1 = cx + 0.88 * s * np.cos(ang), cy + 0.88 * s * np.sin(ang)
+            x2, y2 = cx + 1.0 * s * np.cos(ang), cy + 1.0 * s * np.sin(ang)
+            d.line([x1, y1, x2, y2], fill=col(GRIS, a), width=int(0.07 * s))
+        texto_centrado(d, "72h", fuente(int(0.62 * s)), cx, cy, col(AMBAR, a))
+
+    elif tipo == "calendario":
+        d.rounded_rectangle([cx - 1.1 * s, cy - 0.8 * s, cx + 1.1 * s, cy + 1.0 * s],
+                            radius=0.15 * s, fill=col(BLANCO, a * 0.94))
+        d.rounded_rectangle([cx - 1.1 * s, cy - 0.8 * s, cx + 1.1 * s, cy - 0.32 * s],
+                            radius=0.15 * s, fill=col(ROJO, a))
+        for wx in (-0.55, 0.55):
+            d.line([cx + wx * s, cy - 1.05 * s, cx + wx * s, cy - 0.6 * s],
+                   fill=col(GRIS, a), width=int(0.09 * s))
+        texto_centrado(d, "3", fuente(int(0.85 * s)), cx, cy + 0.32 * s, col(OSCURO, a))
+
+    elif tipo == "check":
+        d.ellipse([cx - 1.05 * s, cy - 1.05 * s, cx + 1.05 * s, cy + 1.05 * s],
+                  fill=col((66, 148, 96), a))
+        d.line([(cx - 0.5 * s, cy + 0.02 * s), (cx - 0.12 * s, cy + 0.42 * s),
+                (cx + 0.55 * s, cy - 0.42 * s)], fill=col(BLANCO, a),
+               width=int(0.18 * s), joint="curve")
+
+
+def dibujar_frame(t, bg, segmentos, duracion):
     acc = 0.0
-    for i, (dur, icono, lineas) in enumerate(SEGMENTOS):
-        if t < acc + dur or i == len(SEGMENTOS) - 1:
+    for i, (dur, icono, lineas) in enumerate(segmentos):
+        if t < acc + dur or i == len(segmentos) - 1:
             tl = t - acc
             break
         acc += dur
@@ -272,7 +385,7 @@ def dibujar_frame(t, bg):
 
     # Barra de progreso (truco de retención)
     d.rectangle([0, 1730, W, 1742], fill=(255, 255, 255, 26))
-    d.rectangle([0, 1730, int(W * t / DURACION), 1742], fill=col(ROJO, 0.9))
+    d.rectangle([0, 1730, int(W * t / duracion), 1742], fill=col(ROJO, 0.9))
 
     return Image.alpha_composite(frame.convert("RGBA"), capa).convert("RGB")
 
@@ -345,12 +458,18 @@ def musica_lofi(dur):
 
 
 def main():
-    salida = sys.argv[1] if len(sys.argv) > 1 else "video-01-netflix.mp4"
+    num = sys.argv[1] if len(sys.argv) > 1 else "1"
+    if num not in VIDEOS:
+        sys.exit(f"Video desconocido: {num}. Disponibles: {', '.join(VIDEOS)}")
+    por_defecto, segmentos = VIDEOS[num]
+    salida = sys.argv[2] if len(sys.argv) > 2 else por_defecto
+    duracion = sum(d for d, _, _ in segmentos)
+
     import imageio_ffmpeg
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
 
-    print(f"🎵 Sintetizando música lo-fi ({DURACION:.1f} s)...")
-    audio = musica_lofi(DURACION)
+    print(f"🎵 Sintetizando música lo-fi ({duracion:.1f} s)...")
+    audio = musica_lofi(duracion)
     wav_path = tempfile.mktemp(suffix=".wav")
     with wave.open(wav_path, "wb") as w:
         w.setnchannels(1)
@@ -360,7 +479,7 @@ def main():
 
     print("🎨 Renderizando frames y codificando...")
     bg = fondo_grande()
-    total = int(DURACION * FPS)
+    total = int(duracion * FPS)
 
     proc = subprocess.Popen(
         [ffmpeg, "-y",
@@ -371,14 +490,14 @@ def main():
         stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     for k in range(total):
-        frame = dibujar_frame(k / FPS, bg)
+        frame = dibujar_frame(k / FPS, bg, segmentos, duracion)
         proc.stdin.write(np.asarray(frame, dtype=np.uint8).tobytes())
         if k % (FPS * 5) == 0:
             print(f"  {k}/{total} frames ({k / FPS:.0f} s)")
 
     proc.stdin.close()
     proc.wait()
-    print(f"✅ Video listo: {salida} ({DURACION:.1f} s, {W}x{H}, {FPS} fps)")
+    print(f"✅ Video listo: {salida} ({duracion:.1f} s, {W}x{H}, {FPS} fps)")
 
 
 if __name__ == "__main__":
