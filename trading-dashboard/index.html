@@ -224,7 +224,9 @@
     <span id="tick-btc" class="num"></span>
     <span id="tick-eth" class="num"></span>
     <span id="tick-sol" class="num"></span>
+    <span class="faint" id="src-status"></span>
     <span class="controls" style="margin-left:auto">
+      <button id="btn-source" type="button">Datos: simulados</button>
       <button id="btn-pause" type="button">Pausar</button>
       <button id="btn-speed" type="button">Velocidad 1×</button>
       <button id="btn-reset" type="button">Reiniciar</button>
@@ -263,7 +265,7 @@
     </section>
 
     <section class="panel">
-      <div class="panel-hd">BTC / USD · velas 5M (sim)
+      <div class="panel-hd"><span id="chart-src">BTC / USD · velas 5M (sim)</span>
         <span class="right chart-price num" id="px-btc">—</span>
       </div>
       <canvas id="cv-candles" height="170" aria-label="Gráfico de velas de BTC/USD simulado" role="img"></canvas>
@@ -363,9 +365,10 @@
   </div>
 
   <footer>
-    <b>Esto es un simulador educativo.</b> Los precios se generan con un paseo aleatorio
-    (movimiento browniano geométrico), las órdenes son ficticias y ningún resultado aquí
-    predice ganancias reales. Los dashboards "milagrosos" que circulan en redes con
+    <b>Esto es un simulador educativo.</b> En modo simulado los precios se generan con un
+    paseo aleatorio (movimiento browniano geométrico); en modo "datos reales" los precios
+    vienen de APIs públicas (Binance/Coinbase), pero las órdenes siguen siendo ficticias:
+    nunca se envía dinero real y ningún resultado aquí predice ganancias reales. Los dashboards "milagrosos" que circulan en redes con
     +$250.000 de PnL son, casi siempre, montajes. Un bot real con dinero real puede
     perderlo todo. — Estrategia: cruce EMA(8/21) + gestión de riesgo del 1% por operación.
   </footer>
@@ -416,6 +419,13 @@ let speed = 1;
 let warmingUp = false;
 let sessionStart = Date.now();
 
+/* ---------- fuente de datos: 'sim' (GBM) o 'live' (precios reales, órdenes de papel) ---------- */
+let dataMode = 'sim';
+let ws = null, wsGotData = false, wsGuard = null;
+let pollTimer = null, pollFails = 0;
+const SYM = { BTCUSDT: 'BTC', ETHUSDT: 'ETH', SOLUSDT: 'SOL' };
+const WS_URL = 'wss://stream.binance.com:9443/stream?streams=btcusdt@miniTicker/ethusdt@miniTicker/solusdt@miniTicker';
+
 /* ---------- históricos previos para que la vista no arranque vacía ---------- */
 (function seedHistory() {
   const a = assets.BTC;
@@ -451,7 +461,12 @@ function setupCanvas(cv) {
 function drawCandles() {
   const [ctx, W, H] = setupCanvas($('cv-candles'));
   ctx.clearRect(0, 0, W, H);
-  const view = candles.slice(-MAX_CANDLES);
+  const view = (curCandle ? candles.concat([curCandle]) : candles).slice(-MAX_CANDLES);
+  if (!view.length) {
+    ctx.fillStyle = css('--ink-3'); ctx.font = '11px ui-monospace, monospace';
+    ctx.fillText('esperando datos…', 8, H / 2);
+    return;
+  }
   let lo = Infinity, hi = -Infinity;
   for (const c of view) { lo = Math.min(lo, c.l); hi = Math.max(hi, c.h); }
   const pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad;
@@ -615,9 +630,12 @@ function maybeOpenTrade() {
   if (openTrades.length >= 3) return;
   for (const k in assets) {
     const a = assets[k];
+    if (dataMode === 'live' && !a.primed) continue;
     const spread = (a.ema8 - a.ema21) / a.ema21;
-    const conf = Math.min(0.99, Math.abs(spread) * 900 + rnd() * 0.25);
-    if (Math.abs(spread) > 0.0006 && conf > 0.55 && rnd() < 0.35) {
+    // umbral relativo a la volatilidad en vivo; fijo en simulación
+    const thr = dataMode === 'live' ? Math.max(0.0002, a.vol * 1.5) : 0.0006;
+    const conf = Math.min(0.99, 0.48 + 0.12 * Math.abs(spread) / thr + rnd() * 0.2);
+    if (Math.abs(spread) > thr && conf > 0.55 && rnd() < 0.35) {
       const side = spread > 0 ? 'LONG' : 'SHORT';
       const riskCash = equity * 0.01;
       const size = riskCash / (a.px * a.vol * 6);   // tamaño s.t. un mov. de 6σ ≈ riesgo
@@ -683,11 +701,15 @@ function renderStats() {
 function renderTicker() {
   for (const k in assets) {
     const a = assets[k];
-    const chg = (a.px - a.open5m) / a.open5m * 100;
     const el = $('tick-' + k.toLowerCase());
-    el.innerHTML = `${k} <span class="${chg >= 0 ? 'up' : 'down'}">${chg >= 0 ? '▲' : '▼'} 5M ${fmtPct(chg, 2)}</span>`;
+    if (dataMode === 'live' && !a.primed) { el.innerHTML = `${k} <span class="faint">…</span>`; continue; }
+    let lbl = '5M', chg;
+    if (dataMode === 'live' && a.chg24 != null) { lbl = '24H'; chg = a.chg24; }
+    else if (dataMode === 'live') { lbl = 'SES'; chg = (a.px - a.liveStart) / a.liveStart * 100; }
+    else chg = (a.px - a.open5m) / a.open5m * 100;
+    el.innerHTML = `${k} <span class="${chg >= 0 ? 'up' : 'down'}">${chg >= 0 ? '▲' : '▼'} ${lbl} ${fmtPct(chg, 2)}</span>`;
   }
-  $('px-btc').textContent = fmtUsd(assets.BTC.px);
+  $('px-btc').textContent = assets.BTC.px >= 1000 ? fmtUsd(assets.BTC.px) : fmtUsd(assets.BTC.px, 2);
   $('mispricing').textContent = fmtSig(Math.abs(gauss()) * 120 + 20, 0);
   $('pace').textContent = fmtUsd(Math.abs(equity - START_CASH) / Math.max(1, (Date.now() - sessionStart) / 3600000), 0) + '/h';
 }
@@ -705,10 +727,19 @@ function stepEngine() {
   tickCount++;
   for (const k in assets) {
     const a = assets[k];
-    a.px *= Math.exp(a.vol * gauss());
+    if (dataMode === 'live') {
+      if (!a.primed) continue;              // aún sin primer precio real
+      const r = a.prev ? Math.log(a.px / a.prev) : 0;
+      a.vol = Math.max(0.0002, Math.sqrt(0.94 * a.vol * a.vol + 0.06 * r * r));
+      a.prev = a.px;
+    } else {
+      a.px *= Math.exp(a.vol * gauss());
+      a.prev = a.px;
+    }
     a.ema8 = a.ema8 + (a.px - a.ema8) * 2 / 9;
     a.ema21 = a.ema21 + (a.px - a.ema21) * 2 / 22;
   }
+  if (dataMode === 'live' && !assets.BTC.primed) return;
   // vela BTC en curso
   const b = assets.BTC;
   if (!curCandle) curCandle = { o: b.px, h: b.px, l: b.px, c: b.px };
@@ -730,12 +761,110 @@ function tick() {
   if (tickCount % 4 === 0) updateHeat();
 }
 
+/* ---------- datos en vivo (precios reales · órdenes siempre de papel) ---------- */
+function setSourceUi(state) {
+  const dot = document.querySelector('.live-dot');
+  const st = $('src-status');
+  const hd = $('chart-src');
+  if (dataMode === 'sim') {
+    dot.textContent = 'LIVE·SIM';
+    hd.textContent = 'BTC / USD · velas 5M (sim)';
+    $('btn-source').textContent = 'Datos: simulados';
+    st.textContent = state === 'error' ? 'sin conexión a datos reales · de vuelta al simulador' : '';
+    return;
+  }
+  $('btn-source').textContent = 'Datos: reales';
+  hd.textContent = 'BTC / USD · precio real · velas ~6s · papel';
+  if (state === 'connecting') { dot.textContent = 'CONECTANDO'; st.textContent = 'buscando precios reales…'; }
+  if (state === 'ws')   { dot.textContent = 'LIVE·REAL'; st.textContent = 'Binance WebSocket'; }
+  if (state === 'rest') { dot.textContent = 'LIVE·REAL'; st.textContent = 'REST cada 2.5s'; }
+}
+function applyLivePrice(k, p) {
+  const a = assets[k];
+  if (!(p > 0)) return;
+  if (!a.primed) {
+    a.primed = true;
+    a.px = a.prev = a.open5m = a.liveStart = p;
+    a.ema8 = a.ema21 = p;
+    a.vol = 0.0004;
+    if (k === 'BTC') { candles = []; curCandle = null; }
+  } else {
+    a.px = p;
+  }
+}
+function stopLiveTransport() {
+  if (ws) { try { ws.onclose = ws.onerror = null; ws.close(); } catch (e) {} ws = null; }
+  clearTimeout(wsGuard);
+  clearInterval(pollTimer); pollTimer = null;
+}
+function startPolling() {
+  if (dataMode !== 'live' || pollTimer) return;
+  pollFails = 0;
+  const tryOnce = async () => {
+    try {
+      const u = 'https://api.binance.com/api/v3/ticker/price?symbols=' +
+        encodeURIComponent('["BTCUSDT","ETHUSDT","SOLUSDT"]');
+      const r = await fetch(u); if (!r.ok) throw new Error(r.status);
+      for (const row of await r.json()) applyLivePrice(SYM[row.symbol], parseFloat(row.price));
+      pollFails = 0; setSourceUi('rest'); return;
+    } catch (e) { /* siguiente fuente */ }
+    try {
+      const pairs = { BTC: 'BTC-USD', ETH: 'ETH-USD', SOL: 'SOL-USD' };
+      for (const k in pairs) {
+        const r = await fetch('https://api.coinbase.com/v2/prices/' + pairs[k] + '/spot');
+        if (!r.ok) throw new Error(r.status);
+        applyLivePrice(k, parseFloat((await r.json()).data.amount));
+      }
+      pollFails = 0; setSourceUi('rest'); return;
+    } catch (e) {
+      if (++pollFails >= 4) stopLive('error');
+    }
+  };
+  tryOnce();
+  pollTimer = setInterval(tryOnce, 2500);
+}
+function startLive() {
+  dataMode = 'live';
+  openTrades = [];                 // las posiciones sim abiertas no cruzan de mundo
+  for (const k in assets) { assets[k].primed = false; assets[k].chg24 = null; }
+  setSourceUi('connecting');
+  try { ws = new WebSocket(WS_URL); } catch (e) { ws = null; return startPolling(); }
+  wsGotData = false;
+  wsGuard = setTimeout(() => { if (!wsGotData) { stopLiveTransport(); startPolling(); } }, 6000);
+  ws.onmessage = ev => {
+    wsGotData = true;
+    const m = JSON.parse(ev.data).data;
+    const k = SYM[m.s]; if (!k) return;
+    applyLivePrice(k, parseFloat(m.c));
+    assets[k].chg24 = (parseFloat(m.c) - parseFloat(m.o)) / parseFloat(m.o) * 100;
+    setSourceUi('ws');
+  };
+  ws.onerror = ws.onclose = () => {
+    if (dataMode === 'live' && !pollTimer) { stopLiveTransport(); startPolling(); }
+  };
+}
+function stopLive(reason) {
+  stopLiveTransport();
+  dataMode = 'sim';
+  openTrades = [];
+  // el simulador continúa desde los últimos precios conocidos
+  for (const k in assets) {
+    const a = assets[k];
+    a.vol = k === 'BTC' ? 0.0009 : k === 'ETH' ? 0.0012 : 0.0016;
+    a.open5m = a.px; a.chg24 = null;
+  }
+  setSourceUi(reason === 'error' ? 'error' : 'off');
+}
+
 /* ---------- controles ---------- */
 let timer = null;
 function schedule() {
   clearInterval(timer);
   if (!paused) timer = setInterval(tick, 750 / speed);
 }
+$('btn-source').addEventListener('click', () => {
+  if (dataMode === 'live') stopLive('manual'); else startLive();
+});
 $('btn-pause').addEventListener('click', () => {
   paused = !paused;
   $('btn-pause').textContent = paused ? 'Reanudar' : 'Pausar';
