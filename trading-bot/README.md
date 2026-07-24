@@ -77,3 +77,18 @@ tail -f bot.log
 
 Corre mientras el ordenador esté encendido. Para 24/7 real: una Raspberry Pi
 o un VPS. El estado persistente hace que un reinicio no pierda nada.
+
+## ¿Y predecir si BTC sube o baja en 5 minutos? (`predictor.py`)
+
+```bash
+python3 predictor.py            # descarga velas reales 5m de BTC y evalúa
+python3 predictor.py --sim      # velas sintéticas (sin internet)
+```
+
+Entrena una regresión logística con features de momentum/RSI/volatilidad sobre
+el pasado y la evalúa en un futuro no visto, comparando contra el azar y contra
+los costes. Lo que muestra: a 5 minutos el movimiento medio de BTC (~0,1%) es
+menor que el coste de operar (~0,24% ida y vuelta), así que la precisión
+necesaria para no perder es superior al 100% — matemáticamente imposible. Y una
+precisión de ~52% en test puede salir hasta con datos de paseo aleatorio puro,
+donde no hay nada que predecir: la banda de azar con ~1.200 velas es ±2,8%.
