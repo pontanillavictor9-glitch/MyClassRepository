@@ -1,0 +1,17 @@
+{
+  "name": "trading-live-studio",
+  "version": "1.0.0",
+  "description": "Plataforma para streaming de trading en directo: multichat (Twitch/YouTube/TikTok), panel de operaciones en vivo, overlays para OBS y avisos legales.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.18.0",
+    "youtube-chat": "^2.2.0",
+    "tiktok-live-connector": "^1.2.3"
+  }
+}

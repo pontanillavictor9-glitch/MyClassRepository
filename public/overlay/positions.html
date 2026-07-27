@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Overlay · Posiciones en vivo</title>
+<style>
+  /* Fondo transparente para usarlo como fuente de navegador en OBS */
+  body { margin: 0; background: transparent; font-family: 'Segoe UI', system-ui, sans-serif; }
+  .card {
+    display: inline-block;
+    min-width: 460px;
+    background: rgba(10, 14, 24, 0.88);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 14px 18px;
+    color: #e8ecf3;
+    backdrop-filter: blur(6px);
+  }
+  .title { font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+           color: #9fb0c9; margin-bottom: 8px; display: flex; justify-content: space-between; gap: 20px; }
+  .title .live { color: #ff5c5c; animation: blink 1.6s infinite; }
+  @keyframes blink { 50% { opacity: 0.3; } }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: #7d8ba3; padding: 4px 8px; }
+  td { padding: 6px 8px; border-top: 1px solid rgba(255,255,255,0.07); }
+  .sym { font-weight: 700; }
+  .side { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .side.long  { background: rgba(46, 204, 113, .18); color: #2ecc71; }
+  .side.short { background: rgba(231, 76, 60, .18); color: #e74c3c; }
+  .up   { color: #2ecc71; font-weight: 700; }
+  .down { color: #e74c3c; font-weight: 700; }
+  .empty { color: #7d8ba3; font-size: 15px; padding: 10px 4px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="title"><span>📊 Operaciones abiertas</span><span class="live">● EN VIVO</span></div>
+    <div id="content"><div class="empty">Sin operaciones abiertas ahora mismo</div></div>
+  </div>
+
+<script src="/js/live.js"></script>
+<script>
+  let moneda = 'USD';
+  Live.connect({
+    onConfig: c => { moneda = c.moneda; },
+    onState: s => {
+      if (s.moneda) moneda = s.moneda;
+      const el = document.getElementById('content');
+      if (!s.positions.length) {
+        el.innerHTML = '<div class="empty">Sin operaciones abiertas ahora mismo</div>';
+        return;
+      }
+      const rows = s.positions.map(p => `
+        <tr>
+          <td class="sym">${p.symbol}</td>
+          <td><span class="side ${p.side}">${p.side === 'long' ? 'LONG ▲' : 'SHORT ▼'}</span></td>
+          <td>${Live.fmtPrice(p.entryPrice)}</td>
+          <td>${Live.fmtPrice(p.lastPrice)}</td>
+          <td class="${Live.pnlClass(p.pnl)}">${Live.fmtMoney(p.pnl, moneda)}</td>
+          <td class="${Live.pnlClass(p.pnlPct)}">${p.pnlPct == null ? '—' : (p.pnlPct >= 0 ? '+' : '') + p.pnlPct.toFixed(2) + '%'}</td>
+        </tr>`).join('');
+      el.innerHTML = `<table>
+        <tr><th>Activo</th><th>Dir.</th><th>Entrada</th><th>Actual</th><th>P&L</th><th>%</th></tr>
+        ${rows}</table>`;
+    }
+  });
+</script>
+</body>
+</html>
