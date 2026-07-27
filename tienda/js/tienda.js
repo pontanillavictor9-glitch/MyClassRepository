@@ -1,7 +1,7 @@
-// Lógica común de la tienda: pintar catálogo, ficha de producto y carrito.
+// Lógica de la tienda monoproducto: landing (index.html) y carrito (carrito.html).
 // El carrito se guarda en localStorage, así sobrevive a recargas de página.
 
-import { PRODUCTOS, TIENDA } from './productos.js';
+import { PRODUCTOS, TIENDA, LANDING } from './productos.js';
 
 const CLAVE_CARRITO = 'tienda-carrito';
 
@@ -39,10 +39,6 @@ export function quitarDelCarrito(id) {
   guardarCarrito(carrito);
 }
 
-export function vaciarCarrito() {
-  guardarCarrito({});
-}
-
 function unidadesTotales() {
   return Object.values(leerCarrito()).reduce((suma, n) => suma + n, 0);
 }
@@ -51,90 +47,149 @@ export function precio(n) {
   return n.toFixed(2).replace('.', ',') + ' ' + TIENDA.moneda;
 }
 
-// ---------- Elementos comunes (cabecera, contador, pie) ----------
+// ---------- Elementos comunes ----------
 
 export function pintarContador() {
-  const el = document.querySelector('.contador-carrito');
-  if (el) el.textContent = unidadesTotales();
+  document.querySelectorAll('.contador-carrito').forEach(el => {
+    el.textContent = unidadesTotales();
+  });
 }
 
 export function iniciarPagina() {
-  document.querySelectorAll('[data-tienda-nombre]').forEach(el => {
-    el.innerHTML = TIENDA.nombre.replace(/(\S+)$/, '<span>$1</span>');
-  });
   const barra = document.querySelector('.barra-envio');
-  if (barra) barra.textContent = TIENDA.envio;
+  if (barra) barra.textContent = TIENDA.oferta;
   pintarContador();
 }
 
-// ---------- Catálogo (index.html) ----------
-
-export function pintarCatalogo(contenedor) {
-  contenedor.innerHTML = PRODUCTOS.map(p => `
-    <article class="tarjeta">
-      <a class="imagen" href="producto.html?id=${p.id}">
-        ${p.etiqueta ? `<span class="etiqueta">${p.etiqueta}</span>` : ''}
-        <img src="${p.imagen}" alt="${p.nombre}">
-      </a>
-      <div class="cuerpo">
-        <h3><a href="producto.html?id=${p.id}">${p.nombre}</a></h3>
-        <div class="precio">${precio(p.precio)}</div>
-        <button class="boton" data-agregar="${p.id}">Añadir al carrito</button>
-      </div>
-    </article>
-  `).join('');
-
-  contenedor.addEventListener('click', ev => {
-    const id = ev.target.dataset.agregar;
-    if (!id) return;
-    agregarAlCarrito(id);
-    ev.target.textContent = '✓ Añadido';
-    setTimeout(() => { ev.target.textContent = 'Añadir al carrito'; }, 1200);
-  });
+function estrellas(n) {
+  return '★'.repeat(n) + '☆'.repeat(5 - n);
 }
 
-// ---------- Ficha (producto.html) ----------
+// ---------- Landing (index.html) ----------
 
-export function pintarFicha(contenedor) {
-  const id = new URLSearchParams(location.search).get('id');
-  const p = PRODUCTOS.find(x => x.id === id);
+export function pintarLanding() {
+  // Galería del héroe
+  const principal = document.getElementById('imagen-principal');
+  const miniaturas = document.getElementById('miniaturas');
+  principal.src = LANDING.galeria[0];
+  miniaturas.innerHTML = LANDING.galeria
+    .map((src, i) => `<img src="${src}" data-src="${src}" class="${i === 0 ? 'activa' : ''}" alt="Vista ${i + 1}">`)
+    .join('');
+  miniaturas.addEventListener('click', ev => {
+    if (!ev.target.dataset.src) return;
+    principal.src = ev.target.dataset.src;
+    miniaturas.querySelectorAll('img').forEach(m => m.classList.remove('activa'));
+    ev.target.classList.add('activa');
+  });
 
-  if (!p) {
-    contenedor.innerHTML = `
-      <div class="vacio">
-        <p>Producto no encontrado.</p>
-        <a class="boton" href="index.html">Volver a la tienda</a>
-      </div>`;
-    return;
+  // Selector de packs
+  const cajaPacks = document.getElementById('packs');
+  let packElegido = PRODUCTOS[1] ? PRODUCTOS[1].id : PRODUCTOS[0].id; // el "más vendido" por defecto
+  function pintarPacks() {
+    cajaPacks.innerHTML = PRODUCTOS.map(p => `
+      <label class="pack ${p.id === packElegido ? 'elegido' : ''}" data-pack="${p.id}">
+        <span class="radio"></span>
+        <span class="pack-info">
+          <strong>${p.nombre}</strong>
+          <small>${p.nota}</small>
+        </span>
+        <span class="pack-precio">
+          <s>${precio(p.precioAntes)}</s>
+          <strong>${precio(p.precio)}</strong>
+        </span>
+      </label>
+    `).join('');
   }
+  pintarPacks();
+  cajaPacks.addEventListener('click', ev => {
+    const pack = ev.target.closest('[data-pack]');
+    if (!pack) return;
+    packElegido = pack.dataset.pack;
+    pintarPacks();
+  });
 
-  document.title = `${p.nombre} — ${TIENDA.nombre}`;
-  contenedor.innerHTML = `
-    <div class="imagen"><img src="${p.imagen}" alt="${p.nombre}"></div>
-    <div>
-      ${p.etiqueta ? `<span class="etiqueta" style="position:static">${p.etiqueta}</span>` : ''}
-      <h1>${p.nombre}</h1>
-      <div class="precio">${precio(p.precio)}</div>
-      <p class="descripcion">${p.descripcion}</p>
-      <ul class="ventajas">
-        <li>${TIENDA.envio}</li>
-        <li>Devolución gratuita en 30 días</li>
-        <li>Pago 100 % seguro</li>
-      </ul>
-      <button class="boton" data-agregar>Añadir al carrito</button>
-      <a class="boton secundario" href="carrito.html" style="margin-left:8px">Ver carrito</a>
-    </div>`;
+  document.getElementById('comprar').addEventListener('click', () => {
+    agregarAlCarrito(packElegido);
+    location.href = 'carrito.html';
+  });
 
-  contenedor.querySelector('[data-agregar]').addEventListener('click', ev => {
-    agregarAlCarrito(p.id);
-    ev.target.textContent = '✓ Añadido';
-    setTimeout(() => { ev.target.textContent = 'Añadir al carrito'; }, 1200);
+  // Sellos de garantía bajo el botón
+  document.getElementById('sellos').innerHTML = LANDING.garantias
+    .map(g => `<span>✓ ${g}</span>`)
+    .join('');
+
+  // Problema → solución
+  document.getElementById('problema-titulo').textContent = LANDING.problema.titulo;
+  document.getElementById('problema-texto').textContent = LANDING.problema.texto;
+
+  // Beneficios
+  document.getElementById('beneficios').innerHTML = LANDING.beneficios.map(b => `
+    <div class="beneficio">
+      <div class="icono">${b.icono}</div>
+      <h3>${b.titulo}</h3>
+      <p>${b.texto}</p>
+    </div>
+  `).join('');
+
+  // Cómo funciona
+  document.getElementById('pasos').innerHTML = LANDING.pasos.map(p => `
+    <div class="paso">
+      <div class="numero">${p.n}</div>
+      <h3>${p.titulo}</h3>
+      <p>${p.texto}</p>
+    </div>
+  `).join('');
+
+  // Reseñas
+  document.getElementById('resenas').innerHTML = LANDING.resenas.map(r => `
+    <div class="resena">
+      <div class="resena-estrellas">${estrellas(r.estrellas)}</div>
+      <p>“${r.texto}”</p>
+      <div class="resena-nombre">${r.nombre}</div>
+    </div>
+  `).join('');
+
+  // Comparativa
+  const comp = LANDING.comparativa;
+  document.getElementById('comparativa-titulo').textContent = comp.titulo;
+  document.getElementById('comparativa').innerHTML = `
+    <tr><th></th><th>Cuenco</th><th class="destacada">AquaMiau</th></tr>
+    ${comp.filas.map(([texto, cuenco, fuente]) => `
+      <tr>
+        <td>${texto}</td>
+        <td>${cuenco ? '✅' : '❌'}</td>
+        <td class="destacada">${fuente ? '✅' : '❌'}</td>
+      </tr>
+    `).join('')}`;
+
+  // FAQ (acordeón)
+  document.getElementById('faq').innerHTML = LANDING.faq.map(f => `
+    <details>
+      <summary>${f.p}</summary>
+      <p>${f.r}</p>
+    </details>
+  `).join('');
+
+  // Garantía
+  document.getElementById('garantia-titulo').textContent = LANDING.garantia.titulo;
+  document.getElementById('garantia-texto').textContent = LANDING.garantia.texto;
+
+  // Barra de compra pegajosa al hacer scroll
+  const pegajosa = document.getElementById('barra-pegajosa');
+  const packBarato = PRODUCTOS[0];
+  pegajosa.querySelector('.precio-pegajoso').textContent = 'Desde ' + precio(packBarato.precio);
+  pegajosa.querySelector('button').addEventListener('click', () => {
+    agregarAlCarrito(packElegido);
+    location.href = 'carrito.html';
+  });
+  window.addEventListener('scroll', () => {
+    pegajosa.classList.toggle('visible', window.scrollY > 600);
   });
 }
 
 // ---------- Carrito (carrito.html) ----------
 
-const ENVIO_GRATIS_DESDE = 40;
+const ENVIO_GRATIS_DESDE = 30;
 const COSTE_ENVIO = 3.99;
 
 export function pintarCarrito(contenedor) {
@@ -162,7 +217,7 @@ export function pintarCarrito(contenedor) {
     contenedor.innerHTML = `
       <div class="vacio">
         <p>Tu carrito está vacío.</p>
-        <a class="boton" href="index.html">Ver productos</a>
+        <a class="boton" href="index.html">Volver a la tienda</a>
       </div>`;
     return;
   }
@@ -172,7 +227,7 @@ export function pintarCarrito(contenedor) {
 
   contenedor.innerHTML = lineas.map(l => `
     <div class="linea-carrito">
-      <a class="mini" href="producto.html?id=${l.p.id}"><img src="${l.p.imagen}" alt=""></a>
+      <a class="mini" href="index.html"><img src="${l.p.imagen}" alt=""></a>
       <div class="info">
         <h3>${l.p.nombre}</h3>
         <div class="unitario">${precio(l.p.precio)} / unidad</div>

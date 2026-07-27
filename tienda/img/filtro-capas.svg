@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef1ff"/><stop offset="1" stop-color="#dfe4f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#fondo)"/>
+  <text x="400" y="70" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#1c1c22">Filtro de 3 capas</text>
+  <!-- capas del filtro -->
+  <g>
+    <ellipse cx="400" cy="180" rx="180" ry="34" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
+    <text x="620" y="185" font-family="Segoe UI, sans-serif" font-size="22" fill="#5b5b66">1 · Malla: pelos</text>
+    <ellipse cx="400" cy="290" rx="180" ry="34" fill="#3b3f52"/>
+    <text x="620" y="295" font-family="Segoe UI, sans-serif" font-size="22" fill="#5b5b66">2 · Carbón: olores</text>
+    <ellipse cx="400" cy="400" rx="180" ry="34" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+    <text x="620" y="405" font-family="Segoe UI, sans-serif" font-size="22" fill="#5b5b66">3 · Algodón: impurezas</text>
+  </g>
+  <!-- flechas de flujo -->
+  <path d="M400 220 v 30 m 0 80 v 30" stroke="#4f46e5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M390 244 l 10 12 10-12 M390 464 l 10 12 10-12" fill="none" stroke="#4f46e5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 434 v 30" stroke="#4f46e5" stroke-width="6" stroke-linecap="round"/>
+  <!-- gota resultante -->
+  <path d="M400 500 q 22 -34 0 -34 q -22 0 0 34" fill="#38bdf8"/>
+  <text x="400" y="560" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="24" fill="#5b5b66">Agua limpia y sin sabores raros — cámbialo cada 2-4 semanas</text>
+</svg>

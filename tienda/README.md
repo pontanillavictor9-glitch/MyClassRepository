@@ -1,8 +1,11 @@
 # 🛍️ Tienda de Dropshipping — plantilla + guía
 
-Esta carpeta contiene una **tienda online de demostración** totalmente funcional
-(catálogo, fichas de producto, carrito) y esta guía con los pasos reales para
-lanzar un negocio de dropshipping.
+Esta carpeta contiene una **tienda monoproducto de demostración** totalmente
+funcional (landing de venta estilo "one product store" + carrito), montada para
+la fuente de agua para gatos **AquaMiau**, y esta guía con los pasos reales
+para lanzar un negocio de dropshipping.
+
+👉 Para replicar esta página dentro de **Shopify**, mira **`SHOPIFY.md`**.
 
 ## Cómo ver la tienda
 
@@ -19,10 +22,11 @@ npm run tienda     # abre http://localhost:4000
 
 | Quiero cambiar… | Archivo |
 |---|---|
-| Los productos, precios y textos | `tienda/js/productos.js` |
-| El nombre y eslogan de la tienda | `tienda/js/productos.js` (bloque `TIENDA`) |
+| Textos de venta, precios, packs, FAQ, reseñas | `tienda/js/productos.js` |
+| El nombre, oferta y eslogan de la tienda | `tienda/js/productos.js` (bloque `TIENDA`) |
 | Los colores y el diseño | `tienda/css/estilos.css` (variables de `:root`) |
 | Las imágenes | `tienda/img/` (sustituye los SVG por fotos reales del proveedor) |
+| La estructura de secciones de la landing | `tienda/index.html` |
 
 ---
 
