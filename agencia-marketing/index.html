@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Impulsa Digital — Agencia de marketing digital: estrategia, redes sociales, publicidad y diseño de marca.">
+  <title>Impulsa Digital | Agencia de Marketing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="contenedor nav-contenido">
+      <a href="#inicio" class="logo">Impulsa<span>Digital</span></a>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#contacto" class="btn btn-pequeno">Contacto</a></li>
+        </ul>
+        <button class="hamburguesa" id="botonMenu" aria-label="Abrir menú">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de inicio (hero) -->
+  <section id="inicio" class="hero">
+    <div class="contenedor">
+      <h1>Hacemos crecer tu marca en el mundo digital</h1>
+      <p>Somos una agencia de marketing que combina estrategia, creatividad y datos para llevar tu negocio al siguiente nivel.</p>
+      <div class="hero-botones">
+        <a href="#contacto" class="btn">Solicita una asesoría gratis</a>
+        <a href="#servicios" class="btn btn-secundario">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de servicios -->
+  <section id="servicios" class="seccion">
+    <div class="contenedor">
+      <h2>Nuestros servicios</h2>
+      <p class="subtitulo">Todo lo que tu marca necesita, en un solo lugar.</p>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono">📱</div>
+          <h3>Redes sociales</h3>
+          <p>Gestión de contenido, community management y campañas en Instagram, TikTok y Facebook.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="icono">🎯</div>
+          <h3>Publicidad digital</h3>
+          <p>Campañas en Google Ads y Meta Ads optimizadas para conseguir clientes, no solo clics.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="icono">🎨</div>
+          <h3>Diseño de marca</h3>
+          <p>Logotipos, identidad visual y piezas gráficas que hacen que tu negocio se vea profesional.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="icono">📈</div>
+          <h3>SEO y contenidos</h3>
+          <p>Posicionamiento en buscadores y blogs estratégicos para atraer tráfico orgánico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de portafolio -->
+  <section id="portafolio" class="seccion seccion-gris">
+    <div class="contenedor">
+      <h2>Portafolio</h2>
+      <p class="subtitulo">Algunos proyectos que hablan por nosotros.</p>
+      <div class="galeria">
+        <figure class="proyecto proyecto-a"><figcaption>Café Aroma — Rebranding</figcaption></figure>
+        <figure class="proyecto proyecto-b"><figcaption>FitLife Gym — Campaña en redes</figcaption></figure>
+        <figure class="proyecto proyecto-c"><figcaption>TechNova — Lanzamiento de producto</figcaption></figure>
+        <figure class="proyecto proyecto-d"><figcaption>Verde Hogar — Tienda en línea</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de equipo -->
+  <section id="equipo" class="seccion">
+    <div class="contenedor">
+      <h2>Nuestro equipo</h2>
+      <p class="subtitulo">Personas creativas que aman lo que hacen.</p>
+      <div class="tarjetas">
+        <article class="tarjeta persona">
+          <div class="avatar">VP</div>
+          <h3>Victor Pontanilla</h3>
+          <p>Director de estrategia</p>
+        </article>
+        <article class="tarjeta persona">
+          <div class="avatar">AM</div>
+          <h3>Ana Martínez</h3>
+          <p>Diseñadora de marca</p>
+        </article>
+        <article class="tarjeta persona">
+          <div class="avatar">CL</div>
+          <h3>Carlos López</h3>
+          <p>Especialista en publicidad</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="seccion seccion-oscura">
+    <div class="contenedor">
+      <h2>Hablemos de tu proyecto</h2>
+      <p class="subtitulo">Déjanos tus datos y te contactamos en menos de 24 horas.</p>
+      <form id="formularioContacto" class="formulario">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="correo" placeholder="Tu correo electrónico" required>
+        <textarea id="mensaje" rows="4" placeholder="Cuéntanos sobre tu negocio..." required></textarea>
+        <button type="submit" class="btn">Enviar mensaje</button>
+        <p id="confirmacion" class="confirmacion" hidden>✅ ¡Gracias! Hemos recibido tu mensaje.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <p>© 2026 Impulsa Digital — Agencia de Marketing. Proyecto de práctica.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
