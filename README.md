@@ -12,6 +12,15 @@ Todo funciona **sin API keys**: la lectura de chats usa conexiones públicas y l
 
 ---
 
+## ⚡ Instalación rápida en Windows (recomendada)
+
+1. Instala [Node.js](https://nodejs.org) (botón verde, versión LTS).
+2. Descarga el ZIP del proyecto ([enlace directo](https://github.com/pontanillavictor9-glitch/MyClassRepository/archive/refs/heads/main.zip)) y descomprímelo.
+3. Doble clic en **`instalar.bat`** → instala todo y te abre la configuración para poner tus canales.
+4. Doble clic en **`arrancar.bat`** → arranca el servidor, el puente MT5 (si tienes Python y MT5 abiertos) y te abre el panel en el navegador.
+
+> Si Windows muestra un aviso azul de "Windows protegió su equipo", pulsa "Más información" → "Ejecutar de todas formas" (es normal con archivos .bat descargados).
+
 ## 💻 Cómo llevarlo a tu PC
 
 1. Instala [Node.js](https://nodejs.org) (versión LTS) — el instalador normal de Windows, siguiente-siguiente.
