@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Overlay · Chat unificado</title>
+<style>
+  body { margin: 0; background: transparent; font-family: 'Segoe UI', system-ui, sans-serif; overflow: hidden; }
+  .chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 380px;
+    height: 560px;
+    padding: 8px;
+  }
+  .msg {
+    background: rgba(10, 14, 24, 0.82);
+    border-radius: 10px;
+    padding: 7px 12px;
+    color: #eef1f7;
+    font-size: 15px;
+    line-height: 1.35;
+    animation: slidein .25s ease-out;
+    word-wrap: break-word;
+  }
+  @keyframes slidein { from { transform: translateY(10px); opacity: 0; } }
+  .user { font-weight: 700; margin-right: 4px; }
+  .twitch  .user { color: #a970ff; }
+  .youtube .user { color: #ff6b6b; }
+  .tiktok  .user { color: #6be6e0; }
+  .super { background: rgba(255, 196, 0, 0.25); border: 1px solid rgba(255, 196, 0, 0.5); }
+</style>
+</head>
+<body>
+  <div class="chat" id="chat"></div>
+
+<script src="/js/live.js"></script>
+<script>
+  const MAX = 18;
+  const chat = document.getElementById('chat');
+  Live.connect({
+    onChat: m => {
+      const div = document.createElement('div');
+      div.className = 'msg ' + m.platform + (m.superchat ? ' super' : '');
+      const user = document.createElement('span');
+      user.className = 'user';
+      user.textContent = Live.platformIcon(m.platform) + ' ' + m.user + ':';
+      const text = document.createElement('span');
+      text.textContent = (m.superchat ? ' [' + m.superchat + '] ' : ' ') + m.text;
+      div.appendChild(user);
+      div.appendChild(text);
+      chat.appendChild(div);
+      while (chat.children.length > MAX) chat.removeChild(chat.firstChild);
+    }
+  });
+</script>
+</body>
+</html>

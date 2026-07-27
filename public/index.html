@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comunidad de Trading</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #0b0f1a; color: #e8ecf3;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  .hero {
+    text-align: center; padding: 70px 20px 40px;
+    background: radial-gradient(ellipse at top, #16213c 0%, #0b0f1a 70%);
+  }
+  .hero h1 { font-size: 42px; margin: 0 0 10px; }
+  .hero p { font-size: 18px; color: #9fb0c9; max-width: 640px; margin: 0 auto; }
+  .live-badge {
+    display: inline-block; margin-bottom: 18px; background: rgba(255,92,92,.15);
+    color: #ff5c5c; font-weight: 800; letter-spacing: 2px; font-size: 13px;
+    padding: 6px 16px; border-radius: 30px; border: 1px solid rgba(255,92,92,.4);
+  }
+  .links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+  .links a {
+    display: inline-block; padding: 12px 26px; border-radius: 10px; font-weight: 700;
+    text-decoration: none; color: #fff; font-size: 15px; transition: transform .15s;
+  }
+  .links a:hover { transform: translateY(-2px); }
+  .twitch  { background: #7b41c9; }
+  .youtube { background: #d33; }
+  .tiktok  { background: #222; border: 1px solid #444; }
+  .discord { background: #4a5fd0; }
+  .telegram{ background: #2596be; }
+  .instagram { background: linear-gradient(45deg, #b52e88, #d34747); }
+  .section { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  .card { background: #101627; border: 1px solid #1f2940; border-radius: 14px; padding: 24px; margin-bottom: 20px; }
+  .card h2 { margin-top: 0; font-size: 20px; }
+  .card p, .card li { color: #b9c4d8; line-height: 1.6; }
+  .disclaimer {
+    border-color: rgba(255,196,0,.4); border-left: 5px solid #ffc400;
+  }
+  .disclaimer h2 { color: #ffc400; }
+  footer { text-align: center; color: #55617a; font-size: 13px; padding: 30px 20px; }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="live-badge">● TRADING EN DIRECTO</div>
+    <h1 id="nombre">Mi Comunidad de Trading</h1>
+    <p id="descripcion">Trading en directo, análisis y aprendizaje en comunidad.</p>
+    <div class="links" id="enlaces"></div>
+  </div>
+
+  <div class="section">
+    <div class="card">
+      <h2>📺 ¿Qué encontrarás en los directos?</h2>
+      <ul>
+        <li>Operativa en tiempo real con el panel de posiciones visible en pantalla.</li>
+        <li>P&L de cada operación y beneficio del día actualizados al segundo.</li>
+        <li>Chat unificado: participa desde Twitch, YouTube o TikTok.</li>
+        <li>Análisis de mercado y explicación de cada entrada y salida.</li>
+      </ul>
+    </div>
+
+    <div class="card disclaimer">
+      <h2>⚠️ Aviso legal importante</h2>
+      <p><b>Este contenido es únicamente entretenimiento y material educativo.</b>
+      Nada de lo que se muestra en los directos, vídeos o publicaciones constituye
+      asesoramiento financiero, ni una recomendación de compra o venta de ningún
+      instrumento financiero.</p>
+      <p>El trading conlleva un <b>alto riesgo de pérdida de capital</b>. Las
+      rentabilidades pasadas no garantizan resultados futuros. Las operaciones
+      mostradas pueden realizarse en cuentas de práctica o simuladas. Cada persona
+      es responsable de sus propias decisiones de inversión: nunca inviertas dinero
+      que no puedas permitirte perder y, si tienes dudas, consulta con un asesor
+      financiero autorizado.</p>
+    </div>
+  </div>
+
+  <footer id="footer">© Comunidad de Trading — Contenido de entretenimiento. No es asesoramiento financiero.</footer>
+
+<script>
+  const ICONS = {
+    twitch: ['🟣 Twitch', 'twitch'],
+    youtube: ['🔴 YouTube', 'youtube'],
+    tiktok: ['⚫ TikTok', 'tiktok'],
+    discord: ['💬 Discord', 'discord'],
+    telegram: ['✈️ Telegram', 'telegram'],
+    instagram: ['📸 Instagram', 'instagram']
+  };
+  fetch('/api/config').then(r => r.json()).then(c => {
+    document.getElementById('nombre').textContent = c.nombreComunidad || 'Mi Comunidad de Trading';
+    document.title = c.nombreComunidad || 'Comunidad de Trading';
+    if (c.comunidad?.descripcion) document.getElementById('descripcion').textContent = c.comunidad.descripcion;
+    const cont = document.getElementById('enlaces');
+    const enlaces = c.comunidad?.enlaces || {};
+    for (const [key, url] of Object.entries(enlaces)) {
+      if (!url || !ICONS[key]) continue;
+      const a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = ICONS[key][0];
+      a.className = ICONS[key][1];
+      cont.appendChild(a);
+    }
+    document.getElementById('footer').textContent =
+      `© ${c.nombreComunidad || 'Comunidad de Trading'} — Contenido de entretenimiento. No es asesoramiento financiero.`;
+  }).catch(() => {});
+</script>
+</body>
+</html>

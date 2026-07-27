@@ -1,0 +1,48 @@
+{
+  "puerto": 3000,
+  "nombreComunidad": "Mi Comunidad de Trading",
+  "streamer": "TuNombre",
+
+  "panelToken": "cambia-esto-por-una-clave-secreta",
+
+  "cuenta": {
+    "balanceInicial": 10000,
+    "moneda": "USD"
+  },
+
+  "simbolosFavoritos": ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT"],
+
+  "chats": {
+    "twitch": {
+      "activo": true,
+      "canal": "tu_canal_de_twitch"
+    },
+    "youtube": {
+      "activo": true,
+      "canal": "@TuCanalDeYouTube"
+    },
+    "tiktok": {
+      "activo": true,
+      "usuario": "tu_usuario_de_tiktok"
+    }
+  },
+
+  "disclaimers": [
+    "⚠️ Este directo es ÚNICAMENTE entretenimiento y contenido educativo. NO es asesoramiento financiero ni una recomendación de inversión.",
+    "📉 El trading conlleva un alto riesgo de pérdida de capital. Rentabilidades pasadas no garantizan resultados futuros.",
+    "🎓 Cada persona es responsable de sus propias decisiones de inversión. Nunca inviertas dinero que no puedas permitirte perder.",
+    "🧪 Las operaciones mostradas pueden realizarse en una cuenta de práctica/simulada."
+  ],
+
+  "comunidad": {
+    "descripcion": "Trading en directo, análisis y aprendizaje en comunidad.",
+    "enlaces": {
+      "discord": "",
+      "telegram": "",
+      "twitch": "",
+      "youtube": "",
+      "tiktok": "",
+      "instagram": ""
+    }
+  }
+}

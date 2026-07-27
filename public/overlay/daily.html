@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Overlay · Beneficio del día</title>
+<style>
+  body { margin: 0; background: transparent; font-family: 'Segoe UI', system-ui, sans-serif; }
+  .card {
+    display: inline-block;
+    background: rgba(10, 14, 24, 0.88);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 12px 22px;
+    color: #e8ecf3;
+    text-align: center;
+    backdrop-filter: blur(6px);
+  }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #9fb0c9; }
+  .value { font-size: 40px; font-weight: 800; margin-top: 2px; transition: color .3s; }
+  .value.up   { color: #2ecc71; }
+  .value.down { color: #e74c3c; }
+  .detail { font-size: 12px; color: #7d8ba3; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">💰 Beneficio del día</div>
+    <div class="value" id="value">—</div>
+    <div class="detail" id="detail"></div>
+  </div>
+
+<script src="/js/live.js"></script>
+<script>
+  let moneda = 'USD';
+  Live.connect({
+    onConfig: c => { moneda = c.moneda; },
+    onState: s => {
+      const v = document.getElementById('value');
+      v.textContent = Live.fmtMoney(s.beneficioDia, moneda);
+      v.className = 'value ' + Live.pnlClass(s.beneficioDia);
+      document.getElementById('detail').textContent =
+        `Cerrado hoy: ${Live.fmtMoney(s.realizadoHoy, moneda)} · Flotante: ${Live.fmtMoney(s.flotante, moneda)}`;
+    }
+  });
+</script>
+</body>
+</html>

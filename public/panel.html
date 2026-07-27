@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de control · Trading Live Studio</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #0b0f1a; color: #e8ecf3;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 22px; background: #101627; border-bottom: 1px solid #1f2940;
+    flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 18px; margin: 0; }
+  header .warn { font-size: 12px; color: #ffc400; }
+  .grid {
+    display: grid; gap: 16px; padding: 16px 22px;
+    grid-template-columns: 1.4fr 1fr;
+  }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: #101627; border: 1px solid #1f2940; border-radius: 12px; padding: 16px;
+  }
+  .card h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+             color: #9fb0c9; margin: 0 0 12px; }
+  .stats { display: flex; gap: 20px; flex-wrap: wrap; }
+  .stat .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #7d8ba3; }
+  .stat .value { font-size: 26px; font-weight: 800; }
+  .up { color: #2ecc71; } .down { color: #e74c3c; }
+  form.trade { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-end; }
+  label { font-size: 11px; text-transform: uppercase; color: #7d8ba3; display: block; margin-bottom: 4px; }
+  input, select, button {
+    background: #0b0f1a; color: #e8ecf3; border: 1px solid #2a3652;
+    border-radius: 8px; padding: 9px 12px; font-size: 15px;
+  }
+  input:focus, select:focus { outline: none; border-color: #4a6cf7; }
+  button { cursor: pointer; font-weight: 700; border: none; }
+  button.long  { background: #1e7e34; } button.long:hover  { background: #28a745; }
+  button.short { background: #a02622; } button.short:hover { background: #c0392b; }
+  button.close { background: #2a3652; font-size: 12px; padding: 6px 10px; }
+  button.close:hover { background: #3b4d75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; color: #7d8ba3; padding: 6px 8px; }
+  td { padding: 8px; border-top: 1px solid #1f2940; }
+  .side { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .side.long  { background: rgba(46,204,113,.15); color: #2ecc71; }
+  .side.short { background: rgba(231,76,60,.15); color: #e74c3c; }
+  #chatbox { height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px;
+             padding-right: 4px; }
+  .msg { background: #0b0f1a; border-radius: 8px; padding: 6px 10px; font-size: 14px; line-height: 1.35; }
+  .msg .user { font-weight: 700; margin-right: 4px; }
+  .msg.twitch  .user { color: #a970ff; }
+  .msg.youtube .user { color: #ff6b6b; }
+  .msg.tiktok  .user { color: #6be6e0; }
+  .msg.super { background: rgba(255,196,0,.18); }
+  .toolbar { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .toolbar button { background: #1f2940; font-size: 12px; padding: 6px 12px; }
+  .toolbar button.active { background: #4a6cf7; }
+  .links a { color: #7ea2ff; font-size: 13px; display: block; margin-top: 6px; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .error { color: #ff8080; font-size: 13px; margin-top: 8px; min-height: 18px; }
+  .muted { color: #7d8ba3; font-size: 13px; }
+  #token { width: 180px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎛️ Panel de control — <span id="titulo">Trading Live Studio</span></h1>
+  <div>
+    <label for="token" style="display:inline">Token del panel</label>
+    <input id="token" type="password" placeholder="clave secreta">
+  </div>
+  <div class="warn">⚠️ NO captures esta ventana en OBS — usa los overlays</div>
+</header>
+
+<div class="grid">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div class="card">
+      <h2>Resumen de la cuenta</h2>
+      <div class="stats">
+        <div class="stat"><div class="label">Balance</div><div class="value" id="balance">—</div></div>
+        <div class="stat"><div class="label">Beneficio del día</div><div class="value" id="dia">—</div></div>
+        <div class="stat"><div class="label">Cerrado hoy</div><div class="value" id="realizado">—</div></div>
+        <div class="stat"><div class="label">Flotante</div><div class="value" id="flotante">—</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Nueva operación</h2>
+      <form class="trade" id="tradeForm">
+        <div>
+          <label>Símbolo (Binance)</label>
+          <input id="symbol" list="symbols" placeholder="BTCUSDT" required style="width:140px">
+          <datalist id="symbols"></datalist>
+        </div>
+        <div>
+          <label>Cantidad (unidades)</label>
+          <input id="qty" type="number" step="any" min="0" placeholder="0.01" required style="width:120px">
+        </div>
+        <button type="submit" class="long"  data-side="long">▲ COMPRAR / LONG</button>
+        <button type="submit" class="short" data-side="short">▼ VENDER / SHORT</button>
+      </form>
+      <div class="muted" id="precioActual" style="margin-top:8px"></div>
+      <div class="error" id="error"></div>
+    </div>
+
+    <div class="card">
+      <h2>Operaciones abiertas</h2>
+      <div id="posiciones" class="muted">Sin operaciones abiertas</div>
+    </div>
+
+    <div class="card">
+      <h2>Historial (últimas cerradas)</h2>
+      <div id="historial" class="muted">Todavía no hay operaciones cerradas</div>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <div class="card">
+      <h2>💬 Chat unificado</h2>
+      <div class="toolbar" id="filtros">
+        <button data-f="all" class="active">Todos</button>
+        <button data-f="twitch">🟣 Twitch</button>
+        <button data-f="youtube">🔴 YouTube</button>
+        <button data-f="tiktok">⚫ TikTok</button>
+      </div>
+      <div id="chatbox"></div>
+    </div>
+
+    <div class="card links">
+      <h2>Overlays para OBS</h2>
+      <span class="muted">Añádelos como «Fuente de navegador» (fondo transparente):</span>
+      <a href="/overlay/positions" target="_blank">📊 Posiciones en vivo</a>
+      <a href="/overlay/daily" target="_blank">💰 Beneficio del día</a>
+      <a href="/overlay/disclaimer" target="_blank">⚠️ Aviso legal (rotativo)</a>
+      <a href="/overlay/chat" target="_blank">💬 Chat unificado</a>
+      <a href="/" target="_blank">🌐 Página de la comunidad</a>
+    </div>
+  </div>
+</div>
+
+<script src="/js/live.js"></script>
+<script>
+  let moneda = 'USD';
+  let filtro = 'all';
+  let lastPrices = {};
+  const $ = id => document.getElementById(id);
+
+  $('token').value = localStorage.getItem('panelToken') || '';
+  $('token').addEventListener('change', () => localStorage.setItem('panelToken', $('token').value));
+
+  function setMoney(id, n) {
+    const el = $(id);
+    el.textContent = Live.fmtMoney(n, moneda);
+    el.className = 'value ' + Live.pnlClass(n);
+  }
+
+  Live.connect({
+    onConfig: c => {
+      moneda = c.moneda;
+      $('titulo').textContent = c.nombreComunidad || 'Trading Live Studio';
+      $('symbols').innerHTML = (c.simbolosFavoritos || [])
+        .map(s => `<option value="${s}">`).join('');
+    },
+    onState: s => {
+      lastPrices = s.prices || {};
+      $('balance').textContent = s.balance.toLocaleString('es-ES', { maximumFractionDigits: 2 }) + ' ' + (moneda === 'USD' ? '$' : moneda);
+      $('balance').className = 'value';
+      setMoney('dia', s.beneficioDia);
+      setMoney('realizado', s.realizadoHoy);
+      setMoney('flotante', s.flotante);
+      renderPosiciones(s.positions);
+      renderHistorial(s.history);
+      mostrarPrecio();
+    },
+    onChat: addChatMsg
+  });
+
+  function renderPosiciones(positions) {
+    const el = $('posiciones');
+    if (!positions.length) {
+      el.className = 'muted';
+      el.textContent = 'Sin operaciones abiertas';
+      return;
+    }
+    el.className = '';
+    el.innerHTML = `<table>
+      <tr><th>Activo</th><th>Dir.</th><th>Cant.</th><th>Entrada</th><th>Actual</th><th>P&L</th><th></th></tr>
+      ${positions.map(p => `<tr>
+        <td><b>${p.symbol}</b></td>
+        <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
+        <td>${p.qty}</td>
+        <td>${Live.fmtPrice(p.entryPrice)}</td>
+        <td>${Live.fmtPrice(p.lastPrice)}</td>
+        <td class="${Live.pnlClass(p.pnl)}">${Live.fmtMoney(p.pnl, moneda)}
+            <span class="muted">(${p.pnlPct === null ? '—' : p.pnlPct.toFixed(2) + '%'})</span></td>
+        <td><button class="close" onclick="cerrar(${p.id})">Cerrar</button></td>
+      </tr>`).join('')}</table>`;
+  }
+
+  function renderHistorial(history) {
+    const el = $('historial');
+    if (!history.length) {
+      el.className = 'muted';
+      el.textContent = 'Todavía no hay operaciones cerradas';
+      return;
+    }
+    el.className = '';
+    el.innerHTML = `<table>
+      <tr><th>Activo</th><th>Dir.</th><th>Entrada</th><th>Salida</th><th>P&L</th></tr>
+      ${history.slice(0, 10).map(h => `<tr>
+        <td><b>${h.symbol}</b></td>
+        <td><span class="side ${h.side}">${h.side.toUpperCase()}</span></td>
+        <td>${Live.fmtPrice(h.entryPrice)}</td>
+        <td>${Live.fmtPrice(h.exitPrice)}</td>
+        <td class="${Live.pnlClass(h.pnl)}">${Live.fmtMoney(h.pnl, moneda)}</td>
+      </tr>`).join('')}</table>`;
+  }
+
+  function mostrarPrecio() {
+    const sym = $('symbol').value.toUpperCase().trim();
+    $('precioActual').textContent = sym && lastPrices[sym]
+      ? `Precio actual de ${sym}: ${Live.fmtPrice(lastPrices[sym])}`
+      : '';
+  }
+  $('symbol').addEventListener('input', mostrarPrecio);
+
+  async function api(path, body) {
+    const res = await fetch(path, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-panel-token': $('token').value
+      },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Error');
+    return data;
+  }
+
+  $('tradeForm').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const side = ev.submitter?.dataset?.side || 'long';
+    $('error').textContent = '';
+    try {
+      await api('/api/trade/open', {
+        symbol: $('symbol').value,
+        side,
+        qty: parseFloat($('qty').value)
+      });
+    } catch (err) {
+      $('error').textContent = err.message;
+    }
+  });
+
+  window.cerrar = async id => {
+    $('error').textContent = '';
+    try { await api('/api/trade/close', { id }); }
+    catch (err) { $('error').textContent = err.message; }
+  };
+
+  // --- Chat ---
+  const chatbox = $('chatbox');
+  function addChatMsg(m) {
+    const div = document.createElement('div');
+    div.className = 'msg ' + m.platform + (m.superchat ? ' super' : '');
+    div.dataset.platform = m.platform;
+    if (filtro !== 'all' && m.platform !== filtro) div.style.display = 'none';
+    const user = document.createElement('span');
+    user.className = 'user';
+    user.textContent = Live.platformIcon(m.platform) + ' ' + m.user + ':';
+    const text = document.createElement('span');
+    text.textContent = (m.superchat ? ' [' + m.superchat + '] ' : ' ') + m.text;
+    div.appendChild(user);
+    div.appendChild(text);
+    const alFinal = chatbox.scrollTop + chatbox.clientHeight >= chatbox.scrollHeight - 40;
+    chatbox.appendChild(div);
+    while (chatbox.children.length > 200) chatbox.removeChild(chatbox.firstChild);
+    if (alFinal) chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  $('filtros').addEventListener('click', ev => {
+    const btn = ev.target.closest('button');
+    if (!btn) return;
+    filtro = btn.dataset.f;
+    for (const b of $('filtros').children) b.classList.toggle('active', b === btn);
+    for (const msg of chatbox.children) {
+      msg.style.display = (filtro === 'all' || msg.dataset.platform === filtro) ? '' : 'none';
+    }
+    chatbox.scrollTop = chatbox.scrollHeight;
+  });
+</script>
+</body>
+</html>
