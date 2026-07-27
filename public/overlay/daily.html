@@ -35,6 +35,7 @@
   Live.connect({
     onConfig: c => { moneda = c.moneda; },
     onState: s => {
+      if (s.moneda) moneda = s.moneda;
       const v = document.getElementById('value');
       v.textContent = Live.fmtMoney(s.beneficioDia, moneda);
       v.className = 'value ' + Live.pnlClass(s.beneficioDia);

@@ -46,6 +46,18 @@ const wss = new WebSocketServer({ server, path: '/ws' });
 
 const chatBuffer = []; // últimas 100 líneas para clientes que se conectan tarde
 
+// Estado empujado por el puente de MT5 (mt5/bridge.py). Si está fresco (<10 s),
+// tiene prioridad sobre la cuenta simulada: los overlays muestran la cuenta MT5.
+const mt5Store = { data: null, ts: 0 };
+const MT5_FRESH_MS = 10000;
+
+function currentState() {
+  if (mt5Store.data && Date.now() - mt5Store.ts < MT5_FRESH_MS) {
+    return { history: [], ...mt5Store.data, fuente: 'mt5' };
+  }
+  return { ...engine.snapshot(), fuente: 'simulada' };
+}
+
 function broadcast(msg) {
   const raw = JSON.stringify(msg);
   for (const client of wss.clients) {
@@ -54,7 +66,7 @@ function broadcast(msg) {
 }
 
 wss.on('connection', ws => {
-  ws.send(JSON.stringify({ type: 'state', data: engine.snapshot() }));
+  ws.send(JSON.stringify({ type: 'state', data: currentState() }));
   ws.send(JSON.stringify({ type: 'config', data: publicConfig() }));
   for (const m of chatBuffer.slice(-50)) {
     ws.send(JSON.stringify({ type: 'chat', data: m }));
@@ -62,8 +74,8 @@ wss.on('connection', ws => {
 });
 
 // Estado a todos los clientes: al cambiar (abrir/cerrar) y cada segundo con precios frescos
-engine.onChange(() => broadcast({ type: 'state', data: engine.snapshot() }));
-setInterval(() => broadcast({ type: 'state', data: engine.snapshot() }), 1000);
+engine.onChange(() => broadcast({ type: 'state', data: currentState() }));
+setInterval(() => broadcast({ type: 'state', data: currentState() }), 1000);
 
 function onChatMessage(msg) {
   chatBuffer.push(msg);
@@ -96,7 +108,7 @@ function publicConfig() {
 }
 
 app.get('/api/config', (req, res) => res.json(publicConfig()));
-app.get('/api/state', (req, res) => res.json(engine.snapshot()));
+app.get('/api/state', (req, res) => res.json(currentState()));
 
 // Las rutas que MODIFICAN el estado requieren el token del panel (si está configurado)
 function requireToken(req, res, next) {
@@ -127,6 +139,19 @@ app.post('/api/trade/close', requireToken, (req, res) => {
 
 app.post('/api/reset', requireToken, (req, res) => {
   engine.reset();
+  res.json({ ok: true });
+});
+
+// El puente de MetaTrader 5 (mt5/bridge.py) empuja aquí el estado de la cuenta
+// cada segundo. Mientras lleguen datos frescos, los overlays muestran MT5.
+app.post('/api/mt5/state', requireToken, (req, res) => {
+  const d = req.body;
+  if (!d || !Array.isArray(d.positions)) {
+    return res.status(400).json({ error: 'Estado MT5 inválido: falta positions[]' });
+  }
+  mt5Store.data = d;
+  mt5Store.ts = Date.now();
+  broadcast({ type: 'state', data: currentState() });
   res.json({ ok: true });
 });
 

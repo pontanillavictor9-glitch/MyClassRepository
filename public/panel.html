@@ -83,6 +83,7 @@
       <h2>Resumen de la cuenta</h2>
       <div class="stats">
         <div class="stat"><div class="label">Balance</div><div class="value" id="balance">—</div></div>
+        <div class="stat" id="equityStat" style="display:none"><div class="label">Equity</div><div class="value" id="equity">—</div></div>
         <div class="stat"><div class="label">Beneficio del día</div><div class="value" id="dia">—</div></div>
         <div class="stat"><div class="label">Cerrado hoy</div><div class="value" id="realizado">—</div></div>
         <div class="stat"><div class="label">Flotante</div><div class="value" id="flotante">—</div></div>
@@ -91,6 +92,10 @@
 
     <div class="card">
       <h2>Nueva operación</h2>
+      <div class="muted" id="mt5aviso" style="display:none">
+        🔗 <b>Modo MT5 activo</b>: los overlays muestran tu cuenta de MetaTrader 5.
+        Abre y cierra las operaciones desde el propio terminal MT5 — aquí solo se visualizan.
+      </div>
       <form class="trade" id="tradeForm">
         <div>
           <label>Símbolo (Binance)</label>
@@ -168,19 +173,28 @@
     },
     onState: s => {
       lastPrices = s.prices || {};
+      if (s.moneda) moneda = s.moneda;
+      const mt5 = s.fuente === 'mt5';
+      $('mt5aviso').style.display = mt5 ? '' : 'none';
+      $('tradeForm').style.display = mt5 ? 'none' : '';
+      $('precioActual').style.display = mt5 ? 'none' : '';
+      $('equityStat').style.display = (mt5 && s.equity !== undefined) ? '' : 'none';
+      if (s.equity !== undefined) {
+        $('equity').textContent = s.equity.toLocaleString('es-ES', { maximumFractionDigits: 2 }) + ' ' + (moneda === 'USD' ? '$' : moneda);
+      }
       $('balance').textContent = s.balance.toLocaleString('es-ES', { maximumFractionDigits: 2 }) + ' ' + (moneda === 'USD' ? '$' : moneda);
       $('balance').className = 'value';
       setMoney('dia', s.beneficioDia);
       setMoney('realizado', s.realizadoHoy);
       setMoney('flotante', s.flotante);
-      renderPosiciones(s.positions);
+      renderPosiciones(s.positions, mt5);
       renderHistorial(s.history);
       mostrarPrecio();
     },
     onChat: addChatMsg
   });
 
-  function renderPosiciones(positions) {
+  function renderPosiciones(positions, mt5) {
     const el = $('posiciones');
     if (!positions.length) {
       el.className = 'muted';
@@ -189,7 +203,7 @@
     }
     el.className = '';
     el.innerHTML = `<table>
-      <tr><th>Activo</th><th>Dir.</th><th>Cant.</th><th>Entrada</th><th>Actual</th><th>P&L</th><th></th></tr>
+      <tr><th>Activo</th><th>Dir.</th><th>Cant.</th><th>Entrada</th><th>Actual</th><th>P&L</th>${mt5 ? '' : '<th></th>'}</tr>
       ${positions.map(p => `<tr>
         <td><b>${p.symbol}</b></td>
         <td><span class="side ${p.side}">${p.side.toUpperCase()}</span></td>
@@ -197,8 +211,8 @@
         <td>${Live.fmtPrice(p.entryPrice)}</td>
         <td>${Live.fmtPrice(p.lastPrice)}</td>
         <td class="${Live.pnlClass(p.pnl)}">${Live.fmtMoney(p.pnl, moneda)}
-            <span class="muted">(${p.pnlPct === null ? '—' : p.pnlPct.toFixed(2) + '%'})</span></td>
-        <td><button class="close" onclick="cerrar(${p.id})">Cerrar</button></td>
+            <span class="muted">(${p.pnlPct == null ? '—' : p.pnlPct.toFixed(2) + '%'})</span></td>
+        ${mt5 ? '' : `<td><button class="close" onclick="cerrar(${p.id})">Cerrar</button></td>`}
       </tr>`).join('')}</table>`;
   }
 

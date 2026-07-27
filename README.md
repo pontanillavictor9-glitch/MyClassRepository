@@ -8,20 +8,25 @@ Plataforma todo-en-uno para hacer **trading en directo** en YouTube, Twitch y Ti
 - ⚠️ **Overlay de aviso legal rotativo**: el típico "esto no es una recomendación de inversión, es solo entretenimiento".
 - 🌐 **Página de comunidad**: landing con tus enlaces (Discord, Telegram, redes) para que la gente se una.
 
-Todo funciona **sin API keys**: la lectura de chats usa conexiones públicas y los precios vienen del WebSocket público de Binance.
+Todo funciona **sin API keys**: la lectura de chats usa conexiones públicas y los precios vienen del WebSocket público de Binance. Y si operas con **MetaTrader 5**, hay un puente que muestra tu cuenta MT5 real/demo en los overlays (ver más abajo).
 
 ---
 
-## 🚀 Puesta en marcha
+## 💻 Cómo llevarlo a tu PC
 
-Necesitas [Node.js](https://nodejs.org) 18 o superior.
+1. Instala [Node.js](https://nodejs.org) (versión LTS) — el instalador normal de Windows, siguiente-siguiente.
+2. Descarga este proyecto:
+   - **Opción fácil**: en GitHub, botón verde `Code → Download ZIP`, y descomprímelo donde quieras.
+   - **Con git**: `git clone https://github.com/pontanillavictor9-glitch/MyClassRepository.git`
+3. Abre una terminal (en Windows: escribe `cmd` en el menú inicio) dentro de la carpeta del proyecto.
+4. Sigue la puesta en marcha:
 
 ```bash
 # 1. Instalar dependencias
 npm install
 
 # 2. Crear tu configuración
-cp config.example.json config.json
+copy config.example.json config.json     # (en Mac/Linux: cp config.example.json config.json)
 #    → edita config.json con tus canales y tu nombre
 
 # 3. Arrancar
@@ -76,6 +81,31 @@ Notas sobre los chats:
 5. **Importante**: nunca captures la ventana del panel de control (`/panel.html`) — es tu pantalla privada y contiene el token.
 
 El overlay del disclaimer **déjalo visible durante todo el directo**: además de protegerte, las políticas de monetización de YouTube/Twitch/TikTok ven con buenos ojos los avisos claros en contenido financiero.
+
+## 🔗 Conectar tu cuenta de MetaTrader 5
+
+Si operas en MT5 (cuenta real o demo, da igual — en pantalla no se distingue), puedes hacer que los overlays muestren **tus posiciones reales de MT5** en vez de la cuenta simulada:
+
+1. Necesitas **Windows** con el terminal **MetaTrader 5 abierto y con sesión iniciada** (el puente se conecta al terminal, no necesita tu contraseña).
+2. Instala [Python](https://www.python.org/downloads/) (marca "Add to PATH" al instalar) y luego:
+
+```bash
+pip install MetaTrader5 requests
+```
+
+3. Con el servidor ya corriendo (`npm start`), abre OTRA terminal en la carpeta del proyecto:
+
+```bash
+python mt5/bridge.py
+```
+
+Y ya está. El puente lee tu cuenta cada segundo y los overlays pasan automáticamente a **modo MT5**:
+
+- **Posiciones abiertas** con su P&L y % en tiempo real (long/short, lotes, precio de entrada y actual).
+- **Beneficio del día** = cerrado hoy (según el historial de MT5) + flotante.
+- El panel muestra además el **equity** y desactiva el formulario de operar (las operaciones se abren y cierran desde el propio MT5, como siempre).
+
+Si cierras el puente, a los 10 segundos todo vuelve solo al modo de cuenta simulada. Abre y cierra operaciones donde siempre (el terminal MT5 o su app de móvil): el stream lo refleja al segundo.
 
 ## 🧪 Cómo funciona la cuenta simulada
 
