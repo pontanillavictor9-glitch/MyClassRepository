@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4e8"/><stop offset="1" stop-color="#fde7cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#fondo)"/>
+  <ellipse cx="400" cy="500" rx="250" ry="24" fill="#ecd4b6"/>
+  <rect x="200" y="380" width="400" height="60" rx="30" fill="#3b3f52"/>
+  <g>
+    <circle cx="280" cy="410" r="26" fill="#f59e0b"/>
+    <circle cx="400" cy="410" r="26" fill="#4f46e5"/>
+    <circle cx="520" cy="410" r="26" fill="#2dd4bf"/>
+    <circle cx="280" cy="410" r="10" fill="#fff"/>
+    <circle cx="400" cy="410" r="10" fill="#fff"/>
+    <circle cx="520" cy="410" r="10" fill="#fff"/>
+  </g>
+  <path d="M280 400 C 260 300, 340 260, 330 170" fill="none" stroke="#f59e0b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M400 400 C 400 300, 430 260, 415 150" fill="none" stroke="#4f46e5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M520 400 C 545 310, 480 250, 505 160" fill="none" stroke="#2dd4bf" stroke-width="12" stroke-linecap="round"/>
+  <rect x="312" y="130" width="36" height="46" rx="8" fill="#3b3f52"/>
+  <rect x="398" y="110" width="36" height="46" rx="8" fill="#3b3f52"/>
+  <rect x="488" y="120" width="36" height="46" rx="8" fill="#3b3f52"/>
+  <text x="400" y="575" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" fill="#5b5b66">Organizador magnético de cables</text>
+</svg>

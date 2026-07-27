@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef7f7"/><stop offset="1" stop-color="#d9ecec"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e5e9f0"/><stop offset="1" stop-color="#aeb6c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#fondo)"/>
+  <ellipse cx="400" cy="490" rx="250" ry="24" fill="#bfd8d8"/>
+  <rect x="200" y="330" width="400" height="110" rx="26" fill="url(#metal)"/>
+  <g fill="#2e3244">
+    <rect x="238" y="368" width="60" height="34" rx="6"/>
+    <rect x="318" y="368" width="60" height="34" rx="6"/>
+    <rect x="398" y="368" width="90" height="34" rx="10"/>
+    <rect x="508" y="368" width="54" height="34" rx="6"/>
+  </g>
+  <rect x="322" y="374" width="52" height="8" rx="3" fill="#4f9cf7"/>
+  <rect x="242" y="374" width="52" height="8" rx="3" fill="#4f9cf7"/>
+  <path d="M600 385 C 660 385, 660 300, 610 290" fill="none" stroke="#3b3f52" stroke-width="14" stroke-linecap="round"/>
+  <rect x="560" y="268" width="64" height="34" rx="12" fill="#3b3f52"/>
+  <circle cx="230" cy="355" r="5" fill="#2dd4bf"/>
+  <text x="400" y="575" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" fill="#5b5b66">Hub USB-C 7 en 1 con HDMI 4K</text>
+</svg>

@@ -1,0 +1,345 @@
+/* Estilos de la tienda — paleta neutra fácil de personalizar.
+   Cambia las variables de :root para adaptar la tienda a tu marca. */
+
+:root {
+  --color-fondo: #f7f7f9;
+  --color-superficie: #ffffff;
+  --color-texto: #1c1c22;
+  --color-texto-suave: #5b5b66;
+  --color-marca: #4f46e5;
+  --color-marca-oscuro: #4338ca;
+  --color-acento: #f59e0b;
+  --color-borde: #e4e4ec;
+  --radio: 14px;
+  --sombra: 0 2px 10px rgba(20, 20, 40, 0.07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.55;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecera .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo span { color: var(--color-marca); }
+
+.nav { display: flex; align-items: center; gap: 18px; }
+
+.boton-carrito {
+  position: relative;
+  background: var(--color-marca);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.boton-carrito:hover { background: var(--color-marca-oscuro); }
+
+.contador-carrito {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--color-acento);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+/* ---------- Aviso de envío ---------- */
+.barra-envio {
+  background: var(--color-marca);
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0 0 12px;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+/* ---------- Rejilla de productos ---------- */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+  padding-bottom: 60px;
+}
+
+.tarjeta {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(20, 20, 40, 0.12);
+}
+
+.tarjeta .imagen {
+  aspect-ratio: 4 / 3;
+  background: #eef0f6;
+  position: relative;
+}
+
+.tarjeta .imagen img { width: 100%; height: 100%; object-fit: cover; }
+
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-acento);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tarjeta .cuerpo {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.tarjeta h3 { margin: 0; font-size: 1rem; line-height: 1.35; }
+
+.precio { font-size: 1.15rem; font-weight: 700; color: var(--color-marca); }
+
+.boton {
+  display: inline-block;
+  background: var(--color-marca);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s;
+  margin-top: auto;
+}
+
+.boton:hover { background: var(--color-marca-oscuro); }
+
+.boton.secundario {
+  background: transparent;
+  color: var(--color-marca);
+  border: 1px solid var(--color-marca);
+}
+
+.boton.secundario:hover { background: #eef0ff; }
+
+/* ---------- Ficha de producto ---------- */
+.ficha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 48px 0 70px;
+  align-items: start;
+}
+
+.ficha .imagen {
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  background: #eef0f6;
+}
+
+.ficha h1 { margin: 0 0 10px; font-size: 1.7rem; letter-spacing: -0.02em; }
+
+.ficha .precio { font-size: 1.7rem; }
+
+.ficha .descripcion { color: var(--color-texto-suave); margin: 16px 0 24px; }
+
+.ventajas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+.ventajas li { padding: 4px 0; }
+.ventajas li::before { content: '✓  '; color: var(--color-marca); font-weight: 700; }
+
+@media (max-width: 720px) {
+  .ficha { grid-template-columns: 1fr; }
+}
+
+/* ---------- Carrito ---------- */
+.pagina-carrito { padding: 48px 0 70px; max-width: 760px; }
+
+.pagina-carrito h1 { letter-spacing: -0.02em; }
+
+.linea-carrito {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.linea-carrito .mini {
+  width: 72px;
+  height: 54px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #eef0f6;
+}
+
+.linea-carrito .mini img { width: 100%; height: 100%; object-fit: cover; }
+
+.linea-carrito .info { flex: 1; }
+.linea-carrito .info h3 { margin: 0; font-size: 0.98rem; }
+.linea-carrito .info .unitario { color: var(--color-texto-suave); font-size: 0.85rem; }
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cantidad button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quitar {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px;
+}
+
+.resumen {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.resumen .fila {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  color: var(--color-texto-suave);
+}
+
+.resumen .fila.total {
+  color: var(--color-texto);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-top: 1px solid var(--color-borde);
+  margin-top: 10px;
+  padding-top: 12px;
+}
+
+.aviso-demo {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  background: #fff8e6;
+  border: 1px solid #f2e2b3;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.vacio {
+  text-align: center;
+  color: var(--color-texto-suave);
+  padding: 40px 0;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  border-top: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+  padding: 26px 0;
+  text-align: center;
+  color: var(--color-texto-suave);
+  font-size: 0.85rem;
+}

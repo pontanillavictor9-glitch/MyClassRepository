@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Desk — Accesorios para tu escritorio</title>
+  <link rel="icon" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="barra-envio"></div>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html" data-tienda-nombre>Nova <span>Desk</span></a>
+      <nav class="nav">
+        <a href="index.html">Tienda</a>
+        <a href="carrito.html">
+          <button class="boton-carrito">🛒 Carrito <span class="contador-carrito">0</span></button>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="contenedor">
+      <h1>Mejora tu escritorio hoy</h1>
+      <p>Accesorios seleccionados para trabajar, estudiar y jugar más cómodo.
+         Envíos rápidos y devolución gratuita en 30 días.</p>
+    </div>
+  </section>
+
+  <main class="contenedor">
+    <div class="rejilla" id="catalogo"></div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      © 2026 Nova Desk — Tienda de demostración creada con la plantilla de dropshipping de este repositorio.
+    </div>
+  </footer>
+
+  <script type="module">
+    import { iniciarPagina, pintarCatalogo } from './js/tienda.js';
+    iniciarPagina();
+    pintarCatalogo(document.getElementById('catalogo'));
+  </script>
+</body>
+</html>

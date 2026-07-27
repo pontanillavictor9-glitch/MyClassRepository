@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu carrito — Nova Desk</title>
+  <link rel="icon" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="barra-envio"></div>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html" data-tienda-nombre>Nova <span>Desk</span></a>
+      <nav class="nav">
+        <a href="index.html">Tienda</a>
+        <a href="carrito.html">
+          <button class="boton-carrito">🛒 Carrito <span class="contador-carrito">0</span></button>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-carrito">
+    <h1>Tu carrito</h1>
+    <div id="carrito"></div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      © 2026 Nova Desk — Tienda de demostración creada con la plantilla de dropshipping de este repositorio.
+    </div>
+  </footer>
+
+  <script type="module">
+    import { iniciarPagina, pintarCarrito } from './js/tienda.js';
+    iniciarPagina();
+    pintarCarrito(document.getElementById('carrito'));
+  </script>
+</body>
+</html>

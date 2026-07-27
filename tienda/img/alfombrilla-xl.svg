@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f4ff"/><stop offset="1" stop-color="#d4e6fb"/>
+    </linearGradient>
+    <linearGradient id="tela" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#343850"/><stop offset="1" stop-color="#23263a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#fondo)"/>
+  <ellipse cx="400" cy="505" rx="290" ry="26" fill="#bed3ec"/>
+  <rect x="130" y="300" width="540" height="200" rx="24" fill="url(#tela)"/>
+  <rect x="142" y="312" width="516" height="176" rx="16" fill="none" stroke="#4f46e5" stroke-width="4" opacity="0.7"/>
+  <path d="M180 470 Q 400 330 620 460" fill="none" stroke="#4f46e5" stroke-width="6" opacity="0.35"/>
+  <rect x="210" y="350" width="150" height="96" rx="10" fill="#454a60"/>
+  <g fill="#5b6079">
+    <rect x="222" y="362" width="28" height="20" rx="4"/><rect x="256" y="362" width="28" height="20" rx="4"/>
+    <rect x="290" y="362" width="28" height="20" rx="4"/><rect x="222" y="388" width="28" height="20" rx="4"/>
+    <rect x="256" y="388" width="28" height="20" rx="4"/><rect x="290" y="388" width="62" height="20" rx="4"/>
+    <rect x="222" y="414" width="130" height="20" rx="4"/>
+  </g>
+  <ellipse cx="520" cy="400" rx="46" ry="62" fill="#454a60"/>
+  <rect x="516" y="352" width="8" height="30" rx="4" fill="#5b6079"/>
+  <text x="400" y="575" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" fill="#5b5b66">Alfombrilla XL 80×30 cm</text>
+</svg>
