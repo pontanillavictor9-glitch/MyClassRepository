@@ -1,0 +1,5 @@
+Este es un guion de ejemplo para probar el locutor.
+
+Cuando tengas tu guion de verdad, escrito con ChatGPT y revisado por ti, bórralo todo y pega aquí el texto. Después, doble clic en locutar punto bat, y en unos segundos tendrás el audio listo para llevarlo a CapCut.
+
+Un truco: escribe los números como se dicen, no como se escriben. Mejor "mil quinientos euros" que 1.500. Y los puntos y aparte crean pausas naturales, úsalos.

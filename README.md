@@ -124,6 +124,14 @@ Si cierras el puente, a los 10 segundos todo vuelve solo al modo de cuenta simul
 - El estado se guarda en `data/state.json`, así que sobrevive a reinicios.
 - Botón de emergencia: `POST /api/reset` (con el token) restaura el balance inicial.
 
+## 🎬 Kit de YouTube (carpeta `youtube/`)
+
+Para hacer crecer el canal donde emites: en [`youtube/`](youtube/) hay un kit completo para
+lanzar y monetizar un canal (con o sin cara). Incluye el plan de estrategia (`PLAN.md`),
+plantillas de ChatGPT para ideas/guiones/miniaturas (`PROMPTS.md`) y un **locutor gratuito**
+(`locutar.bat`: convierte un guion `.txt` en voz `.mp3` con voces neuronales, sin pagar nada).
+Empieza por [`youtube/LEEME.md`](youtube/LEEME.md).
+
 ## 🔒 Seguridad
 
 - Pon un `panelToken` fuerte en `config.json`: cualquier acción que modifique operaciones lo exige.
