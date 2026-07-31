@@ -1,0 +1,730 @@
+{
+  "duracion": 592.525,
+  "frases": [
+    {
+      "inicio": 0,
+      "fin": 2.17,
+      "texto": "Loneliness feels like a personal failure."
+    },
+    {
+      "inicio": 2.17,
+      "fin": 4.82,
+      "texto": "Like something you'd be embarrassed to admit."
+    },
+    {
+      "inicio": 4.82,
+      "fin": 11.34,
+      "texto": "Like evidence that you did something wrong, or that there's something a bit off about you that other people can sense."
+    },
+    {
+      "inicio": 11.34,
+      "fin": 13.68,
+      "texto": "It isn't any of those things."
+    },
+    {
+      "inicio": 13.68,
+      "fin": 15.84,
+      "texto": "Loneliness is an alarm."
+    },
+    {
+      "inicio": 15.84,
+      "fin": 27.52,
+      "texto": "It's a piece of biological equipment, it works exactly the way it was designed to work, and it is doing its job right now, on purpose, because two hundred thousand years ago being alone would have killed you."
+    },
+    {
+      "inicio": 27.52,
+      "fin": 31.28,
+      "texto": "So the question isn't whether ancient humans got lonely."
+    },
+    {
+      "inicio": 31.28,
+      "fin": 33.9,
+      "texto": "The question is what the alarm was for."
+    },
+    {
+      "inicio": 33.9,
+      "fin": 37.86,
+      "texto": "Start with something your body does that nobody finds shameful."
+    },
+    {
+      "inicio": 37.86,
+      "fin": 39.2,
+      "texto": "You get hungry."
+    },
+    {
+      "inicio": 39.2,
+      "fin": 41.54,
+      "texto": "That's not a character flaw."
+    },
+    {
+      "inicio": 41.54,
+      "fin": 47.62,
+      "texto": "It's a signal — an unpleasant one, deliberately unpleasant, because a pleasant signal wouldn't work."
+    },
+    {
+      "inicio": 47.62,
+      "fin": 52.76,
+      "texto": "Your body has a thing it needs, and it makes you uncomfortable until you go and get it."
+    },
+    {
+      "inicio": 52.76,
+      "fin": 55.11,
+      "texto": "Thirst does the same."
+    },
+    {
+      "inicio": 55.11,
+      "fin": 63.46,
+      "texto": "So does pain: an alarm that something is damaging you, loud enough that you can't ignore it and go back to what you were doing."
+    },
+    {
+      "inicio": 63.46,
+      "fin": 66.36,
+      "texto": "Loneliness is built on the same principle."
+    },
+    {
+      "inicio": 66.36,
+      "fin": 72.61,
+      "texto": "It is the signal that fires when your social connections drop below what your body has decided you need."
+    },
+    {
+      "inicio": 72.61,
+      "fin": 76.72,
+      "texto": "It is unpleasant for exactly the same reason hunger is unpleasant."
+    },
+    {
+      "inicio": 76.72,
+      "fin": 80.43,
+      "texto": "And like hunger, it doesn't care about your opinion of it."
+    },
+    {
+      "inicio": 80.43,
+      "fin": 87.88,
+      "texto": "You can be perfectly aware that you're fine, that nothing is wrong, that you have people — and still feel it."
+    },
+    {
+      "inicio": 87.88,
+      "fin": 93.46,
+      "texto": "The researcher who spent his career on this, John Cacioppo, made the comparison directly."
+    },
+    {
+      "inicio": 93.46,
+      "fin": 96.45,
+      "texto": "Hunger protects your body from starvation."
+    },
+    {
+      "inicio": 96.45,
+      "fin": 99.22,
+      "texto": "Thirst protects it from dehydration."
+    },
+    {
+      "inicio": 99.22,
+      "fin": 101.97,
+      "texto": "Physical pain protects it from injury."
+    },
+    {
+      "inicio": 101.97,
+      "fin": 104.72,
+      "texto": "Loneliness protects it from something else."
+    },
+    {
+      "inicio": 104.72,
+      "fin": 110.1,
+      "texto": "And to understand what, you have to look at what happened to a human being on their own."
+    },
+    {
+      "inicio": 110.1,
+      "fin": 114.07,
+      "texto": "Picture the situation your body is actually built for."
+    },
+    {
+      "inicio": 114.07,
+      "fin": 115.74,
+      "texto": "You're one human."
+    },
+    {
+      "inicio": 115.74,
+      "fin": 122.18,
+      "texto": "You're on the ground, in the open, in Africa, a couple of hundred thousand years ago."
+    },
+    {
+      "inicio": 122.18,
+      "fin": 123.89,
+      "texto": "You are not fast."
+    },
+    {
+      "inicio": 123.89,
+      "fin": 125.26,
+      "texto": "You are not strong."
+    },
+    {
+      "inicio": 125.26,
+      "fin": 127.02,
+      "texto": "Your teeth are a joke."
+    },
+    {
+      "inicio": 127.02,
+      "fin": 128.9,
+      "texto": "You cannot see in the dark."
+    },
+    {
+      "inicio": 128.9,
+      "fin": 131.7,
+      "texto": "On your own, you are not a predator."
+    },
+    {
+      "inicio": 131.7,
+      "fin": 133.49,
+      "texto": "You are lunch."
+    },
+    {
+      "inicio": 133.49,
+      "fin": 135.35,
+      "texto": "A group solves this."
+    },
+    {
+      "inicio": 135.35,
+      "fin": 138.26,
+      "texto": "In a group, someone is awake while you sleep."
+    },
+    {
+      "inicio": 138.26,
+      "fin": 141.49,
+      "texto": "Someone else spotted the thing in the grass before you did."
+    },
+    {
+      "inicio": 141.49,
+      "fin": 147.12,
+      "texto": "Food gets shared, so a bad hunting day is survivable rather than fatal."
+    },
+    {
+      "inicio": 147.12,
+      "fin": 160.75,
+      "texto": "If you break a leg, somebody brings you water for six weeks while it heals — and we know that happened, because the archaeological record is full of healed serious injuries in people who could not possibly have fed themselves during the healing."
+    },
+    {
+      "inicio": 160.75,
+      "fin": 163.4,
+      "texto": "That last detail is worth stopping on."
+    },
+    {
+      "inicio": 163.4,
+      "fin": 167.53,
+      "texto": "A healed broken femur in a fossil is evidence of somebody."
+    },
+    {
+      "inicio": 167.53,
+      "fin": 169.12,
+      "texto": "Somebody stayed."
+    },
+    {
+      "inicio": 169.12,
+      "fin": 171.2,
+      "texto": "Now remove the group."
+    },
+    {
+      "inicio": 171.2,
+      "fin": 174.25,
+      "texto": "You are not going to be killed by loneliness."
+    },
+    {
+      "inicio": 174.25,
+      "fin": 186.07,
+      "texto": "You are going to be killed within a few weeks by the first infection, the first bad fall, the first night you fell asleep with nobody watching, or the first stretch of days without food and nobody to share theirs."
+    },
+    {
+      "inicio": 186.07,
+      "fin": 188.45,
+      "texto": "Being alone was not sad."
+    },
+    {
+      "inicio": 188.45,
+      "fin": 189.73,
+      "texto": "It was terminal."
+    },
+    {
+      "inicio": 189.73,
+      "fin": 197.24,
+      "texto": "So a body that produced a loud, horrible, unignorable alarm at the first sign of isolation would keep its owner alive."
+    },
+    {
+      "inicio": 197.24,
+      "fin": 200.03,
+      "texto": "And that body is the one you're sitting in."
+    },
+    {
+      "inicio": 200.03,
+      "fin": 204.59,
+      "texto": "Here's where it gets specific, because loneliness doesn't just make you sad."
+    },
+    {
+      "inicio": 204.59,
+      "fin": 206.6,
+      "texto": "It changes what your body does."
+    },
+    {
+      "inicio": 206.6,
+      "fin": 208.93,
+      "texto": "Lonely people are more vigilant."
+    },
+    {
+      "inicio": 208.93,
+      "fin": 210.03,
+      "texto": "Measurably."
+    },
+    {
+      "inicio": 210.03,
+      "fin": 221.66,
+      "texto": "In experiments, people scoring high on loneliness detect social threat faster — an unfriendly face in a crowd, a hostile tone — and they detect it in things that aren't actually threatening."
+    },
+    {
+      "inicio": 221.66,
+      "fin": 224.02,
+      "texto": "Their threat-detection is turned up."
+    },
+    {
+      "inicio": 224.02,
+      "fin": 225.54,
+      "texto": "Which makes sense."
+    },
+    {
+      "inicio": 225.54,
+      "fin": 230.8,
+      "texto": "A human separated from the group is in danger, and a body in danger should be scanning."
+    },
+    {
+      "inicio": 230.8,
+      "fin": 234.63,
+      "texto": "And there's a second effect that fits the first one perfectly."
+    },
+    {
+      "inicio": 234.63,
+      "fin": 237.1,
+      "texto": "Lonely people sleep worse."
+    },
+    {
+      "inicio": 237.1,
+      "fin": 240.68,
+      "texto": "Not fewer hours, necessarily — but more fragmented."
+    },
+    {
+      "inicio": 240.68,
+      "fin": 243.28,
+      "texto": "More micro-awakenings through the night."
+    },
+    {
+      "inicio": 243.28,
+      "fin": 246.49,
+      "texto": "Brief surfacings that they don't even remember in the morning."
+    },
+    {
+      "inicio": 246.49,
+      "fin": 248.84,
+      "texto": "Think about what that means."
+    },
+    {
+      "inicio": 248.84,
+      "fin": 251.77,
+      "texto": "Your body has worked out it doesn't have a group around it."
+    },
+    {
+      "inicio": 251.77,
+      "fin": 260.12,
+      "texto": "And so it stops sleeping deeply, because sleeping deeply without someone watching is the single most dangerous thing a defenceless animal can do."
+    },
+    {
+      "inicio": 260.12,
+      "fin": 261.52,
+      "texto": "It is checking."
+    },
+    {
+      "inicio": 261.52,
+      "fin": 262.76,
+      "texto": "All night."
+    },
+    {
+      "inicio": 262.76,
+      "fin": 264.38,
+      "texto": "Just in case."
+    },
+    {
+      "inicio": 264.38,
+      "fin": 272.31,
+      "texto": "You may recognise that from a certain feeling of waking up at three in the morning for no reason after a period of feeling disconnected from everyone."
+    },
+    {
+      "inicio": 272.31,
+      "fin": 273.96,
+      "texto": "That's not a coincidence."
+    },
+    {
+      "inicio": 273.96,
+      "fin": 275.58,
+      "texto": "That's the same system."
+    },
+    {
+      "inicio": 275.58,
+      "fin": 277.94,
+      "texto": "So did ancient humans feel this?"
+    },
+    {
+      "inicio": 277.94,
+      "fin": 283.52,
+      "texto": "Almost certainly — but far less often than you do, because the opportunity barely existed."
+    },
+    {
+      "inicio": 283.52,
+      "fin": 288.32,
+      "texto": "A hunter-gatherer band is usually somewhere between twenty and fifty people."
+    },
+    {
+      "inicio": 288.32,
+      "fin": 297.99,
+      "texto": "Those bands sit inside a wider network of related groups that meet, trade, marry across and visit, running to a few hundred people you might know by name."
+    },
+    {
+      "inicio": 297.99,
+      "fin": 301.76,
+      "texto": "And within that, essentially nothing happened alone."
+    },
+    {
+      "inicio": 301.76,
+      "fin": 303.57,
+      "texto": "You slept in a group."
+    },
+    {
+      "inicio": 303.57,
+      "fin": 305.2,
+      "texto": "You ate in a group."
+    },
+    {
+      "inicio": 305.2,
+      "fin": 308.75,
+      "texto": "Tools got made sitting next to other people making tools."
+    },
+    {
+      "inicio": 308.75,
+      "fin": 315.09,
+      "texto": "Children were raised by a rotating cast of adults, not by two exhausted parents in a separate building."
+    },
+    {
+      "inicio": 315.09,
+      "fin": 317.3,
+      "texto": "Giving birth was surrounded."
+    },
+    {
+      "inicio": 317.3,
+      "fin": 319.25,
+      "texto": "Dying was surrounded."
+    },
+    {
+      "inicio": 319.25,
+      "fin": 332.12,
+      "texto": "The state you experience regularly — being in a room by yourself for hours, with the door shut, with nobody knowing or particularly minding where you are — was close to unavailable for almost the whole of human existence."
+    },
+    {
+      "inicio": 332.12,
+      "fin": 336.49,
+      "texto": "When it did happen, it usually meant something had gone badly wrong."
+    },
+    {
+      "inicio": 336.49,
+      "fin": 337.58,
+      "texto": "You were lost."
+    },
+    {
+      "inicio": 337.58,
+      "fin": 338.81,
+      "texto": "You'd been thrown out."
+    },
+    {
+      "inicio": 338.81,
+      "fin": 340.22,
+      "texto": "Everyone else was dead."
+    },
+    {
+      "inicio": 340.22,
+      "fin": 342.85,
+      "texto": "Which is why the alarm is so loud."
+    },
+    {
+      "inicio": 342.85,
+      "fin": 344.83,
+      "texto": "It was never meant to go off often."
+    },
+    {
+      "inicio": 344.83,
+      "fin": 346.57,
+      "texto": "It was built for emergencies."
+    },
+    {
+      "inicio": 346.57,
+      "fin": 348.91,
+      "texto": "Now the thing that trips everybody up."
+    },
+    {
+      "inicio": 348.91,
+      "fin": 352,
+      "texto": "Loneliness is not about how many people are near you."
+    },
+    {
+      "inicio": 352,
+      "fin": 354.07,
+      "texto": "You can be lonely in a full house."
+    },
+    {
+      "inicio": 354.07,
+      "fin": 361.63,
+      "texto": "You can be lonely at a party, in a relationship, in an office of forty people, in a family group chat that never stops."
+    },
+    {
+      "inicio": 361.63,
+      "fin": 366.15,
+      "texto": "And people who live genuinely alone are frequently not lonely at all."
+    },
+    {
+      "inicio": 366.15,
+      "fin": 368.92,
+      "texto": "Because the alarm is not counting bodies."
+    },
+    {
+      "inicio": 368.92,
+      "fin": 374.51,
+      "texto": "It is measuring the gap between the connection you have and the connection you expect to have."
+    },
+    {
+      "inicio": 374.51,
+      "fin": 377.14,
+      "texto": "Which is why it can fire in a crowd."
+    },
+    {
+      "inicio": 377.14,
+      "fin": 386.39,
+      "texto": "Being surrounded by people who don't know you is, to a system built for a band of forty who knew everything about you, a strange and slightly alarming signal."
+    },
+    {
+      "inicio": 386.39,
+      "fin": 387.98,
+      "texto": "Everyone is here."
+    },
+    {
+      "inicio": 387.98,
+      "fin": 389.72,
+      "texto": "Nobody is with you."
+    },
+    {
+      "inicio": 389.72,
+      "fin": 396.95,
+      "texto": "And it is why the alarm can be quiet in a cabin in the woods, if the person in the cabin has three people who would drop everything for them."
+    },
+    {
+      "inicio": 396.95,
+      "fin": 401.73,
+      "texto": "The old measure was: does this group have my back if something goes wrong?"
+    },
+    {
+      "inicio": 401.73,
+      "fin": 404.61,
+      "texto": "That is still the question your body is asking."
+    },
+    {
+      "inicio": 404.61,
+      "fin": 406.76,
+      "texto": "It has just got much harder to answer."
+    },
+    {
+      "inicio": 406.76,
+      "fin": 411.63,
+      "texto": "And now the cruel part, which is the reason loneliness is so hard to get out of."
+    },
+    {
+      "inicio": 411.63,
+      "fin": 413.89,
+      "texto": "Hunger makes you seek food."
+    },
+    {
+      "inicio": 413.89,
+      "fin": 416.63,
+      "texto": "Thirst makes you seek water."
+    },
+    {
+      "inicio": 416.63,
+      "fin": 420.61,
+      "texto": "You'd expect loneliness to simply make you seek people."
+    },
+    {
+      "inicio": 420.61,
+      "fin": 422.3,
+      "texto": "It does, at first."
+    },
+    {
+      "inicio": 422.3,
+      "fin": 426.01,
+      "texto": "But it also does something else, and the two work against each other."
+    },
+    {
+      "inicio": 426.01,
+      "fin": 428.43,
+      "texto": "Remember the vigilance."
+    },
+    {
+      "inicio": 428.43,
+      "fin": 432.4,
+      "texto": "A lonely person is scanning for social threat, and finding it."
+    },
+    {
+      "inicio": 432.4,
+      "fin": 436.42,
+      "texto": "Which means a lonely person walks into a room already braced."
+    },
+    {
+      "inicio": 436.42,
+      "fin": 438.69,
+      "texto": "Reads a neutral message as cold."
+    },
+    {
+      "inicio": 438.69,
+      "fin": 441.63,
+      "texto": "Notices the pause before somebody answers."
+    },
+    {
+      "inicio": 441.63,
+      "fin": 444.58,
+      "texto": "Assumes the invitation was politeness."
+    },
+    {
+      "inicio": 444.58,
+      "fin": 446.61,
+      "texto": "And people can feel that."
+    },
+    {
+      "inicio": 446.61,
+      "fin": 456.15,
+      "texto": "Somebody who is braced for rejection is harder to be around — not because they've done anything wrong, but because wariness is contagious and reads as dislike."
+    },
+    {
+      "inicio": 456.15,
+      "fin": 463.35,
+      "texto": "So the alarm designed to pull you back towards the group can, if it runs long enough, quietly push the group away."
+    },
+    {
+      "inicio": 463.35,
+      "fin": 465.25,
+      "texto": "Which makes the alarm louder."
+    },
+    {
+      "inicio": 465.25,
+      "fin": 467.01,
+      "texto": "Which makes the scanning worse."
+    },
+    {
+      "inicio": 467.01,
+      "fin": 479.22,
+      "texto": "Cacioppo's work found exactly this pattern, and it explains something that otherwise makes no sense: why loneliness so often gets worse in exactly the situations where more people are available."
+    },
+    {
+      "inicio": 479.22,
+      "fin": 481.22,
+      "texto": "It isn't a lack of opportunity."
+    },
+    {
+      "inicio": 481.22,
+      "fin": 487.62,
+      "texto": "It's a system stuck in emergency mode, doing emergency things, in a situation that isn't an emergency."
+    },
+    {
+      "inicio": 487.62,
+      "fin": 493.03,
+      "texto": "Yes, and this is the part that should make you take it seriously rather than treat it as a mood."
+    },
+    {
+      "inicio": 493.03,
+      "fin": 506.17,
+      "texto": "When researchers pooled dozens of studies covering hundreds of thousands of people, they found that weak social connection predicted earlier death by a margin big enough that they compared the effect to smoking around fifteen cigarettes a day."
+    },
+    {
+      "inicio": 506.17,
+      "fin": 514.77,
+      "texto": "Chronic loneliness shows up in the body as elevated stress hormones, higher inflammation, worse immune response, higher blood pressure."
+    },
+    {
+      "inicio": 514.77,
+      "fin": 516.5,
+      "texto": "Not metaphorically."
+    },
+    {
+      "inicio": 516.5,
+      "fin": 518.24,
+      "texto": "On the blood tests."
+    },
+    {
+      "inicio": 518.24,
+      "fin": 525.57,
+      "texto": "Which is exactly what you'd expect from a system that thinks you have been separated from the group and are therefore in mortal danger."
+    },
+    {
+      "inicio": 525.57,
+      "fin": 533.09,
+      "texto": "It floods you with the chemistry of an emergency, and it does not stop, because from its point of view the emergency has not ended."
+    },
+    {
+      "inicio": 533.09,
+      "fin": 537.16,
+      "texto": "Your body genuinely believes you are in danger out here on your own."
+    },
+    {
+      "inicio": 537.16,
+      "fin": 540.53,
+      "texto": "And in the world it was built for, it would have been right."
+    },
+    {
+      "inicio": 540.53,
+      "fin": 544.45,
+      "texto": "So — did ancient humans get lonely?"
+    },
+    {
+      "inicio": 544.45,
+      "fin": 546.12,
+      "texto": "They had the equipment."
+    },
+    {
+      "inicio": 546.12,
+      "fin": 552.1,
+      "texto": "They must have felt it, in the moments when the group thinned out, when someone died, when they were separated."
+    },
+    {
+      "inicio": 552.1,
+      "fin": 558.26,
+      "texto": "But it was rare, it was brief, and it usually got solved, because everybody was right there."
+    },
+    {
+      "inicio": 558.26,
+      "fin": 561.99,
+      "texto": "We kept the alarm and dismantled the thing it was pointing at."
+    },
+    {
+      "inicio": 561.99,
+      "fin": 570.83,
+      "texto": "Which means that when you feel it, you are not malfunctioning, and you are not weak, and it is not evidence of anything being wrong with you as a person."
+    },
+    {
+      "inicio": 570.83,
+      "fin": 578.03,
+      "texto": "It is a two-hundred-thousand-year-old warning light, wired directly into your body, doing what it has always done."
+    },
+    {
+      "inicio": 578.03,
+      "fin": 582.22,
+      "texto": "Telling you that you have drifted from the group and need to get back."
+    },
+    {
+      "inicio": 582.22,
+      "fin": 585.27,
+      "texto": "It has never once been embarrassed to say so."
+    },
+    {
+      "inicio": 585.27,
+      "fin": 592.52,
+      "texto": "And if you're now wondering what else your body is shouting about a world that no longer exists...\n...that's a question for another video."
+    }
+  ]
+}

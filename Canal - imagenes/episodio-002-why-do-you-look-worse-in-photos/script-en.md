@@ -57,6 +57,7 @@ Normally you never notice any of it, because you only ever see one version. But 
 There is a demonstration of this you can do yourself in about a minute. Take a straight-on photo of your face. Cut it down the middle. Mirror each half to build two complete faces out of it.
 You get two people. Two people who clearly look related. But not the same person.
 And you will almost certainly like one of them noticeably more than the other.
+Which is a strange thing to discover about a face you have owned your entire life.
 
 ## ACT 4 — THE LENS IS LYING TOO
 

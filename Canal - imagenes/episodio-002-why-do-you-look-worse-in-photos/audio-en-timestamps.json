@@ -1,0 +1,735 @@
+{
+  "duracion": 539.399,
+  "frases": [
+    {
+      "inicio": 0,
+      "fin": 1.83,
+      "texto": "There are two versions of your face."
+    },
+    {
+      "inicio": 1.83,
+      "fin": 4.63,
+      "texto": "One of them you have seen every single day of your life."
+    },
+    {
+      "inicio": 4.63,
+      "fin": 8.64,
+      "texto": "You have studied it, adjusted it, decided how you feel about it."
+    },
+    {
+      "inicio": 8.64,
+      "fin": 11.37,
+      "texto": "The other one is the one everybody else sees."
+    },
+    {
+      "inicio": 11.37,
+      "fin": 20.26,
+      "texto": "And the first time you really notice the gap — a photo somebody took of you without asking, at an angle you did not choose — it feels like a small betrayal."
+    },
+    {
+      "inicio": 20.26,
+      "fin": 21.62,
+      "texto": "That can't be me."
+    },
+    {
+      "inicio": 21.62,
+      "fin": 22.69,
+      "texto": "I don't look like that."
+    },
+    {
+      "inicio": 22.69,
+      "fin": 24.7,
+      "texto": "Here's the uncomfortable part."
+    },
+    {
+      "inicio": 24.7,
+      "fin": 26.77,
+      "texto": "You don't look like the mirror either."
+    },
+    {
+      "inicio": 26.77,
+      "fin": 28.62,
+      "texto": "So which one is lying?"
+    },
+    {
+      "inicio": 28.62,
+      "fin": 32.84,
+      "texto": "Start with the obvious thing that almost nobody actually thinks about."
+    },
+    {
+      "inicio": 32.84,
+      "fin": 35.39,
+      "texto": "A mirror flips you."
+    },
+    {
+      "inicio": 35.39,
+      "fin": 37.01,
+      "texto": "Not upside down."
+    },
+    {
+      "inicio": 37.01,
+      "fin": 38.46,
+      "texto": "Left to right."
+    },
+    {
+      "inicio": 38.46,
+      "fin": 42.5,
+      "texto": "The mole on your left cheek sits on the right side of the reflection."
+    },
+    {
+      "inicio": 42.5,
+      "fin": 51.92,
+      "texto": "The eyebrow that arches a little higher, the tooth that leans slightly in, the way your smile pulls harder on one side — all of it is on the wrong side."
+    },
+    {
+      "inicio": 51.92,
+      "fin": 55.89,
+      "texto": "And you have been staring at that reversed face since you were about eighteen months old."
+    },
+    {
+      "inicio": 55.89,
+      "fin": 57.69,
+      "texto": "Thousands of hours of it."
+    },
+    {
+      "inicio": 57.69,
+      "fin": 66.31,
+      "texto": "Every mirror, every shop window, every phone held up in selfie mode — because your phone flips the preview too, to feel natural to you."
+    },
+    {
+      "inicio": 66.31,
+      "fin": 69.98,
+      "texto": "That reversed face is the one your brain filed away as you."
+    },
+    {
+      "inicio": 69.98,
+      "fin": 71.72,
+      "texto": "It is the reference image."
+    },
+    {
+      "inicio": 71.72,
+      "fin": 73.82,
+      "texto": "It is what you check yourself against."
+    },
+    {
+      "inicio": 73.82,
+      "fin": 76.08,
+      "texto": "Now a camera takes a picture."
+    },
+    {
+      "inicio": 76.08,
+      "fin": 81.2,
+      "texto": "Somebody else's camera, or your own phone quietly un-flipping the image when it saves it."
+    },
+    {
+      "inicio": 81.2,
+      "fin": 85.6,
+      "texto": "And what comes out is the face everybody else has been looking at your entire life."
+    },
+    {
+      "inicio": 85.6,
+      "fin": 87.53,
+      "texto": "It is not a worse face."
+    },
+    {
+      "inicio": 87.53,
+      "fin": 89.26,
+      "texto": "It is a stranger's face."
+    },
+    {
+      "inicio": 89.26,
+      "fin": 95.69,
+      "texto": "And your brain, which is extraordinarily good at detecting when a face is subtly wrong, immediately puts its hand up."
+    },
+    {
+      "inicio": 95.69,
+      "fin": 97.55,
+      "texto": "Something about this is off."
+    },
+    {
+      "inicio": 97.55,
+      "fin": 98.45,
+      "texto": "Something is off."
+    },
+    {
+      "inicio": 98.45,
+      "fin": 99.06,
+      "texto": "It's you."
+    },
+    {
+      "inicio": 99.06,
+      "fin": 100.64,
+      "texto": "You are the thing that's off."
+    },
+    {
+      "inicio": 100.64,
+      "fin": 105.96,
+      "texto": "In nineteen seventy-seven, three researchers ran an experiment that settles this cleanly."
+    },
+    {
+      "inicio": 105.96,
+      "fin": 108,
+      "texto": "They photographed a group of people."
+    },
+    {
+      "inicio": 108,
+      "fin": 115.47,
+      "texto": "Then they made two prints of every face: the normal photograph, and a mirror-reversed version of that exact same photograph."
+    },
+    {
+      "inicio": 115.47,
+      "fin": 119.18,
+      "texto": "Same person, same light, same expression."
+    },
+    {
+      "inicio": 119.18,
+      "fin": 121.68,
+      "texto": "The only difference was which way round it was."
+    },
+    {
+      "inicio": 121.68,
+      "fin": 125.89,
+      "texto": "Then they showed both to the person in the picture and asked which one they preferred."
+    },
+    {
+      "inicio": 125.89,
+      "fin": 129.35,
+      "texto": "People overwhelmingly chose the mirror version."
+    },
+    {
+      "inicio": 129.35,
+      "fin": 131.39,
+      "texto": "Their own reversed face."
+    },
+    {
+      "inicio": 131.39,
+      "fin": 135.58,
+      "texto": "The one that does not exist anywhere in the world except in reflections."
+    },
+    {
+      "inicio": 135.58,
+      "fin": 140.6,
+      "texto": "Then the researchers showed the same two prints to that person's close friends and partners."
+    },
+    {
+      "inicio": 140.6,
+      "fin": 142.86,
+      "texto": "The friends chose the other one."
+    },
+    {
+      "inicio": 142.86,
+      "fin": 143.93,
+      "texto": "The real one."
+    },
+    {
+      "inicio": 143.93,
+      "fin": 147.1,
+      "texto": "Everybody preferred the version they were used to."
+    },
+    {
+      "inicio": 147.1,
+      "fin": 153.7,
+      "texto": "This is one of the most reliable findings in psychology, and it has a name: the mere-exposure effect."
+    },
+    {
+      "inicio": 153.7,
+      "fin": 156.18,
+      "texto": "It is almost embarrassingly simple."
+    },
+    {
+      "inicio": 156.18,
+      "fin": 159.53,
+      "texto": "The more times you see something, the more you like it."
+    },
+    {
+      "inicio": 159.53,
+      "fin": 161.31,
+      "texto": "Not because it is good."
+    },
+    {
+      "inicio": 161.31,
+      "fin": 162.85,
+      "texto": "Just because it is familiar."
+    },
+    {
+      "inicio": 162.85,
+      "fin": 169.04,
+      "texto": "It works on faces, on songs, on logos, even on nonsense words in a language you do not speak."
+    },
+    {
+      "inicio": 169.04,
+      "fin": 175.87,
+      "texto": "So when a photo of you comes out and you feel that small drop in your stomach — that is not your aesthetic judgement talking."
+    },
+    {
+      "inicio": 175.87,
+      "fin": 178.6,
+      "texto": "That is a familiarity alarm going off."
+    },
+    {
+      "inicio": 178.6,
+      "fin": 184.08,
+      "texto": "Your brain is not saying \"this is ugly.\"\nIt is saying \"this is not the one.\"\n\nBut hold on."
+    },
+    {
+      "inicio": 184.08,
+      "fin": 190.72,
+      "texto": "If a mirror only flips you left to right, and your face were symmetrical, then flipping would change absolutely nothing."
+    },
+    {
+      "inicio": 190.72,
+      "fin": 192.78,
+      "texto": "You would look identical either way."
+    },
+    {
+      "inicio": 192.78,
+      "fin": 197.84,
+      "texto": "Which means this entire problem rests on one fact: nobody's face is symmetrical."
+    },
+    {
+      "inicio": 197.84,
+      "fin": 198.83,
+      "texto": "Not yours."
+    },
+    {
+      "inicio": 198.83,
+      "fin": 200,
+      "texto": "Not anybody's."
+    },
+    {
+      "inicio": 200,
+      "fin": 202.12,
+      "texto": "One eye sits slightly higher."
+    },
+    {
+      "inicio": 202.12,
+      "fin": 204.69,
+      "texto": "One side of the jaw is a fraction wider."
+    },
+    {
+      "inicio": 204.69,
+      "fin": 206.67,
+      "texto": "One nostril is bigger."
+    },
+    {
+      "inicio": 206.67,
+      "fin": 211.15,
+      "texto": "Your smile pulls harder to one side — almost everyone's does."
+    },
+    {
+      "inicio": 211.15,
+      "fin": 213.9,
+      "texto": "Even your hair has a side it wants to fall on."
+    },
+    {
+      "inicio": 213.9,
+      "fin": 218.42,
+      "texto": "Normally you never notice any of it, because you only ever see one version."
+    },
+    {
+      "inicio": 218.42,
+      "fin": 225.14,
+      "texto": "But flip the image, and every single one of those small asymmetries jumps to the other side of your face at the same moment."
+    },
+    {
+      "inicio": 225.14,
+      "fin": 228.18,
+      "texto": "Individually, each one is nothing."
+    },
+    {
+      "inicio": 228.18,
+      "fin": 233.73,
+      "texto": "Together they add up to a face that is recognisably you, and somehow not quite you."
+    },
+    {
+      "inicio": 233.73,
+      "fin": 237.56,
+      "texto": "There is a demonstration of this you can do yourself in about a minute."
+    },
+    {
+      "inicio": 237.56,
+      "fin": 239.96,
+      "texto": "Take a straight-on photo of your face."
+    },
+    {
+      "inicio": 239.96,
+      "fin": 241.35,
+      "texto": "Cut it down the middle."
+    },
+    {
+      "inicio": 241.35,
+      "fin": 244.76,
+      "texto": "Mirror each half to build two complete faces out of it."
+    },
+    {
+      "inicio": 244.76,
+      "fin": 246.53,
+      "texto": "You get two people."
+    },
+    {
+      "inicio": 246.53,
+      "fin": 248.82,
+      "texto": "Two people who clearly look related."
+    },
+    {
+      "inicio": 248.82,
+      "fin": 250.84,
+      "texto": "But not the same person."
+    },
+    {
+      "inicio": 250.84,
+      "fin": 254.5,
+      "texto": "And you will almost certainly like one of them noticeably more than the other."
+    },
+    {
+      "inicio": 254.5,
+      "fin": 259.24,
+      "texto": "Which is a strange thing to discover about a face you have owned your entire life."
+    },
+    {
+      "inicio": 259.24,
+      "fin": 263.09,
+      "texto": "Now, the mirror explains why photos of you feel wrong."
+    },
+    {
+      "inicio": 263.09,
+      "fin": 266.91,
+      "texto": "It does not explain why some photos of you are so much worse than others."
+    },
+    {
+      "inicio": 266.91,
+      "fin": 269.48,
+      "texto": "That part is not psychology at all."
+    },
+    {
+      "inicio": 269.48,
+      "fin": 271.15,
+      "texto": "That part is just optics."
+    },
+    {
+      "inicio": 271.15,
+      "fin": 275.44,
+      "texto": "A lens has a focal length, and focal length changes the shape of a face."
+    },
+    {
+      "inicio": 275.44,
+      "fin": 278,
+      "texto": "It is not the camera being unkind to you."
+    },
+    {
+      "inicio": 278,
+      "fin": 279.44,
+      "texto": "It is geometry."
+    },
+    {
+      "inicio": 279.44,
+      "fin": 286.06,
+      "texto": "When an object is close to a lens, the parts nearest the camera get exaggerated relative to the parts further away."
+    },
+    {
+      "inicio": 286.06,
+      "fin": 289.75,
+      "texto": "And on a face, the thing nearest the camera is your nose."
+    },
+    {
+      "inicio": 289.75,
+      "fin": 295.05,
+      "texto": "Surgeons have actually measured this, because people were bringing selfies into consultations."
+    },
+    {
+      "inicio": 295.05,
+      "fin": 302.39,
+      "texto": "Take a photo at arm's length — roughly thirty centimetres — and your nose comes out looking about thirty percent wider than it really is."
+    },
+    {
+      "inicio": 302.39,
+      "fin": 309.87,
+      "texto": "Move the camera back to a metre and a half and photograph the same face again, and that distortion almost entirely disappears."
+    },
+    {
+      "inicio": 309.87,
+      "fin": 316.34,
+      "texto": "That is exactly why portrait photographers stand further back and zoom in, instead of walking closer."
+    },
+    {
+      "inicio": 316.34,
+      "fin": 326.48,
+      "texto": "Which means the phone in your hand at arm's length — the way the overwhelming majority of photographs of you get taken — is running the single most unflattering configuration available to it."
+    },
+    {
+      "inicio": 326.48,
+      "fin": 329.92,
+      "texto": "Your face did not change between the mirror and the photograph."
+    },
+    {
+      "inicio": 329.92,
+      "fin": 331.08,
+      "texto": "The maths did."
+    },
+    {
+      "inicio": 331.08,
+      "fin": 336.91,
+      "texto": "There is a third thing happening, and this one is my favourite, because once you see it you cannot unsee it."
+    },
+    {
+      "inicio": 336.91,
+      "fin": 338.94,
+      "texto": "In the mirror, you are moving."
+    },
+    {
+      "inicio": 338.94,
+      "fin": 341.98,
+      "texto": "You are never actually looking at a still image of yourself."
+    },
+    {
+      "inicio": 341.98,
+      "fin": 346.39,
+      "texto": "You are looking at a live feed, and you are adjusting it in real time."
+    },
+    {
+      "inicio": 346.39,
+      "fin": 348.67,
+      "texto": "You tilt your chin down a fraction."
+    },
+    {
+      "inicio": 348.67,
+      "fin": 352.85,
+      "texto": "You settle your mouth into the position you long ago decided is your face."
+    },
+    {
+      "inicio": 352.85,
+      "fin": 357.2,
+      "texto": "You look at yourself in the specific way you have practised looking at yourself."
+    },
+    {
+      "inicio": 357.2,
+      "fin": 360.56,
+      "texto": "You have never once seen yourself in a mirror mid-sentence."
+    },
+    {
+      "inicio": 360.56,
+      "fin": 362.25,
+      "texto": "Or halfway through a blink."
+    },
+    {
+      "inicio": 362.25,
+      "fin": 365.52,
+      "texto": "Or in the first quarter-second of reacting to something."
+    },
+    {
+      "inicio": 365.52,
+      "fin": 370.36,
+      "texto": "A camera captures one two-hundredth of a second, and it does not wait for a good one."
+    },
+    {
+      "inicio": 370.36,
+      "fin": 381.35,
+      "texto": "It takes whatever your face happened to be doing at that instant — including all the in-between positions your face passes through on the way from one expression to another, which nobody has ever seen frozen."
+    },
+    {
+      "inicio": 381.35,
+      "fin": 382.86,
+      "texto": "Including you."
+    },
+    {
+      "inicio": 382.86,
+      "fin": 385.8,
+      "texto": "And there is research on precisely this."
+    },
+    {
+      "inicio": 385.8,
+      "fin": 396.32,
+      "texto": "Film someone, then pull a single frame out of the footage, and people rate the moving version as better-looking than the still — even though every frame in that video is itself a still."
+    },
+    {
+      "inicio": 396.32,
+      "fin": 398.58,
+      "texto": "Movement flatters."
+    },
+    {
+      "inicio": 398.58,
+      "fin": 400.11,
+      "texto": "Freezing does not."
+    },
+    {
+      "inicio": 400.11,
+      "fin": 403.57,
+      "texto": "So you are not comparing your face to your face."
+    },
+    {
+      "inicio": 403.57,
+      "fin": 407.57,
+      "texto": "You are comparing a curated live performance to a random screenshot of it."
+    },
+    {
+      "inicio": 407.57,
+      "fin": 413.81,
+      "texto": "And then comes the final insult, which is that being photographed changes what your face is actually doing."
+    },
+    {
+      "inicio": 413.81,
+      "fin": 417.85,
+      "texto": "The moment somebody points a camera at you, you start performing a face."
+    },
+    {
+      "inicio": 417.85,
+      "fin": 420.15,
+      "texto": "You put on the smile you believe you have."
+    },
+    {
+      "inicio": 420.15,
+      "fin": 423.69,
+      "texto": "And a deliberate smile uses different muscles than a real one."
+    },
+    {
+      "inicio": 423.69,
+      "fin": 430.1,
+      "texto": "A genuine smile crinkles the muscles around the eyes, and most people simply cannot fire those on command."
+    },
+    {
+      "inicio": 430.1,
+      "fin": 436.99,
+      "texto": "So the posed smile lands as very slightly wrong — and other people can tell, even when they could not tell you why."
+    },
+    {
+      "inicio": 436.99,
+      "fin": 439.48,
+      "texto": "Then add the conditions nobody chose."
+    },
+    {
+      "inicio": 439.48,
+      "fin": 442.45,
+      "texto": "Overhead lighting that drops shadows under your eyes."
+    },
+    {
+      "inicio": 442.45,
+      "fin": 445.5,
+      "texto": "A flash that flattens your whole face into a pancake."
+    },
+    {
+      "inicio": 445.5,
+      "fin": 447.36,
+      "texto": "Somebody shooting from below."
+    },
+    {
+      "inicio": 447.36,
+      "fin": 448.52,
+      "texto": "And then they post it."
+    },
+    {
+      "inicio": 448.52,
+      "fin": 449.58,
+      "texto": "So."
+    },
+    {
+      "inicio": 449.58,
+      "fin": 451.15,
+      "texto": "Which one is you?"
+    },
+    {
+      "inicio": 451.15,
+      "fin": 452.85,
+      "texto": "The photograph is closer."
+    },
+    {
+      "inicio": 452.85,
+      "fin": 458.69,
+      "texto": "It is the orientation everybody else sees, and it is the version that actually exists out in the world."
+    },
+    {
+      "inicio": 458.69,
+      "fin": 466.29,
+      "texto": "But it has lens distortion and a frozen frame and a performed smile stacked on top of it, so it is not clean either."
+    },
+    {
+      "inicio": 466.29,
+      "fin": 469.65,
+      "texto": "The mirror is the right shape and the wrong way round."
+    },
+    {
+      "inicio": 469.65,
+      "fin": 475.63,
+      "texto": "The honest answer is that the most accurate version of your face is the one nobody ever shows you."
+    },
+    {
+      "inicio": 475.63,
+      "fin": 479.6,
+      "texto": "You, moving, at a normal distance, un-flipped."
+    },
+    {
+      "inicio": 479.6,
+      "fin": 486.02,
+      "texto": "Which is to say: the version that every single person who has ever met you has been looking at the entire time."
+    },
+    {
+      "inicio": 486.02,
+      "fin": 488.98,
+      "texto": "And here is the part that should actually land."
+    },
+    {
+      "inicio": 488.98,
+      "fin": 493.29,
+      "texto": "The people who love you are not carrying the mirror version of you around in their heads."
+    },
+    {
+      "inicio": 493.29,
+      "fin": 494.58,
+      "texto": "They never saw it."
+    },
+    {
+      "inicio": 494.58,
+      "fin": 498.39,
+      "texto": "They fell for the other one — the one in the photograph you hate."
+    },
+    {
+      "inicio": 498.39,
+      "fin": 501.41,
+      "texto": "That is the face they picture when they think about you."
+    },
+    {
+      "inicio": 501.41,
+      "fin": 503.87,
+      "texto": "And it has never once looked wrong to them."
+    },
+    {
+      "inicio": 503.87,
+      "fin": 507.53,
+      "texto": "Because to them, it is the only face you have ever had."
+    },
+    {
+      "inicio": 507.53,
+      "fin": 513.78,
+      "texto": "So the next time a photo of you appears and your stomach drops, pay attention to what your brain is actually reporting."
+    },
+    {
+      "inicio": 513.78,
+      "fin": 516.08,
+      "texto": "It is not reporting ugliness."
+    },
+    {
+      "inicio": 516.08,
+      "fin": 518.14,
+      "texto": "It is reporting unfamiliarity."
+    },
+    {
+      "inicio": 518.14,
+      "fin": 524.92,
+      "texto": "And it uses the exact same alarm for both, which is precisely why the two feel identical from the inside."
+    },
+    {
+      "inicio": 524.92,
+      "fin": 529.41,
+      "texto": "You have just met the version of yourself that everybody else has known for years."
+    },
+    {
+      "inicio": 529.41,
+      "fin": 531.16,
+      "texto": "They are not disappointed by it."
+    },
+    {
+      "inicio": 531.16,
+      "fin": 539.4,
+      "texto": "And if you are now wondering how many other things about yourself you have been seeing backwards this whole time...\n...that is a question for another video."
+    }
+  ]
+}
