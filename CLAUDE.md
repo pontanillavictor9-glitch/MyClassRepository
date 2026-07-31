@@ -98,10 +98,38 @@ lee una cara con expresión; un objeto detallado no se lee.
 6. Dejar el tercio superior del dibujo **vacío** al generarlo, para que el
    texto no tape nada.
 
+7. **Color del texto: solo dos combinaciones.** Amarillo con borde negro
+   sobre fondos oscuros o saturados; negro con borde blanco sobre fondos
+   pálidos. Ninguna otra.
+8. **Un solo sujeto.** O un monigote con expresión exagerada, o un objeto
+   icónico reconocible al instante. Nunca dos cosas compitiendo.
+9. **Variante de tipografía pura**, para episodios con un dato numérico
+   fuerte: fondo liso oscuro y el dato gigante ocupando media pantalla, sin
+   dibujo (en el canal de referencia, "0:00" tiene 512 K). Rompe el patrón
+   en la parrilla y por eso destaca. Usarla de vez en cuando, no siempre.
+
 - Generar el dibujo con `gpt_image_2` y **superponer el texto con ffmpeg**,
   nunca pedírselo al modelo.
 - YouTube: 1280×720, máximo 2 MB.
 - Duración de los vídeos de referencia: 3:58 a 12:58. La nuestra ~10 min.
+
+### Qué temas funcionan (datos de los canales de referencia)
+
+Ordenado por visitas observadas, lo que mejor rinde no es la psicología
+pura sino, por este orden:
+
+1. **Humanos antiguos** — "¿Qué hacían los primeros humanos por la noche?"
+   7,8 M; "Were Ancient Humans Loyal to One Partner?" 21 K (el mejor de su
+   canal). Es el filón principal.
+2. **Experiencias físicas del pasado** — "What Did Surgery Feel Like Before
+   Anesthesia?" 15 K.
+3. **Animales que piensan** — "Do Animals Remember Human Faces?" 15 K.
+4. **Preguntas existenciales** — "What Happens After We Die?" 512 K.
+5. Psicología de autoayuda ("When Do You Peak in Life?") se queda en la
+   media. No abusar.
+
+Nuestro episodio 001 compite directamente con uno de 1,8 M del segundo
+canal de referencia, así que el tema está validado.
 - Comandos: `higgsfield generate cost <modelo> --prompt "..."` para estimar y
   `higgsfield generate create <modelo> --aspect_ratio 16:9 --prompt "..." --wait`
   para generar. Requiere workspace fijado:
