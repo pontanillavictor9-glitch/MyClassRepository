@@ -1,0 +1,200 @@
+{
+  "duracion": 640.916,
+  "escenas": [
+    {
+      "inicio": 0,
+      "fin": 18.22,
+      "texto": "You were alive for about three years... that you have zero memory of. You laughed. You cried. You learned to walk, to talk, to recognize your own name. Someone fed you every single day. You had a favorite toy. You had entire relationships — with people who loved you more than anything in the world."
+    },
+    {
+      "inicio": 18.22,
+      "fin": 33.59,
+      "texto": "And it's all gone. Not blurry. Not faded. Gone. Three years of your own life, and you cannot produce a single frame. So here's the question almost nobody asks: if you can't remember any of it... who was that baby?"
+    },
+    {
+      "inicio": 33.59,
+      "fin": 48.75,
+      "texto": "Try it right now. What is your earliest memory? Go ahead. I'll wait. Whatever you just thought of — a birthday, a beach, falling off something, a dog that scared you — odds are you were about three and a half years old."
+    },
+    {
+      "inicio": 48.75,
+      "fin": 63.48,
+      "texto": "That's the average, across almost every study ever done on this. Almost nobody remembers anything from before age two. And between two and four? Just fragments. Random flashes with no story attached. A patch of carpet."
+    },
+    {
+      "inicio": 63.48,
+      "fin": 78.9,
+      "texto": "A smell. The feeling of being carried somewhere in the dark. Scientists have a name for this: infantile amnesia. And here is why it is genuinely strange. Those first years are the most important of your entire life."
+    },
+    {
+      "inicio": 78.9,
+      "fin": 97.55,
+      "texto": "You learned more, and faster, than you ever will again. An entire language, from nothing. How to operate a human body. Who your family is. Whether the world is safe or hostile. Your brain recorded the most valuable data it will ever collect...\n...and then apparently threw it in the trash."
+    },
+    {
+      "inicio": 97.55,
+      "fin": 114.64,
+      "texto": "Not some of it. All of it. So why would evolution build a brain that deletes its own childhood? Your first guess is probably the obvious one. Babies just can't form memories yet. Their brains aren't finished. Nothing got recorded, so there's nothing to remember."
+    },
+    {
+      "inicio": 114.64,
+      "fin": 129.6,
+      "texto": "Nice theory. It's wrong. In the nineteen eighties, a psychologist named Carolyn Rovee-Collier ran an experiment that is equal parts adorable and mind-blowing. She tied a ribbon from a baby's ankle to a colorful mobile hanging over the crib."
+    },
+    {
+      "inicio": 129.6,
+      "fin": 145.63,
+      "texto": "The baby kicks — the mobile spins. Babies work this out within minutes, and they love it. Kick, spin, delight. Kick, spin, delight. Here's the twist. Bring that same baby back days or even weeks later."
+    },
+    {
+      "inicio": 145.63,
+      "fin": 161.86,
+      "texto": "Same crib, same mobile — but this time, no ribbon. The baby immediately starts kicking. It remembered. And not just the mobile — it remembered what it had learned to do. Two-month-olds held onto that memory for a couple of days."
+    },
+    {
+      "inicio": 161.86,
+      "fin": 177.24,
+      "texto": "Six-month-olds, for around two weeks. Babies form memories perfectly well. They remember faces, places, routines, whole sequences of events. So the recordings existed. Your brain made them."
+    },
+    {
+      "inicio": 177.24,
+      "fin": 194.84,
+      "texto": "You were in there, paying attention. Which makes the real question so much creepier. Where did they go? Meet your hippocampus. It's a small, curled structure buried deep in your brain, and it is the part that files away memories of events — what scientists call episodic memory."
+    },
+    {
+      "inicio": 194.84,
+      "fin": 215.4,
+      "texto": "Your first kiss. Your worst haircut. That thing you said in twenty fourteen that still wakes you up at three in the morning. All filed in there. And in a baby, the hippocampus has a problem. It is still under construction. It's one of the only regions of the brain that keeps producing brand-new neurons at full speed — a process called neurogenesis."
+    },
+    {
+      "inicio": 215.4,
+      "fin": 234.37,
+      "texto": "In a baby, it runs at absolute maximum. Which sounds like good news. New neurons, more learning power. Except in twenty fourteen, a team of researchers found the catch. When new neurons wire themselves into the hippocampus, they don't politely wait their turn at the end of the line."
+    },
+    {
+      "inicio": 234.37,
+      "fin": 250.3,
+      "texto": "They barge straight into circuits that already exist — the exact circuits that are holding your memories. So the researchers tested it in both directions. They took adult mice, whose neurogenesis has slowed to a trickle, and cranked it back up to baby levels."
+    },
+    {
+      "inicio": 250.3,
+      "fin": 269.6,
+      "texto": "Those adults started forgetting things they had already learned. Then they slowed neurogenesis down in infant mice. And the babies remembered longer. Read that again, because it turns the whole thing inside out. The very process that was building your brain was shredding the files as fast as you could save them."
+    },
+    {
+      "inicio": 269.6,
+      "fin": 284.27,
+      "texto": "You did not fail to record your babyhood. Your own brain recorded over it. Like a security tape on a loop. But biology is only half of the answer. Because there's a second thing missing in a baby, and honestly it's stranger than the first one."
+    },
+    {
+      "inicio": 284.27,
+      "fin": 304.88,
+      "texto": "There was no \"you\" yet. An episodic memory isn't just information. It's information filed under a heading, and the heading reads: this happened to me. Which requires a me. A sense of yourself as a specific person who exists across time — who was here yesterday, and who will still be here tomorrow."
+    },
+    {
+      "inicio": 304.88,
+      "fin": 319.71,
+      "texto": "Babies don't start with that. There's a famous test for it: you put a dot of red makeup on a small child's nose, then sit them in front of a mirror. Before about eighteen months, the child reaches toward the mirror. They see a baby with a red nose."
+    },
+    {
+      "inicio": 319.71,
+      "fin": 335.22,
+      "texto": "Somewhere between eighteen months and two years, something clicks — and instead they reach for their own nose. That is the moment a person shows up. And it lands right at the edge of where memory starts to stick. Probably not a coincidence."
+    },
+    {
+      "inicio": 335.22,
+      "fin": 352.79,
+      "texto": "Then there's language. And this is the detail that really gets me. Researchers taught toddlers to operate a strange toy machine, at an age before those children had the words to describe what they were doing. Then they waited months, and came back after those children had learned to talk properly."
+    },
+    {
+      "inicio": 352.79,
+      "fin": 369.62,
+      "texto": "The children could still work the machine. Their hands remembered it perfectly. But when they were asked to describe it out loud, they could only use the words they had possessed at the time it happened. The experience was locked inside the language they had back then — and back then, they had almost none."
+    },
+    {
+      "inicio": 369.62,
+      "fin": 384.42,
+      "texto": "So your babyhood isn't only deleted. Part of it was filed in a format you can no longer open. If infantile amnesia were purely a matter of brain hardware, it should be identical for every human being on the planet. It isn't."
+    },
+    {
+      "inicio": 384.42,
+      "fin": 400.78,
+      "texto": "And that is the biggest clue of all. When researchers in New Zealand compared earliest memories across cultures, they found that Māori adults reported first memories from noticeably earlier in childhood than their neighbors of European descent. Some from before the age of two and a half."
+    },
+    {
+      "inicio": 400.78,
+      "fin": 416.51,
+      "texto": "The brains are the same. What's different is the culture — a strong tradition of talking about the past, out loud, in detail. The same effect shows up inside families. Parents differ enormously in how they talk to small children about things that already happened."
+    },
+    {
+      "inicio": 416.51,
+      "fin": 430.72,
+      "texto": "Some ask questions and build the story together. Remember the ducks? What color were they? Who got scared? Others just confirm it and move on. The children of the first kind end up with earlier, richer, more durable memories."
+    },
+    {
+      "inicio": 430.72,
+      "fin": 445.63,
+      "texto": "Consistently. Which means the boundary of your own memory is not purely a fact about your brain. It is partly a fact about how much somebody talked to you when you were three. Memory, it turns out, is something you learn how to do. And somebody has to teach you."
+    },
+    {
+      "inicio": 445.63,
+      "fin": 464.14,
+      "texto": "Quick historical detour, because the first person to name this problem had a very different theory. Sigmund Freud noticed infantile amnesia over a century ago. His explanation? You do remember your early childhood — but it was so full of forbidden feelings that your mind buried the entire thing."
+    },
+    {
+      "inicio": 464.14,
+      "fin": 479.16,
+      "texto": "On purpose. Very dramatic, Sigmund. There's essentially no evidence for that. But to be fair to the man with the cigar, he spotted something real that everybody else had walked straight past. The memories are not missing because nothing happened."
+    },
+    {
+      "inicio": 479.16,
+      "fin": 494.89,
+      "texto": "Something is actively keeping them from you. He just got the something wrong. It isn't shame. It's construction work. Now for the part of this video that might genuinely bother you. That earliest memory you came up with a few minutes ago?"
+    },
+    {
+      "inicio": 494.89,
+      "fin": 511.48,
+      "texto": "There's a decent chance it never happened. In a study of over six thousand people, researchers found that nearly forty percent reported a first memory from age two or younger — an age at which, as we have just established, lasting episodic memories basically cannot survive."
+    },
+    {
+      "inicio": 511.48,
+      "fin": 529.14,
+      "texto": "Those weren't recordings. They were reconstructions. Assembled later out of family stories, photographs, home videos and imagination, and then quietly filed under \"things I actually experienced.\" The person remembering has no way to tell the difference."
+    },
+    {
+      "inicio": 529.14,
+      "fin": 547.27,
+      "texto": "It feels exactly like a real memory — because as far as your brain is concerned, it is one. Your brain does not play memories back like video. It rebuilds them from scratch, every single time. And it will cheerfully use whatever materials it finds lying around — including a photograph you saw when you were nine."
+    },
+    {
+      "inicio": 547.27,
+      "fin": 561.83,
+      "texto": "And then there's the cruelest detail of all. Small children do remember being babies. Ask a three-year-old about something that happened when they were eighteen months old, and sometimes they will tell you about it. The memories are in there. For a while."
+    },
+    {
+      "inicio": 561.83,
+      "fin": 580.64,
+      "texto": "But around the age of seven, those early memories start dissolving. Fast. Which means that at some point in your childhood, you were the last person alive holding the last surviving memory of your own babyhood...\n...you remembered it one final time...\n...and then you never thought about it again."
+    },
+    {
+      "inicio": 580.64,
+      "fin": 596.02,
+      "texto": "And you didn't even notice it happen. So those missing years. Are they just gone? Not exactly. Because your brain has more than one memory system, and only one of them got wiped. The events were deleted. The skills stayed."
+    },
+    {
+      "inicio": 596.02,
+      "fin": 612.09,
+      "texto": "The language you are listening to right now — installed during the missing years. The way you walk. The way you laugh. Your gut sense of whether the world is basically safe or basically dangerous. Whether you expect the people who leave to come back."
+    },
+    {
+      "inicio": 612.09,
+      "fin": 626.85,
+      "texto": "All of it was written during the years you cannot access. Not as memories, but as the operating system you are running on right now, today, while you watch this. You can't remember being that baby. But you did not lose them."
+    },
+    {
+      "inicio": 626.85,
+      "fin": 640.92,
+      "texto": "Everything they learned, you are still using. Every single day. You're just running on somebody else's notes. And if you're now wondering whether the rest of your memories are trustworthy...\n...that is a question for another video."
+    }
+  ]
+}
