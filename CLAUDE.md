@@ -64,6 +64,23 @@ Se empieza por el inglés.
   Aun así, para el texto de la portada es más seguro superponerlo con
   ffmpeg que pedírselo al modelo.
 - Aspect ratio siempre `16:9`.
+
+### Portadas (miniaturas)
+
+Observado en las portadas del canal de referencia (captura `prueba2.png`):
+
+- **Fondo de color plano a sangre**, no blanco: azul cielo, amarillo pálido,
+  verde claro. El fondo blanco es para las imágenes de dentro del vídeo.
+- **Texto de 2-4 palabras, enorme, amarillo con borde negro grueso**, arriba,
+  normalmente en forma de pregunta: "PEAK AGE?", "WHY YOU?", "NO BLOOD?".
+- **El texto de la portada NO repite el título.** Lo complementa: título
+  "When Do You Peak in Life?" + portada "PEAK AGE?".
+- Un monigote grande y expresivo, a menudo solo la cara en primer plano con
+  los ojos muy abiertos.
+- Generar el dibujo con `gpt_image_2` y **superponer el texto con ffmpeg**,
+  no pedírselo al modelo.
+- YouTube: 1280×720, máximo 2 MB.
+- Duración de los vídeos de referencia: 8:01 a 12:58.
 - Comandos: `higgsfield generate cost <modelo> --prompt "..."` para estimar y
   `higgsfield generate create <modelo> --aspect_ratio 16:9 --prompt "..." --wait`
   para generar. Requiere workspace fijado:
