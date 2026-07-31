@@ -51,7 +51,14 @@ const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/
   body: JSON.stringify({
     text: texto,
     model_id: 'eleven_multilingual_v2',
-    voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0.0, use_speaker_boost: true },
+    voice_settings: {
+      stability: Number(arg('stability', 0.5)),
+      similarity_boost: Number(arg('similarity', 0.75)),
+      style: 0.0,
+      use_speaker_boost: true,
+      // Menos de 1 = mas lento. Util para narracion documental.
+      speed: Number(arg('speed', 1.0)),
+    },
   }),
 })
 

@@ -1,0 +1,67 @@
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/01.png'
+duration 18.270
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/02.png'
+duration 22.740
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/03.png'
+duration 18.770
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/04.png'
+duration 26.820
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/05.png'
+duration 16.150
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/06.png'
+duration 15.480
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/07.png'
+duration 18.680
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/08.png'
+duration 15.750
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/09.png'
+duration 18.450
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/10.png'
+duration 15.610
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/11.png'
+duration 15.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/12.png'
+duration 17.400
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/13.png'
+duration 18.520
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/14.png'
+duration 16.900
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/15.png'
+duration 25.790
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/16.png'
+duration 16.580
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/17.png'
+duration 17.320
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/18.png'
+duration 18.000
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/19.png'
+duration 23.180
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/20.png'
+duration 15.620
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/21.png'
+duration 23.440
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/22.png'
+duration 25.250
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/23.png'
+duration 15.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/24.png'
+duration 17.410
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/25.png'
+duration 19.680
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/26.png'
+duration 21.050
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/27.png'
+duration 19.540
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/28.png'
+duration 17.500
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/29.png'
+duration 25.060
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/30.png'
+duration 15.270
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/31.png'
+duration 17.320
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/32.png'
+duration 18.000
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/33.png'
+duration 8.380
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-001-shipman/imagenes/33.png'

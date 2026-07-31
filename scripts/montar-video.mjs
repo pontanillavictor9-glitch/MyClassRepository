@@ -16,10 +16,13 @@ if (!carpeta) {
   process.exit(1)
 }
 const base = resolve(carpeta)
-const audio = join(base, 'audio-en.mp3')
-const escenasJson = join(base, 'audio-en-escenas.json')
+// El canal ingles usa audio-en, el proyecto en espanol audio-es.
+const idioma = existsSync(join(base, 'audio-en.mp3')) ? 'en' : 'es'
+const audio = join(base, `audio-${idioma}.mp3`)
+const escenasJson = join(base, `audio-${idioma}-escenas.json`)
 const imgDir = join(base, 'imagenes')
-const salida = join(base, 'video-en.mp4')
+const iSal = process.argv.indexOf('--out')
+const salida = iSal === -1 ? join(base, `video-${idioma}.mp4`) : resolve(process.argv[iSal + 1])
 
 const { escenas } = JSON.parse(readFileSync(escenasJson, 'utf8'))
 
