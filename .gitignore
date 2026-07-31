@@ -3,3 +3,7 @@ data/
 config.json
 .env
 __pycache__/
+
+# Videos de referencia (material ajeno, no se sube)
+*.mp4
+*.mov
