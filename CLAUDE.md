@@ -15,6 +15,9 @@ Se empieza por el inglés.
 - La voz la elige el usuario en ElevenLabs (tiene cuenta de pago y otro
   proyecto donde ya la usa). No elegir voz por él.
 - Idioma de trabajo con el usuario: español.
+- **Todo lo que se haga se sube a GitHub.** Al terminar cada paso (guion
+  nuevo, cambio de estructura, notas), commit + push a `origin` para que el
+  trabajo esté igual en local y en GitHub.
 
 ## Estructura
 
