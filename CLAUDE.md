@@ -25,7 +25,7 @@ Se empieza por el inglés.
   **9.000–10.000 caracteres**. Equivale a ~1.500–1.700 palabras y ~10 min
   de audio. Comprobarlo antes de generar voz con:
   `node scripts/extract-narration.mjs <script-en.md> --out salida.txt`
-- **Ritmo de producción objetivo**: 3 episodios al día.
+- **Ritmo de producción objetivo**: 1 episodio al día.
 - **Temáticas**: psicología (efectos con nombre), biología curiosa e
   historia. Título-pregunta de curiosidad en segunda persona.
 
@@ -38,6 +38,28 @@ Se empieza por el inglés.
   speaker_boost `true` (ya están en `scripts/tts.mjs`).
 - Para el canal ES habrá que elegir una voz nativa distinta: Liam hablaría
   español con acento inglés.
+
+## Imágenes (Higgsfield)
+
+- Cuenta: **plan Plus, 1.200 créditos/mes** (47 €). Contratado el 31-07-2026.
+- Modelo por defecto: **`z_image`** — 0,15 créditos/imagen. A 40 imágenes por
+  vídeo son 6 créditos (~0,23 €), unos 180 créditos al mes. Sobra margen.
+- `gpt_image_2` (el que pide el prompt original) cuesta **7 créditos/imagen**:
+  280 por vídeo. Inviable para el ritmo diario, no usarlo por defecto.
+- `nano_banana_2_lite` (1 crédito) requiere plan de pago; útil para las 3-4
+  imágenes clave o las que lleven texto.
+- **Regla de estilo aprendida en las pruebas**: color plano en la ropa y los
+  objetos (camisetas, cunas, sábanas, muebles), pero **las personas siempre
+  monigote blanco de línea negra** — cabeza redonda, ojos de punto,
+  extremidades de línea. Si se pide "bebé con color" sin más, el modelo
+  deriva a ilustración infantil bonita y se sale del estilo del canal.
+- **El texto dentro de la imagen lo escribe mal** `z_image` (salió
+  "HIPOCAMPS"). Evitar carteles; si son imprescindibles, usar modelo mejor.
+- Aspect ratio siempre `16:9`.
+- Comandos: `higgsfield generate cost <modelo> --prompt "..."` para estimar y
+  `higgsfield generate create <modelo> --aspect_ratio 16:9 --prompt "..." --wait`
+  para generar. Requiere workspace fijado:
+  `higgsfield workspace set 949630f0-298a-45ad-82a0-7d9690a1353d`.
 
 ## Scripts de utilidad
 
@@ -64,12 +86,14 @@ episodio → el usuario monta el vídeo.
 ## Estado (actualizar al avanzar)
 
 - [x] Voz del canal EN elegida: Liam.
-- [x] Episodio 001 "Why Can't You Remember Being a Baby?" — guion EN escrito
-      (5.602 caracteres) y audio generado (`audio-en.mp3`, 6:11).
-- [ ] Episodio 001 — **se queda corto**: hay que ampliar el guion a
-      9.000–10.000 caracteres y regenerar el audio.
-- Flujo posterior: el usuario sube el mp3 a TurboScribe para la
-  transcripción con marcas de tiempo.
+- [x] Episodio 001 "Why Can't You Remember Being a Baby?" — guion EN reescrito
+      en narración pura (10.098 caracteres) y audio generado
+      (`audio-en.mp3`, 10:37, un único mp3 continuo).
+- [x] Pruebas de estilo de imagen hechas (`pruebas-imagen/`): 6 en blanco y
+      negro y 4 con color. La buena de referencia es `C1-color-bebe-y-adulto`.
+- [ ] Episodio 001 — pendiente: el usuario sube el mp3 a TurboScribe, pega
+      aquí la transcripción con timestamps, y de ahí salen las descripciones
+      de imagen (una por timestamp) para generar con Higgsfield.
 - Rama de trabajo: `claude/higgsfield-cli-auth-6u1tz7`.
 
 ## Notas técnicas
