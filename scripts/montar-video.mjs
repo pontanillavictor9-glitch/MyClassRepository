@@ -46,6 +46,10 @@ lineas.push(`file '${join(imgDir, `${String(escenas.length).padStart(2, '0')}.pn
 const lista = join(base, 'concat.txt')
 writeFileSync(lista, lineas.join('\n'), 'utf8')
 
+// El demuxer concat exige repetir el ultimo archivo, y eso alarga el video
+// unos segundos de mas. Se corta a la duracion exacta del audio.
+const durAudio = execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', audio], { encoding: 'utf8' }).trim()
+
 console.log(`Montando ${escenas.length} escenas...`)
 
 execFileSync(
@@ -58,7 +62,7 @@ execFileSync(
     '-r', '30',
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
     '-c:a', 'aac', '-b:a', '192k',
-    '-shortest',
+    '-t', durAudio,
     salida,
   ],
   { stdio: 'inherit' },

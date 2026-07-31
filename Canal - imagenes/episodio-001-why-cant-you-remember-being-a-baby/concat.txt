@@ -1,0 +1,79 @@
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/01.png'
+duration 18.220
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/02.png'
+duration 15.370
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/03.png'
+duration 15.160
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/04.png'
+duration 14.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/05.png'
+duration 15.420
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/06.png'
+duration 18.650
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/07.png'
+duration 17.090
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/08.png'
+duration 14.960
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/09.png'
+duration 16.030
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/10.png'
+duration 16.230
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/11.png'
+duration 15.380
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/12.png'
+duration 17.600
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/13.png'
+duration 20.560
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/14.png'
+duration 18.970
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/15.png'
+duration 15.930
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/16.png'
+duration 19.300
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/17.png'
+duration 14.670
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/18.png'
+duration 20.610
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/19.png'
+duration 14.830
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/20.png'
+duration 15.510
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/21.png'
+duration 17.570
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/22.png'
+duration 16.830
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/23.png'
+duration 14.800
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/24.png'
+duration 16.360
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/25.png'
+duration 15.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/26.png'
+duration 14.210
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/27.png'
+duration 14.910
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/28.png'
+duration 18.510
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/29.png'
+duration 15.020
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/30.png'
+duration 15.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/31.png'
+duration 16.590
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/32.png'
+duration 17.660
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/33.png'
+duration 18.130
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/34.png'
+duration 14.560
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/35.png'
+duration 18.810
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/36.png'
+duration 15.380
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/37.png'
+duration 16.070
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/38.png'
+duration 14.760
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/39.png'
+duration 14.070
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-001-why-cant-you-remember-being-a-baby/imagenes/39.png'
