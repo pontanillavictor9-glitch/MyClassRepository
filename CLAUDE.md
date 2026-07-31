@@ -162,6 +162,20 @@ episodio → el usuario monta el vídeo.
 
 ## Estado (actualizar al avanzar)
 
+- [x] **Primera semana completa: 7 episodios subidos y programados**, uno al
+      día del 31-07 al 06-08-2026, todos a las 18:00 hora española
+      (`16:00Z`), con portada, subtítulos y metadatos.
+
+      | Fecha | Episodio | ID |
+      |---|---|---|
+      | 31-07 | How Did Ancient Humans Sleep? | `rh45NBxhKKU` |
+      | 01-08 | Why Can't You Remember Being a Baby? | `6GhGOCW_1NQ` |
+      | 02-08 | Why Do You Look Worse in Photos? | `DWbSCUijt2g` |
+      | 03-08 | Did Ancient Humans Get Lonely? | `MBUvLBNSbCc` |
+      | 04-08 | What Did Childbirth Feel Like Before Hospitals? | `XuNQA8Js-s0` |
+      | 05-08 | Do Animals Know They're Going to Die? | `6qGZrETe07M` |
+      | 06-08 | Why Does Time Speed Up As You Get Older? | `Ka7nGxVyQWs` |
+
 - [x] Voz del canal EN elegida: Liam.
 - [x] Episodio 001 "Why Can't You Remember Being a Baby?" — guion EN reescrito
       en narración pura (10.098 caracteres) y audio generado
