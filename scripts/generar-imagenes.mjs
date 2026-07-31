@@ -23,8 +23,8 @@ const ESTILO =
   'a simple line mouth, thin line arms and legs. Do not draw realistic or cartoon children, no skin tones, ' +
   'no rounded cartoon bodies. Thick uneven black outlines, wobbly hand-drawn lines. Clothes and objects are ' +
   'filled with flat solid colors like a paint bucket fill. No gradients, no shading, no 3D, no cinematic ' +
-  'lighting, no polished illustration, no vector art. Plain white background with lots of empty space. ' +
-  'Amateur, funny, intentionally bad. Scene: '
+  'lighting, no polished illustration, no vector art. The background is a simple flat color as described ' +
+  'in the scene, with lots of empty space and no detail. Amateur, funny, intentionally bad. Scene: '
 
 // En Windows, Node se niega a ejecutar el .cmd (EINVAL) y no encuentra el
 // nombre sin extension (ENOENT). Se llama al .js directamente con Node.

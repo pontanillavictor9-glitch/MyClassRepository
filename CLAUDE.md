@@ -36,6 +36,9 @@ Se empieza por el inglés.
   de audio. Comprobarlo antes de generar voz con:
   `node scripts/extract-narration.mjs <script-en.md> --out salida.txt`
 - **Ritmo de producción objetivo**: 1 episodio al día.
+- **Orden obligatorio**: primero el **resumen en español** de lo que va a
+  contar el episodio, para que el usuario lo apruebe. Solo después se
+  escribe el guion en inglés. Nunca al revés.
 - **Temáticas**: psicología (efectos con nombre), biología curiosa e
   historia. Título-pregunta de curiosidad en segunda persona.
 

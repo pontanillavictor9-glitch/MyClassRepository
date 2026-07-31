@@ -1,0 +1,634 @@
+1
+00:00:00,000 --> 00:00:01,660
+It's three in the
+morning and you're awake.
+
+2
+00:00:01,660 --> 00:00:02,620
+Not sick.
+
+3
+00:00:02,620 --> 00:00:04,930
+Not worried about anything in particular.
+
+4
+00:00:04,930 --> 00:00:14,290
+Just awake, staring at the ceiling, doing the arithmetic — if I fall asleep right now
+I still get four hours — which is the exact thought that guarantees you won't.
+
+5
+00:00:14,290 --> 00:00:18,700
+And somewhere in there is the quiet
+fear that something is wrong with you.
+
+6
+00:00:18,700 --> 00:00:22,950
+That normal people sleep through the night,
+and you have somehow lost the ability.
+
+7
+00:00:22,950 --> 00:00:24,380
+Here's the thing.
+
+8
+00:00:24,380 --> 00:00:28,320
+For most of human history, waking up in
+the middle of the night wasn't the problem.
+
+9
+00:00:28,320 --> 00:00:29,700
+It was the schedule.
+
+10
+00:00:29,700 --> 00:00:40,350
+In the nineteen nineties, a historian called Roger Ekirch was digging through old documents
+— court records, diaries, medical books, letters, plays — looking for something completely unrelated.
+
+11
+00:00:40,350 --> 00:00:43,400
+And he kept tripping over
+the same odd phrase.
+
+12
+00:00:43,400 --> 00:00:44,600
+First sleep.
+
+13
+00:00:44,600 --> 00:00:59,350
+Somebody would write that a thing happened "after the first sleep." A witness would testify that she got up "between
+the first and the second sleep." A doctor would advise taking a particular remedy "at first waking."
+He started collecting them.
+
+14
+00:00:59,350 --> 00:01:01,090
+He found hundreds.
+
+15
+00:01:01,090 --> 00:01:07,410
+More than five hundred references, across
+centuries, in English, French, Italian, Latin.
+
+16
+00:01:07,410 --> 00:01:15,290
+Different countries, different classes, different eras, all casually referring to
+two sleeps as if everybody obviously knew what that meant.
+
+17
+00:01:15,290 --> 00:01:16,970
+Because everybody did.
+
+18
+00:01:16,970 --> 00:01:22,100
+Before artificial light was cheap, an ordinary night
+in much of Europe went like this.
+
+19
+00:01:22,100 --> 00:01:24,320
+You went to bed not long after dark.
+
+20
+00:01:24,320 --> 00:01:26,190
+You slept for three or four hours.
+
+21
+00:01:26,190 --> 00:01:32,550
+Then you woke up — not by accident, not because something disturbed
+you, but simply because that was the shape of the night.
+
+22
+00:01:32,550 --> 00:01:35,450
+You were awake for an hour, maybe two.
+
+23
+00:01:35,450 --> 00:01:37,820
+Then you went back to
+bed and slept until morning.
+
+24
+00:01:37,820 --> 00:01:40,080
+Nobody wrote about this as a problem.
+
+25
+00:01:40,080 --> 00:01:44,360
+Nobody wrote about it much at all, in the
+way that nobody writes down that they breathe.
+
+26
+00:01:44,360 --> 00:01:50,030
+The most striking thing about all five hundred references is
+that not one of them bothers to explain it.
+
+27
+00:01:50,030 --> 00:01:53,300
+So what did people actually do
+in the middle of the night?
+
+28
+00:01:53,300 --> 00:01:54,960
+Everything, apparently.
+
+29
+00:01:54,960 --> 00:01:55,950
+They talked.
+
+30
+00:01:55,950 --> 00:02:01,800
+Couples lying in the dark, in the quietest hour of the
+day, with no children awake and no work to do.
+
+31
+00:02:01,800 --> 00:02:09,650
+Physicians of the period specifically recommended that hour for sex, on the grounds
+that people were rested and would do a better job of it.
+
+32
+00:02:09,650 --> 00:02:11,060
+They prayed.
+
+33
+00:02:11,060 --> 00:02:14,560
+There are prayer manuals written
+specifically for that gap.
+
+34
+00:02:14,560 --> 00:02:20,290
+They got up and tended the fire, checked on
+animals, mended things by the light of the embers.
+
+35
+00:02:20,290 --> 00:02:22,920
+Some people went and
+visited the neighbours.
+
+36
+00:02:22,920 --> 00:02:29,860
+There are court records of people committing perfectly ordinary crimes at
+two in the morning and no one finding the hour suspicious.
+
+37
+00:02:29,860 --> 00:02:34,610
+And a lot of them just lay
+there in a strange half-awake state, thinking.
+
+38
+00:02:34,610 --> 00:02:42,410
+Ekirch found that people used that hour to interpret their dreams, because they had just
+come out of the deepest stretch of dreaming and it was all still there.
+
+39
+00:02:42,410 --> 00:02:45,350
+That last detail is worth sitting with.
+
+40
+00:02:45,350 --> 00:02:52,920
+An entire culture of dream interpretation may exist partly because people used to
+wake up in the middle of the night with the dream still warm.
+
+41
+00:02:52,920 --> 00:02:56,280
+We don't remember our dreams as
+well as our ancestors did.
+
+42
+00:02:56,280 --> 00:02:58,470
+Not because our dreams are worse.
+
+43
+00:02:58,470 --> 00:03:00,230
+Because we sleep straight through them.
+
+44
+00:03:00,230 --> 00:03:02,230
+Now, that's history.
+
+45
+00:03:02,230 --> 00:03:06,730
+Documents can be wrong, and people can
+describe things they don't actually do.
+
+46
+00:03:06,730 --> 00:03:12,690
+So in the early nineteen nineties, a sleep
+researcher named Thomas Wehr tried something direct.
+
+47
+00:03:12,690 --> 00:03:16,890
+He took a group of volunteers and
+gave them a long artificial winter night.
+
+48
+00:03:16,890 --> 00:03:20,900
+Fourteen hours of darkness, every
+night, for a month.
+
+49
+00:03:20,900 --> 00:03:24,840
+No lamps, no screens, nothing
+to do but lie there.
+
+50
+00:03:24,840 --> 00:03:31,630
+For the first few weeks the volunteers mostly slept
+off an accumulated debt — long, heavy nights.
+
+51
+00:03:31,630 --> 00:03:33,740
+And then something changed.
+
+52
+00:03:33,740 --> 00:03:35,820
+Their sleep split in two.
+
+53
+00:03:35,820 --> 00:03:43,170
+They would fall asleep, sleep for about four hours, wake up for
+one to three hours, and then sleep again until the light came.
+
+54
+00:03:43,170 --> 00:03:45,630
+Nobody instructed them to.
+
+55
+00:03:45,630 --> 00:03:48,610
+It just settled into that shape
+once the night was long enough.
+
+56
+00:03:48,610 --> 00:03:53,140
+And the hour in between was not like being awake
+at three in the morning in your bedroom now.
+
+57
+00:03:53,140 --> 00:03:55,580
+The volunteers described it as calm.
+
+58
+00:03:55,580 --> 00:03:56,530
+Quiet.
+
+59
+00:03:56,530 --> 00:03:57,880
+Almost meditative.
+
+60
+00:03:57,880 --> 00:04:06,030
+Their bodies were releasing elevated levels of prolactin — the same
+hormone associated with the still, contented state of an animal resting.
+
+61
+00:04:06,030 --> 00:04:07,920
+It wasn't insomnia.
+
+62
+00:04:07,920 --> 00:04:09,500
+It was a third thing.
+
+63
+00:04:09,500 --> 00:04:12,900
+A state most people alive today
+have simply never been in.
+
+64
+00:04:12,900 --> 00:04:18,400
+There's a second theory about broken sleep, and
+it comes from a completely different direction.
+
+65
+00:04:18,400 --> 00:04:20,110
+Not from history.
+
+66
+00:04:20,110 --> 00:04:22,650
+From the problem of not being eaten.
+
+67
+00:04:22,650 --> 00:04:33,010
+If you're a group of humans sleeping on the ground, in the open, surrounded by things with
+teeth, then a night where everyone is unconscious at the same time is a spectacularly bad idea.
+
+68
+00:04:33,010 --> 00:04:34,780
+Somebody should be awake.
+
+69
+00:04:34,780 --> 00:04:40,550
+Researchers tested this with the Hadza,
+a hunter-gatherer community in Tanzania.
+
+70
+00:04:40,550 --> 00:04:51,340
+They tracked the sleep of a group of adults across many nights and a couple of hundred hours of
+data, and then asked a simple question: how much of that time was every single person asleep at once?
+
+71
+00:04:51,340 --> 00:04:54,070
+The answer was eighteen minutes.
+
+72
+00:04:54,070 --> 00:04:58,760
+Out of more than two hundred hours, there were
+eighteen minutes where the whole camp was out.
+
+73
+00:04:58,760 --> 00:05:00,780
+And they weren't taking shifts.
+
+74
+00:05:00,780 --> 00:05:02,800
+Nobody was assigned a watch.
+
+75
+00:05:02,800 --> 00:05:08,040
+It happened by itself, because people of
+different ages naturally drift to different schedules.
+
+76
+00:05:08,040 --> 00:05:11,110
+Older adults went to bed
+early and woke early.
+
+77
+00:05:11,110 --> 00:05:13,820
+Younger adults stayed up
+late and slept in.
+
+78
+00:05:13,820 --> 00:05:18,080
+Which suggests something a bit lovely
+about a complaint you've definitely heard.
+
+79
+00:05:18,080 --> 00:05:22,520
+Older people who wake at four in the morning
+and can't get back to sleep aren't broken.
+
+80
+00:05:22,520 --> 00:05:25,930
+Teenagers who can't fall asleep
+before two aren't lazy.
+
+81
+00:05:25,930 --> 00:05:28,510
+Between them, they cover the whole night.
+
+82
+00:05:28,510 --> 00:05:30,340
+That's not a malfunction.
+
+83
+00:05:30,340 --> 00:05:31,600
+That may be the point.
+
+84
+00:05:31,600 --> 00:05:37,590
+Now I have to be honest with you, because this is
+where a lot of videos about this stop, and they shouldn't.
+
+85
+00:05:37,590 --> 00:05:41,770
+Those same hunter-gatherer studies
+found something inconvenient.
+
+86
+00:05:41,770 --> 00:05:52,590
+The Hadza in Tanzania, the San in Namibia, the Tsimané in Bolivia — three groups
+on two continents, living without electric light — do not sleep in two blocks.
+
+87
+00:05:52,590 --> 00:05:57,040
+They sleep once, for somewhere between
+six and seven hours, straight through.
+
+88
+00:05:57,040 --> 00:05:59,220
+Less than the eight we're told to get.
+
+89
+00:05:59,220 --> 00:06:02,500
+And none of the three groups
+has a word for insomnia.
+
+90
+00:06:02,500 --> 00:06:09,550
+So the two-sleep pattern that Ekirch found in all those
+documents may not be the ancient human default at all.
+
+91
+00:06:09,550 --> 00:06:18,110
+It may be something specific to long, cold, dark European winters, where the night
+lasts fourteen hours and no human being can sleep for all of it.
+
+92
+00:06:18,110 --> 00:06:21,960
+Which leaves us with two true
+things that don't quite fit together.
+
+93
+00:06:21,960 --> 00:06:25,080
+Pre-industrial Europeans clearly
+slept twice.
+
+94
+00:06:25,080 --> 00:06:27,710
+Equatorial hunter-gatherers clearly don't.
+
+95
+00:06:27,710 --> 00:06:31,430
+The honest read is that there is
+no single natural way to sleep.
+
+96
+00:06:31,430 --> 00:06:37,340
+Sleep bends to the length of the night, the temperature,
+the danger, and who else is in the room.
+
+97
+00:06:37,340 --> 00:06:44,380
+What there definitely isn't, anywhere in the historical or anthropological
+record, is the thing you've been told is normal.
+
+98
+00:06:44,380 --> 00:06:47,150
+So where did the
+eight-hour block come from?
+
+99
+00:06:47,150 --> 00:06:48,860
+Light, mostly.
+
+100
+00:06:48,860 --> 00:06:51,690
+Cheap, bright, artificial light.
+
+101
+00:06:51,690 --> 00:06:57,150
+Street lighting spread through European cities and the night
+stopped being a wall you hit at sunset.
+
+102
+00:06:57,150 --> 00:07:01,920
+Then gas, then electricity, and
+bedtime slid later and later.
+
+103
+00:07:01,920 --> 00:07:09,820
+The evening — the whole idea of an evening, as a thing you do
+rather than a thing you sleep through — is a fairly recent invention.
+
+104
+00:07:09,820 --> 00:07:12,700
+And the night got squeezed from both ends.
+
+105
+00:07:12,700 --> 00:07:17,970
+Factory work arrived, with clocks and shifts
+and a fixed hour to be somewhere.
+
+106
+00:07:17,970 --> 00:07:21,820
+Sleep stopped being a natural
+shape and became a slot.
+
+107
+00:07:21,820 --> 00:07:28,610
+By the early twentieth century, references to the first and
+second sleep had almost completely vanished from the language.
+
+108
+00:07:28,610 --> 00:07:32,620
+Within a couple of generations, people forgot
+it had ever been a thing.
+
+109
+00:07:32,620 --> 00:07:34,870
+And then something worse happened.
+
+110
+00:07:34,870 --> 00:07:37,920
+The consolidated block didn't
+just become normal.
+
+111
+00:07:37,920 --> 00:07:39,390
+It became the standard.
+
+112
+00:07:39,390 --> 00:07:42,190
+The thing you're supposed to achieve.
+
+113
+00:07:42,190 --> 00:07:45,330
+Eight hours, uninterrupted, or
+you're doing it wrong.
+
+114
+00:07:45,330 --> 00:07:51,040
+So now, when your body wakes you at three in
+the morning, you don't experience it as a quiet hour.
+
+115
+00:07:51,040 --> 00:07:53,380
+You experience it as failure.
+
+116
+00:07:53,380 --> 00:07:57,930
+Which brings us back to you,
+lying there, doing the arithmetic.
+
+117
+00:07:57,930 --> 00:08:06,830
+There is a real thing called sleep-maintenance insomnia and it is genuinely miserable
+and worth treating, so this isn't a suggestion that everybody's three a.m.
+
+118
+00:08:06,830 --> 00:08:07,720
+is fine.
+
+119
+00:08:07,720 --> 00:08:11,490
+If you're exhausted every day, go
+and see someone about it.
+
+120
+00:08:11,490 --> 00:08:14,470
+But there's a piece of
+this that's worth knowing anyway.
+
+121
+00:08:14,470 --> 00:08:18,050
+A lot of what makes
+night-waking harmful isn't the waking.
+
+122
+00:08:18,050 --> 00:08:20,010
+It's the panic about the waking.
+
+123
+00:08:20,010 --> 00:08:25,170
+The clock-watching, the arithmetic, the
+certainty that tomorrow is ruined.
+
+124
+00:08:25,170 --> 00:08:33,630
+That's the part that dumps stress hormones into a body that was trying to be calm,
+and that's the part that keeps you up for two hours instead of twenty minutes.
+
+125
+00:08:33,630 --> 00:08:36,890
+Your ancestors woke at the
+same hour you do.
+
+126
+00:08:36,890 --> 00:08:40,340
+They just didn't lie there thinking
+that something had gone wrong.
+
+127
+00:08:40,340 --> 00:08:42,370
+They thought it was the
+middle of the night.
+
+128
+00:08:42,370 --> 00:08:43,950
+Because it was.
+
+129
+00:08:43,950 --> 00:08:50,120
+So the next time you find yourself awake at three
+in the morning, consider the possibility that nothing is broken.
+
+130
+00:08:50,120 --> 00:08:52,190
+You've just arrived in the gap.
+
+131
+00:08:52,190 --> 00:08:58,920
+The hour that used to be for talking, and praying, and remembering your
+dreams, and keeping half an eye on the dark while everyone else slept.
+
+132
+00:08:58,920 --> 00:09:00,880
+Nobody uses it for that anymore.
+
+133
+00:09:00,880 --> 00:09:06,160
+There's a phone next to you and it's very bright
+and it will happily take the hour off your hands.
+
+134
+00:09:06,160 --> 00:09:07,860
+But it's still there.
+
+135
+00:09:07,860 --> 00:09:08,940
+Every night.
+
+136
+00:09:08,940 --> 00:09:10,090
+Waiting.
+
+137
+00:09:10,090 --> 00:09:17,840
+And if you're now wondering what else about your body you've been
+told is a problem when it isn't...
+...that's a question for another video.
