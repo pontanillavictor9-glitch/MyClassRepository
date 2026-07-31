@@ -75,22 +75,33 @@ Se empieza por el inglés.
   ffmpeg que pedírselo al modelo.
 - Aspect ratio siempre `16:9`.
 
-### Portadas (miniaturas)
+### Portadas (miniaturas) — FÓRMULA FIJA
 
-Observado en las portadas del canal de referencia (captura `prueba2.png`):
+Esta fórmula sale de comparar nuestra primera portada (mala) con las de los
+dos canales de referencia (`prueba2.png`, `prueba3.png`). **Aplicarla a
+todos los episodios.** Lo que la hace funcionar es que a 200 píxeles solo se
+lee una cara con expresión; un objeto detallado no se lee.
 
-- **Fondo de color plano a sangre**, no blanco: azul cielo, amarillo pálido,
-  verde claro. El fondo blanco es para las imágenes de dentro del vídeo.
-- **Texto de 2-4 palabras, enorme, amarillo con borde negro grueso**, arriba,
-  normalmente en forma de pregunta: "PEAK AGE?", "WHY YOU?", "NO BLOOD?".
-- **El texto de la portada NO repite el título.** Lo complementa: título
-  "When Do You Peak in Life?" + portada "PEAK AGE?".
-- Un monigote grande y expresivo, a menudo solo la cara en primer plano con
-  los ojos muy abiertos.
+1. **Un monigote grande y de frente**, con la cabeza ocupando alrededor de un
+   tercio del alto de la imagen, mirando al espectador con una expresión
+   clara (agobio, susto, duda). Nunca de espaldas, nunca pequeño.
+2. **El objeto que cuenta la historia, diminuto y simple** — un chupete en el
+   suelo, no una cuna entera. El objeto contextualiza; la cara vende.
+3. **Fondo en dos bandas planas**: cielo de color pálido arriba (crema,
+   amarillo claro, azul) y una franja de suelo abajo (verde, marrón). Nada
+   de un color plano vacío.
+4. **Texto de borde a borde**, en el tercio superior, fuente Impact, 2-4
+   palabras. Negro con borde blanco sobre fondo claro; amarillo con borde
+   negro sobre fondo oscuro.
+5. **El texto NO repite el título.** Lo complementa: título "Why Can't You
+   Remember Being a Baby?" + portada "WHO WERE YOU?".
+6. Dejar el tercio superior del dibujo **vacío** al generarlo, para que el
+   texto no tape nada.
+
 - Generar el dibujo con `gpt_image_2` y **superponer el texto con ffmpeg**,
-  no pedírselo al modelo.
+  nunca pedírselo al modelo.
 - YouTube: 1280×720, máximo 2 MB.
-- Duración de los vídeos de referencia: 8:01 a 12:58.
+- Duración de los vídeos de referencia: 3:58 a 12:58. La nuestra ~10 min.
 - Comandos: `higgsfield generate cost <modelo> --prompt "..."` para estimar y
   `higgsfield generate create <modelo> --aspect_ratio 16:9 --prompt "..." --wait`
   para generar. Requiere workspace fijado:
