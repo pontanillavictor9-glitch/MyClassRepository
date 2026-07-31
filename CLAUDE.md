@@ -126,9 +126,17 @@ episodio → el usuario monta el vídeo.
       (`audio-en.mp3`, 10:37, un único mp3 continuo).
 - [x] Pruebas de estilo de imagen hechas (`pruebas-imagen/`): 6 en blanco y
       negro y 4 con color. La buena de referencia es `C1-color-bebe-y-adulto`.
-- [ ] Episodio 001 — pendiente: el usuario sube el mp3 a TurboScribe, pega
-      aquí la transcripción con timestamps, y de ahí salen las descripciones
-      de imagen (una por timestamp) para generar con Higgsfield.
+- [x] **Episodio 001 publicado**: `6GhGOCW_1NQ`, 39 escenas, portada y
+      subtítulos puestos, programado para el 31-07-2026 a las 18:00 (España).
+- [x] TurboScribe eliminado del flujo: `scripts/tts-timestamps.mjs` devuelve
+      audio y marcas de tiempo en la misma llamada a ElevenLabs.
+- [x] Subida a YouTube automatizada (`scripts/subir-youtube.mjs`). La
+      programación con `publishAt` **sí funciona** aunque el proyecto de
+      Google no esté auditado.
+- Requisitos que costaron un rato y conviene recordar: la cuenta del canal
+  (`zhaaall1234@gmail.com`) debe estar en *Usuarios de prueba* del proyecto
+  de Google Cloud, y el canal debe estar **verificado por teléfono** o
+  YouTube rechaza las miniaturas personalizadas.
 - Rama de trabajo: `claude/higgsfield-cli-auth-6u1tz7`.
 
 ## Notas técnicas
