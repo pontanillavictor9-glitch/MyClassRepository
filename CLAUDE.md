@@ -46,15 +46,23 @@ Se empieza por el inglés.
   vídeo son 6 créditos (~0,23 €), unos 180 créditos al mes. Sobra margen.
 - `gpt_image_2` (el que pide el prompt original) cuesta **7 créditos/imagen**:
   280 por vídeo. Inviable para el ritmo diario, no usarlo por defecto.
-- `nano_banana_2_lite` (1 crédito) requiere plan de pago; útil para las 3-4
-  imágenes clave o las que lleven texto.
+- `nano_banana_2_lite` (1 crédito): **descartado**. En la comparativa salió
+  con línea fina, colores apagados y solo 1376×768. Cuesta 6× más que
+  z_image y se ve peor.
+- **Reparto recomendado**: `z_image` para el grueso del vídeo y
+  `gpt_image_2` para la portada y las 2-3 imágenes clave (es el único que
+  compone bien escenas con varias cosas pasando a la vez, y da 2688×1520).
+  Sale a ~27 créditos/vídeo → ~800 al mes con 30 vídeos.
 - **Regla de estilo aprendida en las pruebas**: color plano en la ropa y los
   objetos (camisetas, cunas, sábanas, muebles), pero **las personas siempre
   monigote blanco de línea negra** — cabeza redonda, ojos de punto,
   extremidades de línea. Si se pide "bebé con color" sin más, el modelo
   deriva a ilustración infantil bonita y se sale del estilo del canal.
-- **El texto dentro de la imagen lo escribe mal** `z_image` (salió
-  "HIPOCAMPS"). Evitar carteles; si son imprescindibles, usar modelo mejor.
+- **El texto dentro de la imagen sí sale bien** si la escena se describe con
+  detalle: los tres modelos escribieron "HIPPOCAMPUS" correctamente. El
+  "HIPOCAMPS" de la primera prueba vino de un prompt demasiado vago.
+  Aun así, para el texto de la portada es más seguro superponerlo con
+  ffmpeg que pedírselo al modelo.
 - Aspect ratio siempre `16:9`.
 - Comandos: `higgsfield generate cost <modelo> --prompt "..."` para estimar y
   `higgsfield generate create <modelo> --aspect_ratio 16:9 --prompt "..." --wait`
