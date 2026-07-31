@@ -1,0 +1,69 @@
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/01.png'
+duration 15.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/02.png'
+duration 14.380
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/03.png'
+duration 15.650
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/04.png'
+duration 14.830
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/05.png'
+duration 15.180
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/06.png'
+duration 19.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/07.png'
+duration 19.470
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/08.png'
+duration 15.170
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/09.png'
+duration 17.590
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/10.png'
+duration 15.280
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/11.png'
+duration 14.710
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/12.png'
+duration 15.480
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/13.png'
+duration 16.590
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/14.png'
+duration 15.760
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/15.png'
+duration 21.070
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/16.png'
+duration 21.720
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/17.png'
+duration 15.090
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/18.png'
+duration 19.520
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/19.png'
+duration 16.810
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/20.png'
+duration 19.920
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/21.png'
+duration 16.120
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/22.png'
+duration 15.550
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/23.png'
+duration 14.890
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/24.png'
+duration 16.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/25.png'
+duration 21.820
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/26.png'
+duration 15.670
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/27.png'
+duration 15.880
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/28.png'
+duration 16.170
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/29.png'
+duration 16.860
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/30.png'
+duration 18.140
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/31.png'
+duration 14.980
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/32.png'
+duration 17.420
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/33.png'
+duration 15.170
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/34.png'
+duration 15.450
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-005-what-did-childbirth-feel-like-before-hospitals/imagenes/34.png'

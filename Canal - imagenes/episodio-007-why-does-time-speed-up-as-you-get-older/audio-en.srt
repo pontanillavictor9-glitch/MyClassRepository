@@ -1,0 +1,654 @@
+1
+00:00:00,000 --> 00:00:03,730
+When you were eight, a single
+summer holiday lasted approximately forever.
+
+2
+00:00:03,730 --> 00:00:04,900
+Six weeks.
+
+3
+00:00:04,900 --> 00:00:07,420
+You'd be a slightly different person
+by the end of it.
+
+4
+00:00:07,420 --> 00:00:11,190
+The first week alone contained more
+than some entire years do now.
+
+5
+00:00:11,190 --> 00:00:12,650
+And this year?
+
+6
+00:00:12,650 --> 00:00:17,570
+This year has been going for a while and
+you couldn't confidently tell me what happened in March.
+
+7
+00:00:17,570 --> 00:00:19,660
+Everyone notices this.
+
+8
+00:00:19,660 --> 00:00:22,050
+Everyone assumes it's just a feeling.
+
+9
+00:00:22,050 --> 00:00:23,740
+It isn't just a feeling.
+
+10
+00:00:23,740 --> 00:00:30,570
+There are two competing explanations, both of them are partly right, and
+one of them tells you exactly what to do about it.
+
+11
+00:00:30,570 --> 00:00:36,160
+First, let's kill the obvious theory, because
+it's wrong and it gets repeated constantly.
+
+12
+00:00:36,160 --> 00:00:41,820
+The idea is that your internal clock slows down as
+you age, so external time seems to whip past.
+
+13
+00:00:41,820 --> 00:00:44,520
+Researchers have tested this directly.
+
+14
+00:00:44,520 --> 00:00:50,050
+Sit people of different ages in a room and ask them
+to estimate when three minutes have passed, with no clock.
+
+15
+00:00:50,050 --> 00:00:53,270
+Older adults do this about
+as well as younger ones.
+
+16
+00:00:53,270 --> 00:00:59,430
+There's some variation, but nothing remotely big enough to explain the
+difference between a summer at eight and a summer at forty.
+
+17
+00:00:59,430 --> 00:01:05,930
+And here's the detail that really rules it out: in
+the moment, older people don't experience time as fast.
+
+18
+00:01:05,930 --> 00:01:11,720
+Ask someone how long this afternoon felt, and
+you get roughly normal answers at every age.
+
+19
+00:01:11,720 --> 00:01:14,180
+The distortion isn't happening live.
+
+20
+00:01:14,180 --> 00:01:16,140
+It's happening in the rear-view mirror.
+
+21
+00:01:16,140 --> 00:01:19,200
+Which means whatever's going on
+isn't in your clock.
+
+22
+00:01:19,200 --> 00:01:20,470
+It's in your memory.
+
+23
+00:01:20,470 --> 00:01:27,080
+The oldest explanation is also the simplest, and it
+comes from a nineteenth-century philosopher called Paul Janet.
+
+24
+00:01:27,080 --> 00:01:32,220
+His idea: you judge a length of time
+against the total amount of time you've lived.
+
+25
+00:01:32,220 --> 00:01:35,300
+When you're one year old, a
+year is your entire life.
+
+26
+00:01:35,300 --> 00:01:36,130
+Everything.
+
+27
+00:01:36,130 --> 00:01:41,060
+When you're five, a year is a fifth
+of everything you've ever known — still enormous.
+
+28
+00:01:41,060 --> 00:01:42,540
+At ten, a tenth.
+
+29
+00:01:42,540 --> 00:01:44,700
+At forty, one fortieth.
+
+30
+00:01:44,700 --> 00:01:47,250
+Same three hundred and sixty-five days.
+
+31
+00:01:47,250 --> 00:01:49,280
+Wildly different fraction of the file.
+
+32
+00:01:49,280 --> 00:01:53,470
+Run that logic forward and
+it produces an unpleasant result.
+
+33
+00:01:53,470 --> 00:02:01,650
+If you measure life in how long it subjectively feels rather than how many
+years it contains, the halfway point of your life arrives at about age seven.
+
+34
+00:02:01,650 --> 00:02:04,870
+By twenty, you've subjectively used
+up most of it.
+
+35
+00:02:04,870 --> 00:02:09,230
+Now, this is elegant, and
+it's clearly capturing something real.
+
+36
+00:02:09,230 --> 00:02:12,470
+But it can't be the whole
+story, and here's how you know.
+
+37
+00:02:12,470 --> 00:02:18,970
+The proportional theory says the speed-up should be smooth
+and constant, a gentle gradient across your whole life.
+
+38
+00:02:18,970 --> 00:02:19,890
+It isn't.
+
+39
+00:02:19,890 --> 00:02:24,200
+People report specific stretches that flew
+and specific stretches that dragged.
+
+40
+00:02:24,200 --> 00:02:28,330
+Some people have a year in their thirties
+that felt longer than the five around it.
+
+41
+00:02:28,330 --> 00:02:32,730
+And almost everybody had one very
+recent year that behaved extremely strangely.
+
+42
+00:02:32,730 --> 00:02:36,620
+So here's the second explanation, and
+I think it's the better one.
+
+43
+00:02:36,620 --> 00:02:42,750
+Your sense of how long a period of time was
+is reconstructed afterwards from how much you remember of it.
+
+44
+00:02:42,750 --> 00:02:47,130
+A stretch stuffed with distinct,
+retrievable memories reads as long.
+
+45
+00:02:47,130 --> 00:02:53,600
+A stretch that produced almost nothing readable reads as short —
+even if it was exactly the same number of days.
+
+46
+00:02:53,600 --> 00:02:57,590
+And your brain is extremely selective
+about what it bothers to record.
+
+47
+00:02:57,590 --> 00:02:59,210
+It records novelty.
+
+48
+00:02:59,210 --> 00:03:03,870
+New places, new people, first times,
+things that broke the pattern.
+
+49
+00:03:03,870 --> 00:03:09,240
+It does not bother recording the fourth thousand
+identical commute, because there's no reason to.
+
+50
+00:03:09,240 --> 00:03:11,320
+Now think about being a child.
+
+51
+00:03:11,320 --> 00:03:13,190
+Everything is the first time.
+
+52
+00:03:13,190 --> 00:03:19,600
+First time on a bike, first time at the sea, first day at
+a new school, first time you understood a joke an adult made.
+
+53
+00:03:19,600 --> 00:03:23,440
+A child's year is almost entirely
+composed of things worth filing.
+
+54
+00:03:23,440 --> 00:03:25,600
+And think about a typical adult year.
+
+55
+00:03:25,600 --> 00:03:30,800
+Same job, same route, same flat,
+same faces, same weekly shop.
+
+56
+00:03:30,800 --> 00:03:32,930
+The days were not shorter.
+
+57
+00:03:32,930 --> 00:03:35,600
+There were just far fewer
+of them worth keeping.
+
+58
+00:03:35,600 --> 00:03:37,750
+Try it on yourself right now.
+
+59
+00:03:37,750 --> 00:03:42,820
+Think back to a holiday you took somewhere
+unfamiliar — a week, maybe ten days.
+
+60
+00:03:42,820 --> 00:03:45,880
+You can probably produce five or
+six distinct scenes from it.
+
+61
+00:03:45,880 --> 00:03:47,360
+A specific meal.
+
+62
+00:03:47,360 --> 00:03:48,520
+Getting lost.
+
+63
+00:03:48,520 --> 00:03:49,960
+A conversation.
+
+64
+00:03:49,960 --> 00:03:51,910
+The way a particular street looked.
+
+65
+00:03:51,910 --> 00:03:55,730
+Now think back to a random
+ordinary week from four months ago.
+
+66
+00:03:55,730 --> 00:03:57,310
+Same seven days.
+
+67
+00:03:57,310 --> 00:04:04,270
+Almost certainly you cannot retrieve a single specific scene from
+it, and if you can, it's because something unusual happened.
+
+68
+00:04:04,270 --> 00:04:06,630
+Your brain is not being lazy.
+
+69
+00:04:06,630 --> 00:04:07,860
+It's being efficient.
+
+70
+00:04:07,860 --> 00:04:10,070
+There was nothing there that it needed.
+
+71
+00:04:10,070 --> 00:04:12,460
+That's why the summer
+at eight feels enormous.
+
+72
+00:04:12,460 --> 00:04:14,060
+It isn't nostalgia.
+
+73
+00:04:14,060 --> 00:04:17,380
+That summer genuinely left
+more material behind.
+
+74
+00:04:17,380 --> 00:04:22,920
+And then, a few years ago, the
+entire planet accidentally ran the experiment.
+
+75
+00:04:22,920 --> 00:04:33,920
+During the lockdowns of twenty twenty, researchers surveyed thousands of people about their sense of
+time, and got a result that looks contradictory until you understand the two-system explanation.
+
+76
+00:04:33,920 --> 00:04:37,380
+Enormous numbers of people reported
+that the days crawled.
+
+77
+00:04:37,380 --> 00:04:38,590
+Interminable.
+
+78
+00:04:38,590 --> 00:04:42,590
+Nothing to do, nothing happening, an
+afternoon that would not end.
+
+79
+00:04:42,590 --> 00:04:45,660
+And the same people reported
+that the months had vanished.
+
+80
+00:04:45,660 --> 00:04:47,850
+Where did the year go?
+
+81
+00:04:47,850 --> 00:04:48,870
+What did I do?
+
+82
+00:04:48,870 --> 00:04:49,730
+It's gone.
+
+83
+00:04:49,730 --> 00:04:53,870
+Slow days, fast months, at the
+same time, in the same person.
+
+84
+00:04:53,870 --> 00:04:56,460
+That's exactly what
+memory density predicts.
+
+85
+00:04:56,460 --> 00:05:03,110
+In the moment, an empty day drags, because there is nothing
+to occupy attention and you notice every minute of it.
+
+86
+00:05:03,110 --> 00:05:07,810
+But afterwards, that same empty day
+left nothing behind to measure with.
+
+87
+00:05:07,810 --> 00:05:12,250
+Two months of identical afternoons collapse
+into a single vague blur.
+
+88
+00:05:12,250 --> 00:05:18,440
+Live time and remembered time are not the same
+thing, and they can move in opposite directions.
+
+89
+00:05:18,440 --> 00:05:24,420
+Which is the key to the whole video: the reason your
+years are speeding up is not that they're going faster.
+
+90
+00:05:24,420 --> 00:05:26,600
+It's that they're leaving less behind.
+
+91
+00:05:26,600 --> 00:05:31,810
+Put the two theories together and you can see why
+the effect hits hardest in a very specific window.
+
+92
+00:05:31,810 --> 00:05:35,840
+Childhood: high novelty,
+small denominator.
+
+93
+00:05:35,840 --> 00:05:37,150
+Time is vast.
+
+94
+00:05:37,150 --> 00:05:40,510
+Late teens and twenties:
+still very high novelty.
+
+95
+00:05:40,510 --> 00:05:46,230
+First job, first move, first relationship,
+first time being responsible for yourself.
+
+96
+00:05:46,230 --> 00:05:58,180
+There's a well-documented thing in memory research called the reminiscence bump — when older adults are asked
+to recall their lives, a disproportionate number of vivid memories come from roughly fifteen to thirty.
+
+97
+00:05:58,180 --> 00:06:01,680
+That period is over-represented for
+the rest of your life.
+
+98
+00:06:01,680 --> 00:06:04,410
+Then, for most people, something changes.
+
+99
+00:06:04,410 --> 00:06:06,260
+The big firsts run out.
+
+100
+00:06:06,260 --> 00:06:08,770
+Life becomes competent and repeated.
+
+101
+00:06:08,770 --> 00:06:19,390
+And competence is the enemy here, because the whole point of becoming good at something is that you
+can do it without paying attention — and anything you did without paying attention was not written down.
+
+102
+00:06:19,390 --> 00:06:20,980
+That's the acceleration.
+
+103
+00:06:20,980 --> 00:06:21,920
+Not aging.
+
+104
+00:06:21,920 --> 00:06:23,340
+Repetition.
+
+105
+00:06:23,340 --> 00:06:29,110
+Which is oddly hopeful, because repetition is a
+thing you can change and aging isn't.
+
+106
+00:06:29,110 --> 00:06:34,730
+So if you want your years back, the instruction
+that falls out of this is annoyingly specific.
+
+107
+00:06:34,730 --> 00:06:40,880
+It is not "slow down." It's not mindfulness,
+or being present, though those are fine things.
+
+108
+00:06:40,880 --> 00:06:44,070
+Being present makes today feel
+longer while you're in it.
+
+109
+00:06:44,070 --> 00:06:46,660
+It doesn't necessarily
+leave anything behind.
+
+110
+00:06:46,660 --> 00:06:51,090
+The instruction is: create memorable first
+times, and space them out.
+
+111
+00:06:51,090 --> 00:06:57,300
+A weekend somewhere you have never been will do more to lengthen
+your year than a fortnight in the place you go every year.
+
+112
+00:06:57,300 --> 00:07:01,290
+The unfamiliar route home leaves a
+mark that the usual one doesn't.
+
+113
+00:07:01,290 --> 00:07:09,010
+A new skill, badly done, generates enormous amounts of storable
+material precisely because you're bad at it and paying attention.
+
+114
+00:07:09,010 --> 00:07:13,270
+And the second part matters as much
+as the first: spread them out.
+
+115
+00:07:13,270 --> 00:07:20,770
+Six new things across twelve months lengthens a year far more than
+six new things in one week, because they act as markers.
+
+116
+00:07:20,770 --> 00:07:25,090
+Your brain measures duration partly by
+counting the distance between landmarks.
+
+117
+00:07:25,090 --> 00:07:29,330
+Bunch the landmarks together and most
+of the year is featureless again.
+
+118
+00:07:29,330 --> 00:07:31,360
+The advice is boring.
+
+119
+00:07:31,360 --> 00:07:33,000
+The mechanism is not.
+
+120
+00:07:33,000 --> 00:07:35,400
+You are not trying to enjoy yourself more.
+
+121
+00:07:35,400 --> 00:07:37,140
+You are trying to leave evidence.
+
+122
+00:07:37,140 --> 00:07:40,560
+There's a harder implication in here and
+I'd rather say it than dodge it.
+
+123
+00:07:40,560 --> 00:07:52,680
+If the length of your life, as you'll eventually experience it looking back, is a function of how much of it you
+actually recorded — then a life can be long in years and short in the only currency that ends up mattering.
+
+124
+00:07:52,680 --> 00:07:55,960
+Twenty years of the same
+week is not twenty years.
+
+125
+00:07:55,960 --> 00:07:57,220
+Not in memory.
+
+126
+00:07:57,220 --> 00:08:01,080
+It compresses down to something you
+could describe in a paragraph.
+
+127
+00:08:01,080 --> 00:08:02,890
+And nobody chooses that.
+
+128
+00:08:02,890 --> 00:08:11,180
+It happens by accumulation, one reasonable comfortable decision at a time, until the
+pattern is so smooth there's nothing left for the brain to catch on.
+
+129
+00:08:11,180 --> 00:08:14,560
+That's the real reason the summer at
+eight feels the way it does.
+
+130
+00:08:14,560 --> 00:08:17,020
+It isn't that you were happier.
+
+131
+00:08:17,020 --> 00:08:24,620
+It's that you were paying attention, constantly, because you had no choice — everything
+was new and you had no idea what was going to happen next.
+
+132
+00:08:24,620 --> 00:08:27,290
+So no, time isn't speeding up.
+
+133
+00:08:27,290 --> 00:08:28,550
+Your clock is fine.
+
+134
+00:08:28,550 --> 00:08:34,660
+What's changed is how much of each year survives the trip into memory,
+and that's a function of how much of it was worth recording.
+
+135
+00:08:34,660 --> 00:08:39,650
+The good news is that this is one of
+the very few things about aging that pushes back.
+
+136
+00:08:39,650 --> 00:08:42,480
+You cannot slow the calendar.
+
+137
+00:08:42,480 --> 00:08:44,790
+You can absolutely change the density.
+
+138
+00:08:44,790 --> 00:08:46,890
+Go somewhere you've never been.
+
+139
+00:08:46,890 --> 00:08:48,730
+Be bad at something in public.
+
+140
+00:08:48,730 --> 00:08:50,780
+Take the wrong road home once in a while.
+
+141
+00:08:50,780 --> 00:08:55,130
+Your brain is keeping a record, and it only writes
+down the parts where it wasn't sure what was coming.
+
+142
+00:08:55,130 --> 00:09:02,280
+And if you're now wondering how much of last year you
+could actually reconstruct if somebody asked...
+...that's a question for another video.

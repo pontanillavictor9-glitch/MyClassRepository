@@ -1,0 +1,700 @@
+{
+  "duracion": 553.799,
+  "frases": [
+    {
+      "inicio": 0,
+      "fin": 3.53,
+      "texto": "An elephant walking across the savannah comes across a pile of bones."
+    },
+    {
+      "inicio": 3.53,
+      "fin": 4.55,
+      "texto": "She stops."
+    },
+    {
+      "inicio": 4.55,
+      "fin": 5.97,
+      "texto": "The whole group stops."
+    },
+    {
+      "inicio": 5.97,
+      "fin": 13.96,
+      "texto": "They gather round, and they start touching — running the tips of their trunks over the skull, over the tusks, lifting pieces and turning them over."
+    },
+    {
+      "inicio": 13.96,
+      "fin": 17.07,
+      "texto": "Some of them put their feet on the bones very gently."
+    },
+    {
+      "inicio": 17.07,
+      "fin": 18.98,
+      "texto": "It goes on for several minutes."
+    },
+    {
+      "inicio": 18.98,
+      "fin": 20.42,
+      "texto": "Then they move on."
+    },
+    {
+      "inicio": 20.42,
+      "fin": 22.34,
+      "texto": "They do this for elephant bones."
+    },
+    {
+      "inicio": 22.34,
+      "fin": 26.7,
+      "texto": "They do not do it for buffalo bones, or rhino bones, or a piece of wood."
+    },
+    {
+      "inicio": 26.7,
+      "fin": 28.49,
+      "texto": "So she knows something."
+    },
+    {
+      "inicio": 28.49,
+      "fin": 29.91,
+      "texto": "The question is what."
+    },
+    {
+      "inicio": 29.91,
+      "fin": 32.41,
+      "texto": "Does she know that this was one of us?"
+    },
+    {
+      "inicio": 32.41,
+      "fin": 34.62,
+      "texto": "Does she know what happened to it?"
+    },
+    {
+      "inicio": 34.62,
+      "fin": 37.64,
+      "texto": "And does she know that one day it will happen to her?"
+    },
+    {
+      "inicio": 37.64,
+      "fin": 44.41,
+      "texto": "We need to be careful here, because there are three different questions hiding inside this one and people mix them up constantly."
+    },
+    {
+      "inicio": 44.41,
+      "fin": 47.59,
+      "texto": "The first is: do animals react to death?"
+    },
+    {
+      "inicio": 47.59,
+      "fin": 49.3,
+      "texto": "Obviously yes."
+    },
+    {
+      "inicio": 49.3,
+      "fin": 52.06,
+      "texto": "That's not in dispute and it isn't very interesting."
+    },
+    {
+      "inicio": 52.06,
+      "fin": 54.54,
+      "texto": "The second is: do animals grieve?"
+    },
+    {
+      "inicio": 54.54,
+      "fin": 58.92,
+      "texto": "That's harder, but the behaviour is well documented and it looks a lot like grief."
+    },
+    {
+      "inicio": 58.92,
+      "fin": 61.28,
+      "texto": "The third is the real one."
+    },
+    {
+      "inicio": 61.28,
+      "fin": 64.52,
+      "texto": "Does an animal understand death as a concept?"
+    },
+    {
+      "inicio": 64.52,
+      "fin": 65.94,
+      "texto": "That it's permanent."
+    },
+    {
+      "inicio": 65.94,
+      "fin": 67.62,
+      "texto": "That it happens to everyone."
+    },
+    {
+      "inicio": 67.62,
+      "fin": 73.9,
+      "texto": "And — the big one — that it is going to happen to me, personally, at some point in a future I can imagine."
+    },
+    {
+      "inicio": 73.9,
+      "fin": 79.68,
+      "texto": "Developmental psychologists actually break this down, because they study when human children get it."
+    },
+    {
+      "inicio": 79.68,
+      "fin": 81.85,
+      "texto": "There are separate components."
+    },
+    {
+      "inicio": 81.85,
+      "fin": 83.64,
+      "texto": "That the body stops working."
+    },
+    {
+      "inicio": 83.64,
+      "fin": 85.35,
+      "texto": "That it can't be undone."
+    },
+    {
+      "inicio": 85.35,
+      "fin": 87.74,
+      "texto": "That it happens to every living thing."
+    },
+    {
+      "inicio": 87.74,
+      "fin": 89.79,
+      "texto": "That there are physical causes."
+    },
+    {
+      "inicio": 89.79,
+      "fin": 91.65,
+      "texto": "And that it applies to you."
+    },
+    {
+      "inicio": 91.65,
+      "fin": 96.42,
+      "texto": "Children pick these up in pieces, usually somewhere between four and seven."
+    },
+    {
+      "inicio": 96.42,
+      "fin": 99.86,
+      "texto": "The last one to arrive is almost always the personal one."
+    },
+    {
+      "inicio": 99.86,
+      "fin": 102.37,
+      "texto": "So we're not asking whether animals are sad."
+    },
+    {
+      "inicio": 102.37,
+      "fin": 104.94,
+      "texto": "We're asking how much of that list they have."
+    },
+    {
+      "inicio": 104.94,
+      "fin": 109.03,
+      "texto": "Back to the elephants, because it's the best-studied case."
+    },
+    {
+      "inicio": 109.03,
+      "fin": 120.11,
+      "texto": "Researchers laid out different objects for wild elephant families to find: elephant skulls, rhino skulls, buffalo skulls, pieces of ivory, and plain wood."
+    },
+    {
+      "inicio": 120.11,
+      "fin": 123.91,
+      "texto": "The elephants went for the ivory and the elephant skulls."
+    },
+    {
+      "inicio": 123.91,
+      "fin": 131,
+      "texto": "They spent significantly more time investigating them, touching and smelling them, than anything else on offer."
+    },
+    {
+      "inicio": 131,
+      "fin": 132.65,
+      "texto": "So they can tell."
+    },
+    {
+      "inicio": 132.65,
+      "fin": 139.1,
+      "texto": "An elephant skull registers as a different category of object to an elephant than a buffalo skull does."
+    },
+    {
+      "inicio": 139.1,
+      "fin": 141.55,
+      "texto": "And this isn't a one-off."
+    },
+    {
+      "inicio": 141.55,
+      "fin": 150.78,
+      "texto": "Elephants have been recorded standing over dead members of their group for hours, trying to lift them, covering them with earth and branches, returning to the place afterwards."
+    },
+    {
+      "inicio": 150.78,
+      "fin": 157.78,
+      "texto": "There are accounts of elephants staying with a body through the night, and of a group refusing to leave until the smell has changed."
+    },
+    {
+      "inicio": 157.78,
+      "fin": 163.47,
+      "texto": "Keepers in sanctuaries describe animals going off their food for days after a death in the herd."
+    },
+    {
+      "inicio": 163.47,
+      "fin": 166.31,
+      "texto": "Now — the honest reading."
+    },
+    {
+      "inicio": 166.31,
+      "fin": 170.9,
+      "texto": "All of that shows recognition and something that looks a great deal like distress."
+    },
+    {
+      "inicio": 170.9,
+      "fin": 175.16,
+      "texto": "It does not, by itself, show an understanding that death is permanent."
+    },
+    {
+      "inicio": 175.16,
+      "fin": 182.1,
+      "texto": "An elephant trying to lift a dead companion might be doing so precisely because it does not understand that this is over."
+    },
+    {
+      "inicio": 182.1,
+      "fin": 184.1,
+      "texto": "It might be trying to wake her up."
+    },
+    {
+      "inicio": 184.1,
+      "fin": 189.72,
+      "texto": "Which is a strange and slightly awful thought, and it is going to come back later in this video."
+    },
+    {
+      "inicio": 189.72,
+      "fin": 192.55,
+      "texto": "Then there's the case that went round the world."
+    },
+    {
+      "inicio": 192.55,
+      "fin": 196.79,
+      "texto": "In twenty eighteen, an orca off the coast of Washington gave birth."
+    },
+    {
+      "inicio": 196.79,
+      "fin": 199.18,
+      "texto": "The calf lived about half an hour."
+    },
+    {
+      "inicio": 199.18,
+      "fin": 201.16,
+      "texto": "And the mother did not let it sink."
+    },
+    {
+      "inicio": 201.16,
+      "fin": 207.47,
+      "texto": "She carried the body on her head, pushing it up through the water, and when it slipped off she dived and retrieved it."
+    },
+    {
+      "inicio": 207.47,
+      "fin": 217.91,
+      "texto": "She did this for seventeen days, across more than a thousand kilometres, while her family group stayed with her and — according to the observers — at times helped carry it."
+    },
+    {
+      "inicio": 217.91,
+      "fin": 220.45,
+      "texto": "She stopped eating properly."
+    },
+    {
+      "inicio": 220.45,
+      "fin": 221.89,
+      "texto": "She fell behind the group."
+    },
+    {
+      "inicio": 221.89,
+      "fin": 223.8,
+      "texto": "The other whales waited."
+    },
+    {
+      "inicio": 223.8,
+      "fin": 226.5,
+      "texto": "This behaviour is not unique to her."
+    },
+    {
+      "inicio": 226.5,
+      "fin": 237.52,
+      "texto": "Primatologists have documented chimpanzee and macaque mothers carrying dead infants for days and sometimes weeks, continuing to groom them, until the body is unrecognisable."
+    },
+    {
+      "inicio": 237.52,
+      "fin": 241.78,
+      "texto": "It is very hard to watch that and conclude nothing is happening inside."
+    },
+    {
+      "inicio": 241.78,
+      "fin": 244.67,
+      "texto": "But notice what it does not tell us."
+    },
+    {
+      "inicio": 244.67,
+      "fin": 251.16,
+      "texto": "Carrying a dead infant for seventeen days is, if anything, evidence of not understanding permanence."
+    },
+    {
+      "inicio": 251.16,
+      "fin": 256.83,
+      "texto": "It is what a mother does when the alarm that says my baby is missing has no way to be switched off."
+    },
+    {
+      "inicio": 256.83,
+      "fin": 258.68,
+      "texto": "The grief may be real."
+    },
+    {
+      "inicio": 258.68,
+      "fin": 261.18,
+      "texto": "That doesn't mean the concept is."
+    },
+    {
+      "inicio": 261.18,
+      "fin": 266.13,
+      "texto": "Now for a case that looks like a funeral and turns out to be something much more practical."
+    },
+    {
+      "inicio": 266.13,
+      "fin": 269.45,
+      "texto": "When a crow finds a dead crow, other crows come."
+    },
+    {
+      "inicio": 269.45,
+      "fin": 274.5,
+      "texto": "They gather in the trees around it, they call loudly, and a crowd builds."
+    },
+    {
+      "inicio": 274.5,
+      "fin": 277.7,
+      "texto": "It has been called a crow funeral for a hundred years."
+    },
+    {
+      "inicio": 277.7,
+      "fin": 280.31,
+      "texto": "So researchers tested it properly."
+    },
+    {
+      "inicio": 280.31,
+      "fin": 285.94,
+      "texto": "They had a person hold a dead crow while standing in a particular spot, wearing a distinctive mask."
+    },
+    {
+      "inicio": 285.94,
+      "fin": 288.68,
+      "texto": "The crows mobbed and alarm-called."
+    },
+    {
+      "inicio": 288.68,
+      "fin": 290.1,
+      "texto": "Fine."
+    },
+    {
+      "inicio": 290.1,
+      "fin": 292.65,
+      "texto": "But then came the interesting part."
+    },
+    {
+      "inicio": 292.65,
+      "fin": 295.99,
+      "texto": "For weeks afterwards, those crows avoided that place."
+    },
+    {
+      "inicio": 295.99,
+      "fin": 298.06,
+      "texto": "And they remembered the face."
+    },
+    {
+      "inicio": 298.06,
+      "fin": 302.21,
+      "texto": "When the same mask appeared later, without any dead crow, they scolded it."
+    },
+    {
+      "inicio": 302.21,
+      "fin": 304.23,
+      "texto": "So it isn't mourning."
+    },
+    {
+      "inicio": 304.23,
+      "fin": 306,
+      "texto": "It's intelligence gathering."
+    },
+    {
+      "inicio": 306,
+      "fin": 312.08,
+      "texto": "A dead crow is information: something killed a crow here, and possibly that thing is standing right there."
+    },
+    {
+      "inicio": 312.08,
+      "fin": 317.25,
+      "texto": "Learn the location, learn the face, tell everybody, don't go back."
+    },
+    {
+      "inicio": 317.25,
+      "fin": 319.93,
+      "texto": "This is arguably more impressive than grief."
+    },
+    {
+      "inicio": 319.93,
+      "fin": 323.51,
+      "texto": "It's an animal using another animal's death as data about the world."
+    },
+    {
+      "inicio": 323.51,
+      "fin": 326.83,
+      "texto": "But it tells you nothing about whether the crow knows it's mortal."
+    },
+    {
+      "inicio": 326.83,
+      "fin": 332.29,
+      "texto": "So what would an animal actually need, in order to know that it is going to die?"
+    },
+    {
+      "inicio": 332.29,
+      "fin": 334.03,
+      "texto": "Not sadness."
+    },
+    {
+      "inicio": 334.03,
+      "fin": 335.17,
+      "texto": "Not memory."
+    },
+    {
+      "inicio": 335.17,
+      "fin": 342.16,
+      "texto": "It needs to be able to place itself in a future that does not exist yet, and imagine a state of the world it will never experience."
+    },
+    {
+      "inicio": 342.16,
+      "fin": 351.98,
+      "texto": "That's a very specific cognitive trick, and it's the same one that lets you dread a dentist appointment on Thursday or feel nervous about a conversation that hasn't happened."
+    },
+    {
+      "inicio": 351.98,
+      "fin": 356,
+      "texto": "For a long time the assumption was that only humans do this."
+    },
+    {
+      "inicio": 356,
+      "fin": 360.73,
+      "texto": "That animals live in a permanent present, dealing with what's in front of them."
+    },
+    {
+      "inicio": 360.73,
+      "fin": 363.25,
+      "texto": "That assumption is now in trouble."
+    },
+    {
+      "inicio": 363.25,
+      "fin": 365.32,
+      "texto": "Scrub jays hide food."
+    },
+    {
+      "inicio": 365.32,
+      "fin": 377.08,
+      "texto": "And in experiments, they hide food for a tomorrow they are not currently experiencing — given a situation where they'll be hungry in a particular room in the morning, they'll cache food in that room the night before."
+    },
+    {
+      "inicio": 377.08,
+      "fin": 379.12,
+      "texto": "They aren't responding to hunger now."
+    },
+    {
+      "inicio": 379.12,
+      "fin": 381.33,
+      "texto": "They're solving a problem they will have later."
+    },
+    {
+      "inicio": 381.33,
+      "fin": 386.72,
+      "texto": "Great apes have been shown selecting and keeping a tool they'll need for a task hours in the future."
+    },
+    {
+      "inicio": 386.72,
+      "fin": 390.12,
+      "texto": "So the ability to think about the future isn't uniquely ours."
+    },
+    {
+      "inicio": 390.12,
+      "fin": 392.04,
+      "texto": "It's a matter of degree."
+    },
+    {
+      "inicio": 392.04,
+      "fin": 395.74,
+      "texto": "And that makes the line we drew a lot blurrier than it was."
+    },
+    {
+      "inicio": 395.74,
+      "fin": 399.77,
+      "texto": "Here it is, and it is going to be less satisfying than you want."
+    },
+    {
+      "inicio": 399.77,
+      "fin": 401.24,
+      "texto": "We don't know."
+    },
+    {
+      "inicio": 401.24,
+      "fin": 409.03,
+      "texto": "And there's a decent argument that we can't know, because the only way to be sure would be to ask, and the answer would have to come back in language."
+    },
+    {
+      "inicio": 409.03,
+      "fin": 411.55,
+      "texto": "What we can say is roughly this."
+    },
+    {
+      "inicio": 411.55,
+      "fin": 416.32,
+      "texto": "Plenty of animals clearly understand that something has changed and that the change is bad."
+    },
+    {
+      "inicio": 416.32,
+      "fin": 419.52,
+      "texto": "Several show behaviour indistinguishable from grief."
+    },
+    {
+      "inicio": 419.52,
+      "fin": 422.63,
+      "texto": "Some use death as information about danger."
+    },
+    {
+      "inicio": 422.63,
+      "fin": 426.01,
+      "texto": "A few can plan for futures they are not currently in."
+    },
+    {
+      "inicio": 426.01,
+      "fin": 441,
+      "texto": "What no animal has ever demonstrated is the specific, awful package that humans carry around: the knowledge that their own death is certain, that it applies to them personally, that it could be at any time, and that nothing can be done about it."
+    },
+    {
+      "inicio": 441,
+      "fin": 448.84,
+      "texto": "And there is a real possibility — this is the part I find genuinely unsettling — that some animals have parts of it."
+    },
+    {
+      "inicio": 448.84,
+      "fin": 450.71,
+      "texto": "Not the full picture."
+    },
+    {
+      "inicio": 450.71,
+      "fin": 455.47,
+      "texto": "Just enough to know that something is very wrong, without the framework to make sense of it."
+    },
+    {
+      "inicio": 455.47,
+      "fin": 459.97,
+      "texto": "An elephant standing over bones for twenty minutes might be somewhere in that gap."
+    },
+    {
+      "inicio": 459.97,
+      "fin": 463.74,
+      "texto": "Which turns the question around, and points it at you."
+    },
+    {
+      "inicio": 463.74,
+      "fin": 466.6,
+      "texto": "Because we're the ones who definitely have it."
+    },
+    {
+      "inicio": 466.6,
+      "fin": 468.3,
+      "texto": "And it is not free."
+    },
+    {
+      "inicio": 468.3,
+      "fin": 472.31,
+      "texto": "The knowledge of your own death is running in the background of everything you do."
+    },
+    {
+      "inicio": 472.31,
+      "fin": 476.13,
+      "texto": "It's in the will, in the insurance, in the health check you've been putting off."
+    },
+    {
+      "inicio": 476.13,
+      "fin": 483.51,
+      "texto": "It's in every religion humans have ever built — practically all of them are, among other things, an answer to this exact problem."
+    },
+    {
+      "inicio": 483.51,
+      "fin": 488.76,
+      "texto": "It's in the pyramids, in the gravestones, in wanting to be remembered."
+    },
+    {
+      "inicio": 488.76,
+      "fin": 495.19,
+      "texto": "Whole cultures exist as a response to a piece of information that no other animal appears to be burdened with."
+    },
+    {
+      "inicio": 495.19,
+      "fin": 500.59,
+      "texto": "An elephant standing over the bones of her mother is, as far as we can tell, sad."
+    },
+    {
+      "inicio": 500.59,
+      "fin": 502.26,
+      "texto": "You would also be sad."
+    },
+    {
+      "inicio": 502.26,
+      "fin": 510.76,
+      "texto": "And on top of that you would be doing something she almost certainly isn't: looking at those bones and understanding, precisely, that you're looking at a preview."
+    },
+    {
+      "inicio": 510.76,
+      "fin": 513.99,
+      "texto": "So — do animals know they're going to die?"
+    },
+    {
+      "inicio": 513.99,
+      "fin": 518.77,
+      "texto": "The best answer available is: probably not the way you do."
+    },
+    {
+      "inicio": 518.77,
+      "fin": 520.46,
+      "texto": "They have the feelings."
+    },
+    {
+      "inicio": 520.46,
+      "fin": 523.2,
+      "texto": "They mostly seem to lack the sentence."
+    },
+    {
+      "inicio": 523.2,
+      "fin": 524.91,
+      "texto": "And that's the trade."
+    },
+    {
+      "inicio": 524.91,
+      "fin": 527.28,
+      "texto": "They get the grief without the dread."
+    },
+    {
+      "inicio": 527.28,
+      "fin": 536.37,
+      "texto": "We got the dread, and in exchange we got planning, and medicine, and history, and every attempt anybody has ever made to leave something behind."
+    },
+    {
+      "inicio": 536.37,
+      "fin": 542.51,
+      "texto": "The elephant touches the bones, and then walks away, and does not spend the afternoon thinking about herself."
+    },
+    {
+      "inicio": 542.51,
+      "fin": 545.29,
+      "texto": "There's a version of that which sounds like a loss."
+    },
+    {
+      "inicio": 545.29,
+      "fin": 547.51,
+      "texto": "And a version that sounds like mercy."
+    },
+    {
+      "inicio": 547.51,
+      "fin": 553.8,
+      "texto": "And if you're now wondering what else you have that no other animal has to carry...\n...that's a question for another video."
+    }
+  ]
+}

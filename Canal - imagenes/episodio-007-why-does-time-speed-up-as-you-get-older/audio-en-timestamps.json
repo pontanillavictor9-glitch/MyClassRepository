@@ -1,0 +1,715 @@
+{
+  "duracion": 542.278,
+  "frases": [
+    {
+      "inicio": 0,
+      "fin": 3.73,
+      "texto": "When you were eight, a single summer holiday lasted approximately forever."
+    },
+    {
+      "inicio": 3.73,
+      "fin": 4.9,
+      "texto": "Six weeks."
+    },
+    {
+      "inicio": 4.9,
+      "fin": 7.42,
+      "texto": "You'd be a slightly different person by the end of it."
+    },
+    {
+      "inicio": 7.42,
+      "fin": 11.19,
+      "texto": "The first week alone contained more than some entire years do now."
+    },
+    {
+      "inicio": 11.19,
+      "fin": 12.65,
+      "texto": "And this year?"
+    },
+    {
+      "inicio": 12.65,
+      "fin": 17.57,
+      "texto": "This year has been going for a while and you couldn't confidently tell me what happened in March."
+    },
+    {
+      "inicio": 17.57,
+      "fin": 19.66,
+      "texto": "Everyone notices this."
+    },
+    {
+      "inicio": 19.66,
+      "fin": 22.05,
+      "texto": "Everyone assumes it's just a feeling."
+    },
+    {
+      "inicio": 22.05,
+      "fin": 23.74,
+      "texto": "It isn't just a feeling."
+    },
+    {
+      "inicio": 23.74,
+      "fin": 30.57,
+      "texto": "There are two competing explanations, both of them are partly right, and one of them tells you exactly what to do about it."
+    },
+    {
+      "inicio": 30.57,
+      "fin": 36.16,
+      "texto": "First, let's kill the obvious theory, because it's wrong and it gets repeated constantly."
+    },
+    {
+      "inicio": 36.16,
+      "fin": 41.82,
+      "texto": "The idea is that your internal clock slows down as you age, so external time seems to whip past."
+    },
+    {
+      "inicio": 41.82,
+      "fin": 44.52,
+      "texto": "Researchers have tested this directly."
+    },
+    {
+      "inicio": 44.52,
+      "fin": 50.05,
+      "texto": "Sit people of different ages in a room and ask them to estimate when three minutes have passed, with no clock."
+    },
+    {
+      "inicio": 50.05,
+      "fin": 53.27,
+      "texto": "Older adults do this about as well as younger ones."
+    },
+    {
+      "inicio": 53.27,
+      "fin": 59.43,
+      "texto": "There's some variation, but nothing remotely big enough to explain the difference between a summer at eight and a summer at forty."
+    },
+    {
+      "inicio": 59.43,
+      "fin": 65.93,
+      "texto": "And here's the detail that really rules it out: in the moment, older people don't experience time as fast."
+    },
+    {
+      "inicio": 65.93,
+      "fin": 71.72,
+      "texto": "Ask someone how long this afternoon felt, and you get roughly normal answers at every age."
+    },
+    {
+      "inicio": 71.72,
+      "fin": 74.18,
+      "texto": "The distortion isn't happening live."
+    },
+    {
+      "inicio": 74.18,
+      "fin": 76.14,
+      "texto": "It's happening in the rear-view mirror."
+    },
+    {
+      "inicio": 76.14,
+      "fin": 79.2,
+      "texto": "Which means whatever's going on isn't in your clock."
+    },
+    {
+      "inicio": 79.2,
+      "fin": 80.47,
+      "texto": "It's in your memory."
+    },
+    {
+      "inicio": 80.47,
+      "fin": 87.08,
+      "texto": "The oldest explanation is also the simplest, and it comes from a nineteenth-century philosopher called Paul Janet."
+    },
+    {
+      "inicio": 87.08,
+      "fin": 92.22,
+      "texto": "His idea: you judge a length of time against the total amount of time you've lived."
+    },
+    {
+      "inicio": 92.22,
+      "fin": 95.3,
+      "texto": "When you're one year old, a year is your entire life."
+    },
+    {
+      "inicio": 95.3,
+      "fin": 96.13,
+      "texto": "Everything."
+    },
+    {
+      "inicio": 96.13,
+      "fin": 101.06,
+      "texto": "When you're five, a year is a fifth of everything you've ever known — still enormous."
+    },
+    {
+      "inicio": 101.06,
+      "fin": 102.54,
+      "texto": "At ten, a tenth."
+    },
+    {
+      "inicio": 102.54,
+      "fin": 104.7,
+      "texto": "At forty, one fortieth."
+    },
+    {
+      "inicio": 104.7,
+      "fin": 107.25,
+      "texto": "Same three hundred and sixty-five days."
+    },
+    {
+      "inicio": 107.25,
+      "fin": 109.28,
+      "texto": "Wildly different fraction of the file."
+    },
+    {
+      "inicio": 109.28,
+      "fin": 113.47,
+      "texto": "Run that logic forward and it produces an unpleasant result."
+    },
+    {
+      "inicio": 113.47,
+      "fin": 121.65,
+      "texto": "If you measure life in how long it subjectively feels rather than how many years it contains, the halfway point of your life arrives at about age seven."
+    },
+    {
+      "inicio": 121.65,
+      "fin": 124.87,
+      "texto": "By twenty, you've subjectively used up most of it."
+    },
+    {
+      "inicio": 124.87,
+      "fin": 129.23,
+      "texto": "Now, this is elegant, and it's clearly capturing something real."
+    },
+    {
+      "inicio": 129.23,
+      "fin": 132.47,
+      "texto": "But it can't be the whole story, and here's how you know."
+    },
+    {
+      "inicio": 132.47,
+      "fin": 138.97,
+      "texto": "The proportional theory says the speed-up should be smooth and constant, a gentle gradient across your whole life."
+    },
+    {
+      "inicio": 138.97,
+      "fin": 139.89,
+      "texto": "It isn't."
+    },
+    {
+      "inicio": 139.89,
+      "fin": 144.2,
+      "texto": "People report specific stretches that flew and specific stretches that dragged."
+    },
+    {
+      "inicio": 144.2,
+      "fin": 148.33,
+      "texto": "Some people have a year in their thirties that felt longer than the five around it."
+    },
+    {
+      "inicio": 148.33,
+      "fin": 152.73,
+      "texto": "And almost everybody had one very recent year that behaved extremely strangely."
+    },
+    {
+      "inicio": 152.73,
+      "fin": 156.62,
+      "texto": "So here's the second explanation, and I think it's the better one."
+    },
+    {
+      "inicio": 156.62,
+      "fin": 162.75,
+      "texto": "Your sense of how long a period of time was is reconstructed afterwards from how much you remember of it."
+    },
+    {
+      "inicio": 162.75,
+      "fin": 167.13,
+      "texto": "A stretch stuffed with distinct, retrievable memories reads as long."
+    },
+    {
+      "inicio": 167.13,
+      "fin": 173.6,
+      "texto": "A stretch that produced almost nothing readable reads as short — even if it was exactly the same number of days."
+    },
+    {
+      "inicio": 173.6,
+      "fin": 177.59,
+      "texto": "And your brain is extremely selective about what it bothers to record."
+    },
+    {
+      "inicio": 177.59,
+      "fin": 179.21,
+      "texto": "It records novelty."
+    },
+    {
+      "inicio": 179.21,
+      "fin": 183.87,
+      "texto": "New places, new people, first times, things that broke the pattern."
+    },
+    {
+      "inicio": 183.87,
+      "fin": 189.24,
+      "texto": "It does not bother recording the fourth thousand identical commute, because there's no reason to."
+    },
+    {
+      "inicio": 189.24,
+      "fin": 191.32,
+      "texto": "Now think about being a child."
+    },
+    {
+      "inicio": 191.32,
+      "fin": 193.19,
+      "texto": "Everything is the first time."
+    },
+    {
+      "inicio": 193.19,
+      "fin": 199.6,
+      "texto": "First time on a bike, first time at the sea, first day at a new school, first time you understood a joke an adult made."
+    },
+    {
+      "inicio": 199.6,
+      "fin": 203.44,
+      "texto": "A child's year is almost entirely composed of things worth filing."
+    },
+    {
+      "inicio": 203.44,
+      "fin": 205.6,
+      "texto": "And think about a typical adult year."
+    },
+    {
+      "inicio": 205.6,
+      "fin": 210.8,
+      "texto": "Same job, same route, same flat, same faces, same weekly shop."
+    },
+    {
+      "inicio": 210.8,
+      "fin": 212.93,
+      "texto": "The days were not shorter."
+    },
+    {
+      "inicio": 212.93,
+      "fin": 215.6,
+      "texto": "There were just far fewer of them worth keeping."
+    },
+    {
+      "inicio": 215.6,
+      "fin": 217.75,
+      "texto": "Try it on yourself right now."
+    },
+    {
+      "inicio": 217.75,
+      "fin": 222.82,
+      "texto": "Think back to a holiday you took somewhere unfamiliar — a week, maybe ten days."
+    },
+    {
+      "inicio": 222.82,
+      "fin": 225.88,
+      "texto": "You can probably produce five or six distinct scenes from it."
+    },
+    {
+      "inicio": 225.88,
+      "fin": 227.36,
+      "texto": "A specific meal."
+    },
+    {
+      "inicio": 227.36,
+      "fin": 228.52,
+      "texto": "Getting lost."
+    },
+    {
+      "inicio": 228.52,
+      "fin": 229.96,
+      "texto": "A conversation."
+    },
+    {
+      "inicio": 229.96,
+      "fin": 231.91,
+      "texto": "The way a particular street looked."
+    },
+    {
+      "inicio": 231.91,
+      "fin": 235.73,
+      "texto": "Now think back to a random ordinary week from four months ago."
+    },
+    {
+      "inicio": 235.73,
+      "fin": 237.31,
+      "texto": "Same seven days."
+    },
+    {
+      "inicio": 237.31,
+      "fin": 244.27,
+      "texto": "Almost certainly you cannot retrieve a single specific scene from it, and if you can, it's because something unusual happened."
+    },
+    {
+      "inicio": 244.27,
+      "fin": 246.63,
+      "texto": "Your brain is not being lazy."
+    },
+    {
+      "inicio": 246.63,
+      "fin": 247.86,
+      "texto": "It's being efficient."
+    },
+    {
+      "inicio": 247.86,
+      "fin": 250.07,
+      "texto": "There was nothing there that it needed."
+    },
+    {
+      "inicio": 250.07,
+      "fin": 252.46,
+      "texto": "That's why the summer at eight feels enormous."
+    },
+    {
+      "inicio": 252.46,
+      "fin": 254.06,
+      "texto": "It isn't nostalgia."
+    },
+    {
+      "inicio": 254.06,
+      "fin": 257.38,
+      "texto": "That summer genuinely left more material behind."
+    },
+    {
+      "inicio": 257.38,
+      "fin": 262.92,
+      "texto": "And then, a few years ago, the entire planet accidentally ran the experiment."
+    },
+    {
+      "inicio": 262.92,
+      "fin": 273.92,
+      "texto": "During the lockdowns of twenty twenty, researchers surveyed thousands of people about their sense of time, and got a result that looks contradictory until you understand the two-system explanation."
+    },
+    {
+      "inicio": 273.92,
+      "fin": 277.38,
+      "texto": "Enormous numbers of people reported that the days crawled."
+    },
+    {
+      "inicio": 277.38,
+      "fin": 278.59,
+      "texto": "Interminable."
+    },
+    {
+      "inicio": 278.59,
+      "fin": 282.59,
+      "texto": "Nothing to do, nothing happening, an afternoon that would not end."
+    },
+    {
+      "inicio": 282.59,
+      "fin": 285.66,
+      "texto": "And the same people reported that the months had vanished."
+    },
+    {
+      "inicio": 285.66,
+      "fin": 287.85,
+      "texto": "Where did the year go?"
+    },
+    {
+      "inicio": 287.85,
+      "fin": 288.87,
+      "texto": "What did I do?"
+    },
+    {
+      "inicio": 288.87,
+      "fin": 289.73,
+      "texto": "It's gone."
+    },
+    {
+      "inicio": 289.73,
+      "fin": 293.87,
+      "texto": "Slow days, fast months, at the same time, in the same person."
+    },
+    {
+      "inicio": 293.87,
+      "fin": 296.46,
+      "texto": "That's exactly what memory density predicts."
+    },
+    {
+      "inicio": 296.46,
+      "fin": 303.11,
+      "texto": "In the moment, an empty day drags, because there is nothing to occupy attention and you notice every minute of it."
+    },
+    {
+      "inicio": 303.11,
+      "fin": 307.81,
+      "texto": "But afterwards, that same empty day left nothing behind to measure with."
+    },
+    {
+      "inicio": 307.81,
+      "fin": 312.25,
+      "texto": "Two months of identical afternoons collapse into a single vague blur."
+    },
+    {
+      "inicio": 312.25,
+      "fin": 318.44,
+      "texto": "Live time and remembered time are not the same thing, and they can move in opposite directions."
+    },
+    {
+      "inicio": 318.44,
+      "fin": 324.42,
+      "texto": "Which is the key to the whole video: the reason your years are speeding up is not that they're going faster."
+    },
+    {
+      "inicio": 324.42,
+      "fin": 326.6,
+      "texto": "It's that they're leaving less behind."
+    },
+    {
+      "inicio": 326.6,
+      "fin": 331.81,
+      "texto": "Put the two theories together and you can see why the effect hits hardest in a very specific window."
+    },
+    {
+      "inicio": 331.81,
+      "fin": 335.84,
+      "texto": "Childhood: high novelty, small denominator."
+    },
+    {
+      "inicio": 335.84,
+      "fin": 337.15,
+      "texto": "Time is vast."
+    },
+    {
+      "inicio": 337.15,
+      "fin": 340.51,
+      "texto": "Late teens and twenties: still very high novelty."
+    },
+    {
+      "inicio": 340.51,
+      "fin": 346.23,
+      "texto": "First job, first move, first relationship, first time being responsible for yourself."
+    },
+    {
+      "inicio": 346.23,
+      "fin": 358.18,
+      "texto": "There's a well-documented thing in memory research called the reminiscence bump — when older adults are asked to recall their lives, a disproportionate number of vivid memories come from roughly fifteen to thirty."
+    },
+    {
+      "inicio": 358.18,
+      "fin": 361.68,
+      "texto": "That period is over-represented for the rest of your life."
+    },
+    {
+      "inicio": 361.68,
+      "fin": 364.41,
+      "texto": "Then, for most people, something changes."
+    },
+    {
+      "inicio": 364.41,
+      "fin": 366.26,
+      "texto": "The big firsts run out."
+    },
+    {
+      "inicio": 366.26,
+      "fin": 368.77,
+      "texto": "Life becomes competent and repeated."
+    },
+    {
+      "inicio": 368.77,
+      "fin": 379.39,
+      "texto": "And competence is the enemy here, because the whole point of becoming good at something is that you can do it without paying attention — and anything you did without paying attention was not written down."
+    },
+    {
+      "inicio": 379.39,
+      "fin": 380.98,
+      "texto": "That's the acceleration."
+    },
+    {
+      "inicio": 380.98,
+      "fin": 381.92,
+      "texto": "Not aging."
+    },
+    {
+      "inicio": 381.92,
+      "fin": 383.34,
+      "texto": "Repetition."
+    },
+    {
+      "inicio": 383.34,
+      "fin": 389.11,
+      "texto": "Which is oddly hopeful, because repetition is a thing you can change and aging isn't."
+    },
+    {
+      "inicio": 389.11,
+      "fin": 394.73,
+      "texto": "So if you want your years back, the instruction that falls out of this is annoyingly specific."
+    },
+    {
+      "inicio": 394.73,
+      "fin": 400.88,
+      "texto": "It is not \"slow down.\" It's not mindfulness, or being present, though those are fine things."
+    },
+    {
+      "inicio": 400.88,
+      "fin": 404.07,
+      "texto": "Being present makes today feel longer while you're in it."
+    },
+    {
+      "inicio": 404.07,
+      "fin": 406.66,
+      "texto": "It doesn't necessarily leave anything behind."
+    },
+    {
+      "inicio": 406.66,
+      "fin": 411.09,
+      "texto": "The instruction is: create memorable first times, and space them out."
+    },
+    {
+      "inicio": 411.09,
+      "fin": 417.3,
+      "texto": "A weekend somewhere you have never been will do more to lengthen your year than a fortnight in the place you go every year."
+    },
+    {
+      "inicio": 417.3,
+      "fin": 421.29,
+      "texto": "The unfamiliar route home leaves a mark that the usual one doesn't."
+    },
+    {
+      "inicio": 421.29,
+      "fin": 429.01,
+      "texto": "A new skill, badly done, generates enormous amounts of storable material precisely because you're bad at it and paying attention."
+    },
+    {
+      "inicio": 429.01,
+      "fin": 433.27,
+      "texto": "And the second part matters as much as the first: spread them out."
+    },
+    {
+      "inicio": 433.27,
+      "fin": 440.77,
+      "texto": "Six new things across twelve months lengthens a year far more than six new things in one week, because they act as markers."
+    },
+    {
+      "inicio": 440.77,
+      "fin": 445.09,
+      "texto": "Your brain measures duration partly by counting the distance between landmarks."
+    },
+    {
+      "inicio": 445.09,
+      "fin": 449.33,
+      "texto": "Bunch the landmarks together and most of the year is featureless again."
+    },
+    {
+      "inicio": 449.33,
+      "fin": 451.36,
+      "texto": "The advice is boring."
+    },
+    {
+      "inicio": 451.36,
+      "fin": 453,
+      "texto": "The mechanism is not."
+    },
+    {
+      "inicio": 453,
+      "fin": 455.4,
+      "texto": "You are not trying to enjoy yourself more."
+    },
+    {
+      "inicio": 455.4,
+      "fin": 457.14,
+      "texto": "You are trying to leave evidence."
+    },
+    {
+      "inicio": 457.14,
+      "fin": 460.56,
+      "texto": "There's a harder implication in here and I'd rather say it than dodge it."
+    },
+    {
+      "inicio": 460.56,
+      "fin": 472.68,
+      "texto": "If the length of your life, as you'll eventually experience it looking back, is a function of how much of it you actually recorded — then a life can be long in years and short in the only currency that ends up mattering."
+    },
+    {
+      "inicio": 472.68,
+      "fin": 475.96,
+      "texto": "Twenty years of the same week is not twenty years."
+    },
+    {
+      "inicio": 475.96,
+      "fin": 477.22,
+      "texto": "Not in memory."
+    },
+    {
+      "inicio": 477.22,
+      "fin": 481.08,
+      "texto": "It compresses down to something you could describe in a paragraph."
+    },
+    {
+      "inicio": 481.08,
+      "fin": 482.89,
+      "texto": "And nobody chooses that."
+    },
+    {
+      "inicio": 482.89,
+      "fin": 491.18,
+      "texto": "It happens by accumulation, one reasonable comfortable decision at a time, until the pattern is so smooth there's nothing left for the brain to catch on."
+    },
+    {
+      "inicio": 491.18,
+      "fin": 494.56,
+      "texto": "That's the real reason the summer at eight feels the way it does."
+    },
+    {
+      "inicio": 494.56,
+      "fin": 497.02,
+      "texto": "It isn't that you were happier."
+    },
+    {
+      "inicio": 497.02,
+      "fin": 504.62,
+      "texto": "It's that you were paying attention, constantly, because you had no choice — everything was new and you had no idea what was going to happen next."
+    },
+    {
+      "inicio": 504.62,
+      "fin": 507.29,
+      "texto": "So no, time isn't speeding up."
+    },
+    {
+      "inicio": 507.29,
+      "fin": 508.55,
+      "texto": "Your clock is fine."
+    },
+    {
+      "inicio": 508.55,
+      "fin": 514.66,
+      "texto": "What's changed is how much of each year survives the trip into memory, and that's a function of how much of it was worth recording."
+    },
+    {
+      "inicio": 514.66,
+      "fin": 519.65,
+      "texto": "The good news is that this is one of the very few things about aging that pushes back."
+    },
+    {
+      "inicio": 519.65,
+      "fin": 522.48,
+      "texto": "You cannot slow the calendar."
+    },
+    {
+      "inicio": 522.48,
+      "fin": 524.79,
+      "texto": "You can absolutely change the density."
+    },
+    {
+      "inicio": 524.79,
+      "fin": 526.89,
+      "texto": "Go somewhere you've never been."
+    },
+    {
+      "inicio": 526.89,
+      "fin": 528.73,
+      "texto": "Be bad at something in public."
+    },
+    {
+      "inicio": 528.73,
+      "fin": 530.78,
+      "texto": "Take the wrong road home once in a while."
+    },
+    {
+      "inicio": 530.78,
+      "fin": 535.13,
+      "texto": "Your brain is keeping a record, and it only writes down the parts where it wasn't sure what was coming."
+    },
+    {
+      "inicio": 535.13,
+      "fin": 542.28,
+      "texto": "And if you're now wondering how much of last year you could actually reconstruct if somebody asked...\n...that's a question for another video."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/01.png'
+duration 15.840
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/02.png'
+duration 15.440
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/03.png'
+duration 16.340
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/04.png'
+duration 15.840
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/05.png'
+duration 16.970
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/06.png'
+duration 16.020
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/07.png'
+duration 17.620
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/08.png'
+duration 14.830
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/09.png'
+duration 18.220
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/10.png'
+duration 16.280
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/11.png'
+duration 22.670
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/12.png'
+duration 18.520
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/13.png'
+duration 17.070
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/14.png'
+duration 15.440
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/15.png'
+duration 14.670
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/16.png'
+duration 20.540
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/17.png'
+duration 16.010
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/18.png'
+duration 15.250
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/19.png'
+duration 15.680
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/20.png'
+duration 17.240
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/21.png'
+duration 15.510
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/22.png'
+duration 14.150
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/23.png'
+duration 20.240
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/24.png'
+duration 15.340
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/25.png'
+duration 14.900
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/26.png'
+duration 15.770
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/27.png'
+duration 14.210
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/28.png'
+duration 16.740
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/29.png'
+duration 15.870
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/30.png'
+duration 26.950
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/31.png'
+duration 19.400
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/32.png'
+duration 14.960
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/33.png'
+duration 17.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/34.png'
+duration 19.770
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/35.png'
+duration 14.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Canal - imagenes/episodio-004-did-ancient-humans-get-lonely/imagenes/35.png'

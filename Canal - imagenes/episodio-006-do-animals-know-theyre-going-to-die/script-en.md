@@ -36,8 +36,9 @@ Researchers laid out different objects for wild elephant families to find: eleph
 The elephants went for the ivory and the elephant skulls. They spent significantly more time investigating them, touching and smelling them, than anything else on offer.
 So they can tell. An elephant skull registers as a different category of object to an elephant than a buffalo skull does.
 And this isn't a one-off. Elephants have been recorded standing over dead members of their group for hours, trying to lift them, covering them with earth and branches, returning to the place afterwards.
-Now — the honest reading. All of that shows recognition and something that looks like distress. It does not, by itself, show an understanding that death is permanent. An elephant trying to lift a dead companion might be doing so precisely because it does not understand that this is over.
-Which is a strange and slightly awful thought.
+There are accounts of elephants staying with a body through the night, and of a group refusing to leave until the smell has changed. Keepers in sanctuaries describe animals going off their food for days after a death in the herd.
+Now — the honest reading. All of that shows recognition and something that looks a great deal like distress. It does not, by itself, show an understanding that death is permanent. An elephant trying to lift a dead companion might be doing so precisely because it does not understand that this is over. It might be trying to wake her up.
+Which is a strange and slightly awful thought, and it is going to come back later in this video.
 
 ## ACT 3 — THE MOTHERS
 
