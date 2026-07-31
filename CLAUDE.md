@@ -19,6 +19,16 @@ Se empieza por el inglés.
   nuevo, cambio de estructura, notas), commit + push a `origin` para que el
   trabajo esté igual en local y en GitHub.
 
+## Identidad del canal EN
+
+- **Nombre**: Why Is That Though?
+- **Handle**: `@whyisthatthough` (comprobado libre el 31-07-2026).
+- Canal reutilizado: ya existía vacío, sin vídeos ni suscriptores.
+- Avatar y banner en `Canal - imagenes/canal/` (`avatar.png` 800×800,
+  `banner.png` 2560×1440 con el texto en la zona segura de 1235×338).
+- El texto del banner se superpone con ffmpeg (fuente Impact, negro con
+  borde blanco), no se le pide al modelo de imagen.
+
 ## Especificación de cada episodio
 
 - **Longitud**: la narración (solo líneas `NARRATION`) debe sumar
