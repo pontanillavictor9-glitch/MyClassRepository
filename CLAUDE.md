@@ -195,6 +195,45 @@ episodio → el usuario monta el vídeo.
   YouTube rechaza las miniaturas personalizadas.
 - Rama de trabajo: `claude/higgsfield-cli-auth-6u1tz7`.
 
+### Dónde retomar (última sesión: 01-08-2026)
+
+- Los 7 episodios ingleses están **subidos y programados**. No hay que tocar
+  nada hasta el 6 de agosto; a partir de ahí toca producir más.
+- **Lo primero al volver**: mirar métricas de los vídeos ya publicados
+  (retención media, porcentaje de clics en la portada, origen de las
+  visitas) y decidir con eso si hay que cambiar portadas, títulos o temas.
+- Créditos de Higgsfield al cerrar la sesión: **727 de 1.200**.
+- Credenciales en disco, fuera de git y sobreviven a un reinicio: `.env`
+  (ElevenLabs), `client_secret.json` y `token.json` (YouTube),
+  `~/.config/higgsfield/credentials.json` (Higgsfield). Si el CLI de
+  Higgsfield se queja de workspace:
+  `higgsfield workspace set 949630f0-298a-45ad-82a0-7d9690a1353d`.
+- Ideas de episodios ya validadas y sin usar: "Why Do You Hate the Sound of
+  Your Own Voice?", "The Doorway Effect", "Why Can't You Tickle Yourself?",
+  "What Did Ancient Humans Do All Winter?".
+
+## Proyecto paralelo: Archivo Rojo (true crime en español)
+
+Canal distinto del usuario, en otra cuenta de Google. **Yo solo produzco; el
+usuario sube.** No tengo (ni necesito) credenciales de ese canal.
+
+- **Entrada**: el usuario pasa un `guion.json` con `narracion`,
+  `youtube_titulo`, `miniatura_texto` y `elevenlabs_config`. Los asteriscos
+  del texto de miniatura marcan énfasis (segunda línea en rojo).
+- **Voz**: Mateo `RD7LAtIKlFefBwftz7lj` (peninsular, informativo) a
+  `--speed 0.9`. Distinta de la del canal inglés a propósito.
+- **Estilo**: los mismos monigotes MS Paint, pero paleta apagada (grises,
+  beige, azul noche) con el rojo como acento. **Nunca se muestra una muerte
+  en pantalla**: se cuenta el antes, el después y la investigación. Además
+  de ser lo correcto, evita que YouTube limite la monetización.
+- **Salida**, en `C:\Users\ponta\Desktop\files\episodios\<caso>\`, con estos
+  nombres exactos en minúsculas:
+  `video_final.mp4`, `portada.png`, `subtitulos.srt`.
+- **El montaje NO lleva subtítulos quemados** y no debe llevarlos: el
+  `cortar_shorts.py` del usuario saca los shorts de ese mismo archivo y con
+  subtítulos quemados salían dobles.
+- Casos hechos: `caso-001-shipman`, `caso-002-tylenol`.
+
 ## Notas técnicas
 
 - ElevenLabs: la API key del usuario debe estar disponible como variable de
