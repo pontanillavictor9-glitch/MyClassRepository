@@ -1,0 +1,61 @@
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/01.png'
+duration 24.710
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/02.png'
+duration 20.290
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/03.png'
+duration 16.680
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/04.png'
+duration 16.270
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/05.png'
+duration 23.460
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/06.png'
+duration 20.250
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/07.png'
+duration 16.350
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/08.png'
+duration 15.870
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/09.png'
+duration 23.420
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/10.png'
+duration 15.220
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/11.png'
+duration 21.420
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/12.png'
+duration 17.890
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/13.png'
+duration 21.230
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/14.png'
+duration 29.570
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/15.png'
+duration 23.370
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/16.png'
+duration 18.490
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/17.png'
+duration 15.230
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/18.png'
+duration 17.440
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/19.png'
+duration 16.380
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/20.png'
+duration 29.240
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/21.png'
+duration 17.130
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/22.png'
+duration 17.010
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/23.png'
+duration 16.230
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/24.png'
+duration 15.100
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/25.png'
+duration 19.730
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/26.png'
+duration 19.970
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/27.png'
+duration 16.170
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/28.png'
+duration 28.410
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/29.png'
+duration 19.770
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/30.png'
+duration 19.160
+file 'C:/Users/ponta/Desktop/Nuevo canal/MyClassRepository/Archivo Rojo/caso-002-tylenol/imagenes/30.png'
