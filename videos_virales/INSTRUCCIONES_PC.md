@@ -72,6 +72,44 @@ Trabaja tú solo hasta acabar. Yo no estaré delante.
 4. Y ya está: te puedes ir. Cuando vuelvas, en la carpeta `listos` tendrás los
    Shorts preparados y `PUBLICAR.md` con títulos y descripciones para copiar y pegar.
 
+## Paso 4B (opcional) — Modo totalmente automático con /chrome
+
+Si quieres que Claude también GENERE los clips por ti (en vez del Paso 3),
+puede manejar tu Chrome con tus sesiones iniciadas:
+
+1. Instala la extensión **"Claude in Chrome"** en tu Chrome (búscala en la
+   Chrome Web Store o desde claude.com; inicia sesión con tu cuenta de Claude).
+2. Deja tu **sesión de Higgsfield iniciada** en Chrome (entra una vez y ya).
+3. En Claude Code (con la carpeta `videos_virales` abierta), escribe **`/chrome`**
+   y sigue lo que te diga para conectar con el navegador.
+4. Pega este mensaje tal cual:
+
+```
+Conectado a mi Chrome tienes mi sesión de Higgsfield abierta. Genera clips con
+los prompts de PROMPTS.md, empezando por la serie A, en vertical 9:16 y con un
+modelo que incluya audio si está disponible (por ejemplo Veo 3). REGLAS:
+- Genera como MÁXIMO 10 clips en total esta sesión. Ni uno más.
+- No compres nada, no cambies ningún ajuste de la cuenta, no toques nada
+  fuera de Higgsfield.
+- Si una generación sale mal, reintenta UNA vez; si falla otra vez, pasa al
+  siguiente prompt.
+- Si la web falla 3 veces seguidas o aparece cualquier pantalla de pago,
+  PARA del todo y déjame una nota en clips/INCIDENCIAS.txt.
+- Descarga cada clip bueno a la carpeta clips/ con el nombre del prompt
+  (clip_A1.mp4, etc.).
+Cuando acabes de generar, haz el montaje: sigue las 6 tareas del Paso 4 de
+INSTRUCCIONES_PC.md y deja los Shorts en listos/ con su PUBLICAR.md.
+Trabaja tú solo hasta acabar. Yo no estaré delante.
+```
+
+**A saber antes de usar este modo:**
+- **Gasta tus créditos de Higgsfield** sin que estés mirando. Por eso el límite
+  de 10 clips va escrito en el mensaje — puedes subirlo o bajarlo.
+- **La primera vez, quédate 10 minutos mirando** cómo va, para comprobar que
+  encuentra los botones bien. Si la primera va fina, las siguientes déjalas solas.
+- Si `/chrome` no aparece en tu versión de Claude Code o la extensión no
+  conecta, usa el Paso 3 normal (generar tú) — el resto no cambia.
+
 ## Paso 5 — Publicar en YouTube Shorts (lo tuyo otra vez, 5 minutos al día)
 
 1. Pásate los vídeos de `listos` al móvil (por WhatsApp a ti mismo, por ejemplo,
