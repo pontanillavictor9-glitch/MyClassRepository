@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EJEMPLO ESCRITO A MANO para probar el lector. No son datos reales. -->
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:cac-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonBasicComponents-2"
+      xmlns:cac="urn:dgpe:names:draft:codice:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc="urn:dgpe:names:draft:codice:schema:xsd:CommonBasicComponents-2">
+  <link rel="next" href="https://ejemplo.invalid/pagina2.atom"/>
+  <entry>
+    <id>https://ejemplo.invalid/licitacion/1</id>
+    <link href="https://ejemplo.invalid/detalle/1"/>
+    <title>Limpieza de colegios municipales</title>
+    <updated>2026-10-31T10:00:00+01:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>EXP-2026-001</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>PUB</cbc-place-ext:ContractFolderStatusCode>
+      <cac-place-ext:LocatedContractingParty><cac:Party><cac:PartyName>
+        <cbc:Name>Ayuntamiento de Ejemplo</cbc:Name>
+      </cac:PartyName></cac:Party></cac-place-ext:LocatedContractingParty>
+      <cac:ProcurementProject>
+        <cbc:Name>Servicio de limpieza de 4 colegios</cbc:Name>
+        <cbc:TypeCode>2</cbc:TypeCode>
+        <cac:BudgetAmount>
+          <cbc:EstimatedOverallContractAmount currencyID="EUR">240000</cbc:EstimatedOverallContractAmount>
+          <cbc:TaxExclusiveAmount currencyID="EUR">120000</cbc:TaxExclusiveAmount>
+        </cac:BudgetAmount>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>90910000</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+        <cac:RealizedLocation><cbc:CountrySubentity>Sevilla</cbc:CountrySubentity><cbc:CountrySubentityCode>ES618</cbc:CountrySubentityCode></cac:RealizedLocation>
+      </cac:ProcurementProject>
+      <cac:TenderingProcess>
+        <cbc:ProcedureCode>1</cbc:ProcedureCode>
+        <cac:TenderSubmissionDeadlinePeriod><cbc:EndDate>2026-11-20</cbc:EndDate><cbc:EndTime>14:00:00</cbc:EndTime></cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+      <cac:LegalDocumentReference><cbc:ID>pliego_administrativo.pdf</cbc:ID>
+        <cac:Attachment><cac:ExternalReference><cbc:URI>https://ejemplo.invalid/pcap.pdf</cbc:URI></cac:ExternalReference></cac:Attachment>
+      </cac:LegalDocumentReference>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+  <entry>
+    <id>https://ejemplo.invalid/licitacion/2</id>
+    <title>Asfaltado de calles</title>
+    <updated>2026-10-30T09:00:00+01:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>EXP-2026-002</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>ADJ</cbc-place-ext:ContractFolderStatusCode>
+      <cac:ProcurementProject><cbc:Name>Asfaltado</cbc:Name><cbc:TypeCode>3</cbc:TypeCode>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>45233222</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+      </cac:ProcurementProject>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+</feed>
