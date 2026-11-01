@@ -1,0 +1,2 @@
+# Única dependencia externa (opcional: sin ella todo funciona, pero sin IA)
+anthropic>=2.3

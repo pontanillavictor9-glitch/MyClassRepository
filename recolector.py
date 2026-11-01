@@ -28,7 +28,8 @@ from pathlib import Path
 FEED_URL = ("https://contrataciondelsectorpublico.gob.es/sindicacion/"
             "sindicacion_643/licitacionesPerfilesContratanteCompleto3.atom")
 
-CARPETA_DATOS = Path(__file__).parent / "datos" / "licitaciones"
+import comun
+CARPETA_DATOS = comun.LICITACIONES
 
 TIPOS = {"1": "Suministros", "2": "Servicios", "3": "Obras"}
 

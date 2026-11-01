@@ -1,3 +1,6 @@
 datos/
 __pycache__/
 *.pyc
+# datos personales: nunca a git
+clientes.json
+.env

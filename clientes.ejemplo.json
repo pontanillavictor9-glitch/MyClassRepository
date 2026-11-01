@@ -1,0 +1,9 @@
+[
+ {"id": "c00001", "email": "limpiezas.ejemplo@ejemplo.invalid", "nombre": "Limpiezas Ejemplo",
+  "estado": "activo", "plan": "pago", "token": "token-de-prueba-1",
+  "sectores": ["9091"], "palabras": ["limpieza"], "provincias": ["Sevilla"],
+  "importe_min": 0, "importe_max": 500000, "enviados": []},
+ {"id": "c00002", "email": "obras.ejemplo@ejemplo.invalid", "nombre": "",
+  "estado": "activo", "plan": "gratis", "token": "token-de-prueba-2",
+  "sectores": ["45"], "palabras": [], "provincias": [], "enviados": []}
+]
