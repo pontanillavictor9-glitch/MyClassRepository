@@ -138,3 +138,77 @@ def euros(x):
     if x is None:
         return "importe no indicado"
     return f"{x:,.0f} €".replace(",", ".")
+
+
+# La Plataforma responde con dos nombres (el antiguo contrataciondelestado.es y el
+# nuevo contrataciondelsectorpublico.gob.es) y sirve lo mismo en los dos. Los
+# enlaces del feed usan el antiguo; se piden siempre por el nuevo, para tener un
+# solo dominio que permitir en cortafuegos y redes.
+DOMINIO_PLATAFORMA = os.environ.get("DOMINIO_PLATAFORMA", "contrataciondelsectorpublico.gob.es")
+
+
+def url_plataforma(url):
+    return (url or "").replace("://contrataciondelestado.es/", f"://{DOMINIO_PLATAFORMA}/")
+
+
+# --------------------------------------------------------------------------
+# Provincias. El nombre que trae el anuncio es un desorden («Valencia/València»,
+# islas sueltas, «CiudadReal», comunidades…), pero el código NUTS viene siempre.
+# NUTS de 5 caracteres = provincia (o isla/comarca, que se sube a su provincia);
+# 3-4 caracteres = comunidad o gran región; «ES» = toda España.
+# --------------------------------------------------------------------------
+
+NUTS_PROVINCIA = {
+    "ES111": "A Coruña", "ES112": "Lugo", "ES113": "Ourense", "ES114": "Pontevedra",
+    "ES120": "Asturias", "ES130": "Cantabria", "ES211": "Álava", "ES212": "Gipuzkoa",
+    "ES213": "Bizkaia", "ES220": "Navarra", "ES230": "La Rioja", "ES241": "Huesca",
+    "ES242": "Teruel", "ES243": "Zaragoza", "ES300": "Madrid", "ES411": "Ávila",
+    "ES412": "Burgos", "ES413": "León", "ES414": "Palencia", "ES415": "Salamanca",
+    "ES416": "Segovia", "ES417": "Soria", "ES418": "Valladolid", "ES419": "Zamora",
+    "ES421": "Albacete", "ES422": "Ciudad Real", "ES423": "Cuenca", "ES424": "Guadalajara",
+    "ES425": "Toledo", "ES431": "Badajoz", "ES432": "Cáceres", "ES511": "Barcelona",
+    "ES512": "Girona", "ES513": "Lleida", "ES514": "Tarragona", "ES521": "Alicante",
+    "ES522": "Castellón", "ES523": "Valencia", "ES531": "Illes Balears",
+    "ES532": "Illes Balears", "ES533": "Illes Balears", "ES611": "Almería",
+    "ES612": "Cádiz", "ES613": "Córdoba", "ES614": "Granada", "ES615": "Huelva",
+    "ES616": "Jaén", "ES617": "Málaga", "ES618": "Sevilla", "ES620": "Murcia",
+    "ES630": "Ceuta", "ES640": "Melilla", "ES703": "Santa Cruz de Tenerife",
+    "ES704": "Las Palmas", "ES705": "Las Palmas", "ES706": "Santa Cruz de Tenerife",
+    "ES707": "Santa Cruz de Tenerife", "ES708": "Las Palmas", "ES709": "Santa Cruz de Tenerife",
+}
+PROVINCIAS = sorted(set(NUTS_PROVINCIA.values()), key=normalizar)
+_PROV_NUTS = {}
+for _cod, _nom in NUTS_PROVINCIA.items():
+    _PROV_NUTS.setdefault(normalizar(_nom), []).append(_cod)
+# nombres alternativos que la gente escribe
+for _alias, _nom in (("alicante/alacant", "Alicante"), ("alacant", "Alicante"),
+                     ("valencia/valencia", "Valencia"), ("castello", "Castellón"),
+                     ("castellon/castello", "Castellón"), ("baleares", "Illes Balears"),
+                     ("mallorca", "Illes Balears"), ("vizcaya", "Bizkaia"),
+                     ("guipuzcoa", "Gipuzkoa"), ("alava", "Álava"), ("araba", "Álava"),
+                     ("la coruna", "A Coruña"), ("orense", "Ourense"), ("gerona", "Girona"),
+                     ("lerida", "Lleida"), ("tenerife", "Santa Cruz de Tenerife"),
+                     ("gran canaria", "Las Palmas")):
+    _PROV_NUTS[_alias] = _PROV_NUTS[normalizar(_nom)]
+
+
+def nuts_de_provincia(nombre):
+    return _PROV_NUTS.get(normalizar(nombre), [])
+
+
+def provincia_de(lic):
+    """Nombre de provincia limpio; si el contrato es de una comunidad o de toda
+    España, el nombre que traiga el anuncio."""
+    return NUTS_PROVINCIA.get(lic.get("nuts") or "") or lic.get("provincia")
+
+
+def ambito(lic):
+    """'provincia', 'region', 'nacional' o 'desconocido'."""
+    n = lic.get("nuts") or ""
+    if n in NUTS_PROVINCIA:
+        return "provincia"
+    if n == "ES":
+        return "nacional"
+    if n.startswith("ES") and 3 <= len(n) <= 4:
+        return "region"
+    return "desconocido"

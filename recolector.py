@@ -22,11 +22,16 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-# Feed oficial de licitaciones (perfiles del contratante, todas las administraciones
-# que publican en la Plataforma). Va de lo más nuevo a lo más viejo y se pagina con
-# <link rel="next">.
-FEED_URL = ("https://contrataciondelsectorpublico.gob.es/sindicacion/"
-            "sindicacion_643/licitacionesPerfilesContratanteCompleto3.atom")
+# Feeds oficiales. Van de lo más nuevo a lo más viejo y se paginan con <link rel="next">.
+#  - estado: los organismos que publican en la Plataforma del Estado (la mayoría).
+#  - autonomicas: lo que publican las plataformas propias de Cataluña, País Vasco,
+#    Navarra, Andalucía, Madrid… (sin contratos menores). Sin él, Barcelona o
+#    Bilbao salen casi vacías.
+_BASE = "https://contrataciondelsectorpublico.gob.es/sindicacion/"
+FEEDS = {
+    "estado": _BASE + "sindicacion_643/licitacionesPerfilesContratanteCompleto3.atom",
+    "autonomicas": _BASE + "sindicacion_1044/PlataformasAgregadasSinMenores.atom",
+}
 
 import comun
 CARPETA_DATOS = comun.LICITACIONES
@@ -170,7 +175,7 @@ def parsear_pagina(xml_bytes):
 # ---------------------------------------------------------------------------
 
 def bajar(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "alertas-licitaciones/0.1"})
+    req = urllib.request.Request(comun.url_plataforma(url), headers={"User-Agent": "alertas-licitaciones/0.1"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.read()
 
@@ -184,12 +189,28 @@ def _fecha(t):
         return None
 
 
-def recolectar_web(dias, max_paginas=200):
+def recolectar_web(dias, fuentes=None, max_paginas=200):
+    todas = []
+    for nombre in fuentes or FEEDS:
+        print(f"Fuente: {nombre}", file=sys.stderr)
+        lote = recolectar_feed(FEEDS[nombre], dias, max_paginas)
+        for e in lote:
+            e["fuente"] = nombre
+        todas.extend(lote)
+    return todas
+
+
+def recolectar_feed(url, dias, max_paginas):
     limite = datetime.now(timezone.utc) - timedelta(days=dias)
-    url, todas = FEED_URL, []
+    todas = []
     for pagina in range(1, max_paginas + 1):
         print(f"  página {pagina}…", file=sys.stderr)
-        entradas, url = parsear_pagina(bajar(url))
+        try:
+            entradas, url = parsear_pagina(bajar(url))
+        except Exception as e:
+            print(f"  la página {pagina} falló ({e}); me quedo con lo bajado hasta aquí",
+                  file=sys.stderr)
+            break
         todas.extend(entradas)
         fechas = [f for f in (_fecha(e.get("actualizado")) for e in entradas) if f]
         if not url or (fechas and min(fechas) < limite):
@@ -245,12 +266,14 @@ def main():
     p.add_argument("--dias", type=int, default=2, help="cuántos días atrás (por defecto 2)")
     p.add_argument("--fichero", help="leer un .atom local en vez de la web")
     p.add_argument("--no-guardar", action="store_true", help="solo enseñar el resumen")
+    p.add_argument("--fuente", choices=list(FEEDS), action="append",
+                   help="solo esta fuente (por defecto, todas)")
     a = p.parse_args()
 
     if a.fichero:
         lics, _ = parsear_pagina(Path(a.fichero).read_bytes())
     else:
-        lics = recolectar_web(a.dias)
+        lics = recolectar_web(a.dias, a.fuente)
 
     if not a.no_guardar:
         fichero, n = guardar(lics)

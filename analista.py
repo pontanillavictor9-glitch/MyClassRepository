@@ -56,24 +56,22 @@ en vez de suponerlo."""
 
 
 def resumen_basico(lic):
-    """Resumen sin IA, a partir de los datos estructurados del anuncio."""
+    """Resumen sin IA: solo lo que es seguro (sin dificultad ni requisitos, que
+    habría que leer del pliego y aquí serían inventados)."""
     return {
-        "resumen": f"{lic.get('organo') or 'Un organismo público'} busca empresa para: "
-                   f"{lic.get('objeto') or lic.get('titulo')}. "
-                   f"Presupuesto: {comun.euros(lic.get('importe_sin_iva'))} sin IVA.",
+        "resumen": "",
         "que_piden": lic.get("objeto") or lic.get("titulo") or "",
-        "requisitos": ["Consultar el pliego administrativo"],
-        "criterios": ["Consultar el pliego"],
-        "para_quien": ", ".join(comun.SECTORES.get(c[:2], c[:2]) for c in lic.get("cpv", [])[:3])
-                      or "No se indica",
-        "dificultad": "media",
+        "requisitos": [],
+        "criterios": [],
+        "para_quien": ", ".join(comun.SECTORES.get(c[:2], c[:2]) for c in lic.get("cpv", [])[:3]),
+        "dificultad": None,
         "alertas": [],
         "con_ia": False,
     }
 
 
 def _bajar_pdf(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "alertas-licitaciones/0.1"})
+    req = urllib.request.Request(comun.url_plataforma(url), headers={"User-Agent": "alertas-licitaciones/0.1"})
     with urllib.request.urlopen(req, timeout=120) as r:
         datos = r.read(MAX_PDF_BYTES + 1)
     if len(datos) > MAX_PDF_BYTES or not datos.startswith(b"%PDF"):

@@ -34,6 +34,16 @@ python diario.py --prueba
 Usa `muestra/ejemplo.atom` (escrito a mano, **no son datos reales**). Para tener
 clientes de prueba, copia `clientes.ejemplo.json` a `datos/clientes.json` antes.
 
+## Datos reales (medidos el 1-11-2026, última semana)
+
+- Dos fuentes: la Plataforma del Estado y el agregado de las plataformas autonómicas
+  (Cataluña, País Vasco, Navarra, Andalucía, Madrid…). Sin la segunda, Barcelona o Bilbao salen casi vacías.
+- **~3.900 licitaciones abiertas** en un día cualquiera; importe mediano ~92.000 € sin IVA.
+- Bajar una semana entera tarda ~8 minutos; el día a día (2 días) mucho menos.
+- La provincia se saca del código NUTS (viene siempre), no del nombre (viene desordenado).
+- Ejemplos de lo que le llegaría a un cliente (abiertas a la vez): limpieza de edificios en Sevilla 7,
+  limpieza en Madrid 19, obras en Valencia hasta 500.000 € 58, informática en toda España 291.
+
 ## Planes
 
 - **Gratis:** 3 licitaciones cada lunes. Es el gancho.
@@ -41,7 +51,7 @@ clientes de prueba, copia `clientes.ejemplo.json` a `datos/clientes.json` antes.
 
 ## Lo que falta para ponerlo en marcha (no es código)
 
-1. **Comprobar los datos reales:** el Recolector aún no se ha probado contra la web oficial (desde la sesión donde se escribió estaba bloqueada).
+1. **La IA de verdad:** los resúmenes con IA solo se han probado con respuestas simuladas; falta una clave real.
 2. **Un servidor** donde corra `servidor.py` y `diario.py` cada mañana.
 3. **Un dominio** y un **proveedor de email** (SMTP para mandar, IMAP para leer).
 4. **Clave de IA** (`ANTHROPIC_API_KEY`) para los resúmenes buenos. El modelo se elige con `MODELO_IA`.

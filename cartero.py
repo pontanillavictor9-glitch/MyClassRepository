@@ -73,7 +73,7 @@ def _bloque(lic):
         "titulo": lic.get("objeto") or lic.get("titulo") or "Licitación",
         "organo": lic.get("organo") or "",
         "importe": comun.euros(lic.get("importe_sin_iva")),
-        "provincia": lic.get("provincia") or "España",
+        "provincia": comun.provincia_de(lic) or "España",
         "plazo": _fecha_bonita(lic.get("fin_plazo")),
         "resumen": an.get("resumen", ""),
         "requisitos": an.get("requisitos", []),

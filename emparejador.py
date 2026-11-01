@@ -24,10 +24,18 @@ PLAN_PAGO_MAX = 40
 
 def puntuar(lic, cli):
     """0 = no encaja. Cuanto más alto, mejor encaja."""
-    provincias = [comun.normalizar(p) for p in cli.get("provincias", [])]
-    prov_lic = comun.normalizar(lic.get("provincia"))
-    if provincias and prov_lic and prov_lic not in provincias:
-        return 0
+    # Zona: se manda si el contrato es de una de sus provincias, de la comunidad
+    # que la contiene o de toda España. Un contrato de otra zona no se manda.
+    codigos = [c for p in cli.get("provincias", []) for c in comun.nuts_de_provincia(p)]
+    nuts = lic.get("nuts") or ""
+    amb = comun.ambito(lic)
+    if codigos:
+        if amb == "provincia" and nuts not in codigos:
+            return 0
+        if amb == "region" and not any(c.startswith(nuts) for c in codigos):
+            return 0
+        if nuts == "ESZZZ":        # «extra-regio»: se ejecuta fuera de España
+            return 0
 
     importe = lic.get("importe_sin_iva")
     if importe is not None:
@@ -47,8 +55,8 @@ def puntuar(lic, cli):
         if comun.normalizar(palabra) in texto:
             puntos += 3
 
-    if puntos and provincias and not prov_lic:
-        puntos -= 1        # sin provincia en el anuncio: se manda, pero más abajo
+    if puntos and codigos and amb != "provincia":
+        puntos -= 1        # contrato regional, nacional o sin zona: se manda, pero más abajo
     return max(puntos, 0)
 
 

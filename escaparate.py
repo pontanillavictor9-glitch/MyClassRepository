@@ -19,15 +19,7 @@ from html import escape
 
 import comun
 
-PROVINCIAS = [
-    "A Coruña", "Álava", "Albacete", "Alicante", "Almería", "Asturias", "Ávila", "Badajoz",
-    "Barcelona", "Bizkaia", "Burgos", "Cáceres", "Cádiz", "Cantabria", "Castellón", "Ceuta",
-    "Ciudad Real", "Córdoba", "Cuenca", "Gipuzkoa", "Girona", "Granada", "Guadalajara",
-    "Huelva", "Huesca", "Illes Balears", "Jaén", "La Rioja", "Las Palmas", "León", "Lleida",
-    "Lugo", "Madrid", "Málaga", "Melilla", "Murcia", "Navarra", "Ourense", "Palencia",
-    "Pontevedra", "Salamanca", "Santa Cruz de Tenerife", "Segovia", "Sevilla", "Soria",
-    "Tarragona", "Teruel", "Toledo", "Valencia", "Valladolid", "Zamora", "Zaragoza",
-]
+PROVINCIAS = comun.PROVINCIAS
 
 PRECIO_MES = "29 €/mes"
 
@@ -90,7 +82,7 @@ def tarjeta(lic):
     an = comun.analisis_de(lic) or {}
     plazo = (lic.get("fin_plazo") or "no indicado")[:10]
     return f"""<div class="card lic"><h3>{escape(lic.get('objeto') or lic.get('titulo') or '')}</h3>
-<div class="meta">{escape(lic.get('organo') or '')} · {escape(lic.get('provincia') or 'España')} ·
+<div class="meta">{escape(lic.get('organo') or '')} · {escape(comun.provincia_de(lic) or 'España')} ·
 <b>{escape(comun.euros(lic.get('importe_sin_iva')))}</b> · plazo {escape(plazo[8:10] + '/' + plazo[5:7] + '/' + plazo[:4] if len(plazo) == 10 else plazo)}</div>
 {f"<p>{escape(an['resumen'])}</p>" if an.get('resumen') else ''}
 {f'<a href="{escape(lic["enlace"])}" rel="nofollow">Ver en la plataforma oficial</a>' if lic.get('enlace') else ''}</div>"""
@@ -109,8 +101,8 @@ def generar():
     for l in lics:
         for div in sorted({c[:2] for c in l.get("cpv", []) if c[:2] in comun.SECTORES}):
             por_sector[div].append(l)
-            if l.get("provincia"):
-                por_sector_prov[(div, l["provincia"])].append(l)
+            if comun.ambito(l) == "provincia":
+                por_sector_prov[(div, comun.provincia_de(l))].append(l)
 
     urls = ["index.html"]
 
@@ -123,7 +115,7 @@ def generar():
     for div, lista in sorted(por_sector.items(), key=lambda x: -len(x[1])):
         nombre = comun.SECTORES[div]
         ruta = f"licitaciones/{comun.slug(nombre)}.html"
-        provs = sorted({l['provincia'] for l in lista if l.get('provincia')})
+        provs = sorted({comun.provincia_de(l) for l in lista if comun.ambito(l) == "provincia"}, key=comun.normalizar)
         sub = "".join(
             f'<li><a href="{comun.slug(nombre)}/{comun.slug(p)}.html">{escape(p)}</a> '
             f'({len(por_sector_prov[(div, p)])})</li>' for p in provs)
