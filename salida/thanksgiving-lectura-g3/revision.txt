@@ -1,0 +1,7 @@
+Producto: thanksgiving-lectura-g3
+Páginas: 12
+Datos: {'nivel_lectura': {'The Harvest Feast of 1621': 4.0, 'Sarah Hale Never Gave Up': 4.3, 'Giant Balloons in the Sky': 3.6, "Maya's Thankful Jar": 2.8}}
+
+RESULTADO: APROBADO
+
+aviso: Sin ANTHROPIC_API_KEY: no se ha hecho la revisión con IA (ortografía y datos).

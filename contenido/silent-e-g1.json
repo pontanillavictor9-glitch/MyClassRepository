@@ -1,0 +1,125 @@
+{
+ "id": "silent-e-decodables-g1",
+ "cuentos": [
+  {
+   "titulo": "Jake and the Cake",
+   "patron": "a_e",
+   "texto": [
+    "Jake and his mom bake a cake.",
+    "Jake mixes the cake in a big pan. Mom sets the pan in to bake.",
+    "The cake is a fat cake. It has a red flag on top.",
+    "Jake will take the cake to Grace. Grace is six. Grace gets a cake and a hug!"
+   ],
+   "preguntas": [
+    {
+     "pregunta": "What do Jake and his mom bake?",
+     "respuesta": "A cake."
+    },
+    {
+     "pregunta": "What is on top of the cake?",
+     "respuesta": "A red flag."
+    },
+    {
+     "pregunta": "Who gets the cake?",
+     "respuesta": "Grace (she is six)."
+    }
+   ]
+  },
+  {
+   "titulo": "Mike Can Ride",
+   "patron": "i_e",
+   "texto": [
+    "Mike has a bike. The bike is white and red.",
+    "Mike can ride the bike up the hill. It is a big hill, but Mike can do it.",
+    "At the top, Mike stops to rest. He has a wide smile.",
+    "Then Mike rides fast to the base of the hill. What a fine ride!"
+   ],
+   "preguntas": [
+    {
+     "pregunta": "What color is the bike?",
+     "respuesta": "White and red."
+    },
+    {
+     "pregunta": "What does Mike do at the top of the hill?",
+     "respuesta": "He stops to rest (and smiles)."
+    },
+    {
+     "pregunta": "How does Mike ride down the hill?",
+     "respuesta": "Fast."
+    }
+   ]
+  },
+  {
+   "titulo": "Rose and the Bone",
+   "patron": "o_e",
+   "texto": [
+    "Rose has a dog. The dog has a bone.",
+    "The dog digs a hole and drops the bone in it. Then the dog runs home.",
+    "Rose spots the hole. She lifts the bone up with a stick.",
+    "Rose drops the bone next to the dog at home. The dog licks Rose on the nose!"
+   ],
+   "preguntas": [
+    {
+     "pregunta": "What does the dog put in the hole?",
+     "respuesta": "A bone."
+    },
+    {
+     "pregunta": "How does Rose get the bone?",
+     "respuesta": "She lifts it up with a stick."
+    },
+    {
+     "pregunta": "What does the dog lick?",
+     "respuesta": "Rose's nose."
+    }
+   ]
+  },
+  {
+   "titulo": "A Cute Mule",
+   "patron": "u_e",
+   "texto": [
+    "Duke is a mule. Duke is a cute mule with a big tan nose.",
+    "Duke can hum a tune. Hum, hum, hum!",
+    "June pets Duke. She hums the tune with him.",
+    "Duke and June hum the tune on the hill at sunset."
+   ],
+   "preguntas": [
+    {
+     "pregunta": "What is Duke?",
+     "respuesta": "A mule (a cute mule)."
+    },
+    {
+     "pregunta": "What can Duke do?",
+     "respuesta": "Hum a tune."
+    },
+    {
+     "pregunta": "When do Duke and June hum on the hill?",
+     "respuesta": "At sunset."
+    }
+   ]
+  },
+  {
+   "titulo": "The Lake Trip",
+   "patron": "mixed",
+   "texto": [
+    "Kate and Pete ride to the lake. It is nice and hot.",
+    "Pete dives in. Kate sits on a rock and kicks the wet sand.",
+    "Then Kate spots a fish. It is huge! It has a stripe on its fin.",
+    "At sunset, Kate and Pete go home. They will come back to the lake in June."
+   ],
+   "preguntas": [
+    {
+     "pregunta": "Where do Kate and Pete go?",
+     "respuesta": "To the lake."
+    },
+    {
+     "pregunta": "What does Kate spot?",
+     "respuesta": "A huge fish (with a stripe on its fin)."
+    },
+    {
+     "pregunta": "When will they come back?",
+     "respuesta": "In June."
+    }
+   ]
+  }
+ ]
+}

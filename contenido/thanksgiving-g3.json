@@ -1,0 +1,266 @@
+{
+ "id": "thanksgiving-lectura-g3",
+ "titulo_producto": "Thanksgiving Reading Comprehension",
+ "grado": "3",
+ "nivel_fk": [
+  2.0,
+  4.5
+ ],
+ "lecturas": [
+  {
+   "titulo": "The Harvest Feast of 1621",
+   "tipo": "Nonfiction",
+   "texto": [
+    "In 1620, a ship called the Mayflower sailed from England to North America. The people on the ship were called the Pilgrims. They built a small town called Plymouth, in what is now Massachusetts.",
+    "The land was already home to the Wampanoag people. The Wampanoag had lived there for thousands of years. They knew how to fish, hunt, and grow food in that place.",
+    "The first winter was very hard for the Pilgrims. It was cold, and they did not have enough food. About half of them got sick and died.",
+    "In the spring, a man named Tisquantum helped the Pilgrims. He spoke English, and he showed them how to plant corn. He also taught them where to catch fish and eels.",
+    "By the fall of 1621, the Pilgrims had a good harvest. They had a celebration that lasted three days. The Wampanoag leader, Massasoit, came with about ninety of his men. The Wampanoag brought five deer to share.",
+    "People today often call this meal the first Thanksgiving. It did not look like a modern Thanksgiving dinner. There were no pies, because the Pilgrims had no ovens and very little sugar. They likely ate deer, wild birds, corn, and fish.",
+    "The Wampanoag people still live in Massachusetts today. They remember this history in their own way, too."
+   ],
+   "preguntas": [
+    {
+     "tipo": "opcion",
+     "pregunta": "Who lived on the land before the Pilgrims came?",
+     "opciones": [
+      "The English",
+      "The Wampanoag people",
+      "The sailors of the Mayflower",
+      "Nobody"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "How did Tisquantum help the Pilgrims?",
+     "opciones": [
+      "He gave them a new ship",
+      "He built their houses",
+      "He showed them how to plant corn",
+      "He took them back to England"
+     ],
+     "correcta": 2
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "Why were there no pies at the 1621 feast?",
+     "opciones": [
+      "Nobody liked pie",
+      "They had no ovens and little sugar",
+      "It was too hot to bake",
+      "The Wampanoag did not allow it"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "vocabulario",
+     "pregunta": "The word harvest means...",
+     "opciones": [
+      "a big boat",
+      "gathering crops that are ready",
+      "a cold winter",
+      "a kind of bird"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "escrita",
+     "pregunta": "How was the 1621 feast different from a Thanksgiving dinner today? Use two details from the text.",
+     "ejemplo": "It lasted three days, and there were no pies. They ate deer, wild birds, corn, and fish."
+    }
+   ]
+  },
+  {
+   "titulo": "Sarah Hale Never Gave Up",
+   "tipo": "Biography",
+   "texto": [
+    "Sarah Josepha Hale was a writer. She was born in New Hampshire in 1788. You may know one of her poems. She wrote \"Mary Had a Little Lamb.\"",
+    "Sarah was the editor of a very popular magazine for women. She used the magazine to share ideas she cared about.",
+    "One big idea was Thanksgiving. In Sarah's time, some states had a day of thanks. But each state picked its own day. Sarah wanted the whole country to give thanks on the same day.",
+    "For about seventeen years, Sarah wrote letters to leaders and to presidents. Many of them said no. Some did not answer at all. Still, Sarah kept writing.",
+    "In 1863, the United States was in the middle of the Civil War. Sarah wrote to President Abraham Lincoln. That year, Lincoln made a special announcement. He asked all Americans to give thanks on the last Thursday of November.",
+    "Since then, Thanksgiving has been a holiday for the whole nation. Today it is on the fourth Thursday of November.",
+    "Sarah Hale shows us something. One person who does not give up can make a big change."
+   ],
+   "preguntas": [
+    {
+     "tipo": "opcion",
+     "pregunta": "What famous poem did Sarah Hale write?",
+     "opciones": [
+      "Twinkle, Twinkle, Little Star",
+      "Mary Had a Little Lamb",
+      "The Itsy Bitsy Spider",
+      "Jack and Jill"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "What did Sarah want for Thanksgiving?",
+     "opciones": [
+      "A day of thanks on the same day for the whole country",
+      "A new kind of pie",
+      "A parade in every town",
+      "No more holidays"
+     ],
+     "correcta": 0
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "Which president made Thanksgiving a national day in 1863?",
+     "opciones": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Thomas Jefferson",
+      "John Adams"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "vocabulario",
+     "pregunta": "In the text, an editor is a person who...",
+     "opciones": [
+      "fixes cars",
+      "is in charge of what goes in a magazine",
+      "sails a ship",
+      "grows corn"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "escrita",
+     "pregunta": "What lesson can we learn from Sarah Hale? Explain with a detail from the text.",
+     "ejemplo": "We can learn not to give up. Sarah wrote letters for about seventeen years until President Lincoln made Thanksgiving a national holiday."
+    }
+   ]
+  },
+  {
+   "titulo": "Giant Balloons in the Sky",
+   "tipo": "Nonfiction",
+   "texto": [
+    "Every Thanksgiving morning, millions of people watch a parade in New York City. It is the Macy's Thanksgiving Day Parade.",
+    "The first parade took place in 1924. It did not have giant balloons. Instead, it had floats, bands, and real animals from the zoo, like bears, camels, and elephants!",
+    "In 1927, the parade got its first giant balloon. It was a cartoon cat named Felix. Since then, balloons have become the most famous part of the parade.",
+    "The balloons are filled with helium, a gas that is lighter than air. That is why they float. Some balloons are as tall as a five-story building.",
+    "A balloon cannot float down the street on its own. A team of people walks below it. They hold long ropes to guide the balloon and keep it from flying away. On windy days, they must hold on tight!",
+    "The parade ends with a very special guest. Santa Claus rides on the last float. His arrival tells everyone that the holiday season has begun."
+   ],
+   "preguntas": [
+    {
+     "tipo": "opcion",
+     "pregunta": "What did the first parade in 1924 have?",
+     "opciones": [
+      "Giant balloons",
+      "Real animals from the zoo",
+      "Fireworks",
+      "Race cars"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "Why do the balloons float?",
+     "opciones": [
+      "They are filled with helium",
+      "They have small motors",
+      "The wind pushes them up",
+      "They are made of paper"
+     ],
+     "correcta": 0
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "What is the job of the people who walk under the balloons?",
+     "opciones": [
+      "To sell tickets",
+      "To guide the balloon with ropes",
+      "To fill the balloon with water",
+      "To sing songs"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "vocabulario",
+     "pregunta": "The word guide means...",
+     "opciones": [
+      "to show the way",
+      "to eat quickly",
+      "to fall asleep",
+      "to paint"
+     ],
+     "correcta": 0
+    },
+    {
+     "tipo": "escrita",
+     "pregunta": "Why does Santa Claus come at the end of the parade? Use a detail from the text.",
+     "ejemplo": "Santa comes at the end to show that the holiday season has begun."
+    }
+   ]
+  },
+  {
+   "titulo": "Maya's Thankful Jar",
+   "tipo": "Fiction",
+   "texto": [
+    "One week before Thanksgiving, Maya's grandpa put an empty glass jar on the kitchen table. Next to it, he placed a stack of paper strips and a pencil.",
+    "\"What is that for?\" Maya asked.",
+    "\"It is a thankful jar,\" Grandpa said. \"Every day, each of us writes one thing we are thankful for. On Thanksgiving, we will read them all together.\"",
+    "Maya thought it sounded easy. On the first day, she wrote, \"I am thankful for my dog, Pepper.\" On the second day, she wrote, \"I am thankful for pizza.\"",
+    "By the fourth day, Maya had to think harder. She looked around. She saw her big brother helping her with her math homework. She wrote, \"I am thankful that Leo helps me.\"",
+    "On Thanksgiving, the jar was full. The family took turns reading the strips out loud. Grandpa laughed at the one about pizza. Leo smiled when he heard his name.",
+    "That night, Maya put a new empty jar on the table. \"Let's keep going,\" she said. \"There is always something to be thankful for.\""
+   ],
+   "preguntas": [
+    {
+     "tipo": "opcion",
+     "pregunta": "What did Grandpa put on the table?",
+     "opciones": [
+      "A pie",
+      "An empty glass jar",
+      "A map",
+      "A box of toys"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "Why did Maya have to think harder by the fourth day?",
+     "opciones": [
+      "She lost the pencil",
+      "She had already written the easy ideas",
+      "She was sick",
+      "Grandpa took the jar away"
+     ],
+     "correcta": 1
+    },
+    {
+     "tipo": "opcion",
+     "pregunta": "How did Leo feel when he heard his name?",
+     "opciones": [
+      "Angry",
+      "Scared",
+      "Happy",
+      "Bored"
+     ],
+     "correcta": 2
+    },
+    {
+     "tipo": "vocabulario",
+     "pregunta": "A stack of paper is...",
+     "opciones": [
+      "a pile of paper",
+      "a torn paper",
+      "a paper airplane",
+      "a wet paper"
+     ],
+     "correcta": 0
+    },
+    {
+     "tipo": "escrita",
+     "pregunta": "How did Maya change from the beginning to the end of the story?",
+     "ejemplo": "At first Maya thought the jar was easy. At the end she wanted to keep going because she saw there is always something to be thankful for."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+Producto: multiplicacion-g3
+Páginas: 22
+Datos: {'soluciones_comprobadas': 470}
+
+RESULTADO: APROBADO
+
+aviso: Sin ANTHROPIC_API_KEY: no se ha hecho la revisión con IA (ortografía y datos).
